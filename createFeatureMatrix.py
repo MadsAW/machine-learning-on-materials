@@ -12,11 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 import os
-os.chdir("/Users/Simon/Documents/DTU/3. semester/Fagprojekt/projekt")
 
-
-
-data = connect('/Users/Simon/Documents/DTU/3. semester/Fagprojekt/oqmd12.db')
+data = connect('oqmd12.db')
 
 atomsList=[]
 
@@ -32,8 +29,8 @@ Første element er følgende matrix.
 GS står for grundstoffets navn.
 
         GS1 | GS2 | GS3 ...
-        ------------------- 
-    
+        -------------------
+
 GS1|     L  |  L  |  L  |
         -----------------
 GS2|     L  |  L  |  L  |
@@ -101,7 +98,7 @@ print("DONE")
 
 
 #%%
-featureMatrixLoaded = np.load("/Users/Simon/Documents/DTU/3. semester/Fagprojekt/projekt/Gemte matrices/featureMatrix.npy")
+featureMatrixLoaded = np.load("Gemte matrices/featureMatrix.npy")
 featureMatrix=featureMatrixLoaded
 #%%
 
@@ -128,7 +125,7 @@ for atom in atomsList:
         else:
             atomicNumberCounts[element]+=1
 
-#Atomic number occurences as an np array, sorted by number atomic number.            
+#Atomic number occurences as an np array, sorted by number atomic number.
 plotData=np.array(sorted(atomicNumberCounts.items()))
 cutOff = 350
 newPlotData = plotData[plotData[:,1]>cutOff]
@@ -169,10 +166,3 @@ removedAtomicNumbers=removedPlotData[:,0]
 
 
 np.save(f"featureMatrixCutoff{cutOff}_noSingleElementKrystals.npy", newFeatureMatrix)
-
-
-
-
-
-
-
