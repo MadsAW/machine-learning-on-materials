@@ -67,23 +67,20 @@ for i in np.shape(x):
 
 featureMatrix=np.zeros(dim)
 
-atomicNumbersList = []
+atomicSymbolsList = []
 
-
-
-
-for atom in atomsList:
-    atomicNumbersList.append(list(atom.get_atomic_numbers()))
 
 #%%
-"""
+
 start = time.time()
 featureMatrix=np.zeros(dim)
 
 
 index=0
 for atom in atomsList:
-    featureMatrix[index]=prdf(atom,rs,dr,rmax)[0]
+    X=prdf(atom,rs,dr,rmax)
+    featureMatrix[index] = X[0]
+    atomicSymbolsList.append(X[1])
     print(f"Progress: {index / dim[0] * 100:8.5f}%. Elapsed: {(time.time()-start)/60:5.2f} minutes. Remaining: {((time.time()-start)/ ((index +1) / dim[0]))/60 - (time.time()-start)/60:5.2f} minutes")
     index+=1
 
@@ -91,15 +88,15 @@ np.save(f"featureMatrix.npy", featureMatrix)
 
 print("DONE")
 
-"""
+
 
 
 
 
 
 #%%
-featureMatrixLoaded = np.load("Gemte matrices/featureMatrix.npy")
-featureMatrix=featureMatrixLoaded
+#featureMatrixLoaded = np.load("Gemte matrices/featureMatrix.npy")
+#featureMatrix=featureMatrixLoaded
 #%%
 
 energies = [atom.get_potential_energy() for atom in atomsList]
@@ -135,7 +132,7 @@ removedPlotData = plotData[plotData[:,1]<=cutOff]
 
 index=0
 for atom in atomsList:
-    if len(np.unique(atomicNumbersList[index]))!=2:
+    if len(atomicSymbolsList[index])!=2:
         atomsRemovedNotTwo.append(atom)
         indicesToRemove.append(index)
     elif any(elem in removedPlotData[:,0] for elem in atom.get_atomic_numbers()):
@@ -144,7 +141,7 @@ for atom in atomsList:
     index+=1
 
 newFeatureMatrix=np.delete(featureMatrix,indicesToRemove,0)
-newAtomicNumbersList = np.delete(atomicNumbersList,indicesToRemove,0)
+newAtomicSymbolsList = list(np.delete(atomicSymbolsList,indicesToRemove,0))
 
 chemFormulaeNotTwo=[]
 for i in range(len(atomsRemovedNotTwo)):
