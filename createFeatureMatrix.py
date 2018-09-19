@@ -9,9 +9,8 @@ Created on Wed Sep 12 14:11:28 2018
 from ase.db import connect
 from prdf import prdf
 import numpy as np
-import matplotlib.pyplot as plt
 import time
-import os
+
 
 data = connect('oqmd12.db')
 
@@ -85,6 +84,10 @@ for atom in atomsList:
     index+=1
 
 np.save(f"featureMatrix.npy", featureMatrix)
+energies = [atom.get_potential_energy() for atom in atomsList]
+
+#HUSK AT TILFØJE SÅ atomicSymbolsList GEMMES I EN ANDEN FIL
+#HUSK AT TILFØJE SÅ energies GEMMES I EN ANDEN FIL
 
 print("DONE")
 
@@ -94,72 +97,3 @@ print("DONE")
 
 
 
-#%%
-#featureMatrixLoaded = np.load("Gemte matrices/featureMatrix.npy")
-#featureMatrix=featureMatrixLoaded
-#%%
-
-energies = [atom.get_potential_energy() for atom in atomsList]
-
-
-
-
-
-#%%
-#Fjerner atomer hvor der kun er et grundstof
-#Fjerner features hvor der er færre end (cutOff) materialer som indeholder grundstofferne
-
-atomsRemovedNotTwo=[]
-atomsRemovedCutOff=[]
-indicesToRemove=[]
-
-
-atomicNumberCounts={}
-for atom in atomsList:
-    for element in atom.get_atomic_numbers():
-        if element not in atomicNumberCounts:
-            atomicNumberCounts[element]=1
-        else:
-            atomicNumberCounts[element]+=1
-
-#Atomic number occurences as an np array, sorted by number atomic number.
-plotData=np.array(sorted(atomicNumberCounts.items()))
-cutOff = 350
-newPlotData = plotData[plotData[:,1]>cutOff]
-removedPlotData = plotData[plotData[:,1]<=cutOff]
-
-
-
-index=0
-for atom in atomsList:
-    if len(atomicSymbolsList[index])!=2:
-        atomsRemovedNotTwo.append(atom)
-        indicesToRemove.append(index)
-    elif any(elem in removedPlotData[:,0] for elem in atom.get_atomic_numbers()):
-        atomsRemovedCutOff.append(atom)
-        indicesToRemove.append(index)
-    index+=1
-
-newFeatureMatrix=np.delete(featureMatrix,indicesToRemove,0)
-newAtomicSymbolsList = list(np.delete(atomicSymbolsList,indicesToRemove,0))
-
-chemFormulaeNotTwo=[]
-for i in range(len(atomsRemovedNotTwo)):
-    chemFormulaeNotTwo.append(atomsRemovedNotTwo[i].get_chemical_formula())
-
-print(f"Removed {len(featureMatrix)-len(newFeatureMatrix)} entries from the feature matrix")
-
-
-
-plt.bar(newPlotData[:,0],newPlotData[:,1], color='blue')
-plt.bar(removedPlotData[:,0],removedPlotData[:,1], color='red')
-plt.plot([-1,max(plotData[:,0])+2],[cutOff,cutOff], color='red')
-plt.show()
-
-removedAtomicNumbers=removedPlotData[:,0]
-
-
-
-
-
-np.save(f"featureMatrixCutoff{cutOff}_noSingleElementKrystals.npy", newFeatureMatrix)
