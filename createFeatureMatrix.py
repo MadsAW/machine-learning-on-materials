@@ -19,7 +19,7 @@ atomsList=[]
 
 for row in data.select():
     atomsList.append(data.get_atoms(row['id']))
-
+    
 #%%
 """
 
