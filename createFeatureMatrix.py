@@ -144,7 +144,7 @@ for atom in atomsList:
     index+=1
 
 newFeatureMatrix=np.delete(featureMatrix,indicesToRemove,0)
-
+newAtomicNumbersList = np.delete(atomicNumbersList,indicesToRemove,0)
 
 chemFormulaeNotTwo=[]
 for i in range(len(atomsRemovedNotTwo)):
