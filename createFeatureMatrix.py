@@ -34,14 +34,14 @@ Første element er følgende matrix.
 
 GS står for grundstoffets navn.
 
-        GS1 | GS2 | GS3 ...
-        -------------------
+        GS1 | GS2 | 
+        -----------
 
-GS1|     L  |  L  |  L  |
-        -----------------
-GS2|     L  |  L  |  L  |
-        -----------------
-GS3|     L  |  L  |  L  |
+GS1|     L  |  L  |
+        -----------
+GS2|     L  |  L  |   
+        -----------
+
 
 ...
 

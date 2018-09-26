@@ -27,8 +27,7 @@ def getAtomicNumbers(atomicSymbols):
                 out.append(i[0])
     
     return(out)
-    print("Atomic symbol not found in list")
-    assert(False)
+
 
 
 #Path to saved files
@@ -58,7 +57,7 @@ for crystal in atomicSymbolsList:
 
 #Atomic number occurences as an np array, sorted by number atomic number.
 plotData=np.array(sorted(atomicNumberCounts.items()))
-cutOff = 100
+cutOff = 25
 newPlotData = plotData[plotData[:,1]>cutOff]
 removedPlotData = plotData[plotData[:,1]<=cutOff]
 
