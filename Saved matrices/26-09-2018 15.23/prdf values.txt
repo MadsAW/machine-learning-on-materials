@@ -1,0 +1,5 @@
+prdf variable
+
+rmax = 10.0
+dr = 0.2
+rs = np.arange(0, rmax - dr, dr)

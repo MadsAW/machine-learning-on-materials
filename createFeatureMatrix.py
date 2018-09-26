@@ -61,7 +61,7 @@ Som input tager prdf følgende: Atoms, rs, dr, rmax
 
 rmax = 10.0
 dr = 0.2
-rs = np.arange(0, rmax - dr, dr / 5)
+rs = np.arange(0, rmax - dr, dr)
 
 
 x=np.array(prdf(atomsList[0],rs,dr,rmax)[0])
