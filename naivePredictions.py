@@ -133,7 +133,7 @@ for i in range(len(energies)):
     b+=(energies[i]-sum((A[i]*result[0])))**2
 rmse_b=np.sqrt(b/len(energies))
 
-s
 
-print(f"Guess mean every time. Root mean square error {rmse_a:.3f} eV.\n")
-print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found least squares regression. Root mean square error {rmse_a:.3f} eV\n\n")
+
+print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")# =57.436 eV
+print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found least squares regression. Root mean square error {rmse_b:.3f} eV\n\n")# =9.022 eV
