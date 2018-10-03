@@ -11,6 +11,7 @@ import pickle
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Flatten
+from keras import backend
 import numpy as np
 
 
@@ -26,6 +27,7 @@ with open(path+"pickledEnergies.txt", "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
 
+
 X = largeFeatureMatrix
 Y = np.array(energies)
 
@@ -36,26 +38,49 @@ Y = np.array(energies)
 
 #Create model
 model = Sequential()
-inputShape = np.shape(X)[1:]
-outputShape = np.shape(Y)[1:]
 
-model.add(Dense(800, input_shape=inputShape, activation='relu'))
-model.add(Dense(400, activation='relu'))
-model.add(Flatten(input_shape=inputShape))
-model.add(Dense(1 , activation='relu'))
-#model.add(Dense(1, output_shape=outputShape , activation='relu'))
+inputShape = np.shape(X)[1:]
+
+model.add(Dense(196, input_shape=inputShape, activation='relu'))
+model.add(Dense(100, activation='relu'))
+model.add(Dense(1, activation='relu'))
+model.add(Flatten())
+model.add(Dense(1))
+
+
+
+
+
+
+#Root mean squared error metric
+def rmse(y_true, y_pred):
+	return backend.sqrt(backend.mean(backend.square(y_pred - y_true), axis=-1))
+
+
 
 #Compile model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=[rmse])
+
+
+
 
 #Fit the model. This is where the hard computing happens. 
 #Number of epochs is number of iterations through dataset
 #Batch size is number of iterations before weights are changed.
-model.fit(X, Y, epochs=150, batch_size=10)
+model.fit(X, Y, epochs=16, batch_size=10)
 
 #Evaluate model efficiency
 scores = model.evaluate(X, Y)
-print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+print("\n%s: %.2f eV" % (model.metrics_names[1], scores[1]))
 
 #Make predictions
 predictions = model.predict(X)
+
+#Save weights
+model.save(path+"test2_model.h5")
+
+
+a=0
+for i in range(len(predictions)):
+    a+=(energies[i]-predictions[i])**2
+rmse=np.sqrt(a/len(energies))
