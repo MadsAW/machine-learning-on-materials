@@ -26,7 +26,7 @@ largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFil
 with open(path+"pickledEnergies.txt", "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
-
+largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 
 X = largeFeatureMatrix
 Y = np.array(energies)
@@ -41,10 +41,8 @@ model = Sequential()
 
 inputShape = np.shape(X)[1:]
 
-model.add(Dense(196, input_shape=inputShape, activation='relu'))
-model.add(Dense(100, activation='relu'))
-model.add(Dense(1, activation='relu'))
-model.add(Flatten())
+model.add(Dense(100, input_shape=inputShape, activation='relu'))
+model.add(Dense(50, activation='relu'))
 model.add(Dense(1))
 
 
@@ -61,8 +59,7 @@ def rmse(y_true, y_pred):
 #Compile model
 model.compile(loss='mean_squared_error', optimizer='adam', metrics=[rmse])
 
-
-
+print(model.summary())
 
 #Fit the model. This is where the hard computing happens. 
 #Number of epochs is number of iterations through dataset
