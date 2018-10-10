@@ -1,13 +1,16 @@
 #!/bin/bash
-##BSUB -q pgutitanxpascal #Skift til gpu nedenfor
+##Kør på gpu
+#BSUB -q gpuv100
 ##Kør på cpu
-#BSUB -q hpc
+##BSUB -q hpc
+##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
+#BSUB -gpu "num=1:mode=exclusive_process"
 ##Navn på job
 #BSUB -J test2
 ##Output fil
 #BSUB -o test2-%J.out
 ##Antal kerner
-#BSUB -n 16
+#BSUB -n 8
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
