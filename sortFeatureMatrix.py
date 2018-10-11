@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import pickle
 import pandas as pd
 import os
+import math
 
 
 
@@ -70,6 +71,8 @@ for crystal in atomicSymbolsList:
         indicesToRemove.append(index)
     elif any(elem in removedPlotData[:,0] for elem in getAtomicNumbers(crystal)):
         crystalsRemovedCutOff.append(crystal)
+        indicesToRemove.append(index)
+    elif math.isnan(energies[index]):
         indicesToRemove.append(index)
     index+=1
 

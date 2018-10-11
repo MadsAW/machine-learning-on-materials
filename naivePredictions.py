@@ -9,23 +9,25 @@ Created on Fri Sep 28 18:15:16 2018
 import numpy as np
 from ase.db import connect
 import pandas as pd
+import math
 
 
 data = connect('oqmd12.db')
 
 atomsList=[]
+energies=[]
 
 for row in data.select():
     atomsList.append(data.get_atoms(row['id']))
+    energies.append(row.de)
     
 
 chemicalSymbols=[]
-energies=[]
+
 
 for atom in atomsList:
     chemicalSymbols.append(atom.get_chemical_symbols())
-    energies.append(atom.get_potential_energy())
-
+    
 
 
 atomicSymbolsAndNumbers=np.array(pd.read_csv("atomicSymbolsAndNumbers.csv", header=None, sep=","))
@@ -61,6 +63,8 @@ for crystal in chemicalSymbols:
     if len(list(np.unique(getAtomicNumbers(crystal))))!=2:
         indicesToRemove.append(index)
     elif any(elem in removedSymbols[:,0] for elem in getAtomicNumbers(crystal)):
+        indicesToRemove.append(index)
+    elif math.isnan(energies[index]):
         indicesToRemove.append(index)
     index+=1
 
@@ -135,5 +139,5 @@ rmse_b=np.sqrt(b/len(energies))
 
 
 
-print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")# =57.436 eV
-print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found least squares regression. Root mean square error {rmse_b:.3f} eV\n\n")# =9.022 eV
+print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")
+print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found with least squares regression. Root mean square error {rmse_b:.3f} eV\n\n")
