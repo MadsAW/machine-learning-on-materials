@@ -8,9 +8,9 @@
 #BSUB -q hpc
 
 ##Navn på job
-#BSUB -J test2
+#BSUB -J test4
 ##Output fil
-#BSUB -o test2-%J.out
+#BSUB -o test4-%J.out
 ##Antal kerner
 #BSUB -n 16
 ##Om kernerne må være på forskellige computere
@@ -28,5 +28,5 @@
 module purge
 module load tensorflow/1.5-cpu-python-3.6.2
 
-python3 test2.py
+python3 test4.py
 
