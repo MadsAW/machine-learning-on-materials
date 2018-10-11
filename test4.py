@@ -13,6 +13,7 @@ from keras.layers import Dense
 from keras.layers import Flatten
 from keras import backend
 import numpy as np
+import os
 
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
@@ -74,7 +75,7 @@ print("\n%s: %.2f eV" % (model.metrics_names[1], scores[1]))
 predictions = model.predict(X)
 
 #Save weights
-model.save(path+"test2_model.h5")
+model.save_weights(os.path.basename(__file__)[:-3]+"weights")
 
 
 a=0
