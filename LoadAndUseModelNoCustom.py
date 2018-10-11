@@ -1,8 +1,16 @@
-from keras.models import load_model
-from keras import backend
-import pickle
+
 from createLargerFeatureMatrix import simpleLargeMatrix
+import pickle
+from keras.models import Sequential
+from keras.models import load_model
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras import backend
 import numpy as np
+import os
+
+
+
 
 
 
@@ -13,16 +21,43 @@ atomicSymbolsListFile = "pickledAtomicSymbolsList.txt"
 
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
+
+
 with open(path+"pickledEnergies.txt", "rb") as pickleFile:
     energies = pickle.load(pickleFile)
+
+largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 
 X = largeFeatureMatrix
 Y = np.array(energies)
 
 
-model_path='test4_model.h5'
 
-model = load_model(model_path)
+
+
+
+#Create model
+model = Sequential()
+
+inputShape = np.shape(X)[1:]
+
+model.add(Dense(200, input_shape=inputShape, activation='relu'))
+model.add(Dense(100, activation='relu'))
+model.add(Dense(1))
+
+
+
+#Compile model
+model.compile(loss='mse', optimizer='adam', metrics=["mse"])
+
+print(model.summary())
+
+
+model_path='test4weights'
+
+
+model.load_weights(model_path)
+
 
 predictions = model.predict(X)
 
