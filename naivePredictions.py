@@ -73,19 +73,26 @@ chemicalSymbols = list(np.delete(chemicalSymbols,indicesToRemove,0))
 energies = list(np.delete(energies,indicesToRemove,0))
 
 
+seed=2018
+np.random.seed(seed)
+np.random.shuffle(energies)
 
+
+pctTest = round(len(energies)*0.15)
 
 
 
 #Mean
-mean=np.mean(energies)
+mean=np.mean(energies[pctTest:])
 
 a=0
-for i in range(len(energies)):
-    a+=(energies[i]-mean)**2
-rmse_a=np.sqrt(a/len(energies))
+for i in range(len(energies[0:pctTest])):
+    a+=((energies[0:pctTest])[i]-mean)**2
+rmse_a=np.sqrt(a/len(energies[0:pctTest]))
 
 
+if rmse_a != np.sqrt(np.sum((energies[0:pctTest]-mean)**2) / len(energies[0:pctTest])):
+    print("ERROR a")
 
 
 
@@ -93,9 +100,14 @@ rmse_a=np.sqrt(a/len(energies))
 
 
 #Linear model, linear algebra, least squares method
+seed=2018
+np.random.seed(seed)
+np.random.shuffle(chemicalSymbols)
+
+
 chemicalSymbolsCount = []
 
-for crystal in chemicalSymbols:
+for crystal in chemicalSymbols[pctTest:]:
     elements, counts = np.unique(crystal, return_counts=True)
     chemicalSymbolsCount.append([list(elements), list(counts)])
     
@@ -116,7 +128,7 @@ for sym in uniqueAtomicSymbols:
 
 
 A=np.zeros((len(chemicalSymbolsCount),len(mappedAtomicNumber)))
-B=energies
+B=energies[pctTest:]
 
 index=0
 for i in chemicalSymbolsCount:
@@ -133,11 +145,16 @@ result = np.linalg.lstsq(A,B)
 
 
 b=0
-for i in range(len(energies)):
-    b+=(energies[i]-sum((A[i]*result[0])))**2
+for i in range(len(energies[0:pctTest])):
+    b+=((energies[0:pctTest])[i]-sum((A[i]*result[0])))**2
 rmse_b=np.sqrt(b/len(energies))
 
 
 
+if rmse_b != np.sqrt(np.sum((energies[0:pctTest]-A@result[0])**2) / len(energies[0:pctTest])):
+    print("ERROR b")
+
+
 print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")
 print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found with least squares regression. Root mean square error {rmse_b:.3f} eV\n\n")
+

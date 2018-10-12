@@ -91,19 +91,55 @@ plt.show()
 
 
 
-
 try:
     os.mkdir(path+f"sorted_Cutoff{cutOff}_noSingleElementKrystals/")
 except:
     pass
 newFolder=path+f"sorted_Cutoff{cutOff}_noSingleElementKrystals/"
 
-np.save(newFolder+"featureMatrix.npy", newFeatureMatrix)
+np.save(newFolder+"FullSet_featureMatrix.npy", newFeatureMatrix)
 
-with open(newFolder+"/pickledEnergies.txt", "wb") as pickleFile:
+with open(newFolder+"/FullSet_pickledEnergies.txt", "wb") as pickleFile:
     pickle.dump(newEnergies, pickleFile)
     
-with open(newFolder+"/pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+with open(newFolder+"/FullSet_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
     pickle.dump(newAtomicSymbolsList, pickleFile)
     
+    
+
+seed=2018
+np.random.seed(seed)
+np.random.shuffle(newFeatureMatrix)
+
+np.random.seed(seed)
+np.random.shuffle(newEnergies)
+
+np.random.seed(seed)
+np.random.shuffle(newAtomicSymbolsList)
+
+pctTest = round(len(newEnergies)*0.15)
+#%%
+#Træningssæt
+np.save(newFolder+"train_featureMatrix.npy", newFeatureMatrix[pctTest:])
+
+with open(newFolder+"/train_pickledEnergies.txt", "wb") as pickleFile:
+    pickle.dump(newEnergies[pctTest:], pickleFile)
+    
+with open(newFolder+"/train_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+    pickle.dump(newAtomicSymbolsList[pctTest:], pickleFile)
+
+
+#%%
+#Testsæt
+np.save(newFolder+"test_featureMatrix.npy", newFeatureMatrix[0:pctTest])
+
+with open(newFolder+"/test_pickledEnergies.txt", "wb") as pickleFile:
+    pickle.dump(newEnergies[0:pctTest], pickleFile)
+    
+with open(newFolder+"/test_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+    pickle.dump(newAtomicSymbolsList[0:pctTest], pickleFile)
+    
+    
+#%%
+
 print("DONE")
