@@ -21,8 +21,8 @@ atomsList=[]
 
 for row in data.select():
     atomsList.append(data.get_atoms(row['id']))
-    
-    
+
+
 now = datetime.datetime.now()
 folderName = now.strftime("%d-%m-%Y %H.%M")
 os.mkdir("Saved matrices/"+folderName)
@@ -34,12 +34,12 @@ Første element er følgende matrix.
 
 GS står for grundstoffets navn.
 
-        GS1 | GS2 | 
+        GS1 | GS2 |
         -----------
 
 GS1|     L  |  L  |
         -----------
-GS2|     L  |  L  |   
+GS2|     L  |  L  |
         -----------
 
 
@@ -97,15 +97,8 @@ energies = [atom.get_potential_energy() for atom in atomsList]
 
 with open("Saved matrices/"+folderName+"/pickledEnergies.txt", "wb") as pickleFile:
     pickle.dump(energies, pickleFile)
-    
+
 with open("Saved matrices/"+folderName+"/pickledAtomicSymbolsList.txt", "wb") as pickleFile:
     pickle.dump(atomicSymbolsList, pickleFile)
 
 print("DONE")
-
-
-
-
-
-
-
