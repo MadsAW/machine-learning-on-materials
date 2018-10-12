@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import pickle
 import pandas as pd
 import os
+import math
 
 
 
@@ -31,7 +32,7 @@ def getAtomicNumbers(atomicSymbols):
 
 
 #Path to saved files
-path = "Saved matrices/26-09-2018 15.23/"
+path = "Saved matrices/11-10-2018 11.36/"
 
 featureMatrix = np.load(path+"/featureMatrix.npy")
 
@@ -71,6 +72,8 @@ for crystal in atomicSymbolsList:
     elif any(elem in removedPlotData[:,0] for elem in getAtomicNumbers(crystal)):
         crystalsRemovedCutOff.append(crystal)
         indicesToRemove.append(index)
+    elif math.isnan(energies[index]):
+        indicesToRemove.append(index)
     index+=1
 
 newFeatureMatrix=np.delete(featureMatrix,indicesToRemove,0)
@@ -88,19 +91,55 @@ plt.show()
 
 
 
-
 try:
     os.mkdir(path+f"sorted_Cutoff{cutOff}_noSingleElementKrystals/")
 except:
     pass
 newFolder=path+f"sorted_Cutoff{cutOff}_noSingleElementKrystals/"
 
-np.save(newFolder+"featureMatrix.npy", newFeatureMatrix)
+np.save(newFolder+"FullSet_featureMatrix.npy", newFeatureMatrix)
 
-with open(newFolder+"/pickledEnergies.txt", "wb") as pickleFile:
+with open(newFolder+"/FullSet_pickledEnergies.txt", "wb") as pickleFile:
     pickle.dump(newEnergies, pickleFile)
     
-with open(newFolder+"/pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+with open(newFolder+"/FullSet_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
     pickle.dump(newAtomicSymbolsList, pickleFile)
     
+    
+
+seed=2018
+np.random.seed(seed)
+np.random.shuffle(newFeatureMatrix)
+
+np.random.seed(seed)
+np.random.shuffle(newEnergies)
+
+np.random.seed(seed)
+np.random.shuffle(newAtomicSymbolsList)
+
+pctTest = round(len(newEnergies)*0.15)
+#%%
+#Træningssæt
+np.save(newFolder+"train_featureMatrix.npy", newFeatureMatrix[pctTest:])
+
+with open(newFolder+"/train_pickledEnergies.txt", "wb") as pickleFile:
+    pickle.dump(newEnergies[pctTest:], pickleFile)
+    
+with open(newFolder+"/train_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+    pickle.dump(newAtomicSymbolsList[pctTest:], pickleFile)
+
+
+#%%
+#Testsæt
+np.save(newFolder+"test_featureMatrix.npy", newFeatureMatrix[0:pctTest])
+
+with open(newFolder+"/test_pickledEnergies.txt", "wb") as pickleFile:
+    pickle.dump(newEnergies[0:pctTest], pickleFile)
+    
+with open(newFolder+"/test_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+    pickle.dump(newAtomicSymbolsList[0:pctTest], pickleFile)
+    
+    
+#%%
+
 print("DONE")
