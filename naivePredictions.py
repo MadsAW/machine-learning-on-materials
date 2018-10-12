@@ -91,10 +91,6 @@ for i in range(len(energies[0:pctTest])):
 rmse_a=np.sqrt(a/len(energies[0:pctTest]))
 
 
-if rmse_a != np.sqrt(np.sum((energies[0:pctTest]-mean)**2) / len(energies[0:pctTest])):
-    print("ERROR a")
-
-
 
 
 
@@ -144,15 +140,25 @@ result = np.linalg.lstsq(A,B)
 
 
 
+
+
+chemicalSymbolsCount = []
+for crystal in chemicalSymbols[0:pctTest]:
+    elements, counts = np.unique(crystal, return_counts=True)
+    chemicalSymbolsCount.append([list(elements), list(counts)])
+A=np.zeros((len(chemicalSymbolsCount),len(mappedAtomicNumber)))
+index=0
+for i in chemicalSymbolsCount:
+    A[index][mappedAtomicNumber[i[0][0]]]=i[1][0]
+    A[index][mappedAtomicNumber[i[0][1]]]=i[1][1]    
+    index+=1
+
 b=0
 for i in range(len(energies[0:pctTest])):
-    b+=((energies[0:pctTest])[i]-sum((A[i]*result[0])))**2
+    b+=((energies[0:pctTest])[i]- (A@result[0])[i])**2
 rmse_b=np.sqrt(b/len(energies))
 
 
-
-if rmse_b != np.sqrt(np.sum((energies[0:pctTest]-A@result[0])**2) / len(energies[0:pctTest])):
-    print("ERROR b")
 
 
 print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")
