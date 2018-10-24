@@ -16,14 +16,14 @@ import os
 
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
-featureMatrixFile = "featureMatrix.npy"
-atomicSymbolsListFile = "pickledAtomicSymbolsList.txt"
+featureMatrixFile = "test_featureMatrix.npy"
+atomicSymbolsListFile = "test_pickledAtomicSymbolsList.txt"
 
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
 
-with open(path+"pickledEnergies.txt", "rb") as pickleFile:
+with open(path+"test_pickledEnergies.txt", "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
 largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
@@ -61,7 +61,7 @@ model.load_weights(model_path)
 
 predictions = model.predict(X)
 
-#Save weights
+
 a=0
 for i in range(len(predictions)):
     a+=(energies[i]-predictions[i])**2
