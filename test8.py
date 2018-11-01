@@ -63,7 +63,7 @@ print("\n%s: %.2f eV" % (model.metrics_names[1], scores[1]))
 predictions = model.predict(X)
 
 #Save weights
-model.save_weights(os.path.basename(__file__)[:-3]+"weights")
+#model.save_weights(os.path.basename(__file__)[:-3]+"weights")
 
 
 a=0
