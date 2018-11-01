@@ -1,6 +1,6 @@
 #!/bin/bash
 ##Kør på gpu
-#BSUB -q gputitanxpascal
+#BSUB -q gpuk40
 ##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
 #BSUB -gpu "num=1:mode=exclusive_process"
 
@@ -8,11 +8,11 @@
 ##BSUB -q hpc
 
 ##Navn på job
-#BSUB -J test5
+#BSUB -J test6
 ##Output fil
-#BSUB -o test5-%J.out
+#BSUB -o test6-%J.out
 ##Antal kerner
-#BSUB -n 16
+#BSUB -n 8
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
@@ -29,5 +29,5 @@ module purge
 #module load tensorflow/1.5-cpu-python-3.6.2
 module load tensorflow/1.5-gpu-python-3.6.2
 
-python3 test5.py
+python3 test6.py
 
