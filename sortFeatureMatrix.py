@@ -119,14 +119,15 @@ np.random.shuffle(newAtomicSymbolsList)
 
 pctTest = round(len(newEnergies)*0.15)
 #%%
+
 #Træningssæt
-np.save(newFolder+"train_featureMatrix.npy", newFeatureMatrix[pctTest:])
+np.save(newFolder+"train_featureMatrix.npy", newFeatureMatrix[2*pctTest:])
 
 with open(newFolder+"/train_pickledEnergies.txt", "wb") as pickleFile:
-    pickle.dump(newEnergies[pctTest:], pickleFile)
+    pickle.dump(newEnergies[2*pctTest:], pickleFile)
     
 with open(newFolder+"/train_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
-    pickle.dump(newAtomicSymbolsList[pctTest:], pickleFile)
+    pickle.dump(newAtomicSymbolsList[2*pctTest:], pickleFile)
 
 
 #%%
@@ -139,6 +140,17 @@ with open(newFolder+"/test_pickledEnergies.txt", "wb") as pickleFile:
 with open(newFolder+"/test_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
     pickle.dump(newAtomicSymbolsList[0:pctTest], pickleFile)
     
+
+#%%
+#Validering
+np.save(newFolder+"validate_featureMatrix.npy", newFeatureMatrix[pctTest:2*pctTest])
+
+with open(newFolder+"/validate_pickledEnergies.txt", "wb") as pickleFile:
+    pickle.dump(newEnergies[pctTest:2*pctTest], pickleFile)
+    
+with open(newFolder+"/validate_pickledAtomicSymbolsList.txt", "wb") as pickleFile:
+    pickle.dump(newAtomicSymbolsList[pctTest:2*pctTest], pickleFile)
+
     
 #%%
 
