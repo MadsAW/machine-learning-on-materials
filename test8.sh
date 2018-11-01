@@ -1,6 +1,6 @@
 #!/bin/bash
 ##Kør på gpu
-#BSUB -q gpuv100i
+#BSUB -q gputitanxpascal
 ##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
 #BSUB -gpu "num=1:mode=exclusive_process"
 
@@ -18,7 +18,7 @@
 ##Ram pr kerne
 #BSUB -R "rusage[mem=3GB]"
 ##Hvor lang tid må den køre hh:mm
-#BSUB -W 5:00
+#BSUB -W 15:00
 ##Email når jobbet starter
 #BSUB -B
 ##og stopper
