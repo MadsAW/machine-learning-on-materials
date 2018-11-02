@@ -1,6 +1,6 @@
 #!/bin/bash
 ##Kør på gpu
-#BSUB -q gputitanxpascal
+#BSUB -q gpuv100
 ##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
 #BSUB -gpu "num=1:mode=exclusive_process"
 
@@ -12,11 +12,11 @@
 ##Output fil
 #BSUB -o test8-%J.out
 ##Antal kerner
-#BSUB -n 8
+#BSUB -n 16
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
-#BSUB -R "rusage[mem=3GB]"
+#BSUB -R "rusage[mem=8GB]"
 ##Hvor lang tid må den køre hh:mm
 #BSUB -W 15:00
 ##Email når jobbet starter

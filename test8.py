@@ -38,9 +38,9 @@ model = Sequential()
 
 inputShape = np.shape(X)[1:]
 
-model.add(Dense(5000, input_shape=inputShape, activation='relu'))
-model.add(Dense(2500, activation='relu'))
-model.add(Dense(1250, activation='relu'))
+model.add(Dense(4000, input_shape=inputShape, activation='relu'))
+model.add(Dense(2000, activation='relu'))
+model.add(Dense(1000, activation='relu'))
 model.add(Dense(1))
 
 
