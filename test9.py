@@ -32,7 +32,7 @@ Y = np.array(energies)
 
 
 #Lambda regularization penalty
-lam = 0.001
+lam = 0.01
 
 
 #Create model
@@ -54,7 +54,7 @@ print(model.summary())
 #Fit the model. This is where the hard computing happens. 
 #Number of epochs is number of iterations through dataset
 #Batch size is number of iterations before weights are changed.
-model.fit(X, Y, epochs=40, batch_size=50)
+model.fit(X, Y, epochs=50, batch_size=40)
 
 #Evaluate model efficiency
 scores = model.evaluate(X, Y)
