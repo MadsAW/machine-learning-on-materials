@@ -71,8 +71,6 @@ for i in range(len(X)):
 
 
 
-
-
 #Load validation set
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
