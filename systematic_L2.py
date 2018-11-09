@@ -6,7 +6,6 @@ Created on Fri Nov  9 09:57:18 2018
 @author: Simon
 """
 
-ap
 
 
 import os
