@@ -7,7 +7,7 @@ Created on Tue Nov 13 12:31:46 2018
 """
 
 import os
-os.chdir("..")
+#os.chdir("..")
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
 from keras.models import Sequential
