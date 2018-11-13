@@ -29,5 +29,6 @@ module purge
 #module load tensorflow/1.5-cpu-python-3.6.2
 module load tensorflow/1.5-gpu-python-3.6.2
 
-python3 systematic_L2.py
+
+python3 systematic/L2_0_1.pypython3 systematic/L2_0_01.pypython3 systematic/L2_0_001.pypython3 systematic/L2_0_0001.pypython3 systematic/L2_0_5.pypython3 systematic/L2_0_05.pypython3 systematic/L2_0_005.pypython3 systematic/L2_0_0005.pypython3 systematic/L2_1.pypython3 systematic/L2_5.py
 
