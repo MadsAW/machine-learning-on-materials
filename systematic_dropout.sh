@@ -12,11 +12,11 @@
 ##Output fil
 #BSUB -o systematic_dropout-%J.out
 ##Antal kerner
-#BSUB -n 12
+#BSUB -n 5
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
-#BSUB -R "rusage[mem=5GB]"
+#BSUB -R "rusage[mem=6GB]"
 ##Hvor lang tid må den køre hh:mm
 #BSUB -W 3:00
 ##Email når jobbet starter
