@@ -126,8 +126,8 @@ print("RMSE on validation data "+str(rmseValidate))
 
 
 
-outs = ["Drop = " + str(drop),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
-outfile="rmse_dropout.txt"
+outs = ["Drop = " + str(drop),"N = " + str(N),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
+outfile="rmse_drop_N.txt"
 with open(outfile, "a+") as file:
     for line in outs:
         file.write(line)

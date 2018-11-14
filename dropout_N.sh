@@ -29,15 +29,12 @@ module purge
 #module load tensorflow/1.5-cpu-python-3.6.2
 module load tensorflow/1.5-gpu-python-3.6.2
 
-N_list=(100,250,500,750,1000)
-drop_list=(10,20,30,40,50,60,70,80,90)
 
-for drop in "${drop_list[@]}"
+for drop in 10 20 30 40 50 60 70 80 90
 do
-	for N in "${N_list[@]}"
+	for N in 250 500 750 1000
 	do
-		python3 dropout_N.py $drop $N
+		python3 $N $drop
 	done
 done
-
 
