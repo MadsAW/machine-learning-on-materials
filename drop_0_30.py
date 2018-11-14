@@ -63,9 +63,10 @@ model = Sequential()
     
 inputShape = np.shape(X)[1:]
 
-model.add(Dense(800, input_shape=inputShape, activation='relu'))
+model.add(Dropout(drop, input_shape=inputShape))
+model.add(Dense(1000, activation='relu'))
 model.add(Dropout(drop))
-model.add(Dense(400, activation='relu'))
+model.add(Dense(500, activation='relu'))
 model.add(Dropout(drop))
 model.add(Dense(1))
 
