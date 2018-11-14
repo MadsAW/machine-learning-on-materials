@@ -1,0 +1,40 @@
+Lambda = 0.1
+RMSE on training data [0.5558128]
+RMSE on validation data [0.5266611]
+
+Lambda = 0.01
+RMSE on training data [0.3119413]
+RMSE on validation data [0.34155524]
+
+Lambda = 0.001
+RMSE on training data [0.13226673]
+RMSE on validation data [0.2991208]
+
+Lambda = 0.0001
+RMSE on training data [0.09625252]
+RMSE on validation data [0.28517118]
+
+Lambda = 0.5
+RMSE on training data [0.55725914]
+RMSE on validation data [0.5286691]
+
+Lambda = 0.05
+RMSE on training data [0.5555486]
+RMSE on validation data [0.5265766]
+
+Lambda = 0.005
+RMSE on training data [0.21576029]
+RMSE on validation data [0.2957177]
+
+Lambda = 0.0005
+RMSE on training data [0.10977162]
+RMSE on validation data [0.29014412]
+
+Lambda = 1
+RMSE on training data [0.5555142]
+RMSE on validation data [0.52650845]
+
+Lambda = 5
+RMSE on training data [0.5560696]
+RMSE on validation data [0.526881]
+

@@ -1,0 +1,40 @@
+Drop = 0.5
+RMSE on training data [0.09862862]
+RMSE on validation data [0.28607985]
+
+Drop = 0.05
+RMSE on training data [0.09158138]
+RMSE on validation data [0.28623623]
+
+Drop = 0.1
+RMSE on training data [0.08755212]
+RMSE on validation data [0.28283387]
+
+Drop = 0.15
+RMSE on training data [0.09424854]
+RMSE on validation data [0.28290254]
+
+Drop = 0.2
+RMSE on training data [0.08988824]
+RMSE on validation data [0.28368908]
+
+Drop = 0.25
+RMSE on training data [0.09363762]
+RMSE on validation data [0.28541747]
+
+Drop = 0.3
+RMSE on training data [0.09603812]
+RMSE on validation data [0.2881337]
+
+Drop = 0.35
+RMSE on training data [0.08983683]
+RMSE on validation data [0.28541148]
+
+Drop = 0.4
+RMSE on training data [0.08891092]
+RMSE on validation data [0.28646258]
+
+Drop = 0.45
+RMSE on training data [0.09258309]
+RMSE on validation data [0.28674626]
+

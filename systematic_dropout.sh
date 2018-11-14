@@ -29,14 +29,14 @@ module purge
 #module load tensorflow/1.5-cpu-python-3.6.2
 module load tensorflow/1.5-gpu-python-3.6.2
 
-python3 systematic/drop_0_5.py
-python3 systematic/drop_0_05.py
-python3 systematic/drop_0_10.py
-python3 systematic/drop_0_15.py
-python3 systematic/drop_0_20.py
-python3 systematic/drop_0_25.py
-python3 systematic/drop_0_30.py
-python3 systematic/drop_0_35.py
-python3 systematic/drop_0_40.py
-python3 systematic/drop_0_45.py
+python3 drop_0_5.py
+python3 drop_0_05.py
+python3 drop_0_10.py
+python3 drop_0_15.py
+python3 drop_0_20.py
+python3 drop_0_25.py
+python3 drop_0_30.py
+python3 drop_0_35.py
+python3 drop_0_40.py
+python3 drop_0_45.py
 
