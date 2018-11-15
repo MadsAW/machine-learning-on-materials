@@ -1,3 +1,5 @@
+Dropout on hidden layers. 800 and 400 neurons.
+
 Drop = 0.5
 RMSE on training data [0.09862862]
 RMSE on validation data [0.28607985]
@@ -37,4 +39,48 @@ RMSE on validation data [0.28646258]
 Drop = 0.45
 RMSE on training data [0.09258309]
 RMSE on validation data [0.28674626]
+
+
+
+
+Dropout on all layers. 1000 and 500 neurons:
+Drop = 0.5
+RMSE on training data [0.14912255]
+RMSE on validation data [0.3105471]
+
+Drop = 0.05
+RMSE on training data [0.10081018]
+RMSE on validation data [0.28976047]
+
+Drop = 0.1
+RMSE on training data [0.09166648]
+RMSE on validation data [0.2816677]
+
+Drop = 0.15
+RMSE on training data [0.09723717]
+RMSE on validation data [0.29372656]
+
+Drop = 0.2
+RMSE on training data [0.09720678]
+RMSE on validation data [0.30294645]
+
+Drop = 0.25
+RMSE on training data [0.09486818]
+RMSE on validation data [0.29080847]
+
+Drop = 0.3
+RMSE on training data [0.10928076]
+RMSE on validation data [0.3032172]
+
+Drop = 0.35
+RMSE on training data [0.11667421]
+RMSE on validation data [0.29620218]
+
+Drop = 0.4
+RMSE on training data [0.14294592]
+RMSE on validation data [0.30953762]
+
+Drop = 0.45
+RMSE on training data [0.1370491]
+RMSE on validation data [0.3159156]
 

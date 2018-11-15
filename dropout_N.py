@@ -16,8 +16,8 @@ import numpy as np
 import sys
 
 
-if len(sys.argv)!=3:
-    print("Usage: script.py dropout N")
+if len(sys.argv)!=4:
+    print("Usage: script.py dropout N activation")
     sys.exit(1)
 
 
@@ -66,15 +66,16 @@ Y_v = np.array(energiesValidate)
 #Model
 drop=float(sys.argv[1])
 N=int(sys.argv[2])
+activation=sys.argv[3]
 
 model = Sequential()
     
 inputShape = np.shape(X)[1:]
 
 model.add(Dropout(drop, input_shape=inputShape))
-model.add(Dense(N, activation='relu'))
+model.add(Dense(N, activation='activation'))
 model.add(Dropout(drop))
-model.add(Dense(N//2, activation='relu'))
+model.add(Dense(N//2, activation='activation'))
 model.add(Dropout(drop))
 model.add(Dense(1))
 
@@ -126,7 +127,7 @@ print("RMSE on validation data "+str(rmseValidate))
 
 
 
-outs = ["Drop = " + str(drop),"N = " + str(N),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
+outs = ["Activation = "+activation,"Drop = " + str(drop),"N = " + str(N),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
 outfile="rmse_drop_N.txt"
 with open(outfile, "a+") as file:
     for line in outs:

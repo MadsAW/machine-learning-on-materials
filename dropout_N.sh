@@ -8,9 +8,9 @@
 ##BSUB -q hpc
 
 ##Navn på job
-#BSUB -J systematic_dropout
+#BSUB -J dropout_N
 ##Output fil
-#BSUB -o systematic_dropout-%J.out
+#BSUB -o dropout_N-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -30,11 +30,14 @@ module purge
 module load tensorflow/1.5-gpu-python-3.6.2
 
 
-for drop in 10 20 30 40 50 60 70 80 90
+for drop in 0.30 0.50 0.90
 do
-	for N in 250 500 750 1000
+	for N in 500 1000
 	do
-		python3 $N $drop
+		for act in softmax elu selu softplus softsign relu tanh sigmoid hard_sigmoid exponential linear
+		do
+			python3 dropout_N.py $drop $N $act
+		done
 	done
 done
 

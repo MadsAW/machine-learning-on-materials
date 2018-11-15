@@ -1,0 +1,360 @@
+Drop = 250.0
+N = 10
+RMSE on training data [0.08459031]
+RMSE on validation data [0.29662645]
+
+Drop = 500.0
+N = 10
+RMSE on training data [0.08012813]
+RMSE on validation data [0.2843272]
+
+Drop = 750.0
+N = 10
+RMSE on training data [0.08341888]
+RMSE on validation data [0.2886599]
+
+Drop = 1000.0
+N = 10
+RMSE on training data [0.08328474]
+RMSE on validation data [0.2911612]
+
+Drop = 250.0
+N = 20
+RMSE on training data [0.08266495]
+RMSE on validation data [0.2934494]
+
+Drop = 500.0
+N = 20
+RMSE on training data [0.08254461]
+RMSE on validation data [0.2843445]
+
+Drop = 750.0
+N = 20
+RMSE on training data [0.08427707]
+RMSE on validation data [0.29058337]
+
+Drop = 1000.0
+N = 20
+RMSE on training data [0.08249623]
+RMSE on validation data [0.29071322]
+
+Drop = 250.0
+N = 30
+RMSE on training data [0.08122148]
+RMSE on validation data [0.28309003]
+
+Drop = 500.0
+N = 30
+RMSE on training data [0.08130112]
+RMSE on validation data [0.28165233]
+
+Drop = 750.0
+N = 30
+RMSE on training data [0.08418287]
+RMSE on validation data [0.28828913]
+
+Drop = 1000.0
+N = 30
+RMSE on training data [0.08196132]
+RMSE on validation data [0.28226674]
+
+Drop = 250.0
+N = 40
+RMSE on training data [0.08459962]
+RMSE on validation data [0.2833714]
+
+Drop = 500.0
+N = 40
+RMSE on training data [0.08308639]
+RMSE on validation data [0.28332388]
+
+Drop = 750.0
+N = 40
+RMSE on training data [0.08304199]
+RMSE on validation data [0.2810768]
+
+Drop = 1000.0
+N = 40
+RMSE on training data [0.08097253]
+RMSE on validation data [0.28573644]
+
+Drop = 250.0
+N = 50
+RMSE on training data [0.08374751]
+RMSE on validation data [0.28502816]
+
+Drop = 500.0
+N = 50
+RMSE on training data [0.08599815]
+RMSE on validation data [0.28420573]
+
+Drop = 750.0
+N = 50
+RMSE on training data [0.08115746]
+RMSE on validation data [0.28162572]
+
+Drop = 1000.0
+N = 50
+RMSE on training data [0.08340548]
+RMSE on validation data [0.28602585]
+
+Drop = 250.0
+N = 60
+RMSE on training data [0.08123803]
+RMSE on validation data [0.28281075]
+
+Drop = 500.0
+N = 60
+RMSE on training data [0.08325573]
+RMSE on validation data [0.2810145]
+
+Drop = 750.0
+N = 60
+RMSE on training data [0.08237749]
+RMSE on validation data [0.2828463]
+
+Drop = 1000.0
+N = 60
+RMSE on training data [0.0823191]
+RMSE on validation data [0.28311905]
+
+Drop = 250.0
+N = 70
+RMSE on training data [0.08254711]
+RMSE on validation data [0.28468275]
+
+Drop = 500.0
+N = 70
+RMSE on training data [0.08080842]
+RMSE on validation data [0.28227973]
+
+Drop = 750.0
+N = 70
+RMSE on training data [0.08211127]
+RMSE on validation data [0.28144988]
+
+Drop = 1000.0
+N = 70
+RMSE on training data [0.08298815]
+RMSE on validation data [0.28656095]
+
+Drop = 250.0
+N = 80
+RMSE on training data [0.08227611]
+RMSE on validation data [0.2840301]
+
+Drop = 500.0
+N = 80
+RMSE on training data [0.08587239]
+RMSE on validation data [0.28347257]
+
+Drop = 750.0
+N = 80
+RMSE on training data [0.08183236]
+RMSE on validation data [0.28312203]
+
+Drop = 1000.0
+N = 80
+RMSE on training data [0.08098363]
+RMSE on validation data [0.28594145]
+
+Drop = 250.0
+N = 90
+RMSE on training data [0.08343575]
+RMSE on validation data [0.28498548]
+
+Drop = 500.0
+N = 90
+RMSE on training data [0.08321679]
+RMSE on validation data [0.28294203]
+
+Drop = 750.0
+N = 90
+RMSE on training data [0.08302469]
+RMSE on validation data [0.28405336]
+
+Drop = 1000.0
+N = 90
+RMSE on training data [0.0808418]
+RMSE on validation data [0.28458136]
+
+Drop = 0.1
+N = 250
+RMSE on training data [0.08874419]
+RMSE on validation data [0.29274905]
+
+Drop = 0.1
+N = 500
+RMSE on training data [0.10196153]
+RMSE on validation data [0.2942089]
+
+Drop = 0.1
+N = 750
+RMSE on training data [0.08823027]
+RMSE on validation data [0.29558095]
+
+Drop = 0.1
+N = 1000
+RMSE on training data [0.0894272]
+RMSE on validation data [0.29399672]
+
+Drop = 0.2
+N = 250
+RMSE on training data [0.10314335]
+RMSE on validation data [0.29843354]
+
+Drop = 0.2
+N = 500
+RMSE on training data [0.10851218]
+RMSE on validation data [0.29964286]
+
+Drop = 0.2
+N = 750
+RMSE on training data [0.09187555]
+RMSE on validation data [0.29230535]
+
+Drop = 0.2
+N = 1000
+RMSE on training data [0.09314327]
+RMSE on validation data [0.29393965]
+
+Drop = 0.3
+N = 250
+RMSE on training data [0.10527235]
+RMSE on validation data [0.29876387]
+
+Drop = 0.3
+N = 500
+RMSE on training data [0.10345804]
+RMSE on validation data [0.29700476]
+
+Drop = 0.3
+N = 750
+RMSE on training data [0.09945107]
+RMSE on validation data [0.30455685]
+
+Drop = 0.3
+N = 1000
+RMSE on training data [0.1063605]
+RMSE on validation data [0.3093379]
+
+Drop = 0.4
+N = 250
+RMSE on training data [0.10758244]
+RMSE on validation data [0.29754376]
+
+Drop = 0.4
+N = 500
+RMSE on training data [0.11826242]
+RMSE on validation data [0.30436796]
+
+Drop = 0.4
+N = 750
+RMSE on training data [0.10268569]
+RMSE on validation data [0.29458612]
+
+Drop = 0.4
+N = 1000
+RMSE on training data [0.10295803]
+RMSE on validation data [0.28812173]
+
+Drop = 0.5
+N = 250
+RMSE on training data [0.12217871]
+RMSE on validation data [0.3051008]
+
+Drop = 0.5
+N = 500
+RMSE on training data [0.10638376]
+RMSE on validation data [0.29277924]
+
+Drop = 0.5
+N = 750
+RMSE on training data [0.10610855]
+RMSE on validation data [0.29222202]
+
+Drop = 0.5
+N = 1000
+RMSE on training data [0.14017193]
+RMSE on validation data [0.30576578]
+
+Drop = 0.6
+N = 250
+RMSE on training data [0.15345192]
+RMSE on validation data [0.30261925]
+
+Drop = 0.6
+N = 500
+RMSE on training data [0.11939866]
+RMSE on validation data [0.30464295]
+
+Drop = 0.6
+N = 750
+RMSE on training data [0.13178253]
+RMSE on validation data [0.29448196]
+
+Drop = 0.6
+N = 1000
+RMSE on training data [0.11505834]
+RMSE on validation data [0.29070294]
+
+Drop = 0.7
+N = 250
+RMSE on training data [0.18654609]
+RMSE on validation data [0.3071698]
+
+Drop = 0.7
+N = 500
+RMSE on training data [0.18967594]
+RMSE on validation data [0.31602466]
+
+Drop = 0.7
+N = 750
+RMSE on training data [0.17442463]
+RMSE on validation data [0.30559883]
+
+Drop = 0.7
+N = 1000
+RMSE on training data [0.18902752]
+RMSE on validation data [0.3184276]
+
+Drop = 0.8
+N = 250
+RMSE on training data [0.28788528]
+RMSE on validation data [0.35529032]
+
+Drop = 0.8
+N = 500
+RMSE on training data [0.27768853]
+RMSE on validation data [0.35408092]
+
+Drop = 0.8
+N = 750
+RMSE on training data [0.24763028]
+RMSE on validation data [0.32912582]
+
+Drop = 0.8
+N = 1000
+RMSE on training data [0.2437577]
+RMSE on validation data [0.33560407]
+
+Drop = 0.9
+N = 250
+RMSE on training data [0.46737766]
+RMSE on validation data [0.45775455]
+
+Drop = 0.9
+N = 500
+RMSE on training data [0.43177763]
+RMSE on validation data [0.43223804]
+
+Drop = 0.9
+N = 750
+RMSE on training data [0.42818597]
+RMSE on validation data [0.43475467]
+
+Drop = 0.9
+N = 1000
+RMSE on training data [0.4228331]
+RMSE on validation data [0.42820618]
+
