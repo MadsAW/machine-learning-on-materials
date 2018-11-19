@@ -68,16 +68,16 @@ Y_v = np.array(energiesValidate)
 #Model
 drop=float(sys.argv[1])
 N=int(sys.argv[2])
-activation=sys.argv[3]
+act=sys.argv[3]
 
 model = Sequential()
     
 inputShape = np.shape(X)[1:]
 
 model.add(Dropout(drop, input_shape=inputShape))
-model.add(Dense(N, activation='activation'))
+model.add(Dense(N, activation=act))
 model.add(Dropout(drop))
-model.add(Dense(N//2, activation='activation'))
+model.add(Dense(N//2, activation=act))
 model.add(Dropout(drop))
 model.add(Dense(1))
 
@@ -93,7 +93,7 @@ print(model.summary())
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=40, batch_size=50, validation_data=(X_v,Y_v))
 
-with open(f"histories/hist_N_{N}_drop_{drop}_acti_{activation}", 'wb') as file:
+with open(f"histories/hist_N_{N}_drop_{drop}_acti_{act}", 'wb') as file:
     #pickle.dump(history.history, file)
     pickle.dump("abcd", file)
 
@@ -133,8 +133,8 @@ print("RMSE on validation data "+str(rmseValidate))
 
 
 
-outs = ["Activation = "+activation,"Drop = " + str(drop),"N = " + str(N),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
-outfile="rmse_drop_N.txt"
+outs = ["Activation = "+act,"Drop = " + str(drop),"N = " + str(N),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
+outfile="rmse_drop_N_act.txt"
 with open(outfile, "a+") as file:
     for line in outs:
         file.write(line)
