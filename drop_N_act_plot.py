@@ -94,8 +94,8 @@ print(model.summary())
 history=model.fit(X, Y, epochs=40, batch_size=50, validation_data=(X_v,Y_v))
 
 with open(f"histories/hist_N_{N}_drop_{drop}_acti_{act}", 'wb') as file:
-    #pickle.dump(history.history, file)
-    pickle.dump("abcd", file)
+    pickle.dump(history.history, file)
+    #pickle.dump("abcd", file)
 
 #Evaluate model efficiency
 scores = model.evaluate(X, Y)
