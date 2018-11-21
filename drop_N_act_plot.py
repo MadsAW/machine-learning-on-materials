@@ -91,7 +91,7 @@ print(model.summary())
 #Fit the model. This is where the hard computing happens. 
 #Number of epochs is number of iterations through dataset
 #Batch size is number of iterations before weights are changed.
-history=model.fit(X, Y, epochs=40, batch_size=50, validation_data=(X_v,Y_v))
+history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
 with open(f"histories/hist_N_{N}_drop_{drop}_acti_{act}", 'wb') as file:
     pickle.dump(history.history, file)

@@ -1,6 +1,6 @@
 #!/bin/bash
 ##Kør på gpu
-#BSUB -q gpuv100
+#BSUB -q gputitanxpascal
 ##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
 #BSUB -gpu "num=1:mode=exclusive_process"
 
@@ -34,7 +34,7 @@ for drop in 0.30 0.50 0.80
 do
 	for N in 500 1000
 	do
-		for act in softmax elu selu softplus softsign relu tanh sigmoid hard_sigmoid exponential linear
+		for act in elu selu softplus relu sigmoid hard_sigmoid exponential
 		do
 			python3 drop_N_act_plot.py $drop $N $act
 		done
