@@ -32,9 +32,9 @@ module load tensorflow/1.5-gpu-python-3.6.2
 
 for drop in 0.40 0.70
 do
-	for N in 5 10 25 50 100 250 500 100
+	for N in 5 10 25 50 100 250 500 1000
 	do
-		for act in relu sigmoid hard_sigmoid
+		for act in relu sigmoid
 		do
 			python3 drop_N_act_plot2.py $drop $N $act
 		done
