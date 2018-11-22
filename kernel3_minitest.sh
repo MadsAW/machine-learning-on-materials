@@ -20,6 +20,7 @@
 ##og stopper
 #BSUB -N
 
-
+module purge
+module load python3
 
 python3 kernel3_minitest.py

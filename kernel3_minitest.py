@@ -52,12 +52,12 @@ Y_v = np.array(energiesValidate)
 
 
 #%% Dummy data
-
+"""
 X=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]])
 Y=np.array(X.sum(axis=1))
 X_v=(X+1)[:-1]
 Y_v=(Y+3)[:-1]
-
+"""
 
 
 
@@ -144,11 +144,11 @@ print(f"cholesky prediction time validation: {time.time()-start}")
 rmse_val_c = np.sqrt(np.mean(np.square(Y_predict_val_c-Y_v)))
 
 
-print("rmse train {rmse_train}")
-print("rmse validation {rmse_val}")
-print("rmse validation cholesky {rmse_val_c}")
+print(f"rmse train {rmse_train}")
+print(f"rmse validation {rmse_val}")
+print(f"rmse validation cholesky {rmse_val_c}")
 
-
+print(X.shape)
 
 
 

@@ -1043,3 +1043,195 @@ N = 1000
 RMSE on training data [0.63093483]
 RMSE on validation data [0.60364074]
 
+Activation = relu
+Drop = 0.4
+N = 5
+RMSE on training data [0.5555077]
+RMSE on validation data [0.52648205]
+
+Activation = sigmoid
+Drop = 0.4
+N = 5
+RMSE on training data [0.5074718]
+RMSE on validation data [0.48757884]
+
+Activation = relu
+Drop = 0.4
+N = 10
+RMSE on training data [0.2151229]
+RMSE on validation data [0.32112718]
+
+Activation = sigmoid
+Drop = 0.4
+N = 10
+RMSE on training data [0.3626503]
+RMSE on validation data [0.38308895]
+
+Activation = relu
+Drop = 0.4
+N = 25
+RMSE on training data [0.13061811]
+RMSE on validation data [0.29170313]
+
+Activation = sigmoid
+Drop = 0.4
+N = 25
+RMSE on training data [0.31518722]
+RMSE on validation data [0.3561566]
+
+Activation = relu
+Drop = 0.4
+N = 50
+RMSE on training data [0.11980686]
+RMSE on validation data [0.29701728]
+
+Activation = sigmoid
+Drop = 0.4
+N = 50
+RMSE on training data [0.25380453]
+RMSE on validation data [0.3223018]
+
+Activation = relu
+Drop = 0.4
+N = 100
+RMSE on training data [0.10530157]
+RMSE on validation data [0.2933702]
+
+Activation = sigmoid
+Drop = 0.4
+N = 100
+RMSE on training data [0.2290413]
+RMSE on validation data [0.3114189]
+
+Activation = relu
+Drop = 0.4
+N = 250
+RMSE on training data [0.09912294]
+RMSE on validation data [0.29922697]
+
+Activation = sigmoid
+Drop = 0.4
+N = 250
+RMSE on training data [0.18362154]
+RMSE on validation data [0.29871732]
+
+Activation = relu
+Drop = 0.4
+N = 500
+RMSE on training data [0.10346682]
+RMSE on validation data [0.29371268]
+
+Activation = sigmoid
+Drop = 0.4
+N = 500
+RMSE on training data [0.16721705]
+RMSE on validation data [0.29708475]
+
+Activation = relu
+Drop = 0.4
+N = 1000
+RMSE on training data [0.12381437]
+RMSE on validation data [0.30296233]
+
+Activation = sigmoid
+Drop = 0.4
+N = 1000
+RMSE on training data [0.1545143]
+RMSE on validation data [0.2990997]
+
+Activation = relu
+Drop = 0.7
+N = 5
+RMSE on training data [0.5438631]
+RMSE on validation data [0.51623297]
+
+Activation = sigmoid
+Drop = 0.7
+N = 5
+RMSE on training data [0.5554125]
+RMSE on validation data [0.5263868]
+
+Activation = relu
+Drop = 0.7
+N = 10
+RMSE on training data [0.46005228]
+RMSE on validation data [0.4519504]
+
+Activation = sigmoid
+Drop = 0.7
+N = 10
+RMSE on training data [0.55481386]
+RMSE on validation data [0.5260216]
+
+Activation = relu
+Drop = 0.7
+N = 25
+RMSE on training data [0.29721305]
+RMSE on validation data [0.3632626]
+
+Activation = sigmoid
+Drop = 0.7
+N = 25
+RMSE on training data [0.55531925]
+RMSE on validation data [0.5263937]
+
+Activation = relu
+Drop = 0.7
+N = 50
+RMSE on training data [0.20529534]
+RMSE on validation data [0.3154307]
+
+Activation = sigmoid
+Drop = 0.7
+N = 50
+RMSE on training data [0.55305314]
+RMSE on validation data [0.5244673]
+
+Activation = relu
+Drop = 0.7
+N = 100
+RMSE on training data [0.18545686]
+RMSE on validation data [0.31010777]
+
+Activation = sigmoid
+Drop = 0.7
+N = 100
+RMSE on training data [0.49105358]
+RMSE on validation data [0.47883478]
+
+Activation = relu
+Drop = 0.7
+N = 250
+RMSE on training data [0.16098635]
+RMSE on validation data [0.29650033]
+
+Activation = sigmoid
+Drop = 0.7
+N = 250
+RMSE on training data [0.40023482]
+RMSE on validation data [0.4208978]
+
+Activation = relu
+Drop = 0.7
+N = 500
+RMSE on training data [0.15648304]
+RMSE on validation data [0.30456465]
+
+Activation = sigmoid
+Drop = 0.7
+N = 500
+RMSE on training data [0.3577998]
+RMSE on validation data [0.3919729]
+
+Activation = relu
+Drop = 0.7
+N = 1000
+RMSE on training data [0.14869523]
+RMSE on validation data [0.2916977]
+
+Activation = sigmoid
+Drop = 0.7
+N = 1000
+RMSE on training data [0.35491064]
+RMSE on validation data [0.39961243]
+
