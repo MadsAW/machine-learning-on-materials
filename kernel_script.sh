@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 kernel_script
+python3 kernel_script.py

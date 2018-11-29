@@ -1,0 +1,777 @@
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09530057]
+RMSE on validation data [0.29304585]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.1271546]
+RMSE on validation data [0.29939422]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.16446331]
+RMSE on validation data [0.31108427]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.4242234]
+RMSE on validation data [0.4219907]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55551416]
+RMSE on validation data [0.52650905]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.23401867]
+RMSE on validation data [0.30581883]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.254662]
+RMSE on validation data [0.3178437]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.31634742]
+RMSE on validation data [0.35421416]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.5533842]
+RMSE on validation data [0.52468735]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55551046]
+RMSE on validation data [0.5264976]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09185497]
+RMSE on validation data [0.30015168]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.09445221]
+RMSE on validation data [0.29621622]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.11401417]
+RMSE on validation data [0.30064633]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.10577367]
+RMSE on validation data [0.28078067]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.12824398]
+RMSE on validation data [0.28654882]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.17784266]
+RMSE on validation data [0.29726097]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.15456955]
+RMSE on validation data [0.29336533]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.15036416]
+RMSE on validation data [0.28800544]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.16757695]
+RMSE on validation data [0.29018733]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55552727]
+RMSE on validation data [0.5264619]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09139152]
+RMSE on validation data [0.3032723]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.09671479]
+RMSE on validation data [0.2902797]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.10390256]
+RMSE on validation data [0.2884057]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.09671707]
+RMSE on validation data [0.28532672]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.09722437]
+RMSE on validation data [0.30667993]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.15317279]
+RMSE on validation data [0.2942657]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.14494416]
+RMSE on validation data [0.30154207]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.13743274]
+RMSE on validation data [0.29182592]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.15952972]
+RMSE on validation data [0.2922306]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.5556218]
+RMSE on validation data [0.5265147]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.12674654]
+RMSE on validation data [0.30278713]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.1772027]
+RMSE on validation data [0.31053728]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.26991642]
+RMSE on validation data [0.3558114]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.3735848]
+RMSE on validation data [0.40324417]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.5555126]
+RMSE on validation data [0.5264684]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.33471286]
+RMSE on validation data [0.35959053]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.37682575]
+RMSE on validation data [0.3963063]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.5542043]
+RMSE on validation data [0.5253945]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.5554754]
+RMSE on validation data [0.5264457]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.5555142]
+RMSE on validation data [0.5265104]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.10095098]
+RMSE on validation data [0.30354914]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.13497747]
+RMSE on validation data [0.29926085]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.11743636]
+RMSE on validation data [0.28487474]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.13236335]
+RMSE on validation data [0.29438427]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.22641212]
+RMSE on validation data [0.3227578]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.2442104]
+RMSE on validation data [0.30992723]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.231812]
+RMSE on validation data [0.32063374]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.24648142]
+RMSE on validation data [0.3201401]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.32207394]
+RMSE on validation data [0.36155325]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55551237]
+RMSE on validation data [0.5265045]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.11835044]
+RMSE on validation data [0.30675426]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.10021409]
+RMSE on validation data [0.2934141]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.11539848]
+RMSE on validation data [0.28850153]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.17305434]
+RMSE on validation data [0.30043298]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.24383529]
+RMSE on validation data [0.32185158]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.3423247]
+RMSE on validation data [0.3900703]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.25678706]
+RMSE on validation data [0.31374124]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.25911272]
+RMSE on validation data [0.3158015]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.33014512]
+RMSE on validation data [0.35905188]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.36024237]
+RMSE on validation data [0.38856938]
+
+Activation = sigmoid
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.5555141]
+RMSE on validation data [0.52646637]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09969959]
+RMSE on validation data [0.3013079]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.09849276]
+RMSE on validation data [0.28927055]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.09611202]
+RMSE on validation data [0.28544548]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.12257394]
+RMSE on validation data [0.29661828]
+
+Activation = relu
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.12370599]
+RMSE on validation data [0.28189573]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.17249174]
+RMSE on validation data [0.29337594]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.15103626]
+RMSE on validation data [0.29233277]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.16275874]
+RMSE on validation data [0.29399508]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.18540584]
+RMSE on validation data [0.29865772]
+
+Activation = sigmoid
+Drop = 0.3
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.20770776]
+RMSE on validation data [0.28956473]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09664106]
+RMSE on validation data [0.3019045]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.097288]
+RMSE on validation data [0.29066315]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.09060254]
+RMSE on validation data [0.28906393]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.09502669]
+RMSE on validation data [0.29256824]
+
+Activation = relu
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.09174373]
+RMSE on validation data [0.29235408]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.15569644]
+RMSE on validation data [0.2982214]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.13299623]
+RMSE on validation data [0.29461935]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.12912214]
+RMSE on validation data [0.28893092]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.19727926]
+RMSE on validation data [0.31671843]
+
+Activation = sigmoid
+Drop = 0.3
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55564606]
+RMSE on validation data [0.52672315]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.13402642]
+RMSE on validation data [0.30087566]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.18047856]
+RMSE on validation data [0.30213168]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.25081542]
+RMSE on validation data [0.33849296]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.37713185]
+RMSE on validation data [0.40940905]
+
+Activation = relu
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55550843]
+RMSE on validation data [0.5264894]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.30087554]
+RMSE on validation data [0.33754432]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.3688452]
+RMSE on validation data [0.3893423]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.5121948]
+RMSE on validation data [0.49143964]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.5555074]
+RMSE on validation data [0.52648646]
+
+Activation = sigmoid
+Drop = 0.5
+N = 25
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55552584]
+RMSE on validation data [0.5264618]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.10687222]
+RMSE on validation data [0.3034942]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.13778165]
+RMSE on validation data [0.3006196]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.1329834]
+RMSE on validation data [0.29630336]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.1604587]
+RMSE on validation data [0.30126357]
+
+Activation = relu
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.20265391]
+RMSE on validation data [0.3150972]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.23847613]
+RMSE on validation data [0.30788147]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.23577055]
+RMSE on validation data [0.3178313]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.23601408]
+RMSE on validation data [0.31399757]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.26118848]
+RMSE on validation data [0.31108677]
+
+Activation = sigmoid
+Drop = 0.5
+N = 250
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55552644]
+RMSE on validation data [0.5264657]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.10557286]
+RMSE on validation data [0.3048915]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.10702742]
+RMSE on validation data [0.28666908]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.11271705]
+RMSE on validation data [0.28040057]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.11708262]
+RMSE on validation data [0.2951656]
+
+Activation = relu
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.17232524]
+RMSE on validation data [0.3027106]
+
+Activation = sigmoid
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.21242893]
+RMSE on validation data [0.30481035]
+
+Activation = sigmoid
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.17874019]
+RMSE on validation data [0.29818308]
+
+Activation = sigmoid
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.20764343]
+RMSE on validation data [0.31209314]
+
+Activation = sigmoid
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 4
+RMSE on training data [0.328451]
+RMSE on validation data [0.36821756]
+
+Activation = sigmoid
+Drop = 0.5
+N = 1000
+Number of hidden layers (width halves with every layer) = 5
+RMSE on training data [0.55551875]
+RMSE on validation data [0.5264658]
+
