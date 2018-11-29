@@ -69,7 +69,7 @@ Y_v = np.array(energiesValidate)
 drop=float(sys.argv[1])
 N=int(sys.argv[2])
 act=sys.argv[3]
-n_hidden=sys.argv[4]
+n_hidden=int(sys.argv[4])
 
 model = Sequential()
     
