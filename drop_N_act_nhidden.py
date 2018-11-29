@@ -99,8 +99,7 @@ print(model.summary())
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
 with open(f"histories func of depth/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
-    pickle.dump(5, file)
-    #pickle.dump(history.history, file)
+    pickle.dump(history.history, file)
     
 
 

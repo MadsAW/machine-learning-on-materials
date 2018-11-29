@@ -10,8 +10,9 @@ Created on Thu Nov 22 16:19:33 2018
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
 import numpy as np
-import time
+#import time
 import numexpr as ne
+train_bool = True
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
 #%% Load training data
@@ -72,20 +73,25 @@ def subt(A,B):
 
 
 #Linear
-def lin(A, B, c):
-    return np.tensordot(A,B,axes=([1],[1]))+c
+def lin(A, B, param):
+    # param = c
+    return np.tensordot(A,B,axes=([1],[1]))+param
 
-#Polynomial
-def pol(A, B, c1, c2, d):
-    return np.power(c1*np.tensordot(A,B,axes=([1],[1]))+c2,d)
+#Polynomial, c1 must be positive, d must be a positve integer
+def pol(A, B, param):
+    # param = (c1, c2, d)
+    # np.power(c1*np.tensordot(A,B,axes=([1],[1]))+c2,d)
+    return np.power(param[0]*np.tensordot(A,B,axes=([1],[1]))+param[1],param[2])
 
-#Gaussian
-def gauss(A, B, sigma):
-    return np.exp(   -np.square(np.linalg.norm(subt(A,B), axis=2)) / (2*(sigma**2))    )
+#Gaussian, sigma must be positive
+def gauss(A, B, param):
+    # param = sigma
+    return np.exp(   -np.square(np.linalg.norm(subt(A,B), axis=2)) / (2*(param**2))    )
 
-#Laplacian
-def laplace(A, B, sigma):
-    return np.exp(   -(np.linalg.norm(subt(A,B), axis=2)) /  sigma    )
+#Laplacian, sigma must be positive
+def laplace(A, B, param):
+    # param = sigma
+    return np.exp(   -(np.linalg.norm(subt(A,B), axis=2)) /  param   )
 
 
 
@@ -117,24 +123,41 @@ print(K-laplace(X,X,3))
 
 
 #%% 
-
+"""
 func=lin
 c=2
+param = (c)
 lam=3
+"""
 
-K=func(X,X,c)
-KAP_train=K
-KAP_val=func(X_v,X,c)
+def calc(func, param, lam, train_bool):
+    K=func(X,X,param)
+    KAP_train=K
+    KAP_val=func(X_v,X,param)
+    
+    I = np.identity(len(X))
+    
+    Y_predict_train = KAP_train @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
+    rmse_train = np.sqrt(np.mean(np.square(Y_predict_train-Y)))
+    
+    print(func.__name__)
+    print("param:" + str(param))
+    print("lambda:" + str(lam))
+    print(f"rmse train {rmse_train}")
+    
+    if train_bool != True:
+        Y_predict_val = KAP_val @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
+        rmse_val = np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
+        print(f"rmse validation {rmse_val}")
+        return rmse_train, rmse_val
 
-I = np.identity(len(X))
+    return rmse_train, "training"
+    
+    
+
+    
 
 
-Y_predict_train = KAP_train @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
-rmse_train = np.sqrt(np.mean(np.square(Y_predict_train-Y)))
-
-
-Y_predict_val = KAP_val @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
-rmse_val = np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
 
 """
 start = time.time()
@@ -144,10 +167,6 @@ print(f"cholesky prediction time validation: {time.time()-start}")
 rmse_val_c = np.sqrt(np.mean(np.square(Y_predict_val_c-Y_v)))
 """
 
-print(f"rmse train {rmse_train}")
-print(f"rmse validation {rmse_val}")
-
-print(X.shape)
 
 
 
