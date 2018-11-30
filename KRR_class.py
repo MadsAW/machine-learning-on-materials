@@ -63,70 +63,11 @@ class KernelRidgeRegression:
 
 
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Thu Nov 22 16:19:33 2018
-
-@author: Simon
-"""
-
-
-from createLargerFeatureMatrix import simpleLargeMatrix
-import pickle
-import time
-
-
-path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
-#%% Load training data
-featureMatrixFile = "train_featureMatrix.npy"
-atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
-energiesFile = "train_pickledEnergies.txt"
-
-largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
-
-
-with open(path+energiesFile, "rb") as pickleFile:
-    energies = pickle.load(pickleFile)
-
-largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
-
-X = largeFeatureMatrix
-Y = np.array(energies)
-
-
-
-#%% Load validation data
-featureMatrixFileValidate = "validate_featureMatrix.npy"
-atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
-energiesFileValidate = "validate_pickledEnergies.txt"
-
-largeFeatureMatrixValidate, mappedAtomicNumberValidate = simpleLargeMatrix(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)
-
-
-with open(path+energiesFileValidate, "rb") as pickleFile:
-    energiesValidate = pickle.load(pickleFile)
-
-largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
-
-X_v = largeFeatureMatrixValidate
-Y_v = np.array(energiesValidate)
-
-
-
-
-#%% Dummy data
-"""
-X=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]])
-Y=np.array(X.sum(axis=1))
-X_v=(X+1)[:-1]
-Y_v=(Y+3)[:-1]
-"""
-
-
 KRR=KernelRidgeRegression("gauss")
 KRR.set_var(1,1,1,2)
 KRR.fit(X,Y)
 Y_predict_val=KRR.predict(X_v)
 rmse_class=np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
 print(rmse_class)
+"""
