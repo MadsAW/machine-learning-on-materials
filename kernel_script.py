@@ -54,8 +54,8 @@ params = (c1_list, c2_list, d_list)
 
 out_matrix_pol = np.zeros((len(params[0]), len(params[1]), len(params[2]), len(lam_list)))
 for p0 in range(len(params[0])):
-    for p1 in range(len(params[0])):
-        for p2 in range(len(params[0])):
+    for p1 in range(len(params[1])):
+        for p2 in range(len(params[2])):
             for l in range(len(lam_list)):
                 tup = (params[0][p0],params[1][p1],params[2][p2])
                 try:
