@@ -28,10 +28,10 @@ x.reverse()
 c2_list = x + c2_list
 
 
-d_list = [2**n for n in range(0,12)]
+d_list = [2**n for n in range(0,8)]
 
 
-sigma_list = [2**n for n in range(-5,8)]
+sigma_list = [2**n for n in range(-4,8)]
 
 train_bool = True
 #Linear
