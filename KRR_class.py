@@ -10,6 +10,7 @@ class KernelRidgeRegression:
 
     - type, specifies the type can be one of ["linear","laplace","gauss","poly"]
         specifying the kernel space. Defaults to "linear".
+    - lambd, the regularization constant
     - sigma, sets sigma for laplacian or gauss, note overwrites c1.
     - c1, first koefficent for linear and poly overwrites sigma.
     - c2, second koefficent
