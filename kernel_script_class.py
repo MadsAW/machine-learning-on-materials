@@ -60,11 +60,11 @@ Y_v = np.array(energiesValidate)
 
 
 #Define parameters
-lam_list = [10**n for n in range(-2,2)]
+lam_list = [10**n for n in range(-2,5)]
 
 
-c_list = [10**n for n in range(-2,2)]
-x = [10**n for n in range(-2,2)]
+c_list = [10**n for n in range(-2,5)]
+x = [10**n for n in range(-2,5)]
 x.reverse()
 c_list = x + c_list
 
