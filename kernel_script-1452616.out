@@ -2314,6 +2314,8 @@ lin
 param:2048
 lambda:2048
 rmse train 0.554158639413171
+
+
 pol
 param:(0.03125, -2048, 1)
 lambda:0.03125
@@ -2858,6 +2860,7 @@ pol
 param:(0.03125, -2048, 2048)
 lambda:2048
 rmse train nan
+
 Traceback (most recent call last):
   File "kernel_script.py", line 60, in <module>
     tup = (params[0][p0],params[1][p1],params[2][p2])

@@ -11,7 +11,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
-os.chdir("histories")
+os.chdir("histories func of N")
 
 files = [file for file in os.listdir() if file!='plots' and file!='.DS_Store']
 data={"relu":{0.4:[[],[],[]], 0.7:[[],[],[]]},"sigmoid":{0.4:[[],[],[]], 0.7:[[],[],[]]}}
@@ -49,6 +49,7 @@ sigmoid_07=sigmoid_07[:,np.argsort(sigmoid_07[0])].tolist()
 
 data_list=[relu_04,relu_07,sigmoid_04,sigmoid_07]
 title_list=['Relu, dropout 40%','Relu, dropout 70%','Sigmoid, dropout 40%','Sigmoid, dropout 70%']
+name_list=['Relu_drop_0.4','Relu_drop_0.7','Sigmoid_drop_0.4','Sigmoid_drop_0.7']
 
 for i in range(len(data_list)):
     plt.plot(data_list[i][0],data_list[i][1], 'b', label='train')
@@ -59,6 +60,7 @@ for i in range(len(data_list)):
     plt.ylabel('Root mean squared error')
     plt.ylim(0.1,0.6)
     
+    plt.savefig(f'plots/'+name_list[i]+'.png')
     plt.show()
     
     

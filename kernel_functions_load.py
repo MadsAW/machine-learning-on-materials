@@ -31,7 +31,8 @@ largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 X = largeFeatureMatrix
 Y = np.array(energies)
 
-
+#X=X[:100]
+#Y=Y[:100]
 
 #%% Load validation data
 featureMatrixFileValidate = "validate_featureMatrix.npy"
@@ -49,7 +50,8 @@ largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
 
-
+#X_v=X_v[:20]
+#Y_v=Y_v[:20]
 
 
 #%% Dummy data
@@ -155,7 +157,7 @@ def calc(func, param, lam, train_bool):
     
     
 
-    
+print(calc(gauss,1,1,False))
 
 
 
