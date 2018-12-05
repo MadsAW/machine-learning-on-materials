@@ -1,6 +1,8 @@
 import numpy as np
 import numexpr as ne
-
+# Heat of formation vs heat of formation predicted point plot
+# fit x to sin(x)
+# or use cos
 class KernelRidgeRegression:
     """KernelRidgeRegression
     This class creates a kernel ridge regression model that can be used for
@@ -13,6 +15,10 @@ class KernelRidgeRegression:
     - c2, second koefficent
     - d, third koeeficent only used in poly
 
+    Note all values default to 1
+
+
+    ADD DIMENSION CHECK
     """
     def __init__(self, **kwargs):
         self.lambd = kwargs.get("lambd",1)
@@ -32,6 +38,7 @@ class KernelRidgeRegression:
                 laplace, gauss, poly, defaulting to linear model")
         self.weigths = []
         self.fitted = False
+        self.rmse = None
 
     def _subt(self, A, B):
         A_3D = A[:, np.newaxis]
@@ -47,11 +54,32 @@ class KernelRidgeRegression:
 
     #Gaussian
     def _gauss(self, A, B, sigma, *args):
-        return np.exp(   -np.square(np.linalg.norm(self._subt(A,B), axis=2)) / (2*(sigma**2))    )
+        K=np.zeros((len(A),len(B)))
+        for i in range(0, len(A)):
+            for j in range(0, len(B)):
+                K[i,j]=np.exp(-np.square(np.linalg.norm(A[i]-B[j]))/(2*(sigma**2)))
+        return K
+        #A=A[:,np.newaxis]
+        #return np.exp(   -np.square(np.linalg.norm(A-B, axis=2)) / (2*(sigma**2))    )
+        #return np.exp(   -np.square(np.linalg.norm(self._subt(A,B), axis=2)) / (2*(sigma**2))    )
 
     #Laplacian
     def _laplace(self, A, B, sigma, *args):
-        return np.exp(   -(np.linalg.norm(self._subt(A,B), axis=1)) /  sigma    )
+        K=np.zeros((len(A),len(B)))
+        for i in range(0, len(A)):
+            for j in range(0, len(B)):
+                K[i,j]=np.exp(-np.linalg.norm(A[i]-B[j])/(sigma))
+        return K
+        #return np.exp(   -(np.linalg.norm(self._subt(A,B), axis=2)) /  sigma    )
+
+    def _clear(self):
+        self.weigths = []
+        self.fitted = False
+        self.rmse = None
+
+    def _check_dim(self, A, B):
+        if(A.shape[0]!=B.shape[0]):
+            raise ValueError("Dimension do not match")
 
     def set_var(self,**kwargs):
         self.lambd = kwargs.get("lambd",1)
@@ -61,7 +89,7 @@ class KernelRidgeRegression:
             self.c1 = kwargs.get("sigma",1)
         self.c2 = kwargs.get("c2",1)
         self.d = kwargs.get("d",1)
-        self.fitted = False
+        self._clear()
     def set_type(self, type):
         type = kwargs.get("type","linear")
         if type in ["linear","laplace","gauss","poly"]:
@@ -70,9 +98,10 @@ class KernelRidgeRegression:
             self.type="linear"
             print("Illegal type assignment, note allowed types are linear, \
                 laplace, gauss, poly, defaulting to linear model")
-        self.fitted = False
+        self._clear()
     def fit(self, X, Y):
         if (self.fitted == False):
+            self._check_dim(X,Y)
             self.X = X
             self.Y = Y
             K = eval('self._'+self.type+'(self.X, self.X, self.c1, self.c2, self.d)')
@@ -81,12 +110,16 @@ class KernelRidgeRegression:
             self.fitted = True
         else:
             print("already fitted")
-    def predict(self, Xp):
+    def predict(self, Xp, Y=[]):
         if (self.fitted == False):
             print("Not fitted yet")
             return
         Kappa = eval('self._'+self.type+'(Xp, self.X, self.c1, self.c2, self.d)')
-        return Kappa @ self.weights @ self.Y
+        Y_predicted=Kappa @ self.weights @ self.Y
+        if (Y!=[]):
+            self._check_dim(Y_predicted.T,Y)
+            self.rmse=np.sqrt(np.mean(np.square(Y_predicted-Y)))
+        return Y_predicted
 
 
 

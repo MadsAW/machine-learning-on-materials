@@ -48,15 +48,15 @@ X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
 
 
-
+"""
 
 #%% Dummy data
 X=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12],[13,14,15]])
 Y=np.array(X.sum(axis=1))
 X_v=(X+1)[:-1]
 Y_v=(Y+3)[:-1]
-
-
+"""
+print(X_v.shape,X.shape)
 
 
 #%% Define kernels
@@ -114,7 +114,7 @@ print(K-laplace(X,X,3))
 """
 
 
-#%% 
+#%%
 
 
 c=1
@@ -208,13 +208,3 @@ rmse_val = np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
 
 print(rmse_train)
 print(rmse_val)
-
-
-
-
-
-
-
-
-
-

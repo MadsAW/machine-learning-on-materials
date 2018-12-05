@@ -10,6 +10,18 @@ energiesFile = "train_pickledEnergies.txt"
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
+
+with open(path+energiesFile, "rb") as pickleFile:
+    energies = pickle.load(pickleFile)
+
+#Flatten description
+largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
+
+X = largeFeatureMatrix
+Y = np.array(energies)
+
+
+
 #%% Load validation data
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
@@ -21,19 +33,21 @@ largeFeatureMatrixValidate, mappedAtomicNumberValidate = simpleLargeMatrix(path,
 with open(path+energiesFileValidate, "rb") as pickleFile:
     energiesValidate = pickle.load(pickleFile)
 
+#Flatten description
+largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
+
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
 
-with open(path+energiesFile, "rb") as pickleFile:
-    energies = pickle.load(pickleFile)
 
-largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 
-X = largeFeatureMatrix
-Y = np.array(energies)
-
-KRR=KernelRidgeRegression(type="gauss")
-KRR.fit(X[:,1500],Y)
-Y_predict_val=KRR.predict(X_v)
+import time
+start=time.time()
+KRR=KernelRidgeRegression(type="laplace")
+KRR.fit(X,Y)
+Y_predict_val=KRR.predict(X_v,Y_v)
+print(KRR.rmse)
 rmse_class=np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
 print(rmse_class)
+end=time.time()
+print(end-start)
