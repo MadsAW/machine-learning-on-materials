@@ -11,6 +11,7 @@ from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import sys
+import numpy
 
 
 
@@ -121,13 +122,28 @@ if method=='polynomial':
                 for l in range(len(lam_list)):
                     print(f'c1={c1_list[c1]}, c2={c2_list[c2]}, d={d_list[d]}, lambda={lam_list[l]}')
                     
-                    KRR=KernelRidgeRegression(type="poly")
-                    KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
-                    KRR.fit(X,Y)
-                    Y_predict_train=KRR.predict(X,Y)
-                    
-                    out=KRR.rmse
-                    print(out)
+                    try:
+                        KRR=KernelRidgeRegression(type="poly")
+                        KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
+                        KRR.fit(X,Y)
+                        Y_predict_train=KRR.predict(X,Y)
+                        out=KRR.rmse
+                        print(out)
+                    except numpy.linalg.linalg.LinAlgError:
+                        out=-1
+                        print('singular matrix error')
+                        try:
+                            print(f'c1={c1_list[c1]*1.05}, c2={c2_list[c2]*1.05}, d={d_list[d]*1.05}, lambda={lam_list[l]*1.05}')
+                            KRR=KernelRidgeRegression(type="poly")
+                            KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
+                            KRR.fit(X,Y)
+                            Y_predict_train=KRR.predict(X,Y)
+                            out=KRR.rmse
+                            print(out)
+                        except:
+                            pass
+                    except:
+                        pass
                     
                     out_matrix_pol[c1,c2,d,l]=out
             
