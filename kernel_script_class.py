@@ -41,6 +41,7 @@ X = largeFeatureMatrix
 Y = np.array(energies)
 
 #%% Load validation data
+"""
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
 energiesFileValidate = "validate_pickledEnergies.txt"
@@ -55,33 +56,8 @@ largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
+"""
 
-#%%
-
-
-#Define parameters
-lam_list = [10**n for n in range(-2,5)]
-
-
-c_list = [10**n for n in range(-2,5)]
-x = [10**n for n in range(-2,5)]
-x.reverse()
-c_list = x + c_list
-
-
-c1_list = [10**n for n in range(-2,2)]
-
-
-c2_list = [10**n for n in range(-2,2)]
-x = [10**n for n in range(-2,2)]
-x.reverse()
-c2_list = x + c2_list
-
-
-d_list = [10**n for n in range(-2,2)]
-
-
-sigma_list = [10**n for n in range(-2,2)]
 
 
 #Kernel matrices output folder
@@ -89,6 +65,15 @@ folder = "kernel pickles/"
 
 #%%
 out=1
+
+
+
+lam_list = [10**n for n in range(-3,5)]
+
+c_list = [10**n for n in range(-3,5)]
+x = [10**n for n in range(-3,5)]
+x.reverse()
+c_list = x + c_list
 
 if method=='linear':
     out_matrix_lin = np.zeros((len(c_list), len(lam_list)))
@@ -99,7 +84,7 @@ if method=='linear':
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=c_list[c], lamd=lam_list[l])
             KRR.fit(X,Y)
-            Y_predict_val=KRR.predict(X_v,Y_v)
+            Y_predict_train=KRR.predict(X,Y)
             
             out=KRR.rmse
             print(out)
@@ -111,7 +96,24 @@ if method=='linear':
         pickle.dump(out_matrix_lin, file)
 
 
-elif method=='polynomial':
+
+
+
+
+
+
+lam_list = [10**n for n in range(-3,3)]
+
+c1_list = [10**n for n in range(-3,3)]
+
+c2_list = [10**n for n in range(-2,3)]
+x = [10**n for n in range(-2,3)]
+x.reverse()
+c2_list = x + c2_list
+
+d_list = [10**n for n in range(-3,3)]
+
+if method=='polynomial':
     out_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
     for c1 in range(len(c1_list)):
         for c2 in range(len(c2_list)):
@@ -122,7 +124,7 @@ elif method=='polynomial':
                     KRR=KernelRidgeRegression(type="poly")
                     KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
                     KRR.fit(X,Y)
-                    Y_predict_val=KRR.predict(X_v,Y_v)
+                    Y_predict_train=KRR.predict(X,Y)
                     
                     out=KRR.rmse
                     print(out)
@@ -133,8 +135,16 @@ elif method=='polynomial':
         pickle.dump(out_matrix_pol, file)
 
 
+
+
+
+
+
+lam_list = [10**n for n in range(-3,3)]
+
+sigma_list = [10**n for n in range(-3,3)]
     
-elif method=='gaussian':
+if method=='gaussian':
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
@@ -143,7 +153,7 @@ elif method=='gaussian':
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y)
-            Y_predict_val=KRR.predict(X_v,Y_v)
+            Y_predict_train=KRR.predict(X,Y)
             
             out=KRR.rmse
             print(out)
@@ -158,7 +168,14 @@ elif method=='gaussian':
 
 
 
-elif method=='laplacian':
+
+
+
+lam_list = [10**n for n in range(-3,3)]
+
+sigma_list = [10**n for n in range(-3,3)]
+
+if method=='laplacian':
     out_matrix_laplace = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
@@ -167,7 +184,7 @@ elif method=='laplacian':
             KRR=KernelRidgeRegression(type="laplace")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y)
-            Y_predict_val=KRR.predict(X_v,Y_v)
+            Y_predict_train=KRR.predict(X,Y)
             
             out=KRR.rmse
             print(out)
