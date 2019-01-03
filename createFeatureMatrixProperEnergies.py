@@ -61,9 +61,9 @@ Som input tager prdf følgende: Atoms, rs, dr, rmax
 """
 #%%
 
-rmax = 6.0
+rmax = 8.0
 dr = 0.25
-rs = np.arange(0, rmax - dr, dr)
+rs = np.arange(0, rmax - dr, dr/2)
 
 
 x=np.array(prdf(atomsList[0],rs,dr,rmax)[0])
