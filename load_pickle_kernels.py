@@ -17,7 +17,7 @@ folder = 'kernel pickles/'
 #%%
 #Linear
 c_list = [10**n for n in range(-2,5)]
-x = [10**n for n in range(-2,5)]
+x = [-10**n for n in range(-2,5)]
 x.reverse()
 c_list = x + c_list
 

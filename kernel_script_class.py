@@ -72,7 +72,7 @@ out=1
 lam_list = [10**n for n in range(-3,5)]
 
 c_list = [10**n for n in range(-3,5)]
-x = [10**n for n in range(-3,5)]
+x = [-10**n for n in range(-3,5)]
 x.reverse()
 c_list = x + c_list
 
@@ -108,7 +108,7 @@ lam_list = [10**n for n in range(-3,3)]
 c1_list = [10**n for n in range(-3,3)]
 
 c2_list = [10**n for n in range(-2,3)]
-x = [10**n for n in range(-2,3)]
+x = [-10**n for n in range(-2,3)]
 x.reverse()
 c2_list = x + c2_list
 
