@@ -8,6 +8,7 @@ Created on Wed Sep 26 10:46:25 2018
 import numpy as np
 import pickle
 import pandas as pd
+from getGroupAndPeriod import getGroupAndPeriod
 
 def simpleLargeMatrix(path,featureMatrixFile,atomicSymbolsListFile):
     
@@ -65,10 +66,42 @@ def simpleLargeMatrix(path,featureMatrixFile,atomicSymbolsListFile):
         
         
     return newFeatureMatrix, mappedAtomicNumber
+
+
+
+def no_redundancy_matrix(path,featureMatrixFile,atomicSymbolsListFile):
     
-    
-    
+    featureMatrix = np.load(path+featureMatrixFile)
         
+    with open(path+atomicSymbolsListFile, "rb") as pickleFile:
+        atomicSymbolsList = pickle.load(pickleFile)
+    
+    
+    atomicSymbolsAndNumbers=np.array(pd.read_csv("atomicSymbolsAndNumbers.csv", header=None, sep=","))
+    def getAtomicNumbers(atomicSymbols):
+        out=[]
+        for elem in atomicSymbols:
+            for i in atomicSymbolsAndNumbers:
+                if elem == i[1]:
+                    out.append(i[0])
+        
+        return(out)
+    
+    featureMatrix.shape = (featureMatrix.shape[0], -1)
+    newFeatureMatrix=[]
+    
+    for observation in range(len(atomicSymbolsList)):
+        element1 = getGroupAndPeriod(atomicSymbolsList[observation][0])
+        element2 = getGroupAndPeriod(atomicSymbolsList[observation][1])
+        
+        
+        newFeatureMatrix.append(np.hstack([element1,element2,featureMatrix[observation]]))
+        
+    return np.array(newFeatureMatrix)
+    
+    
+
+
         
         
         
