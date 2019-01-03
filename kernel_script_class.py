@@ -71,8 +71,8 @@ out=1
 
 lam_list = [10**n for n in range(-3,5)]
 
-c_list = [10**n for n in range(-3,5)]
-x = [-10**n for n in range(-3,5)]
+c_list = [10**n for n in range(-1,7)]
+x = [-10**n for n in range(-1,7)]
 x.reverse()
 c_list = x + c_list
 
@@ -94,7 +94,7 @@ if method=='linear':
     
     
     with open(folder + "out_matrix_lin", 'wb') as file:
-        pickle.dump(out_matrix_lin, file)
+        pickle.dump([lam_list, c_list, out_matrix_lin], file)
 
 
 
@@ -148,7 +148,7 @@ if method=='polynomial':
                     out_matrix_pol[c1,c2,d,l]=out
             
     with open(folder + "out_matrix_pol", 'wb') as file:
-        pickle.dump(out_matrix_pol, file)
+        pickle.dump([lam_list, c1_list, c2_list, d_list, out_matrix_pol], file)
 
 
 
@@ -179,7 +179,7 @@ if method=='gaussian':
     
     
     with open(folder + "out_matrix_gauss", 'wb') as file:
-        pickle.dump(out_matrix_gauss, file)
+        pickle.dump([lam_list, sigma_list, out_matrix_gauss], file)
 
 
 
@@ -210,4 +210,4 @@ if method=='laplacian':
             
     
     with open(folder + "out_matrix_laplace", 'wb') as file:
-        pickle.dump(out_matrix_laplace, file)
+        pickle.dump([lam_list, sigma_list, out_matrix_laplace], file)
