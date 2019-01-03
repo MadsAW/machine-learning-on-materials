@@ -32,7 +32,7 @@ def getAtomicNumbers(atomicSymbols):
 
 
 #Path to saved files
-path = "Saved matrices/11-10-2018 11.36/"
+path = "Saved matrices/03-01-2019 11.04/"
 
 featureMatrix = np.load(path+"/featureMatrix.npy")
 

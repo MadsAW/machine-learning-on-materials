@@ -24,7 +24,7 @@ if len(sys.argv)!=5:
 
 
 
-path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
+path = "Saved matrices/03-01-2019 11.04/sorted_Cutoff25_noSingleElementKrystals/"
 
 
 #Load training data
@@ -98,7 +98,7 @@ print(model.summary())
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
-with open(f"histories func of depth/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
+with open(f"histories less overlap/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
     pickle.dump(history.history, file)
     
 

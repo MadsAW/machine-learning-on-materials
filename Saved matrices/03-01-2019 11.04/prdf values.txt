@@ -1,0 +1,3 @@
+rmax = 8.0
+dr = 0.25
+rs = np.arange(0, rmax - dr, dr/2)
