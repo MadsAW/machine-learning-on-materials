@@ -71,7 +71,7 @@ out=1
 
 lam_list = [10**n for n in range(-3,5)]
 
-c_list = [10**n for n in range(-1,7)]
+c_list = [10**n for n in range(-3,7)]
 x = [-10**n for n in range(-1,7)]
 x.reverse()
 c_list = x + c_list
