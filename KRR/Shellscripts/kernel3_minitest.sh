@@ -6,7 +6,7 @@
 ##Navn på job
 #BSUB -J kernel3_minitest
 ##Output fil
-#BSUB -o kernel3_minitest-%J.out
+#BSUB -o output/kernel3_minitest-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 kernel3_minitest.py
+python3 KRR/kernel3_minitest.py

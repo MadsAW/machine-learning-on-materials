@@ -6,7 +6,7 @@
 ##Navn på job
 #BSUB -J kernel_script
 ##Output fil
-#BSUB -o kernel_script-%J.out
+#BSUB -o output/kernel_script-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 kernel_script.py
+python3 KRR/kernel_script.py
