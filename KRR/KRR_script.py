@@ -9,9 +9,10 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from KRR_class import KernelRidgeRegression
 
-print(os.getcwd())
-if os.path.abspath(os.path.join(__file__, os.pardir))[-3:] == 'KRR':
+
+if os.getcwd()[-3:] == 'KRR':
     os.chdir('..')
+
 
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
