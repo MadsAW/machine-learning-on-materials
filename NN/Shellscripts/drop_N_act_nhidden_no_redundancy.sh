@@ -38,7 +38,7 @@ do
 		do
 			for nhidden in 1 2 3 4 5
 			do
-				python3 NN/Shellscripts/drop_N_act_nhidden_no_redundancy.py $drop $N $act $nhidden
+				python3 NN/drop_N_act_nhidden_no_redundancy.py $drop $N $act $nhidden
 			done
 		done
 	done
