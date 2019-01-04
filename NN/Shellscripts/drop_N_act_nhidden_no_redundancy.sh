@@ -10,7 +10,7 @@
 ##Navn på job
 #BSUB -J drop_N_act_nhidden
 ##Output fil
-#BSUB -o drop_N_act_nhidden-%J.out
+#BSUB -o ../../output/drop_N_act_nhidden-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -38,9 +38,8 @@ do
 		do
 			for nhidden in 1 2 3 4 5
 			do
-				python3 drop_N_act_nhidden_no_redundancy.py $drop $N $act $nhidden
+				python3 ../drop_N_act_nhidden_no_redundancy.py $drop $N $act $nhidden
 			done
 		done
 	done
 done
-

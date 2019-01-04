@@ -98,7 +98,7 @@ print(model.summary())
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
-with open(f"histories minimalistic feature matrix/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
+with open(f"NN/Saved/histories minimalistic feature matrix/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
     pickle.dump(history.history, file)
 
 
@@ -136,17 +136,17 @@ rmseValidate=np.sqrt(a/len(energiesValidate))
 
 print("RMSE on validation data "+str(rmseValidate))
 
-
-
-
-outs = ["Activation = "+act,"Drop = " + str(drop),"N = " + str(N), "Number of hidden layers (width halves with every layer) = " + str(n_hidden),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
-outfile="rmse_drop_N_act_nhidden.txt"
-with open(outfile, "a+") as file:
-    for line in outs:
-        file.write(line)
-        file.write("\n")
-    file.write("\n")
-
-
-
-print("DONE")
+#
+#
+#
+# outs = ["Activation = "+act,"Drop = " + str(drop),"N = " + str(N), "Number of hidden layers (width halves with every layer) = " + str(n_hidden),"RMSE on training data "+str(rmse),"RMSE on validation data "+str(rmseValidate)]
+# outfile="rmse_drop_N_act_nhidden.txt"
+# with open(outfile, "a+") as file:
+#     for line in outs:
+#         file.write(line)
+#         file.write("\n")
+#     file.write("\n")
+#
+#
+#
+# print("DONE")
