@@ -11,7 +11,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
-os.chdir("Saved/histories func of depth")
+os.chdir("Saved/histories minimalistic feature matrix")
 
 files = [file for file in os.listdir() if file!='plots' and file!='.DS_Store']
 files = [file[7:] for file in files]

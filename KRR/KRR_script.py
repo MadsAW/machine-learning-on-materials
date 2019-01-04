@@ -7,16 +7,20 @@ Created on Thu Nov 29 14:40:54 2018
 """
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from KRR_class import KernelRidgeRegression
+
+
+if os.getcwd()[-3:] == 'KRR':
+    os.chdir('..')
+
 
 from createLargerFeatureMatrix import simpleLargeMatrix
-from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import numpy
 
 
-method="laplacian"
-"""
+
 if len(sys.argv)!=2:
     print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian laplacian')
     sys.exit(1)
@@ -33,7 +37,7 @@ energiesFile = "train_pickledEnergies.txt"
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
-
+print(largeFeatureMatrix.shape)
 with open(path+energiesFile, "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
