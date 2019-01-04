@@ -26,7 +26,7 @@ if len(sys.argv)!=2:
     sys.exit(1)
 
 method=sys.argv[1]
-"""
+
 
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
@@ -65,7 +65,7 @@ largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
 
-
+"""
 
 #Kernel matrices output folder
 folder = "KRR/Saved/kernel pickles/"
