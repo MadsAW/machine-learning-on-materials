@@ -15,14 +15,14 @@ import numpy as np
 import numpy
 
 
-
-
+method="laplacian"
+"""
 if len(sys.argv)!=2:
     print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian laplacian')
     sys.exit(1)
 
 method=sys.argv[1]
-
+"""
 
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
@@ -199,14 +199,13 @@ if method=='laplacian':
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
 
             KRR=KernelRidgeRegression(type="laplace")
+            print(KRR.weigths, KRR.type)
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
-            KRR.fit(X,Y)
-            Y_predict_train=KRR.predict(X,Y)
-
+            KRR.fit(X,Y, "error")
+            ww=KRR.getw()
             out=KRR.rmse
+            #%%
             print(out)
-
-
             out_matrix_laplace[s,l]=out
 
 

@@ -18,8 +18,6 @@ class KernelRidgeRegression:
 
     Note all values default to 1
 
-
-    ADD DIMENSION CHECK
     """
     def __init__(self, **kwargs):
         self.lambd = kwargs.get("lambd",1)
@@ -37,7 +35,7 @@ class KernelRidgeRegression:
             self.type="linear"
             print("Illegal type assignment, note allowed types are linear, \
                 laplace, gauss, poly, defaulting to linear model")
-        self.weigths = []
+        self.weigths = None
         self.fitted = False
         self.rmse = None
 
@@ -100,17 +98,23 @@ class KernelRidgeRegression:
             print("Illegal type assignment, note allowed types are linear, \
                 laplace, gauss, poly, defaulting to linear model")
         self._clear()
-    def fit(self, X, Y):
+    def fit(self, X, Y, *args):
         if (self.fitted == False):
             self._check_dim(X,Y)
             self.X = X
             self.Y = Y
             K = eval('self._'+self.type+'(self.X, self.X, self.c1, self.c2, self.d)')
             I = np.identity(len(X))
-            self.weights = np.linalg.inv(np.matrix(K+self.lambd*I))
+            weigth=np.linalg.inv(np.matrix(K+self.lambd*I))
+            self.weights = weigth
             self.fitted = True
+            if "error" in args:
+                Y_predicted=K @ weigth @ self.Y
+                self.rmse=self.rmse=np.sqrt(np.mean(np.square(Y_predicted-Y)))
         else:
             print("already fitted")
+    def getw(self):
+        return self.weigths
     def predict(self, Xp, Y=[]):
         if (self.fitted == False):
             print("Not fitted yet")
