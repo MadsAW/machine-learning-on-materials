@@ -7,7 +7,9 @@ Created on Thu Nov 29 13:18:03 2018
 """
 
 
-import os
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,18 +22,18 @@ data={"relu":{0.3:{25:[[],[],[]], 250:[[],[],[]], 1000:[[],[],[]]}, 0.5:{25:[[],
 for file in files:
     with open(file, "rb") as pickleFile:
         history = pickle.load(pickleFile)
-    
+
     rmse_train_list = [elem**(1/2) for elem in history['mean_squared_error']]
     rmse_val_list = [elem**(1/2) for elem in history['val_mean_squared_error']]
-    
+
     rmse_train = np.mean(rmse_train_list[-10:])
     rmse_val = np.mean(rmse_val_list[-10:])
-    
+
     N=int(file[7:file.find("_",7)])
     drop=float(file[file.find("drop")+5:file.find("_",file.find("drop")+5)])
     act=file[file.find("acti")+5:file.find("_",file.find("acti")+5)]
     n_hidden=file[file.find("nhidden")+8:]
-    
+
     data[act][drop][N][0].append(n_hidden)
     data[act][drop][N][1].append(rmse_train)
     data[act][drop][N][2].append(rmse_val)
@@ -90,6 +92,3 @@ for i in range(len(data_list)):
 
     plt.savefig("plots/" + title_list[i] + ".png")
     plt.show()
-
-    
-    

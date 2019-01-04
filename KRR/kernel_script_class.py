@@ -5,12 +5,14 @@ Created on Thu Nov 29 14:40:54 2018
 
 @author: Simon
 """
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 print()
 from createLargerFeatureMatrix import simpleLargeMatrix
 from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
-import sys
 import numpy
 print(2)
 
@@ -81,18 +83,18 @@ if method=='linear':
     for c in range(len(c_list)):
         for l in range(len(lam_list)):
             print(f'c={c_list[c]}, lambda={lam_list[l]}')
-            
+
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=c_list[c], lamd=lam_list[l])
             KRR.fit(X,Y)
             Y_predict_train=KRR.predict(X,Y)
-            
+
             out=KRR.rmse
             print(out)
-            
+
             out_matrix_lin[c,l]=out
-    
-    
+
+
     with open(folder + "out_matrix_lin", 'wb') as file:
         pickle.dump([lam_list, c_list, out_matrix_lin], file)
 
@@ -121,7 +123,7 @@ if method=='polynomial':
             for d in range(len(d_list)):
                 for l in range(len(lam_list)):
                     print(f'c1={c1_list[c1]}, c2={c2_list[c2]}, d={d_list[d]}, lambda={lam_list[l]}')
-                    
+
                     try:
                         KRR=KernelRidgeRegression(type="poly")
                         KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
@@ -144,9 +146,9 @@ if method=='polynomial':
                             pass
                     except:
                         pass
-                    
+
                     out_matrix_pol[c1,c2,d,l]=out
-            
+
     with open(folder + "out_matrix_pol", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out_matrix_pol], file)
 
@@ -159,26 +161,26 @@ if method=='polynomial':
 lam_list = [10**n for n in range(-3,3)]
 
 sigma_list = [10**n for n in range(-3,3)]
-    
+
 if method=='gaussian':
     print(4)
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
-    
+
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y)
             Y_predict_train=KRR.predict(X,Y)
-            
+
             out=KRR.rmse
             print(out)
-    
-    
+
+
             out_matrix_gauss[s,l]=out
-    
-    
+
+
     with open(folder + "out_matrix_gauss", 'wb') as file:
         pickle.dump([lam_list, sigma_list, out_matrix_gauss], file)
 
@@ -197,18 +199,18 @@ if method=='laplacian':
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
-    
+
             KRR=KernelRidgeRegression(type="laplace")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y)
             Y_predict_train=KRR.predict(X,Y)
-            
+
             out=KRR.rmse
             print(out)
-    
-    
-            out_matrix_laplace[s,l]=out   
-            
-    
+
+
+            out_matrix_laplace[s,l]=out
+
+
     with open(folder + "out_matrix_laplace", 'wb') as file:
         pickle.dump([lam_list, sigma_list, out_matrix_laplace], file)

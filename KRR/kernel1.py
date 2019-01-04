@@ -6,9 +6,10 @@ Created on Thu Nov  8 13:54:00 2018
 @author: Simon
 """
 
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-import os
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
 import numpy as np
@@ -61,9 +62,9 @@ for i in range(len(X)):
     kap = np.zeros(x.shape)
     for i in range(len(X)):
         kap[i] = f(X[i],x)
-        
+
     y=(Y.T @ np.linalg.inv(np.matrix(K+lam*I)) @ kap)
-    
+
     diff.append((Y[i]-y)[0,0])
 
 

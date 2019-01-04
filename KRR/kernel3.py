@@ -5,6 +5,8 @@ Created on Thu Nov 22 14:38:12 2018
 
 @author: Simon
 """
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 

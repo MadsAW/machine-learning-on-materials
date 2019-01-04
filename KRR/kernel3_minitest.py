@@ -5,7 +5,8 @@ Created on Thu Nov 22 16:19:33 2018
 
 @author: Simon
 """
-
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
@@ -115,7 +116,7 @@ print(K-laplace(X,X,3))
 """
 
 
-#%% 
+#%%
 
 
 c=2
@@ -149,11 +150,3 @@ print(f"rmse validation {rmse_val}")
 print(f"rmse validation cholesky {rmse_val_c}")
 
 print(X.shape)
-
-
-
-
-
-
-
-

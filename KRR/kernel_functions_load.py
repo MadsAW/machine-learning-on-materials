@@ -5,6 +5,8 @@ Created on Thu Nov 22 16:19:33 2018
 
 @author: Simon
 """
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 from createLargerFeatureMatrix import simpleLargeMatrix
@@ -124,7 +126,7 @@ print(K-laplace(X,X,3))
 """
 
 
-#%% 
+#%%
 """
 func=lin
 c=2
@@ -136,17 +138,17 @@ def calc(func, param, lam, train_bool):
     K=func(X,X,param)
     KAP_train=K
     KAP_val=func(X_v,X,param)
-    
+
     I = np.identity(len(X))
-    
+
     Y_predict_train = KAP_train @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
     rmse_train = np.sqrt(np.mean(np.square(Y_predict_train-Y)))
-    
+
     print(func.__name__)
     print("param:" + str(param))
     print("lambda:" + str(lam))
     print(f"rmse train {rmse_train}")
-    
+
     if train_bool != True:
         Y_predict_val = KAP_val @ np.linalg.inv(np.matrix(K+lam*I)) @ Y
         rmse_val = np.sqrt(np.mean(np.square(Y_predict_val-Y_v)))
@@ -154,8 +156,8 @@ def calc(func, param, lam, train_bool):
         return rmse_train, rmse_val
 
     return rmse_train, "training"
-    
-    
+
+
 
 print(calc(gauss,1,1,False))
 
@@ -168,12 +170,3 @@ Y_predict_val_c = KAP_val @ (np.linalg.inv(L).T @ np.linalg.inv(L)) @ Y
 print(f"cholesky prediction time validation: {time.time()-start}")
 rmse_val_c = np.sqrt(np.mean(np.square(Y_predict_val_c-Y_v)))
 """
-
-
-
-
-
-
-
-
-

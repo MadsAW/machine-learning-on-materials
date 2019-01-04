@@ -7,6 +7,8 @@ Created on Thu Nov  8 13:54:00 2018
 @author: Simon
 """
 
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
@@ -61,13 +63,13 @@ Y_v=(Y+7*3)[:-1]
 
 #%%
 class KRR:
-    
+
     def __init__(self):
         self.available_kernels = ['linear','pol','gauss','laplace']
         self.kernel_type = None
         self.K = None
         self.lam = None
-    
+
 
     def set_kernel_type(self, arg):
         if arg not in self.available_kernels:
@@ -83,8 +85,8 @@ class KRR:
             raise Exception('Not a number')
         else:
             self.lam = lam
-    
-        
+
+
 
 
 
@@ -122,9 +124,9 @@ for i in range(len(X)):
     kap = np.zeros(len(X))
     for j in range(len(X)):
         kap[j] = f(X[j],x)
-        
+
     y=(kap @ np.linalg.inv(np.matrix(K+lam*I)) @ Y)
-    
+
     diff.append((Y[i]-y)[0,0])
 
 
@@ -148,9 +150,9 @@ for i in range(len(X_v)):
     kap = np.zeros(len(X))
     for j in range(len(X)):
         kap[j] = f(X[j],x)
-        
+
     y=(kap @ np.linalg.inv(np.matrix(K+lam*I)) @ Y)
-    
+
     diff.append((Y_v[i]-y)[0,0])
 
 

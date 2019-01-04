@@ -11,7 +11,7 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
-os.chdir("histories func of N")
+os.chdir("Saved/histories func of N")
 
 files = [file for file in os.listdir() if file!='plots' and file!='.DS_Store']
 data={"relu":{0.4:[[],[],[]], 0.7:[[],[],[]]},"sigmoid":{0.4:[[],[],[]], 0.7:[[],[],[]]}}
@@ -19,17 +19,17 @@ data={"relu":{0.4:[[],[],[]], 0.7:[[],[],[]]},"sigmoid":{0.4:[[],[],[]], 0.7:[[]
 for file in files:
     with open(file, "rb") as pickleFile:
         history = pickle.load(pickleFile)
-    
+
     rmse_train_list = [elem**(1/2) for elem in history['mean_squared_error']]
     rmse_val_list = [elem**(1/2) for elem in history['val_mean_squared_error']]
-    
+
     rmse_train = np.mean(rmse_train_list[-10:])
     rmse_val = np.mean(rmse_val_list[-10:])
-    
+
     N=int(file[7:file.find("_",7)])
     drop=float(file[file.find("drop")+5:file.find("_",file.find("drop")+5)])
     act=file[file.find("acti")+5:]
-    
+
     data[act][drop][0].append(N)
     data[act][drop][1].append(rmse_train)
     data[act][drop][2].append(rmse_val)
@@ -59,8 +59,6 @@ for i in range(len(data_list)):
     plt.xlabel('N')
     plt.ylabel('Root mean squared error')
     plt.ylim(0.1,0.6)
-    
+
     plt.savefig(f'plots/'+name_list[i]+'.png')
     plt.show()
-    
-    

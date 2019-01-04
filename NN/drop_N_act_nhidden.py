@@ -7,14 +7,14 @@ Created on Thu Nov 29 12:50:17 2018
 """
 
 
-import os
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from createLargerFeatureMatrix import simpleLargeMatrix
 import pickle
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras import regularizers
 import numpy as np
-import sys
 import pickle
 
 
@@ -72,7 +72,7 @@ act=sys.argv[3]
 n_hidden=int(sys.argv[4])
 
 model = Sequential()
-    
+
 inputShape = np.shape(X)[1:]
 
 #First hidden layer after input
@@ -93,14 +93,14 @@ model.compile(loss='mse', optimizer='adam', metrics=["mse"])
 
 print(model.summary())
 
-#Fit the model. This is where the hard computing happens. 
+#Fit the model. This is where the hard computing happens.
 #Number of epochs is number of iterations through dataset
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
 with open(f"histories less overlap/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
     pickle.dump(history.history, file)
-    
+
 
 
 #Evaluate model efficiency
