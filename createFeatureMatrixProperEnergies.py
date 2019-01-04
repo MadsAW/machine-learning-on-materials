@@ -61,9 +61,9 @@ Som input tager prdf følgende: Atoms, rs, dr, rmax
 """
 #%%
 
-rmax = 8.0
+rmax = 6.0
 dr = 0.25
-rs = np.arange(0, rmax - dr, dr/2)
+rs = np.arange(0, rmax - dr, dr/5)
 
 
 x=np.array(prdf(atomsList[0],rs,dr,rmax)[0])
@@ -90,7 +90,7 @@ for atom in atomsList:
     X=prdf(atom,rs,dr,rmax)
     featureMatrix[index] = X[0]
     atomicSymbolsList.append(X[1])
-    print(f"Progress: {index / dim[0] * 100:8.5f}%. Elapsed: {(time.time()-start)/60:5.2f} minutes. Remaining: {((time.time()-start)/ ((index +1) / dim[0]))/60 - (time.time()-start)/60:5.2f} minutes")
+    print(f"\rProgress: {index / dim[0] * 100:8.5f}%. Elapsed: {(time.time()-start)/60:5.2f} minutes. Remaining: {((time.time()-start)/ ((index +1) / dim[0]))/60 - (time.time()-start)/60:5.2f} minutes")
     index+=1
 
 np.save("Saved matrices/"+folderName+"/featureMatrix.npy", featureMatrix)

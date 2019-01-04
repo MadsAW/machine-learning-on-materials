@@ -7,13 +7,17 @@ Created on Thu Nov 29 14:40:54 2018
 """
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from KRR_class import KernelRidgeRegression
+
+
+if os.getcwd()[-3:] == 'KRR':
+    os.chdir('..')
+
 
 from createLargerFeatureMatrix import simpleLargeMatrix
-from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import numpy
-
 
 
 
@@ -22,7 +26,7 @@ if len(sys.argv)!=2:
     sys.exit(1)
 
 method=sys.argv[1]
-
+"""
 
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
@@ -33,7 +37,7 @@ energiesFile = "train_pickledEnergies.txt"
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
-
+print(largeFeatureMatrix.shape)
 with open(path+energiesFile, "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
@@ -199,14 +203,13 @@ if method=='laplacian':
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
 
             KRR=KernelRidgeRegression(type="laplace")
+            print(KRR.weigths, KRR.type)
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
-            KRR.fit(X,Y)
-            Y_predict_train=KRR.predict(X,Y)
-
+            KRR.fit(X,Y, "error")
+            ww=KRR.getw()
             out=KRR.rmse
+            #%%
             print(out)
-
-
             out_matrix_laplace[s,l]=out
 
 
