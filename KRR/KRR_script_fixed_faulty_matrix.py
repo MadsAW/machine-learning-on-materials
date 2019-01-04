@@ -5,19 +5,16 @@ Created on Thu Nov 29 14:40:54 2018
 
 @author: Simon
 """
+
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from KRR_class import KernelRidgeRegression
-
-
-if os.getcwd()[-3:] == 'KRR':
-    os.chdir('..')
-
 
 from createLargerFeatureMatrix import simpleLargeMatrix
+from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import numpy
+
 
 
 
@@ -26,10 +23,10 @@ if len(sys.argv)!=2:
     sys.exit(1)
 
 method=sys.argv[1]
-"""
 
 
-path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
+
+path = "Saved matrices/04-01-2019 21.56/sorted_Cutoff25_noSingleElementKrystals/"
 #%% Load training data
 featureMatrixFile = "train_featureMatrix.npy"
 atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
@@ -37,7 +34,7 @@ energiesFile = "train_pickledEnergies.txt"
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
-print(largeFeatureMatrix.shape)
+
 with open(path+energiesFile, "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
@@ -48,8 +45,6 @@ Y = np.array(energies)
 
 #%% Load validation data
 """
-path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
-
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
 energiesFileValidate = "validate_pickledEnergies.txt"
@@ -64,6 +59,7 @@ largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
+"""
 
 
 
@@ -97,7 +93,7 @@ if method=='linear':
             out_matrix_lin[c,l]=out
 
 
-    with open(folder + "out_matrix_lin", 'wb') as file:
+    with open(folder + "out_matrix_lin_fixed_faulty_matrix", 'wb') as file:
         pickle.dump([lam_list, c_list, out_matrix_lin], file)
 
 
@@ -134,7 +130,7 @@ if method=='polynomial':
                         print(out, flush=True)
                     except numpy.linalg.linalg.LinAlgError:
                         out=-1
-                        print('singular matrix error')
+                        print('singular matrix error', flush=True)
                         try:
                             print(f'c1={c1_list[c1]*1.05}, c2={c2_list[c2]*1.05}, d={d_list[d]*1.05}, lambda={lam_list[l]*1.05}', flush=True)
                             KRR=KernelRidgeRegression(type="poly")
@@ -149,7 +145,7 @@ if method=='polynomial':
 
                     out_matrix_pol[c1,c2,d,l]=out
 
-    with open(folder + "out_matrix_pol", 'wb') as file:
+    with open(folder + "out_matrix_pol_fixed_faulty_matrix", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out_matrix_pol], file)
 
 
@@ -178,7 +174,7 @@ if method=='gaussian':
             out_matrix_gauss[s,l]=out
 
 
-    with open(folder + "out_matrix_gauss", 'wb') as file:
+    with open(folder + "out_matrix_gauss_fixed_faulty_matrix", 'wb') as file:
         pickle.dump([lam_list, sigma_list, out_matrix_gauss], file)
 
 
@@ -198,13 +194,14 @@ if method=='laplacian':
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="laplace")
-            print(KRR.weigths, KRR.type)
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y, "error")
             out=KRR.rmse
             print(out, flush=True)
+
+
             out_matrix_laplace[s,l]=out
 
 
-    with open(folder + "out_matrix_laplace", 'wb') as file:
+    with open(folder + "out_matrix_laplace_fixed_faulty_matrix", 'wb') as file:
         pickle.dump([lam_list, sigma_list, out_matrix_laplace], file)
