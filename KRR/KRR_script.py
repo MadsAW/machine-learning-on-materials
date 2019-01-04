@@ -164,7 +164,7 @@ if method=='gaussian':
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
-            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True, flush=True)
+            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
