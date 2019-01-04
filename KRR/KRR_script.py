@@ -62,7 +62,6 @@ largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 
 X_v = largeFeatureMatrixValidate
 Y_v = np.array(energiesValidate)
-"""
 
 
 
@@ -89,11 +88,9 @@ if method=='linear':
 
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=c_list[c], lamd=lam_list[l])
-            KRR.fit(X,Y)
-            Y_predict_train=KRR.predict(X,Y)
-
+            KRR.fit(X,Y, "error")
             out=KRR.rmse
-            print(out)
+            print(out, flush=True)
 
             out_matrix_lin[c,l]=out
 
@@ -125,26 +122,24 @@ if method=='polynomial':
         for c2 in range(len(c2_list)):
             for d in range(len(d_list)):
                 for l in range(len(lam_list)):
-                    print(f'c1={c1_list[c1]}, c2={c2_list[c2]}, d={d_list[d]}, lambda={lam_list[l]}')
+                    print(f'c1={c1_list[c1]}, c2={c2_list[c2]}, d={d_list[d]}, lambda={lam_list[l]}', flush=True)
 
                     try:
                         KRR=KernelRidgeRegression(type="poly")
                         KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
-                        KRR.fit(X,Y)
-                        Y_predict_train=KRR.predict(X,Y)
+                        KRR.fit(X,Y, "error")
                         out=KRR.rmse
-                        print(out)
+                        print(out, flush=True)
                     except numpy.linalg.linalg.LinAlgError:
                         out=-1
                         print('singular matrix error')
                         try:
-                            print(f'c1={c1_list[c1]*1.05}, c2={c2_list[c2]*1.05}, d={d_list[d]*1.05}, lambda={lam_list[l]*1.05}')
+                            print(f'c1={c1_list[c1]*1.05}, c2={c2_list[c2]*1.05}, d={d_list[d]*1.05}, lambda={lam_list[l]*1.05}', flush=True)
                             KRR=KernelRidgeRegression(type="poly")
                             KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
-                            KRR.fit(X,Y)
-                            Y_predict_train=KRR.predict(X,Y)
+                            KRR.fit(X,Y, "error")
                             out=KRR.rmse
-                            print(out)
+                            print(out, flush=True)
                         except:
                             pass
                     except:
@@ -169,15 +164,13 @@ if method=='gaussian':
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
-            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
+            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True, flush=True)
 
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
-            KRR.fit(X,Y)
-            Y_predict_train=KRR.predict(X,Y)
-
+            KRR.fit(X,Y, "error")
             out=KRR.rmse
-            print(out)
+            print(out, flush=True)
 
 
             out_matrix_gauss[s,l]=out
@@ -200,16 +193,14 @@ if method=='laplacian':
     out_matrix_laplace = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
-            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
+            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="laplace")
             print(KRR.weigths, KRR.type)
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y, "error")
-            ww=KRR.getw()
             out=KRR.rmse
-            #%%
-            print(out)
+            print(out, flush=True)
             out_matrix_laplace[s,l]=out
 
 
