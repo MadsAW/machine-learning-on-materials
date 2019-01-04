@@ -48,6 +48,8 @@ Y = np.array(energies)
 
 #%% Load validation data
 """
+path = "Saved matrices/11-10-2018 11.04/sorted_Cutoff25_noSingleElementKrystals/"
+
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
 energiesFileValidate = "validate_pickledEnergies.txt"
