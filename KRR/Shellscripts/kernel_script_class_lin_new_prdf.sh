@@ -4,9 +4,9 @@
 #BSUB -q hpc
 
 ##Navn på job
-#BSUB -J kernel_script_class_lin
+#BSUB -J KRR_script_lin
 ##Output fil
-#BSUB -o kernel_script_class_lin-%J.out
+#BSUB -o output/KRR_script_lin_new-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 kernel_script_class.py linear
+python3 KRR/KRR_script_new_prdf.py linear

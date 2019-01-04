@@ -4,9 +4,9 @@
 #BSUB -q hpc
 
 ##Navn på job
-#BSUB -J kernel_script_class_lap
+#BSUB -J KRR_script_lap
 ##Output fil
-#BSUB -o kernel_script_class_lap-%J.out
+#BSUB -o output/KRR_script_lap-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 kernel_script_class.py laplacian
+python3 KRR/KRR_script.py laplacian
