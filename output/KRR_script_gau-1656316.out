@@ -1,0 +1,53 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+import _frozen_importlib # frozen
+import _imp # builtin
+import sys # builtin
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import _thread # previously loaded ('_thread')
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import _weakref # previously loaded ('_weakref')
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+# installing zipimport hook
+import 'zipimport' # <class '_frozen_importlib.BuiltinImporter'>
+# installed zipimport hook
+# /appl/python/3.6.2/lib/python3.6/encodings/__pycache__/__init__.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/encodings/__init__.py
+# code object from '/appl/python/3.6.2/lib/python3.6/encodings/__pycache__/__init__.cpython-36.pyc'
+# /appl/python/3.6.2/lib/python3.6/__pycache__/codecs.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/codecs.py
+# code object from '/appl/python/3.6.2/lib/python3.6/__pycache__/codecs.cpython-36.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa01077b8>
+# /appl/python/3.6.2/lib/python3.6/encodings/__pycache__/aliases.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/encodings/aliases.py
+# code object from '/appl/python/3.6.2/lib/python3.6/encodings/__pycache__/aliases.cpython-36.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa0121198>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa0107358>
+# /appl/python/3.6.2/lib/python3.6/encodings/__pycache__/latin_1.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/encodings/latin_1.py
+# code object from '/appl/python/3.6.2/lib/python3.6/encodings/__pycache__/latin_1.cpython-36.pyc'
+import 'encodings.latin_1' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa0127f98>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+# /appl/python/3.6.2/lib/python3.6/encodings/__pycache__/utf_8.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/encodings/utf_8.py
+# code object from '/appl/python/3.6.2/lib/python3.6/encodings/__pycache__/utf_8.cpython-36.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa012cac8>
+# /appl/python/3.6.2/lib/python3.6/__pycache__/io.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/io.py
+# code object from '/appl/python/3.6.2/lib/python3.6/__pycache__/io.cpython-36.pyc'
+# /appl/python/3.6.2/lib/python3.6/__pycache__/abc.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/abc.py
+# code object from '/appl/python/3.6.2/lib/python3.6/__pycache__/abc.cpython-36.pyc'
+# /appl/python/3.6.2/lib/python3.6/__pycache__/_weakrefset.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/_weakrefset.py
+# code object from '/appl/python/3.6.2/lib/python3.6/__pycache__/_weakrefset.cpython-36.pyc'
+import '_weakrefset' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa0133a58>
+import 'abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa0133128>
+import 'io' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa012cd30>
+# /appl/python/3.6.2/lib/python3.6/__pycache__/_bootlocale.cpython-36.pyc matches /appl/python/3.6.2/lib/python3.6/_bootlocale.py
+# code object from '/appl/python/3.6.2/lib/python3.6/__pycache__/_bootlocale.cpython-36.pyc'
+import '_locale' # <class '_frozen_importlib.BuiltinImporter'>
+import '_bootlocale' # <_frozen_importlib_external.SourceFileLoader object at 0x7fbfa013be80>
+Python 3.6.2 (default, Aug 30 2017, 11:41:44) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+Terminated

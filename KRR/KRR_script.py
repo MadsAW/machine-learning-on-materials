@@ -81,7 +81,7 @@ if method=='linear':
     out_matrix_lin = np.zeros((len(c_list), len(lam_list)))
     for c in range(len(c_list)):
         for l in range(len(lam_list)):
-            print(f'c={c_list[c]}, lambda={lam_list[l]}')
+            print(f'c={c_list[c]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=c_list[c], lamd=lam_list[l])
@@ -165,7 +165,7 @@ if method=='gaussian':
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
-            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}')
+            print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
