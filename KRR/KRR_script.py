@@ -37,7 +37,7 @@ energiesFile = "train_pickledEnergies.txt"
 
 largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
 
-
+print(largeFeatureMatrix.shape)
 with open(path+energiesFile, "rb") as pickleFile:
     energies = pickle.load(pickleFile)
 
