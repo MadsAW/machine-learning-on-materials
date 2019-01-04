@@ -64,7 +64,7 @@ Y_v = np.array(energiesValidate)
 
 
 #Kernel matrices output folder
-folder = "kernel pickles/"
+folder = "KRR/Saved/kernel pickles/"
 
 #%%
 out=1
