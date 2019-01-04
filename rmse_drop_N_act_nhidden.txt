@@ -1,0 +1,21 @@
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 1
+RMSE on training data [0.09615136]
+RMSE on validation data [0.27934295]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 2
+RMSE on training data [0.11799866]
+RMSE on validation data [0.29158756]
+
+Activation = relu
+Drop = 0.3
+N = 25
+Number of hidden layers (width halves with every layer) = 3
+RMSE on training data [0.16286962]
+RMSE on validation data [0.29591832]
+
