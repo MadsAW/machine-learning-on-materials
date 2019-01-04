@@ -98,7 +98,7 @@ print(model.summary())
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
-with open(f"histories less overlap/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
+with open(f"NN/Saved/histories less overlap/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
     pickle.dump(history.history, file)
 
 
