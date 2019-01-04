@@ -5,14 +5,14 @@ Created on Thu Nov 29 14:40:54 2018
 
 @author: Simon
 """
-
+print()
 from createLargerFeatureMatrix import simpleLargeMatrix
 from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import sys
 import numpy
-
+print(2)
 
 
 
@@ -67,7 +67,7 @@ folder = "kernel pickles/"
 #%%
 out=1
 
-
+print(3)
 
 lam_list = [10**n for n in range(-3,5)]
 
@@ -161,6 +161,7 @@ lam_list = [10**n for n in range(-3,3)]
 sigma_list = [10**n for n in range(-3,3)]
     
 if method=='gaussian':
+    print(4)
     out_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
