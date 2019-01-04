@@ -201,6 +201,7 @@ if method=='laplacian':
             KRR=KernelRidgeRegression(type="laplace")
             KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
             KRR.fit(X,Y)
+            print(1)
             Y_predict_train=KRR.predict(X,Y)
 
             out=KRR.rmse
