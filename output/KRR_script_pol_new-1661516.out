@@ -4500,3 +4500,179 @@ c1=105.0, c2=1.05, d=105.0, lambda=0.10500000000000001
 c1=100, c2=1, d=100, lambda=1
 singular matrix error
 c1=105.0, c2=1.05, d=105.0, lambda=1.05
+c1=100, c2=1, d=100, lambda=10
+singular matrix error
+c1=105.0, c2=1.05, d=105.0, lambda=10.5
+c1=100, c2=1, d=100, lambda=100
+singular matrix error
+c1=105.0, c2=1.05, d=105.0, lambda=105.0
+c1=100, c2=10, d=0.001, lambda=0.001
+0.5279423012726531
+c1=100, c2=10, d=0.001, lambda=0.01
+0.5279423012726531
+c1=100, c2=10, d=0.001, lambda=0.1
+0.5279423012726531
+c1=100, c2=10, d=0.001, lambda=1
+0.5279423012726531
+c1=100, c2=10, d=0.001, lambda=10
+0.5279423012726531
+c1=100, c2=10, d=0.001, lambda=100
+0.5279423012726531
+c1=100, c2=10, d=0.01, lambda=0.001
+0.4159174332661602
+c1=100, c2=10, d=0.01, lambda=0.01
+0.4159174332661602
+c1=100, c2=10, d=0.01, lambda=0.1
+0.4159174332661602
+c1=100, c2=10, d=0.01, lambda=1
+0.4159174332661602
+c1=100, c2=10, d=0.01, lambda=10
+0.4159174332661602
+c1=100, c2=10, d=0.01, lambda=100
+0.4159174332661602
+c1=100, c2=10, d=0.1, lambda=0.001
+0.282634678672504
+c1=100, c2=10, d=0.1, lambda=0.01
+0.282634678672504
+c1=100, c2=10, d=0.1, lambda=0.1
+0.282634678672504
+c1=100, c2=10, d=0.1, lambda=1
+0.282634678672504
+c1=100, c2=10, d=0.1, lambda=10
+0.282634678672504
+c1=100, c2=10, d=0.1, lambda=100
+0.282634678672504
+c1=100, c2=10, d=1, lambda=0.001
+0.07696665192844485
+c1=100, c2=10, d=1, lambda=0.01
+0.07696665192844485
+c1=100, c2=10, d=1, lambda=0.1
+0.07696665192844485
+c1=100, c2=10, d=1, lambda=1
+0.07696665192844485
+c1=100, c2=10, d=1, lambda=10
+0.07696665192844485
+c1=100, c2=10, d=1, lambda=100
+0.07696665192844485
+c1=100, c2=10, d=10, lambda=0.001
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=0.0010500000000000002
+c1=100, c2=10, d=10, lambda=0.01
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=0.0105
+c1=100, c2=10, d=10, lambda=0.1
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=0.10500000000000001
+c1=100, c2=10, d=10, lambda=1
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=1.05
+c1=100, c2=10, d=10, lambda=10
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=10.5
+c1=100, c2=10, d=10, lambda=100
+singular matrix error
+c1=105.0, c2=10.5, d=10.5, lambda=105.0
+c1=100, c2=10, d=100, lambda=0.001
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=0.0010500000000000002
+c1=100, c2=10, d=100, lambda=0.01
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=0.0105
+c1=100, c2=10, d=100, lambda=0.1
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=0.10500000000000001
+c1=100, c2=10, d=100, lambda=1
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=1.05
+c1=100, c2=10, d=100, lambda=10
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=10.5
+c1=100, c2=10, d=100, lambda=100
+singular matrix error
+c1=105.0, c2=10.5, d=105.0, lambda=105.0
+c1=100, c2=100, d=0.001, lambda=0.001
+0.5496173892353252
+c1=100, c2=100, d=0.001, lambda=0.01
+0.5496173892353252
+c1=100, c2=100, d=0.001, lambda=0.1
+0.5496173892353252
+c1=100, c2=100, d=0.001, lambda=1
+0.5496173892353252
+c1=100, c2=100, d=0.001, lambda=10
+0.5496173892353252
+c1=100, c2=100, d=0.001, lambda=100
+0.5496173892353252
+c1=100, c2=100, d=0.01, lambda=0.001
+0.5055407908287433
+c1=100, c2=100, d=0.01, lambda=0.01
+0.5055407908287433
+c1=100, c2=100, d=0.01, lambda=0.1
+0.5055407908287433
+c1=100, c2=100, d=0.01, lambda=1
+0.5055407908287433
+c1=100, c2=100, d=0.01, lambda=10
+0.5055407908287433
+c1=100, c2=100, d=0.01, lambda=100
+0.5055407908287433
+c1=100, c2=100, d=0.1, lambda=0.001
+0.34644787177607483
+c1=100, c2=100, d=0.1, lambda=0.01
+0.34644787177607483
+c1=100, c2=100, d=0.1, lambda=0.1
+0.34644787177607483
+c1=100, c2=100, d=0.1, lambda=1
+0.34644787177607483
+c1=100, c2=100, d=0.1, lambda=10
+0.34644787177607483
+c1=100, c2=100, d=0.1, lambda=100
+0.34644787177607483
+c1=100, c2=100, d=1, lambda=0.001
+0.07696787038164879
+c1=100, c2=100, d=1, lambda=0.01
+0.07696787038164879
+c1=100, c2=100, d=1, lambda=0.1
+0.07696787038164879
+c1=100, c2=100, d=1, lambda=1
+0.07696787038164879
+c1=100, c2=100, d=1, lambda=10
+0.07696787038164879
+c1=100, c2=100, d=1, lambda=100
+0.07696787038164879
+c1=100, c2=100, d=10, lambda=0.001
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=0.0010500000000000002
+c1=100, c2=100, d=10, lambda=0.01
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=0.0105
+c1=100, c2=100, d=10, lambda=0.1
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=0.10500000000000001
+c1=100, c2=100, d=10, lambda=1
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=1.05
+c1=100, c2=100, d=10, lambda=10
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=10.5
+c1=100, c2=100, d=10, lambda=100
+singular matrix error
+c1=105.0, c2=105.0, d=10.5, lambda=105.0
+c1=100, c2=100, d=100, lambda=0.001
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=0.0010500000000000002
+c1=100, c2=100, d=100, lambda=0.01
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=0.0105
+c1=100, c2=100, d=100, lambda=0.1
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=0.10500000000000001
+c1=100, c2=100, d=100, lambda=1
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=1.05
+c1=100, c2=100, d=100, lambda=10
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=10.5
+c1=100, c2=100, d=100, lambda=100
+singular matrix error
+c1=105.0, c2=105.0, d=105.0, lambda=105.0
+/zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials/KRR/KRR_class.py:52: RuntimeWarning: invalid value encountered in power
+  return np.power(c1*np.tensordot(A,B,axes=([1],[1]))+c2,d)

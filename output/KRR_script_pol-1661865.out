@@ -53,3 +53,12 @@ sigma=10, lambda=0.001
 sigma=10, lambda=0.01
 0.4670205504086957
 sigma=10, lambda=0.1
+0.4670205504086957
+sigma=10, lambda=1
+0.4670205504086957
+sigma=10, lambda=10
+0.4670205504086957
+sigma=10, lambda=100
+0.4670205504086957
+sigma=100, lambda=0.001
+User defined signal 2
