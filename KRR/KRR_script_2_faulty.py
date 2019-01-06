@@ -57,8 +57,8 @@ with open(path+energiesFileValidate, "rb") as pickleFile:
 
 largeFeatureMatrixValidate.shape = (largeFeatureMatrixValidate.shape[0], -1)
 
-X_v = largeFeatureMatrixValidate
-Y_v = np.array(energiesValidate)
+Xv = largeFeatureMatrixValidate
+Yv = np.array(energiesValidate)
 
 
 
