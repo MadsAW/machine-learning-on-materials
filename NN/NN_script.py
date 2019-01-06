@@ -27,9 +27,9 @@ if len(sys.argv)!=7:
     sys.exit(1)
 
 
-saved_matrix_folder=int(sys.argv[5])
+saved_matrix_folder=sys.argv[5]
 
-feature_matrix_shape=int(sys.argv[6])
+feature_matrix_shape=sys.argv[6]
 
 matrix_functions={"atomic_number":simpleLargeMatrix, "group_period_2x2":no_redundancy_matrix, "group_period_x_group_period":advanced_large_matrix}
 
