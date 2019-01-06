@@ -110,7 +110,7 @@ class KernelRidgeRegression:
             self.fitted = True
             if "error" in args:
                 Y_predicted=K @ weigth @ self.Y
-                self.rmse=self.rmse=np.sqrt(np.mean(np.square(Y_predicted-Y)))
+                self.rmse=np.sqrt(np.mean(np.square(Y_predicted-Y)))
         else:
             print("already fitted")
     def getw(self):
