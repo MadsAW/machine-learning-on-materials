@@ -40,7 +40,7 @@ do
 			do
 				for feature_matrix_shape in atomic_number group_period_2x2 group_period_x_group_period
 				do
-					python3 NN/drop_N_act_nhidden_no_redundancy.py $drop $N $act $nhidden 04-01-2019\ 21.56 $feature_matrix_shape
+					python3 NN/NN_script.py $drop $N $act $nhidden 04-01-2019\ 21.56 $feature_matrix_shape
 				done
 			done
 		done
