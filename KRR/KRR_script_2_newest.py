@@ -75,17 +75,17 @@ out=1
 
 
 
-lam_list = [10**n for n in frange(-1,3)]
+lam_list = [10**n for n in range(-1,3)]
 
-c_list = [10**n for n in frange(-3,7)]
-x = [-10**n for n in frange(-1,7)]
+c_list = [10**n for n in range(-3,7)]
+x = [-10**n for n in range(-1,7)]
 x.reverse()
 c_list = x + c_list
 
 if method=='linear':
     out_matrix_lin = np.zeros((len(c_list), len(lam_list)))
-    for c in frange(len(c_list)):
-        for l in frange(len(lam_list)):
+    for c in range(len(c_list)):
+        for l in range(len(lam_list)):
             print(f'c={c_list[c]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="linear")
@@ -112,7 +112,7 @@ if method=='linear':
 
 
 
-lam_list = [10**n for n in frange(-1,3)]
+lam_list = [10**n for n in range(-1,3)]
 
 c1_list = list(frange(-5,20,5))
 
@@ -123,10 +123,10 @@ d_list = list(frange(-20,25,10))
 
 if method=='polynomial':
     out_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
-    for c1 in frange(len(c1_list)):
-        for c2 in frange(len(c2_list)):
-            for d in frange(len(d_list)):
-                for l in frange(len(lam_list)):
+    for c1 in range(len(c1_list)):
+        for c2 in range(len(c2_list)):
+            for d in range(len(d_list)):
+                for l in range(len(lam_list)):
                     print(f'c1={c1_list[c1]}, c2={c2_list[c2]}, d={d_list[d]}, lambda={lam_list[l]}', flush=True)
 
                     try:
@@ -167,15 +167,15 @@ if method=='polynomial':
 
 
 
-lam_list = [10**n for n in frange(-1,2)]
+lam_list = [10**n for n in range(-1,2)]
 
 sigma_list = [-1,1, 10]
 
 if method=='gaussian':
     out1_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
     out2_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
-    for s in frange(len(sigma_list)):
-        for l in frange(len(lam_list)):
+    for s in range(len(sigma_list)):
+        for l in range(len(lam_list)):
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="gauss")
@@ -201,15 +201,15 @@ if method=='gaussian':
 
 
 
-lam_list = [10**n for n in frange(-1,2)]
+lam_list = [10**n for n in range(-1,2)]
 
 sigma_list = [-1,1,10]
 
 if method=='laplacian':
     out1_matrix_laplace = np.zeros((len(sigma_list), len(lam_list)))
     out2_matrix_laplace = np.zeros((len(sigma_list), len(lam_list)))
-    for s in frange(len(sigma_list)):
-        for l in frange(len(lam_list)):
+    for s in range(len(sigma_list)):
+        for l in range(len(lam_list)):
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="laplace")
