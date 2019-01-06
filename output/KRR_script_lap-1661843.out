@@ -1,0 +1,111 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+(2918, 62, 62, 23)
+sigma=0.001, lambda=0.001
+None laplace
+0.3437616203747186
+sigma=0.001, lambda=0.01
+None laplace
+0.3437616203747186
+sigma=0.001, lambda=0.1
+None laplace
+0.3437616203747186
+sigma=0.001, lambda=1
+None laplace
+0.3437616203747186
+sigma=0.001, lambda=10
+None laplace
+0.3437616203747186
+sigma=0.001, lambda=100
+None laplace
+0.3437616203747186
+sigma=0.01, lambda=0.001
+None laplace
+0.3437614797127516
+sigma=0.01, lambda=0.01
+None laplace
+0.3437614797127516
+sigma=0.01, lambda=0.1
+None laplace
+0.3437614797127516
+sigma=0.01, lambda=1
+None laplace
+0.3437614797127516
+sigma=0.01, lambda=10
+None laplace
+0.3437614797127516
+sigma=0.01, lambda=100
+None laplace
+0.3437614797127516
+sigma=0.1, lambda=0.001
+None laplace
+0.30209757047715574
+sigma=0.1, lambda=0.01
+None laplace
+0.30209757047715574
+sigma=0.1, lambda=0.1
+None laplace
+0.30209757047715574
+sigma=0.1, lambda=1
+None laplace
+0.30209757047715574
+sigma=0.1, lambda=10
+None laplace
+0.30209757047715574
+sigma=0.1, lambda=100
+None laplace
+0.30209757047715574
+sigma=1, lambda=0.001
+None laplace
+0.24783647422820967
+sigma=1, lambda=0.01
+None laplace
+0.24783647422820967
+sigma=1, lambda=0.1
+None laplace
+0.24783647422820967
+sigma=1, lambda=1
+None laplace
+0.24783647422820967
+sigma=1, lambda=10
+None laplace
+0.24783647422820967
+sigma=1, lambda=100
+None laplace
+0.24783647422820967
+sigma=10, lambda=0.001
+None laplace
+0.4079097290648656
+sigma=10, lambda=0.01
+None laplace
+0.4079097290648656
+sigma=10, lambda=0.1
+None laplace
+0.4079097290648656
+sigma=10, lambda=1
+None laplace
+0.4079097290648656
+sigma=10, lambda=10
+None laplace
+0.4079097290648656
+sigma=10, lambda=100
+None laplace
+0.4079097290648656
+sigma=100, lambda=0.001
+None laplace
+0.5271400626180535
+sigma=100, lambda=0.01
+None laplace
+0.5271400626180535
+sigma=100, lambda=0.1
+None laplace
+0.5271400626180535
+sigma=100, lambda=1
+None laplace
+0.5271400626180535
+sigma=100, lambda=10
+None laplace
+0.5271400626180535
+sigma=100, lambda=100
+None laplace
+0.5271400626180535
