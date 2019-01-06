@@ -83,7 +83,8 @@ x.reverse()
 c_list = x + c_list
 
 if method=='linear':
-    out_matrix_lin = np.zeros((len(c_list), len(lam_list)))
+    out1_matrix_lin = np.zeros((len(c_list), len(lam_list)))
+    out2_matrix_lin = np.zeros((len(c_list), len(lam_list)))
     for c in range(len(c_list)):
         for l in range(len(lam_list)):
             print(f'c={c_list[c]}, lambda={lam_list[l]}', flush=True)
@@ -122,7 +123,8 @@ c2_list = list(frange(-20,25,10))
 d_list = list(frange(-20,25,10))
 
 if method=='polynomial':
-    out_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
+    out1_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
+    out2_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
     for c1 in range(len(c1_list)):
         for c2 in range(len(c2_list)):
             for d in range(len(d_list)):
