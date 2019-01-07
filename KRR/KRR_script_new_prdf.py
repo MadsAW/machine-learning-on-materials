@@ -85,7 +85,7 @@ if method=='linear':
             print(f'c={c_list[c]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="linear")
-            KRR.set_var(c1=c_list[c], lamd=lam_list[l])
+            KRR.set_var(c1=c_list[c], lambd=lam_list[l])
             KRR.fit(X,Y, "error")
             out=KRR.rmse
             print(out, flush=True)
@@ -124,7 +124,7 @@ if method=='polynomial':
 
                     try:
                         KRR=KernelRidgeRegression(type="poly")
-                        KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
+                        KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lambd=lam_list[l])
                         KRR.fit(X,Y, "error")
                         out=KRR.rmse
                         print(out, flush=True)
@@ -134,7 +134,7 @@ if method=='polynomial':
                         try:
                             print(f'c1={c1_list[c1]*1.05}, c2={c2_list[c2]*1.05}, d={d_list[d]*1.05}, lambda={lam_list[l]*1.05}', flush=True)
                             KRR=KernelRidgeRegression(type="poly")
-                            KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lamd=lam_list[l])
+                            KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lambd=lam_list[l])
                             KRR.fit(X,Y, "error")
                             out=KRR.rmse
                             print(out, flush=True)
@@ -165,7 +165,7 @@ if method=='gaussian':
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="gauss")
-            KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
+            KRR.set_var(sigma=sigma_list[s], lambd=lam_list[l])
             KRR.fit(X,Y, "error")
             out=KRR.rmse
             print(out, flush=True)
@@ -194,7 +194,7 @@ if method=='laplacian':
             print(f'sigma={sigma_list[s]}, lambda={lam_list[l]}', flush=True)
 
             KRR=KernelRidgeRegression(type="laplace")
-            KRR.set_var(sigma=sigma_list[s], lamd=lam_list[l])
+            KRR.set_var(sigma=sigma_list[s], lambd=lam_list[l])
             KRR.fit(X,Y, "error")
             out=KRR.rmse
             print(out, flush=True)
