@@ -157,8 +157,8 @@ if method=='polynomial':
                     except:
                         pass
 
-                    out_matrix_pol[c1,c2,d,l]=out
-
+                    out1_matrix_pol[c1,c2,d,l]=out1
+                    out2_matrix_pol[c1,c2,d,l]=out2
     with open(folder + "2_newest_pol_train", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out1_matrix_pol], file)
     with open(folder + "2_newest_pol_val", 'wb') as file:
