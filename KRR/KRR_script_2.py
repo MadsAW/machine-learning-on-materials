@@ -47,7 +47,7 @@ largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 X = largeFeatureMatrix
 Y = np.array(energies)
 
-#%% Load validation data
+#%% Load  Validation data
 
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
@@ -95,7 +95,7 @@ if method=='linear':
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            print("/n Train: " + str(out1) + "Validation: " + str(out2)+"/n", flush=True)
+            print("\n Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
 
             out1_matrix_lin[c,l]=out1
             out2_matrix_lin[c,l]=out2
@@ -138,7 +138,7 @@ if method=='polynomial':
                         out1=KRR.rmse
                         KRR.predict(Xv,Yv)
                         out2=KRR.rmse
-                        print("/n Train: " + str(out1) + "Validation: " + str(out2)+"/n", flush=True)
+                        print("\n Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
                     except numpy.linalg.linalg.LinAlgError:
                         out1=-1
                         out2=-1
@@ -151,7 +151,7 @@ if method=='polynomial':
                             out1=KRR.rmse
                             KRR.predict(Xv,Yv)
                             out2=KRR.rmse
-                            print("/n Train: " + str(out1) + "Validation: " + str(out2)+"/n", flush=True)
+                            print("\n Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
                         except:
                             pass
                     except:
@@ -187,7 +187,7 @@ if method=='gaussian':
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            print("/n Train: " + str(out1) + "Validation: " + str(out2)+"/n", flush=True)
+            print("\n Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
 
 
             out1_matrix_gauss[s,l]=out1
@@ -221,7 +221,7 @@ if method=='laplacian':
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            print("/n Train: " + str(out1) + "Validation: " + str(out2)+"/n", flush=True)
+            print("\n Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
 
 
             out1_matrix_laplace[s,l]=out1
