@@ -75,7 +75,7 @@ out=1
 
 
 
-lam_list = [10**n for n in range(-1,3)]
+lam_list = [10**n for n in range(-2,3)]
 
 c_list = [10**n for n in range(-3,7)]
 x = [-10**n for n in range(-1,7)]
@@ -113,7 +113,7 @@ if method=='linear':
 
 
 
-lam_list = [10**n for n in range(-1,3)]
+lam_list = [10**n for n in range(-2,3)]
 
 c1_list = list(frange(-5,20,5))
 
@@ -169,9 +169,9 @@ if method=='polynomial':
 
 
 
-lam_list = [10**n for n in range(-1,2)]
+lam_list = [10**n for n in range(-2,1)]
 
-sigma_list = [-1,1, 10]
+sigma_list = [0.25, 0.5, 1, 10]
 
 if method=='gaussian':
     out1_matrix_gauss = np.zeros((len(sigma_list), len(lam_list)))
@@ -203,9 +203,9 @@ if method=='gaussian':
 
 
 
-lam_list = [10**n for n in range(-1,2)]
+lam_list = [10**n for n in range(-2,1)]
 
-sigma_list = [-1,1,10]
+sigma_list = [0.25, 0.5, 1, 10]
 
 if method=='laplacian':
     out1_matrix_laplace = np.zeros((len(sigma_list), len(lam_list)))
