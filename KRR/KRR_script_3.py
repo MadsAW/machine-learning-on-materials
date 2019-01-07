@@ -117,7 +117,7 @@ lam_list = [10**n for n in range(-3,2)]
 
 c1_list = list(frange(-10,20,2.5))
 
-c2_list = list(frange(-30,-5,2.5)).append(list(range(0,20,5)))
+c2_list = list(frange(-30,-5,2.5))+list(range(0,20,5))
 
 
 d_list = list(frange(-30,25,5))
