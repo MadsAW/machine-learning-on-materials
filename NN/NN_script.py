@@ -41,7 +41,7 @@ path = "Saved matrices/"+saved_matrix_folder+"/sorted_Cutoff25_noSingleElementKr
 histories_folder=saved_matrix_folder+"_shape_"+feature_matrix_shape
 
 if histories_folder not in os.listdir("NN/Saved"):
-    os.mkdir("NN/Saved"+histories_folder)
+    os.mkdir("NN/Saved/"+histories_folder)
 
 
 #Load training data
