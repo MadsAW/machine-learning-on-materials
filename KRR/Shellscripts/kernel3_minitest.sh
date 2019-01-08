@@ -12,7 +12,7 @@
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
-#BSUB -R "rusage[mem=30GB]"
+#BSUB -R "rusage[mem=10GB]"
 ##Hvor lang tid må den køre hh:mm
 #BSUB -W 15:00
 ##Email når jobbet starter
