@@ -186,7 +186,7 @@ if method=='laplacian':
     for s in range(len(sigma_list)):
         for l in range(len(lam_list)):
             KRR=KernelRidgeRegression(type="laplace")
-            KRR.set_var(sigma=sigma_list[s], lambd=lam_list[l])
+            KRR.set_var(sigma=sigma_list[s], lambd=lambd)
             KRR.fit(X,Y, "error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
