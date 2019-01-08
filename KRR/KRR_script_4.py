@@ -74,8 +74,8 @@ Yv = np.array(energiesValidate)
 
 
 
-c_list = [10**n for n in range(-9,20)]
-x = [-10**n for n in range(-9,20)]
+c_list = [10**n for n in range(-9,15)]
+x = [-10**n for n in range(-9,15)]
 x.reverse()
 c_list = x + c_list
 
