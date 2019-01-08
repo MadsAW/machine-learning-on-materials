@@ -83,18 +83,25 @@ if method=='linear':
     prev=100
     lambd=0.01
     inistep=1
-    for i in range(10):
+    precision=0.00001
+    i=0
+    steps=0
+    maxstep=1000
+    while(abs(diff)>precision and steps<maxstep):
+        i+=1
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            lambd=lambd+steps*(-1)**i
+            steps+=1
+            lambd=lambd+step*(-1)**i
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=-10**10, lambd=lambd)
             KRR.fit(X,Y)
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out2<0:
+            diff=prev-out2
+            if diff<0:
                 GoodDir=False
             prev=out2
             output.append([lambd,out2])
@@ -166,20 +173,26 @@ if method=='gaussian':
     prev=100
     sigma=1
     inistep=5
-    for i in range(10):
+    precision=0.00001
+    i=0
+    steps=0
+    maxstep=250
+    while(abs(diff)>precision and steps<maxstep):
+        i+=1
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            sigma=sigma+steps*(-1)**i
+            steps+=1
+            sigma=sigma+step*(-1)**i
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma, lambd=0.01)
             KRR.fit(X,Y,"error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-
-            if prev-out1<0:
+            diff=prev-out1
+            if diff<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
@@ -197,19 +210,26 @@ if method=='laplacian':
     prev=100
     sigma=1
     inistep=5
-    for i in range(10):
+    precision=0.00001
+    i=0
+    steps=0
+    maxstep=250
+    while(abs(diff)>precision and steps<maxstep):
+        i+=1
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            sigma=sigma+steps*(-1)**i
-            KRR=KernelRidgeRegression(type="gauss")
+            steps+=1
+            sigma=sigma+step*(-1)**i
+            KRR=KernelRidgeRegression(type="laplace")
             KRR.set_var(sigma=sigma, lambd=0.01)
             KRR.fit(X,Y,"error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out1<0:
+            diff=prev-out1
+            if diff<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
