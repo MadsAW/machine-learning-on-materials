@@ -8,7 +8,7 @@
 ##Output fil
 #BSUB -o output/4_0.01_newest_pol-%J.out
 ##Antal kerner
-#BSUB -n 5
+#BSUB -n 1
 ##Om kernerne må være på forskellige computere
 #BSUB -R "span[hosts=1]"
 ##Ram pr kerne
