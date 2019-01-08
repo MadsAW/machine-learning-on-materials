@@ -94,7 +94,7 @@ if method=='linear':
             KRR.fit(X,Y)
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out2>0:
+            if prev-out2<0:
                 GoodDir=False
             prev=out2
             output.append([lambd,out2])
@@ -179,7 +179,7 @@ if method=='gaussian':
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
 
-            if prev-out1>0:
+            if prev-out1<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
@@ -209,7 +209,7 @@ if method=='laplacian':
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out1>0:
+            if prev-out1<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
