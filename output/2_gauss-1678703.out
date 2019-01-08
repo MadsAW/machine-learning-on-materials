@@ -81,3 +81,23 @@ sigma=1.5, lambda=100
  Train: 0.5448565580287856 Validation: 0.5145230288524748
 
 sigma=2, lambda=0.01
+
+ Train: 0.08398076674329286 Validation: 0.28709685928043654
+
+sigma=2, lambda=0.1
+
+ Train: 0.15951483196392946 Validation: 0.2923735541986004
+
+sigma=2, lambda=1
+
+ Train: 0.31280953608494194 Validation: 0.3443018701423645
+
+sigma=2, lambda=10
+
+ Train: 0.4696394543964306 Validation: 0.45301423192540385
+
+sigma=2, lambda=100
+
+ Train: 0.54604958842974 Validation: 0.5160654707697024
+
+sigma=5, lambda=0.01
