@@ -87,7 +87,7 @@ if method=='linear':
     maxstep=250
     precision=0.0001
     steps=0
-    diff=0
+    diff=100
     while(abs(diff)>precision and steps<maxstep):
         i+=1
         GoodDir=True
@@ -182,7 +182,7 @@ if method=='gaussian':
     maxstep=250
     precision=0.0001
     steps=0
-    diff=0
+    diff=100
     while(abs(diff)>precision and steps<maxstep):
         i+=1
         GoodDir=True
@@ -220,7 +220,7 @@ if method=='laplacian':
     maxstep=250
     precision=0.0001
     steps=0
-    diff=0
+    diff=100
     while(abs(diff)>precision and steps<maxstep):
         i+=1
         GoodDir=True
