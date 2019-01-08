@@ -16,17 +16,18 @@ os.chdir("Saved")
 folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store']
 folders.sort()
 
+
 #
 folders = folders[-3:]
 #
 
 
 
-li=[]
+data=[]
 for folder in folders:
     files = [file[7:] for file in os.listdir(folder) if file!='.DS_Store']
     
-    m_folder=folder
+    m_folder=folder[:16]
     m_func=folder[folder.find('_')+1:]
 
     for file in files:
@@ -38,22 +39,45 @@ for folder in folders:
             acti='sigmoid'
         nhidden=int(file[-1])
     
-        li.append({'N':N,'drop':drop,'acti':acti,'nhidden':nhidden,'m_folder':m_folder,'m_func':m_func,'file':'hist_N_'+file})
+        data.append({'N':N,'drop':drop,'acti':acti,'nhidden':nhidden,'m_folder':m_folder,'m_func':m_func,'file':'hist_N_'+file})
 
 
-for di in li:
-    path=di['m_folder']+'/'+di['file']
+for di in data:
+    path=di['m_folder']+'_'+di['m_func']+'/'+di['file']
     with open(path, 'rb') as pickle_file:
         history=pickle.load(pickle_file)
     di['rmse']=np.sqrt(np.mean(history['mean_squared_error'][-5:]))
     di['rmse_val']=np.sqrt(np.mean(history['val_mean_squared_error'][-5:]))
 
 minimum=100
-
-for di in li:
+for di in data:
     if di['rmse_val']<minimum:
         minimum=di['rmse_val']
         minimum_di=di
+
+
+param_list=['N','drop','acti','nhidden','m_folder','m_func']
+
+
+for param in param_list:
+    new_list = param_list.copy()
+    new_list.pop(param_list.index(param))
+    
+    plot_list=[]
+    for di in data:
+        if [di[p] for p in new_list]==[minimum_di[p] for p in new_list]:
+            plot_list.append(di)
+    
+    list_param=[di[param] for di in plot_list]
+    list_rmse=[di['rmse_val'] for di in plot_list]
+    
+    plt.plot(zip(*sorted(zip(list_param, list_rmse))))
+    
+    
+    break
+        
+
+
 
 #
 #min_vals=[]
