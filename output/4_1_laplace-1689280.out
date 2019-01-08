@@ -1,2 +1,8 @@
 Unloaded module: latex/TeXLive12
 Loaded module: python3/3.6.2
+
+Train: 0.33180936336593564 Validation: 0.6195758471084356
+
+
+Train: 0.22533248084655283 Validation: 0.38512155752732774
+
