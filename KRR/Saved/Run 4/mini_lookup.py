@@ -13,7 +13,7 @@ for matrix in matrices:
             results = pickle.load(pickleFile)
             # Enable interactive mode
             plt.ion()
-            
+            print(results)
             # Draw the grid lines
             plt.grid(True)
             #plt.plot(results[1],results[2],label=matrix)
