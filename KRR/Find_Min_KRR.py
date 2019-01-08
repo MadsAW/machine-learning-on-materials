@@ -81,7 +81,7 @@ if method=='linear':
     output=[]
     folder=folder+"lin/"
     prev=100
-    lambd=3.00000000000000000000000000001
+    lambd=3
     inistep=1
     i=0
     maxstep=250
@@ -95,6 +95,7 @@ if method=='linear':
         while (GoodDir):
             steps+=1
             lambd=lambd+step*(-1)**i
+            if lambd<=0: lambd=step*1.1
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=-10**10, lambd=lambd)
             KRR.fit(X,Y)
