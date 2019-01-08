@@ -1,0 +1,27 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.0
+sigma=0.25, lambda=0.001
+
+Train: 0.07609006107536737 Validation: 0.5019623606515415
+
+sigma=0.25, lambda=0.01
+
+Train: 0.07626553710002086 Validation: 0.5020069905270239
+
+sigma=0.4, lambda=0.001
+
+Train: 0.07608959817408358 Validation: 0.4254842420927182
+
+sigma=0.4, lambda=0.01
+
+Train: 0.07622007471975153 Validation: 0.42560784944465596
+
+sigma=0.5, lambda=0.001
+
+Train: 0.07608944108603459 Validation: 0.3921036111119398
+
+sigma=0.5, lambda=0.01
+
+Train: 0.07620459787926004 Validation: 0.3922506269057473
+
+sigma=0.6, lambda=0.001

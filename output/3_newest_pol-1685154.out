@@ -1,0 +1,600 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+c1=-10, c2=-30, d=-30, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-30, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-30, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-30, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-30, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-25, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-25, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-25, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-25, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-25, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-20, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-20, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-20, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-20, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-20, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-15, lambda=0.001
+
+ Train: 0.7661138771303023 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-15, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-15, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-15, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-15, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-30, d=-10, lambda=0.001
+
+ Train: 0.7661138753936436 Validation: 0.7424498170097504
+
+c1=-10, c2=-30, d=-10, lambda=0.01
+
+ Train: 0.7661138769566364 Validation: 0.7424498186138268
+
+c1=-10, c2=-30, d=-10, lambda=0.1
+
+ Train: 0.7661138771129357 Validation: 0.7424498187742344
+
+c1=-10, c2=-30, d=-10, lambda=1
+
+ Train: 0.7661138771285657 Validation: 0.7424498187902752
+
+c1=-10, c2=-30, d=-10, lambda=10
+
+ Train: 0.7661138771301286 Validation: 0.7424498187918793
+
+c1=-10, c2=-30, d=-5, lambda=0.001
+
+ Train: 0.8162540498722259 Validation: 0.7938012827770149
+
+c1=-10, c2=-30, d=-5, lambda=0.01
+
+ Train: 0.770448466064102 Validation: 0.7468955000674166
+
+c1=-10, c2=-30, d=-5, lambda=0.1
+
+ Train: 0.7665414195711344 Validation: 0.7428883762647588
+
+c1=-10, c2=-30, d=-5, lambda=1
+
+ Train: 0.7661565729799603 Validation: 0.7424936152088887
+
+c1=-10, c2=-30, d=-5, lambda=10
+
+ Train: 0.7661181461320844 Validation: 0.7424541978412029
+
+c1=-10, c2=-30, d=0, lambda=0.001
+
+ Train: 0.5555076189466934 Validation: 0.5264812597226138
+
+c1=-10, c2=-30, d=0, lambda=0.01
+
+ Train: 0.5555076189496058 Validation: 0.5264812471594592
+
+c1=-10, c2=-30, d=0, lambda=0.1
+
+ Train: 0.555507619240874 Validation: 0.5264811217352311
+
+c1=-10, c2=-30, d=0, lambda=1
+
+ Train: 0.5555076483495623 Validation: 0.5264798955628145
+
+c1=-10, c2=-30, d=0, lambda=10
+
+ Train: 0.5555105411811626 Validation: 0.5264704214376545
+
+c1=-10, c2=-30, d=5, lambda=0.001
+
+ Train: 0.07608918939127263 Validation: 0.3063402495947651
+
+c1=-10, c2=-30, d=5, lambda=0.01
+
+ Train: 0.07608827943725584 Validation: 0.3063646940290468
+
+c1=-10, c2=-30, d=5, lambda=0.1
+
+ Train: 0.07608825800529807 Validation: 0.30636906067453534
+
+c1=-10, c2=-30, d=5, lambda=1
+
+ Train: 0.07608825781596686 Validation: 0.30636884442032186
+
+c1=-10, c2=-30, d=5, lambda=10
+
+ Train: 0.07608825781388044 Validation: 0.30636886105252176
+
+c1=-10, c2=-30, d=10, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-31.5, d=10.5, lambda=0.0010500000000000002
+c1=-10, c2=-30, d=10, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-31.5, d=10.5, lambda=0.0105
+c1=-10, c2=-30, d=10, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-31.5, d=10.5, lambda=0.10500000000000001
+c1=-10, c2=-30, d=10, lambda=1
+singular matrix error
+c1=-10.5, c2=-31.5, d=10.5, lambda=1.05
+c1=-10, c2=-30, d=10, lambda=10
+singular matrix error
+c1=-10.5, c2=-31.5, d=10.5, lambda=10.5
+c1=-10, c2=-30, d=15, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-31.5, d=15.75, lambda=0.0010500000000000002
+c1=-10, c2=-30, d=15, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-31.5, d=15.75, lambda=0.0105
+c1=-10, c2=-30, d=15, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-31.5, d=15.75, lambda=0.10500000000000001
+c1=-10, c2=-30, d=15, lambda=1
+singular matrix error
+c1=-10.5, c2=-31.5, d=15.75, lambda=1.05
+c1=-10, c2=-30, d=15, lambda=10
+singular matrix error
+c1=-10.5, c2=-31.5, d=15.75, lambda=10.5
+c1=-10, c2=-30, d=20, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-31.5, d=21.0, lambda=0.0010500000000000002
+c1=-10, c2=-30, d=20, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-31.5, d=21.0, lambda=0.0105
+c1=-10, c2=-30, d=20, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-31.5, d=21.0, lambda=0.10500000000000001
+c1=-10, c2=-30, d=20, lambda=1
+singular matrix error
+c1=-10.5, c2=-31.5, d=21.0, lambda=1.05
+c1=-10, c2=-30, d=20, lambda=10
+singular matrix error
+c1=-10.5, c2=-31.5, d=21.0, lambda=10.5
+c1=-10, c2=-27.5, d=-30, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-30, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-30, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-30, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-30, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-25, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-25, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-25, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-25, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-25, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-20, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-20, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-20, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-20, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-20, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-15, lambda=0.001
+
+ Train: 0.7661138771303025 Validation: 0.7424498187920578
+
+c1=-10, c2=-27.5, d=-15, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-15, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-15, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-15, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-27.5, d=-10, lambda=0.001
+
+ Train: 0.7661138729908217 Validation: 0.7424498145435695
+
+c1=-10, c2=-27.5, d=-10, lambda=0.01
+
+ Train: 0.7661138767163542 Validation: 0.7424498183672087
+
+c1=-10, c2=-27.5, d=-10, lambda=0.1
+
+ Train: 0.7661138770889074 Validation: 0.7424498187495726
+
+c1=-10, c2=-27.5, d=-10, lambda=1
+
+ Train: 0.7661138771261627 Validation: 0.7424498187878091
+
+c1=-10, c2=-27.5, d=-10, lambda=10
+
+ Train: 0.7661138771298883 Validation: 0.7424498187916327
+
+c1=-10, c2=-27.5, d=-5, lambda=0.001
+
+ Train: 0.8513043592098408 Validation: 0.8296156472492804
+
+c1=-10, c2=-27.5, d=-5, lambda=0.01
+
+ Train: 0.7728590851375876 Validation: 0.7493677554457892
+
+c1=-10, c2=-27.5, d=-5, lambda=0.1
+
+ Train: 0.7667741807742176 Validation: 0.7431271700945528
+
+c1=-10, c2=-27.5, d=-5, lambda=1
+
+ Train: 0.7661797681787952 Validation: 0.7425174123764158
+
+c1=-10, c2=-27.5, d=-5, lambda=10
+
+ Train: 0.7661204648447939 Validation: 0.7424565767378577
+
+c1=-10, c2=-27.5, d=0, lambda=0.001
+
+ Train: 0.5555076189466934 Validation: 0.5264812597226138
+
+c1=-10, c2=-27.5, d=0, lambda=0.01
+
+ Train: 0.5555076189496058 Validation: 0.5264812471594592
+
+c1=-10, c2=-27.5, d=0, lambda=0.1
+
+ Train: 0.555507619240874 Validation: 0.5264811217352311
+
+c1=-10, c2=-27.5, d=0, lambda=1
+
+ Train: 0.5555076483495623 Validation: 0.5264798955628145
+
+c1=-10, c2=-27.5, d=0, lambda=10
+
+ Train: 0.5555105411811626 Validation: 0.5264704214376545
+
+c1=-10, c2=-27.5, d=5, lambda=0.001
+
+ Train: 0.07608850457957525 Validation: 0.3079712412138153
+
+c1=-10, c2=-27.5, d=5, lambda=0.01
+
+ Train: 0.07608826501239119 Validation: 0.3079647008623335
+
+c1=-10, c2=-27.5, d=5, lambda=0.1
+
+ Train: 0.07608825789973095 Validation: 0.30796512636297557
+
+c1=-10, c2=-27.5, d=5, lambda=1
+
+ Train: 0.0760882578146375 Validation: 0.30796512469145243
+
+c1=-10, c2=-27.5, d=5, lambda=10
+
+ Train: 0.07608825781394388 Validation: 0.30796514545355796
+
+c1=-10, c2=-27.5, d=10, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-28.875, d=10.5, lambda=0.0010500000000000002
+c1=-10, c2=-27.5, d=10, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-28.875, d=10.5, lambda=0.0105
+c1=-10, c2=-27.5, d=10, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-28.875, d=10.5, lambda=0.10500000000000001
+c1=-10, c2=-27.5, d=10, lambda=1
+singular matrix error
+c1=-10.5, c2=-28.875, d=10.5, lambda=1.05
+c1=-10, c2=-27.5, d=10, lambda=10
+singular matrix error
+c1=-10.5, c2=-28.875, d=10.5, lambda=10.5
+c1=-10, c2=-27.5, d=15, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-28.875, d=15.75, lambda=0.0010500000000000002
+c1=-10, c2=-27.5, d=15, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-28.875, d=15.75, lambda=0.0105
+c1=-10, c2=-27.5, d=15, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-28.875, d=15.75, lambda=0.10500000000000001
+c1=-10, c2=-27.5, d=15, lambda=1
+singular matrix error
+c1=-10.5, c2=-28.875, d=15.75, lambda=1.05
+c1=-10, c2=-27.5, d=15, lambda=10
+singular matrix error
+c1=-10.5, c2=-28.875, d=15.75, lambda=10.5
+c1=-10, c2=-27.5, d=20, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-28.875, d=21.0, lambda=0.0010500000000000002
+c1=-10, c2=-27.5, d=20, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-28.875, d=21.0, lambda=0.0105
+c1=-10, c2=-27.5, d=20, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-28.875, d=21.0, lambda=0.10500000000000001
+c1=-10, c2=-27.5, d=20, lambda=1
+singular matrix error
+c1=-10.5, c2=-28.875, d=21.0, lambda=1.05
+c1=-10, c2=-27.5, d=20, lambda=10
+singular matrix error
+c1=-10.5, c2=-28.875, d=21.0, lambda=10.5
+c1=-10, c2=-25.0, d=-30, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-30, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-30, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-30, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-30, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-25, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-25, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-25, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-25, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-25, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-20, lambda=0.001
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-20, lambda=0.01
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-20, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-20, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-20, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-15, lambda=0.001
+
+ Train: 0.7661138771303033 Validation: 0.7424498187920586
+
+c1=-10, c2=-25.0, d=-15, lambda=0.01
+
+ Train: 0.7661138771303023 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-15, lambda=0.1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-15, lambda=1
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-15, lambda=10
+
+ Train: 0.7661138771303022 Validation: 0.7424498187920576
+
+c1=-10, c2=-25.0, d=-10, lambda=0.001
+
+ Train: 0.7661138664114607 Validation: 0.7424498077904181
+
+c1=-10, c2=-25.0, d=-10, lambda=0.01
+
+ Train: 0.7661138760584181 Validation: 0.7424498176918936
+
+c1=-10, c2=-25.0, d=-10, lambda=0.1
+
+ Train: 0.7661138770231138 Validation: 0.7424498186820411
+
+c1=-10, c2=-25.0, d=-10, lambda=1
+
+ Train: 0.7661138771195835 Validation: 0.7424498187810559
+
+c1=-10, c2=-25.0, d=-10, lambda=10
+
+ Train: 0.7661138771292304 Validation: 0.7424498187909573
+
+c1=-10, c2=-25.0, d=-5, lambda=0.001
+
+ Train: 0.9308201533115438 Validation: 0.9106480508772081
+
+c1=-10, c2=-25.0, d=-5, lambda=0.01
+
+ Train: 0.7771218260877626 Validation: 0.7537387579693526
+
+c1=-10, c2=-25.0, d=-5, lambda=0.1
+
+ Train: 0.7671773393894451 Validation: 0.7435407936894658
+
+c1=-10, c2=-25.0, d=-5, lambda=1
+
+ Train: 0.7662198620864489 Validation: 0.7425585492400041
+
+c1=-10, c2=-25.0, d=-5, lambda=10
+
+ Train: 0.7661244720249071 Validation: 0.7424606881782133
+
+c1=-10, c2=-25.0, d=0, lambda=0.001
+
+ Train: 0.5555076189466934 Validation: 0.5264812597226138
+
+c1=-10, c2=-25.0, d=0, lambda=0.01
+
+ Train: 0.5555076189496058 Validation: 0.5264812471594592
+
+c1=-10, c2=-25.0, d=0, lambda=0.1
+
+ Train: 0.555507619240874 Validation: 0.5264811217352311
+
+c1=-10, c2=-25.0, d=0, lambda=1
+
+ Train: 0.5555076483495623 Validation: 0.5264798955628145
+
+c1=-10, c2=-25.0, d=0, lambda=10
+
+ Train: 0.5555105411811626 Validation: 0.5264704214376545
+
+c1=-10, c2=-25.0, d=5, lambda=0.001
+
+ Train: 0.07608851355727513 Validation: 0.30984135567735416
+
+c1=-10, c2=-25.0, d=5, lambda=0.01
+
+ Train: 0.07608826392066292 Validation: 0.3098426431818162
+
+c1=-10, c2=-25.0, d=5, lambda=0.1
+
+ Train: 0.0760882578740242 Validation: 0.30984467546671174
+
+c1=-10, c2=-25.0, d=5, lambda=1
+
+ Train: 0.0760882578148969 Validation: 0.3098445441050613
+
+c1=-10, c2=-25.0, d=5, lambda=10
+
+ Train: 0.07608825781408617 Validation: 0.30984455955502843
+
+c1=-10, c2=-25.0, d=10, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-26.25, d=10.5, lambda=0.0010500000000000002
+c1=-10, c2=-25.0, d=10, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-26.25, d=10.5, lambda=0.0105
+c1=-10, c2=-25.0, d=10, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-26.25, d=10.5, lambda=0.10500000000000001
+c1=-10, c2=-25.0, d=10, lambda=1
+singular matrix error
+c1=-10.5, c2=-26.25, d=10.5, lambda=1.05
+c1=-10, c2=-25.0, d=10, lambda=10
+singular matrix error
+c1=-10.5, c2=-26.25, d=10.5, lambda=10.5
+c1=-10, c2=-25.0, d=15, lambda=0.001
+singular matrix error
+c1=-10.5, c2=-26.25, d=15.75, lambda=0.0010500000000000002
+c1=-10, c2=-25.0, d=15, lambda=0.01
+singular matrix error
+c1=-10.5, c2=-26.25, d=15.75, lambda=0.0105
+c1=-10, c2=-25.0, d=15, lambda=0.1
+singular matrix error
+c1=-10.5, c2=-26.25, d=15.75, lambda=0.10500000000000001
+c1=-10, c2=-25.0, d=15, lambda=1
+singular matrix error
+c1=-10.5, c2=-26.25, d=15.75, lambda=1.05
+c1=-10, c2=-25.0, d=15, lambda=10

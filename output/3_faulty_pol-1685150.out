@@ -1,0 +1,6 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+Traceback (most recent call last):
+  File "KRR/KRR_script_3_faulty.py", line 126, in <module>
+    out1_matrix_pol = np.zeros((len(c1_list), len(c2_list), len(d_list), len(lam_list)))
+TypeError: object of type 'NoneType' has no len()

@@ -9,3 +9,42 @@ sigma=0.25, lambda=0.1
  Train: 0.09460124256319025 Validation: 0.5889868723749363
 
 sigma=0.25, lambda=1
+
+ Train: 0.3348019697044848 Validation: 0.6247997757165239
+
+sigma=0.5, lambda=0.01
+
+ Train: 0.07629221657858894 Validation: 0.5033218368280236
+
+sigma=0.5, lambda=0.1
+
+ Train: 0.09161541531359631 Validation: 0.5049498224541503
+
+sigma=0.5, lambda=1
+
+ Train: 0.30152919694140556 Validation: 0.543529289279988
+
+sigma=1, lambda=0.01
+
+ Train: 0.07643730203072985 Validation: 0.3536894891780962
+
+sigma=1, lambda=0.1
+
+ Train: 0.09379132814509344 Validation: 0.35318725702638737
+
+sigma=1, lambda=1
+
+ Train: 0.2429649587480433 Validation: 0.3770086758281218
+
+sigma=10, lambda=0.01
+
+ Train: 0.16830311013095606 Validation: 0.29198604822447455
+
+sigma=10, lambda=0.1
+
+ Train: 0.3182647633255524 Validation: 0.34662866875118853
+
+sigma=10, lambda=1
+
+ Train: 0.4670205504086957 Validation: 0.45185968720378106
+
