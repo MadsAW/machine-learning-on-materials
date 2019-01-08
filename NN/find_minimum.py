@@ -71,10 +71,23 @@ for param in param_list:
     list_param=[di[param] for di in plot_list]
     list_rmse=[di['rmse_val'] for di in plot_list]
     
-    plt.plot(zip(*sorted(zip(list_param, list_rmse))))
+    l1,l2=zip(*sorted(zip(list_param, list_rmse)))
+    l1=list(l1)
+    l2=list(l2)
+    
+    if type(l1[0])==str:
+        plt.bar(l1,l2)
+
+
+    else:
+        plt.plot(l1,l2)
+    
+    plt.title(param)
+    plt.show()
     
     
-    break
+    
+
         
 
 
