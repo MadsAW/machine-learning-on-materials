@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 KRR/Find_Min_KRR_faulty.py gaussian GP
+python3 KRR/Find_Min_KRR_faulty.py gaussian SimpleLarge

@@ -4,9 +4,9 @@
 #BSUB -q hpc
 
 ##Navn på job
-#BSUB -J KRR_Min_faulty_gauss
+#BSUB -J KRR_Min_lin
 ##Output fil
-#BSUB -o output/Optimize__faulty_gauss-%J.out
+#BSUB -o output/Optimize__lin-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -23,4 +23,4 @@
 module purge
 module load python3
 
-python3 KRR/Find_Min_KRR_faulty.py gaussian GP
+python3 KRR/Find_Min_KRR.py linear SimpleLarge
