@@ -19,7 +19,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras import regularizers
 import numpy as np
-import pickle
+
 
 
 if len(sys.argv)!=7:
@@ -122,7 +122,7 @@ print(model.summary())
 #Batch size is number of iterations before weights are changed.
 history=model.fit(X, Y, epochs=70, batch_size=50, validation_data=(X_v,Y_v))
 
-with open(f"NN/Saved/"+histories_folder+"/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
+with open(f"NN/Saved/"+histories_folder+f"/hist_N_{N}_drop_{drop}_acti_{act}_nhidden_{n_hidden}", 'wb') as file:
     pickle.dump(history.history, file)
 
 
