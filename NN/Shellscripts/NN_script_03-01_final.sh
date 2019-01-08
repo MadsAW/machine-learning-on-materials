@@ -30,9 +30,9 @@ module purge
 module load tensorflow/1.5-gpu-python-3.6.2
 
 
-for drop in 0.15 0.25 0.45
+for drop in 0.15 0.25 0.35 0.45
 do
-	for N in 200 300 500 600
+	for N in 200 300 400 500 600
 	do
 		for nhidden in 0 1 2 3 4
 		do
