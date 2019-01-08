@@ -1,0 +1,5 @@
+Unloaded module: latex/TeXLive12
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: python3/3.6.2
+Loaded dependency [cudnn/v7.0.5-prod-cuda-9.0]: cuda/9.0
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: cudnn/v7.0.5-prod-cuda-9.0
+Loaded module: tensorflow/1.5-gpu-python-3.6.2
