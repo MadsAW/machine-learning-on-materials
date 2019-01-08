@@ -89,7 +89,6 @@ if method=='linear':
     diff=100
     maxstep=1000
     while(abs(diff)>precision and steps<maxstep):
-        i+=1
         GoodDir=True
         div=2**i
         step=inistep/div
@@ -107,10 +106,11 @@ if method=='linear':
             prev=out2
             output.append([lambd,out2])
             print("\nLambda: " + str(lambd) + " Validation: " + str(out2)+"\n", flush=True)
+        i+=1
 
 
 
-    with open(folder + "MINI_LIN_newest", 'wb') as file:
+    with open(folder + "MINI_other_LIN_newest", 'wb') as file:
         pickle.dump([output], file)
 
 
@@ -180,7 +180,6 @@ if method=='gaussian':
     maxstep=250
     diff=100
     while(abs(diff)>precision and steps<maxstep):
-        i+=1
         GoodDir=True
         div=2**i
         step=inistep/div
@@ -199,11 +198,12 @@ if method=='gaussian':
             prev=out1
             output.append([sigma,out1,out2])
             print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+        i+=1
 
 
 
 
-    with open(folder + "MINI_GAUSS_newest", 'wb') as file:
+    with open(folder + "MINI_other_GAUSS_newest", 'wb') as file:
         pickle.dump([output], file)
 
 if method=='laplacian':
@@ -218,7 +218,6 @@ if method=='laplacian':
     maxstep=250
     diff=100
     while(abs(diff)>precision and steps<maxstep):
-        i+=1
         GoodDir=True
         div=2**i
         step=inistep/div
@@ -237,7 +236,8 @@ if method=='laplacian':
             prev=out1
             output.append([sigma,out1,out2])
             print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+        i+=1
 
 
-    with open(folder + "MINI_LAPLACE_newest", 'wb') as file:
+    with open(folder + "MINI_other_LAPLACE_newest", 'wb') as file:
         pickle.dump([output], file)
