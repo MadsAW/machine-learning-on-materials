@@ -82,7 +82,7 @@ if method=='linear':
     folder=folder+"lin/"
     prev=100
     lambd=0.01
-    inistep=5
+    inistep=1
     i=0
     maxstep=250
     precision=0.0001
