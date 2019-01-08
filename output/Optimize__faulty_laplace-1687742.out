@@ -3,3 +3,7 @@ Loaded module: python3/3.6.2
 
 Sigma: 6.0 Train: 0.20814877651468475 Validation: 0.30003743475121264
 
+
+Sigma: 3.5 Train: 0.14694286190204497 Validation: 0.2898025469796004
+
+Terminated
