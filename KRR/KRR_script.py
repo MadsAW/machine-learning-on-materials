@@ -22,7 +22,7 @@ import numpy
 
 
 if len(sys.argv)!=2:
-    print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian laplacian')
+    print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian 1 SimpleLarge laplacian 1 SimpleLarge')
     sys.exit(1)
 
 method=sys.argv[1]
