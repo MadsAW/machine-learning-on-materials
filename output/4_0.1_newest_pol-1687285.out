@@ -1,0 +1,3 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+/zhome/b0/b/127184/.lsbatch/1546950277.1687285.shell: line 26: 19345 Killed                  python3 KRR/KRR_script_4_newest.py polynomial 0.1 SimpleLarge

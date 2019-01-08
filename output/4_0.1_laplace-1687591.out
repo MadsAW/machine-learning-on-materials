@@ -1,0 +1,6 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+Traceback (most recent call last):
+  File "KRR/KRR_script_4.py", line 187, in <module>
+    for l in range(len(lam_list)):
+NameError: name 'lam_list' is not defined
