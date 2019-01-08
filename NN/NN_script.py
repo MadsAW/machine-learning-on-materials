@@ -49,11 +49,14 @@ featureMatrixFile = "train_featureMatrix.npy"
 atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
 energiesFile = "train_pickledEnergies.txt"
 
-largeFeatureMatrix, mappedAtomicNumber = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
-
+if matrix_function == simpleLargeMatrix:
+    largeFeatureMatrix = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)[0]
+else:
+    largeFeatureMatrix = matrix_function(path,featureMatrixFile, atomicSymbolsListFile)
 
 with open(path+energiesFile, "rb") as pickleFile:
     energies = pickle.load(pickleFile)
+
 
 largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 
@@ -67,7 +70,11 @@ featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
 energiesFileValidate = "validate_pickledEnergies.txt"
 
-largeFeatureMatrixValidate, mappedAtomicNumberValidate = simpleLargeMatrix(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)
+if matrix_function == simpleLargeMatrix:
+    largeFeatureMatrixValidate = simpleLargeMatrix(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)[0]
+else:
+    largeFeatureMatrixValidate = matrix_function(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)
+
 
 
 with open(path+energiesFileValidate, "rb") as pickleFile:
