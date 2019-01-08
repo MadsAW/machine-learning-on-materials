@@ -65,7 +65,7 @@ def simpleLargeMatrix(path,featureMatrixFile,atomicSymbolsListFile):
         materialNum += 1
         
         
-    return newFeatureMatrix, mappedAtomicNumber
+    return newFeatureMatrix
 
 
 
