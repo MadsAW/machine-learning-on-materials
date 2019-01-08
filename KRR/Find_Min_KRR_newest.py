@@ -105,7 +105,7 @@ if method=='linear':
                 GoodDir=False
             prev=out2
             output.append([lambd,out2])
-            print("\nLambda: " + str(lambd) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(lambd) + ", " + str(out2)+"\n", flush=True)
         i+=1
 
 
@@ -197,7 +197,7 @@ if method=='gaussian':
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
-            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(sigma) + ", " + str(out1) + ", " + str(out2)+"\n", flush=True)
         i+=1
 
 
@@ -235,7 +235,7 @@ if method=='laplacian':
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
-            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(sigma) + ", " + str(out1) + ", " + str(out2)+"\n", flush=True)
         i+=1
 
 
