@@ -21,3 +21,15 @@ sigma=0.5, lambda=0.001
 Train: 0.07609034103403133 Validation: 0.5032650560286827
 
 sigma=0.5, lambda=0.01
+
+Train: 0.07629221657858894 Validation: 0.5033218368280236
+
+sigma=0.6, lambda=0.001
+
+Train: 0.07609029494731737 Validation: 0.46437327550669355
+
+sigma=0.6, lambda=0.01
+
+Train: 0.07628643510727098 Validation: 0.46442464432818925
+
+sigma=0.7, lambda=0.001
