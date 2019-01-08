@@ -18,7 +18,7 @@
 ##Ram pr kerne
 #BSUB -R "rusage[mem=6GB]"
 ##Hvor lang tid må den køre hh:mm
-#BSUB -W 15:00
+#BSUB -W 20:00
 ##Email når jobbet starter
 #BSUB -B
 ##og stopper
