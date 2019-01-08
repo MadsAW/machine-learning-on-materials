@@ -1968,3 +1968,34 @@ c1=15, c2=-10, d=-20, lambda=0.1
 singular matrix error
 c1=15.75, c2=-10.5, d=-21.0, lambda=0.10500000000000001
 c1=15, c2=-10, d=-20, lambda=1
+singular matrix error
+c1=15.75, c2=-10.5, d=-21.0, lambda=1.05
+c1=15, c2=-10, d=-20, lambda=10
+
+ Train: 1.5598443790326016e+85 Validation: 5.0368062833326085e+68
+
+c1=15, c2=-10, d=-20, lambda=100
+
+ Train: 9.721836887715714e+65 Validation: 2.732142320423908e+67
+
+c1=15, c2=-10, d=-10, lambda=0.01
+
+ Train: 1.0629830272883993e+35 Validation: 1.8172580304819676e+40
+
+c1=15, c2=-10, d=-10, lambda=0.1
+
+ Train: 9.942808159034238e+48 Validation: 2.177917188160538e+38
+
+c1=15, c2=-10, d=-10, lambda=1
+
+ Train: 7.578687570688342e+37 Validation: 3.9950419441303655e+34
+
+c1=15, c2=-10, d=-10, lambda=10
+
+ Train: 2.5545734635174116e+49 Validation: 2.2588427582753308e+38
+
+c1=15, c2=-10, d=-10, lambda=100
+
+ Train: 6.0841361092010355e+37 Validation: 3.346155028313612e+41
+
+c1=15, c2=-10, d=0, lambda=0.01

@@ -9454,3 +9454,153 @@ c1=10.0, c2=-20, d=0, lambda=10
  Train: 0.5555105411811626 Validation: 0.5264704214376545
 
 c1=10.0, c2=-20, d=0, lambda=100
+
+ Train: 0.5557826060971731 Validation: 0.5266363806973965
+
+c1=10.0, c2=-20, d=5, lambda=0.01
+
+ Train: 0.07608825797351985 Validation: 29.29476839369755
+
+c1=10.0, c2=-20, d=5, lambda=0.1
+
+ Train: 0.07608826039581527 Validation: 29.532055648638593
+
+c1=10.0, c2=-20, d=5, lambda=1
+
+ Train: 0.07608856293576166 Validation: 32.13254061092878
+
+c1=10.0, c2=-20, d=5, lambda=10
+
+ Train: 0.07798777330413093 Validation: 257.22919694464053
+
+c1=10.0, c2=-20, d=5, lambda=100
+
+ Train: 0.07613596090482935 Validation: 4.148015031516049
+
+c1=10.0, c2=-20, d=10, lambda=0.01
+
+ Train: 9.728582674311628 Validation: 17.373546623383582
+
+c1=10.0, c2=-20, d=10, lambda=0.1
+
+ Train: 1.5389371440553292 Validation: 3.7145259358435316
+
+c1=10.0, c2=-20, d=10, lambda=1
+
+ Train: 0.1491037262223571 Validation: 4.191774963395535
+
+c1=10.0, c2=-20, d=10, lambda=10
+
+ Train: 0.07703603317020857 Validation: 4.213195074185994
+
+c1=10.0, c2=-20, d=10, lambda=100
+
+ Train: 0.0760998006446855 Validation: 4.2091746642476595
+
+c1=10.0, c2=-20, d=15, lambda=0.01
+singular matrix error
+c1=10.5, c2=-21.0, d=15.75, lambda=0.0105
+c1=10.0, c2=-20, d=15, lambda=0.1
+singular matrix error
+c1=10.5, c2=-21.0, d=15.75, lambda=0.10500000000000001
+c1=10.0, c2=-20, d=15, lambda=1
+singular matrix error
+c1=10.5, c2=-21.0, d=15.75, lambda=1.05
+c1=10.0, c2=-20, d=15, lambda=10
+singular matrix error
+c1=10.5, c2=-21.0, d=15.75, lambda=10.5
+c1=10.0, c2=-20, d=15, lambda=100
+singular matrix error
+c1=10.5, c2=-21.0, d=15.75, lambda=105.0
+c1=10.0, c2=-20, d=20, lambda=0.01
+singular matrix error
+c1=10.5, c2=-21.0, d=21.0, lambda=0.0105
+c1=10.0, c2=-20, d=20, lambda=0.1
+singular matrix error
+c1=10.5, c2=-21.0, d=21.0, lambda=0.10500000000000001
+c1=10.0, c2=-20, d=20, lambda=1
+singular matrix error
+c1=10.5, c2=-21.0, d=21.0, lambda=1.05
+c1=10.0, c2=-20, d=20, lambda=10
+singular matrix error
+c1=10.5, c2=-21.0, d=21.0, lambda=10.5
+c1=10.0, c2=-20, d=20, lambda=100
+singular matrix error
+c1=10.5, c2=-21.0, d=21.0, lambda=105.0
+c1=10.0, c2=-15, d=-20, lambda=0.01
+
+ Train: 0.7651568439409814 Validation: 0.7418454863010135
+
+c1=10.0, c2=-15, d=-20, lambda=0.1
+
+ Train: 0.7651816217512887 Validation: 0.7418450022173783
+
+c1=10.0, c2=-15, d=-20, lambda=1
+
+ Train: 0.7652081941446353 Validation: 0.7418469508220202
+
+c1=10.0, c2=-15, d=-20, lambda=10
+
+ Train: 0.7652571792894796 Validation: 0.7419935253264666
+
+c1=10.0, c2=-15, d=-20, lambda=100
+
+ Train: 0.7653234014468713 Validation: 0.7422828826847714
+
+c1=10.0, c2=-15, d=-15, lambda=0.01
+
+ Train: 0.7651547882944016 Validation: 0.7418458287441257
+
+c1=10.0, c2=-15, d=-15, lambda=0.1
+
+ Train: 0.7654557897541625 Validation: 0.7418469524167225
+
+c1=10.0, c2=-15, d=-15, lambda=1
+
+ Train: 0.7653246338857688 Validation: 0.7419006101294339
+
+c1=10.0, c2=-15, d=-15, lambda=10
+
+ Train: 0.7656437328564306 Validation: 0.7437556498133716
+
+c1=10.0, c2=-15, d=-15, lambda=100
+
+ Train: 0.7653622941117139 Validation: 0.7424129386251567
+
+c1=10.0, c2=-15, d=-10, lambda=0.01
+
+ Train: 0.7646078799246586 Validation: 0.741841367173748
+
+c1=10.0, c2=-15, d=-10, lambda=0.1
+
+ Train: 0.7650920216306528 Validation: 0.7418440037277042
+
+c1=10.0, c2=-15, d=-10, lambda=1
+
+ Train: 0.7651933027295121 Validation: 0.7418710081908262
+
+c1=10.0, c2=-15, d=-10, lambda=10
+
+ Train: 0.7652888879280072 Validation: 0.7421495960826886
+
+c1=10.0, c2=-15, d=-10, lambda=100
+
+ Train: 0.7653359133447701 Validation: 0.7423295023836811
+
+c1=10.0, c2=-15, d=-5, lambda=0.01
+
+ Train: 1.044822678967066 Validation: 1.0087837250277223
+
+c1=10.0, c2=-15, d=-5, lambda=0.1
+
+ Train: 0.7880656276803765 Validation: 0.7572366561292031
+
+c1=10.0, c2=-15, d=-5, lambda=1
+
+ Train: 0.7678413848141378 Validation: 0.744628505945943
+
+c1=10.0, c2=-15, d=-5, lambda=10
+
+ Train: 0.7659469028682822 Validation: 0.7427444667086314
+
+c1=10.0, c2=-15, d=-5, lambda=100
