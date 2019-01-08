@@ -75,8 +75,8 @@ Yv = np.array(energiesValidate)
 
 
 
-c_list = [10**n for n in range(-9,9)]
-x = [-10**n for n in range(-9,9)]
+c_list = [10**n for n in range(-9,30)]
+x = [-10**n for n in range(-9,30)]
 x.reverse()
 c_list = x + c_list
 
@@ -97,9 +97,9 @@ if method=='linear':
 
 
 
-    with open(folder + "3_faulty_lin_train_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_lin_train_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, c_list, out1_matrix_lin], file)
-    with open(folder + "3_faulty_lin_val_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_lin_val_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, c_list, out2_matrix_lin], file)
 
 
@@ -147,9 +147,9 @@ if method=='polynomial':
                 out1_matrix_pol[c1,c2,d]=out1
                 out2_matrix_pol[c1,c2,d]=out2
 
-    with open(folder + "3_faulty_pol_train", 'wb') as file:
+    with open(folder + "4_faulty_pol_train", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out1_matrix_pol], file)
-    with open(folder + "3_faulty_pol_val", 'wb') as file:
+    with open(folder + "4_faulty_pol_val", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out2_matrix_pol], file)
 
 
@@ -175,9 +175,9 @@ if method=='gaussian':
         out2_matrix_gauss[s]=out2
 
 
-    with open(folder + "3_faulty_gauss_train_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_gauss_train_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, sigma_list, out1_matrix_gauss], file)
-    with open(folder + "3_faulty_gauss_val_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_gauss_val_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, sigma_list, out2_matrix_gauss], file)
 
 if method=='laplacian':
@@ -199,7 +199,7 @@ if method=='laplacian':
             out2_matrix_laplace[s]=out2
 
 
-    with open(folder + "3_faulty_laplace_train_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_laplace_train_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, sigma_list, out1_matrix_laplace], file)
-    with open(folder + "3_faulty_laplace_val_"+str(lambd), 'wb') as file:
+    with open(folder + "4_faulty_laplace_val_"+str(lambd), 'wb') as file:
         pickle.dump([lambd, sigma_list, out2_matrix_laplace], file)
