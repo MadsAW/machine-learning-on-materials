@@ -1,5 +1,0 @@
-Unloaded module: latex/TeXLive12
-Loaded module: python3/3.6.2
-Usage: 
-"python3 KRR_script.py method"
-where method is one of linear polynomial gaussian laplacian

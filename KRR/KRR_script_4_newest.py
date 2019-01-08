@@ -147,9 +147,9 @@ if method=='polynomial':
                 out2_matrix_pol[c1,c2,d]=out2
 
     with open(folder + "4_newest_pol_train", 'wb') as file:
-        pickle.dump([lam_list, c1_list, c2_list, d_list, out1_matrix_pol], file)
+        pickle.dump([lambd, c1_list, c2_list, d_list, out1_matrix_pol], file)
     with open(folder + "4_newest_pol_val", 'wb') as file:
-        pickle.dump([lam_list, c1_list, c2_list, d_list, out2_matrix_pol], file)
+        pickle.dump([lambd, c1_list, c2_list, d_list, out2_matrix_pol], file)
 
 
 
@@ -184,18 +184,16 @@ if method=='laplacian':
     out1_matrix_laplace = np.zeros((len(sigma_list)))
     out2_matrix_laplace = np.zeros((len(sigma_list)))
     for s in range(len(sigma_list)):
-        for l in range(len(lam_list)):
-            KRR=KernelRidgeRegression(type="laplace")
-            KRR.set_var(sigma=sigma_list[s], lambd=lambd)
-            KRR.fit(X,Y, "error")
-            out1=KRR.rmse
-            KRR.predict(Xv,Yv)
-            out2=KRR.rmse
-            print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+        KRR=KernelRidgeRegression(type="laplace")
+        KRR.set_var(sigma=sigma_list[s], lambd=lambd)
+        KRR.fit(X,Y, "error")
+        out1=KRR.rmse
+        KRR.predict(Xv,Yv)
+        out2=KRR.rmse
+        print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
 
-
-            out1_matrix_laplace[s]=out1
-            out2_matrix_laplace[s]=out2
+        out1_matrix_laplace[s]=out1
+        out2_matrix_laplace[s]=out2
 
 
     with open(folder + "4_newest_laplace_train_"+str(lambd), 'wb') as file:
