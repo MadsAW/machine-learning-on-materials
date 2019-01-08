@@ -19,21 +19,20 @@ import pickle
 import numpy as np
 import numpy
 
-
 #Kernel matrices output folder
 folder = "KRR/Saved/Run 4/"
 
-if len(sys.argv)!=4:
+
+if len(sys.argv)!=3:
     print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian laplacian')
     sys.exit(1)
 
 method=sys.argv[1]
-lambd=float(sys.argv[2])
-Feature=str(sys.argv[3])
+Feature=str(sys.argv[2])
 
 
 
-path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
+path ="Saved matrices/04-01-2019 21.56/sorted_Cutoff25_noSingleElementKrystals/"
 #%% Load training data
 featureMatrixFile = "train_featureMatrix.npy"
 atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
@@ -74,33 +73,37 @@ Yv = np.array(energiesValidate)
 
 
 
-
-c_list = [10**n for n in range(-9,20)]
-x = [-10**n for n in range(-9,20)]
+c_list = [10**n for n in range(-9,9)]
+x = [-10**n for n in range(-9,9)]
 x.reverse()
 c_list = x + c_list
-
 if method=='linear':
-    out1_matrix_lin = np.zeros((len(c_list)))
-    out2_matrix_lin = np.zeros((len(c_list)))
+    output=[]
     folder=folder+"lin/"
-    for c in range(len(c_list)):
-        KRR=KernelRidgeRegression(type="linear")
-        KRR.set_var(c1=c_list[c], lambd=lambd)
-        KRR.fit(X,Y, "error")
-        out1=KRR.rmse
-        KRR.predict(Xv,Yv)
-        out2=KRR.rmse
-        print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
-        out1_matrix_lin[c]=out1
-        out2_matrix_lin[c]=out2
+    prev=100
+    lambd=0.01
+    inistep=1
+    for i in range(10):
+        GoodDir=True
+        div=2**i
+        steps=inistep/div
+        while (GoodDir):
+            lambd=lambd+steps*(-1)**i
+            KRR=KernelRidgeRegression(type="linear")
+            KRR.set_var(c1=-10**10, lambd=lambd)
+            KRR.fit(X,Y)
+            KRR.predict(Xv,Yv)
+            out2=KRR.rmse
+            if prev-out2>0:
+                GoodDir=False
+            prev=out2
+            output.append([lambd,out2])
+            print("\nLambda: " + str(lambd) + " Validation: " + str(out2)+"\n", flush=True)
 
 
 
-    with open(folder + "4_faulty_lin_train_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, c_list, out1_matrix_lin], file)
-    with open(folder + "4_faulty_lin_val_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, c_list, out2_matrix_lin], file)
+    with open(folder + "MINI_LIN_newest", 'wb') as file:
+        pickle.dump([out2], file)
 
 
 
@@ -147,9 +150,9 @@ if method=='polynomial':
                 out1_matrix_pol[c1,c2,d]=out1
                 out2_matrix_pol[c1,c2,d]=out2
 
-    with open(folder + "4_faulty_pol_train", 'wb') as file:
+    with open(folder + "3_pol_train", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out1_matrix_pol], file)
-    with open(folder + "4_faulty_pol_val", 'wb') as file:
+    with open(folder + "3_pol_val", 'wb') as file:
         pickle.dump([lam_list, c1_list, c2_list, d_list, out2_matrix_pol], file)
 
 
@@ -157,49 +160,61 @@ if method=='polynomial':
 
 
 
-sigma_list = [0.1,0.5,1,5,10,25,50,100]
-
 if method=='gaussian':
     folder=folder+"gauss/"
-    out1_matrix_gauss = np.zeros((len(sigma_list)))
-    out2_matrix_gauss = np.zeros((len(sigma_list)))
-    for s in range(len(sigma_list)):
-        KRR=KernelRidgeRegression(type="gauss")
-        KRR.set_var(sigma=sigma_list[s], lambd=lambd)
-        KRR.fit(X,Y, "error")
-        out1=KRR.rmse
-        KRR.predict(Xv,Yv)
-        out2=KRR.rmse
-        print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
-        out1_matrix_gauss[s]=out1
-        out2_matrix_gauss[s]=out2
-
-
-    with open(folder + "4_faulty_gauss_train_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, sigma_list, out1_matrix_gauss], file)
-    with open(folder + "4_faulty_gauss_val_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, sigma_list, out2_matrix_gauss], file)
-
-if method=='laplacian':
-    folder=folder+"laplace/"
-    out1_matrix_laplace = np.zeros((len(sigma_list)))
-    out2_matrix_laplace = np.zeros((len(sigma_list)))
-    for s in range(len(sigma_list)):
-        for l in range(len(lam_list)):
-            KRR=KernelRidgeRegression(type="laplace")
-            KRR.set_var(sigma=sigma_list[s], lambd=lam_list[l])
-            KRR.fit(X,Y, "error")
+    output=[]
+    prev=100
+    sigma=1
+    inistep=5
+    for i in range(10):
+        GoodDir=True
+        div=2**i
+        steps=inistep/div
+        while (GoodDir):
+            sigma=sigma+steps*(-1)**i
+            KRR=KernelRidgeRegression(type="gauss")
+            KRR.set_var(sigma=sigma, lambd=0.01)
+            KRR.fit(X,Y,"error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+
+            if prev-out1>0:
+                GoodDir=False
+            prev=out1
+            output.append([sigma,out1,out2])
+            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
 
 
-            out1_matrix_laplace[s]=out1
-            out2_matrix_laplace[s]=out2
 
 
-    with open(folder + "4_faulty_laplace_train_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, sigma_list, out1_matrix_laplace], file)
-    with open(folder + "4_faulty_laplace_val_"+str(lambd), 'wb') as file:
-        pickle.dump([lambd, sigma_list, out2_matrix_laplace], file)
+    with open(folder + "MINI_GAUSS_newest", 'wb') as file:
+        pickle.dump([output], file)
+
+if method=='laplacian':
+    folder=folder+"laplace/"
+    output=[]
+    prev=100
+    sigma=1
+    inistep=5
+    for i in range(10):
+        GoodDir=True
+        div=2**i
+        steps=inistep/div
+        while (GoodDir):
+            sigma=sigma+steps*(-1)**i
+            KRR=KernelRidgeRegression(type="gauss")
+            KRR.set_var(sigma=sigma, lambd=0.01)
+            KRR.fit(X,Y,"error")
+            out1=KRR.rmse
+            KRR.predict(Xv,Yv)
+            out2=KRR.rmse
+            if prev-out1>0:
+                GoodDir=False
+            prev=out1
+            output.append([sigma,out1,out2])
+            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+
+
+    with open(folder + "MINI_LAPLACE_newest", 'wb') as file:
+        pickle.dump([sigma, output], file)

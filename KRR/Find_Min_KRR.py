@@ -23,13 +23,12 @@ import numpy
 folder = "KRR/Saved/Run 4/"
 
 
-if len(sys.argv)!=4:
+if len(sys.argv)!=3:
     print('Usage: \n"python3 KRR_script.py method"\nwhere method is one of linear polynomial gaussian laplacian')
     sys.exit(1)
 
 method=sys.argv[1]
-lambd=float(sys.argv[2])
-Feature=str(sys.argv[3])
+Feature=str(sys.argv[2])
 
 
 
@@ -166,7 +165,7 @@ if method=='gaussian':
     output=[]
     prev=100
     sigma=1
-    inistep=1
+    inistep=5
     for i in range(10):
         GoodDir=True
         div=2**i
@@ -197,7 +196,7 @@ if method=='laplacian':
     output=[]
     prev=100
     sigma=1
-    inistep=1
+    inistep=5
     for i in range(10):
         GoodDir=True
         div=2**i
