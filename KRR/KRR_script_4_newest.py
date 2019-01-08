@@ -19,7 +19,8 @@ import pickle
 import numpy as np
 import numpy
 
-
+#Kernel matrices output folder
+folder = "KRR/Saved/Run 4/"
 
 
 if len(sys.argv)!=4:
@@ -72,10 +73,6 @@ Xv = largeFeatureMatrixValidate
 Yv = np.array(energiesValidate)
 
 
-
-
-#Kernel matrices output folder
-folder = "KRR/Saved/Run 4/"
 
 c_list = [10**n for n in range(-9,9)]
 x = [-10**n for n in range(-9,9)]
