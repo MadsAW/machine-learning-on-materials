@@ -38,10 +38,10 @@ featureMatrixFile = "train_featureMatrix.npy"
 atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
 energiesFile = "train_pickledEnergies.txt"
 
-if Feature="SimpleLarge":
+if Feature=="SimpleLarge":
     largeFeatureMatrix = simpleLargeMatrix(path,featureMatrixFile, atomicSymbolsListFile)
     folder=folder+"SimpleLarge/"
-elif Feature="GP":
+elif Feature=="GP":
     largeFeatureMatrix = advanced_large_matrix(path,featureMatrixFile, atomicSymbolsListFile)
     folder=folder+"GP/"
 
