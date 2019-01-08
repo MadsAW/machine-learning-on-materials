@@ -103,7 +103,7 @@ if method=='linear':
 
 
     with open(folder + "MINI_LIN_newest", 'wb') as file:
-        pickle.dump([out2], file)
+        pickle.dump([output], file)
 
 
 
@@ -217,4 +217,4 @@ if method=='laplacian':
 
 
     with open(folder + "MINI_LAPLACE_newest", 'wb') as file:
-        pickle.dump([sigma, output], file)
+        pickle.dump([output], file)
