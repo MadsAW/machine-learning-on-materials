@@ -58,9 +58,9 @@ Y = np.array(energies)
 featureMatrixFileValidate = "validate_featureMatrix.npy"
 atomicSymbolsListFileValidate = "validate_pickledAtomicSymbolsList.txt"
 energiesFileValidate = "validate_pickledEnergies.txt"
-if Feature="SimpleLarge":
+if Feature=="SimpleLarge":
     largeFeatureMatrixValidate = simpleLargeMatrix(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)
-elif Feature="GP":
+elif Feature=="GP":
     largeFeatureMatrixValidate = advanced_large_matrix(path,featureMatrixFileValidate, atomicSymbolsListFileValidate)
 
 with open(path+energiesFileValidate, "rb") as pickleFile:
