@@ -81,7 +81,7 @@ if method=='linear':
     output=[]
     folder=folder+"lin/"
     prev=100
-    lambd=0.01
+    lambd=3
     inistep=1
     precision=0.00001
     i=0
@@ -172,7 +172,7 @@ if method=='gaussian':
     folder=folder+"gauss/"
     output=[]
     prev=100
-    sigma=1
+    sigma=10
     inistep=5
     precision=0.00001
     i=0
@@ -210,7 +210,7 @@ if method=='laplacian':
     folder=folder+"laplace/"
     output=[]
     prev=100
-    sigma=1
+    sigma=10
     inistep=5
     precision=0.00001
     i=0
