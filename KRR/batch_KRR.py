@@ -101,7 +101,7 @@ elif method=='polynomial':
 if method=='gaussian':
     folder=folder+"gauss/"
     KRR=KernelRidgeRegression(type="gauss")
-    KRR.set_var(sigma=sigma_list[s], lambd=lambd)
+    KRR.set_var(sigma=Args, lambd=lambd)
     KRR.fit(X,Y, "error")
     out1=KRR.rmse
     KRR.predict(Xv,Yv)
@@ -110,7 +110,7 @@ if method=='gaussian':
 elif method=='laplacian':
     folder=folder+"laplace/"
     KRR=KernelRidgeRegression(type="laplace")
-    KRR.set_var(sigma=sigma_list[s], lambd=lambd)
+    KRR.set_var(sigma=Args, lambd=lambd)
     KRR.fit(X,Y, "error")
     out1=KRR.rmse
     KRR.predict(Xv,Yv)

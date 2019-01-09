@@ -1,11 +1,8 @@
-c_list = [10**n for n in range(-9,15)]
-x = [-10**n for n in range(-9,15)]
-x.reverse()
-c_list = x + c_list
+c_list = [0.1,0.5,1,5,10,25,50,100]
 for prdf in ["default", "faulty", "newest","deep"]:
     for description in ["GP","SimpleLarge"]:
-        for ktype in ["linear"]:#,"linear","gaussian","laplacian"
-            for lambd in [0.01, 0.1, 1, 10]:
+        for ktype in ["gaussian","laplacian"]:#,"linear","gaussian","laplacian"
+            for lambd in [0.01, 0.001, 0.1, 1, 10]:
                 for c1 in c_list:
                     #Shell script function
                     jobname='batch_job_this_is_on_purpose_to_utilize_more_kernel'
