@@ -2475,3 +2475,46 @@ c1=-10, c2=5, d=20, lambda=10
 singular matrix error
 c1=-10.5, c2=5.25, d=21.0, lambda=10.5
 c1=-10, c2=10, d=-30, lambda=0.001
+singular matrix error
+c1=-10.5, c2=10.5, d=-31.5, lambda=0.0010500000000000002
+c1=-10, c2=10, d=-30, lambda=0.01
+singular matrix error
+c1=-10.5, c2=10.5, d=-31.5, lambda=0.0105
+c1=-10, c2=10, d=-30, lambda=0.1
+singular matrix error
+c1=-10.5, c2=10.5, d=-31.5, lambda=0.10500000000000001
+c1=-10, c2=10, d=-30, lambda=1
+singular matrix error
+c1=-10.5, c2=10.5, d=-31.5, lambda=1.05
+c1=-10, c2=10, d=-30, lambda=10
+singular matrix error
+c1=-10.5, c2=10.5, d=-31.5, lambda=10.5
+c1=-10, c2=10, d=-25, lambda=0.001
+singular matrix error
+c1=-10.5, c2=10.5, d=-26.25, lambda=0.0010500000000000002
+c1=-10, c2=10, d=-25, lambda=0.01
+singular matrix error
+c1=-10.5, c2=10.5, d=-26.25, lambda=0.0105
+c1=-10, c2=10, d=-25, lambda=0.1
+singular matrix error
+c1=-10.5, c2=10.5, d=-26.25, lambda=0.10500000000000001
+c1=-10, c2=10, d=-25, lambda=1
+singular matrix error
+c1=-10.5, c2=10.5, d=-26.25, lambda=1.05
+c1=-10, c2=10, d=-25, lambda=10
+singular matrix error
+c1=-10.5, c2=10.5, d=-26.25, lambda=10.5
+c1=-10, c2=10, d=-20, lambda=0.001
+
+Train: 5.412803400910359e+74 Validation: 1.832357143619608e+65
+
+c1=-10, c2=10, d=-20, lambda=0.01
+singular matrix error
+c1=-10.5, c2=10.5, d=-21.0, lambda=0.0105
+c1=-10, c2=10, d=-20, lambda=0.1
+singular matrix error
+c1=-10.5, c2=10.5, d=-21.0, lambda=0.10500000000000001
+c1=-10, c2=10, d=-20, lambda=1
+singular matrix error
+c1=-10.5, c2=10.5, d=-21.0, lambda=1.05
+c1=-10, c2=10, d=-20, lambda=10

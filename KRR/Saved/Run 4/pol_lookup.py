@@ -42,7 +42,7 @@ for matrix in matrices:
         for i in range(len(dimensions)):
             Variables.append(dimensions[i][index[i]])
         print("Variables:", Variables)
-        print("Lambda:", results[0][index[-1]])
+        print("Lambda:", results[0])
         """
         MANUAL SHIT HERE FOR BACKUP
         values=list(flatten(results[len(results)-1]))

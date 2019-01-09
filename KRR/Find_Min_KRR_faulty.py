@@ -81,29 +81,38 @@ if method=='linear':
     output=[]
     folder=folder+"lin/"
     prev=100
-    lambd=0.01
+    lambd=3
     inistep=1
-    for i in range(10):
+    precision=0.00001
+    i=0
+    steps=0
+    diff=100
+    maxstep=1000
+    while(abs(diff)>precision and steps<maxstep):
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            lambd=lambd+steps*(-1)**i
+            steps+=1
+            lambd=lambd+step*(-1)**i
+            if lambd<=0: lambd=step*1.1
             KRR=KernelRidgeRegression(type="linear")
             KRR.set_var(c1=-10**10, lambd=lambd)
             KRR.fit(X,Y)
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out2<0:
+            diff=prev-out2
+            if diff<0:
                 GoodDir=False
             prev=out2
             output.append([lambd,out2])
-            print("\nLambda: " + str(lambd) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(lambd) + ", " + str(out2)+"\n", flush=True)
+        i+=1
 
 
 
-    with open(folder + "MINI_LIN_faulty", 'wb') as file:
-        pickle.dump([out2], file)
+    with open(folder + "MINI_other_LIN_faulty", 'wb') as file:
+        pickle.dump([output], file)
 
 
 
@@ -164,57 +173,72 @@ if method=='gaussian':
     folder=folder+"gauss/"
     output=[]
     prev=100
-    sigma=1
+    sigma=10.00000000000000000000000000001
     inistep=5
-    for i in range(10):
+    precision=0.0001
+    i=0
+    maxstep=250
+    steps=0
+    diff=100
+    while(abs(diff)>precision and steps<maxstep):
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            sigma=sigma+steps*(-1)**i
+            steps+=1
+            sigma=sigma+step*(-1)**i
             KRR=KernelRidgeRegression(type="gauss")
             KRR.set_var(sigma=sigma, lambd=0.01)
             KRR.fit(X,Y,"error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-
-            if prev-out1<0:
+            diff=prev-out1
+            if diff<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
-            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(sigma) + ", " + str(out1) + ", " + str(out2)+"\n", flush=True)
+        i+=1
 
 
 
 
-    with open(folder + "MINI_GAUSS_faulty", 'wb') as file:
+    with open(folder + "MINI_other_GAUSS_faulty", 'wb') as file:
         pickle.dump([output], file)
 
 if method=='laplacian':
     folder=folder+"laplace/"
     output=[]
     prev=100
-    sigma=1
+    sigma=10.00000000000000000000000000001
     inistep=5
-    for i in range(10):
+    i=0
+    maxstep=250
+    precision=0.0001
+    steps=0
+    diff=100
+    while(abs(diff)>precision and steps<maxstep):
         GoodDir=True
         div=2**i
-        steps=inistep/div
+        step=inistep/div
         while (GoodDir):
-            sigma=sigma+steps*(-1)**i
-            KRR=KernelRidgeRegression(type="gauss")
+            steps+=1
+            sigma=sigma+step*(-1)**i
+            KRR=KernelRidgeRegression(type="laplace")
             KRR.set_var(sigma=sigma, lambd=0.01)
             KRR.fit(X,Y,"error")
             out1=KRR.rmse
             KRR.predict(Xv,Yv)
             out2=KRR.rmse
-            if prev-out1<0:
+            diff=prev-out1
+            if diff<0:
                 GoodDir=False
             prev=out1
             output.append([sigma,out1,out2])
-            print("\nSigma: " + str(sigma) + " Train: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+            print(str(sigma) + ", " + str(out1) + ", " + str(out2)+"\n", flush=True)
+        i+=1
 
 
-    with open(folder + "MINI_LAPLACE_faulty", 'wb') as file:
-        pickle.dump([sigma, output], file)
+    with open(folder + "MINI_other_LAPLACE_faulty", 'wb') as file:
+        pickle.dump([output], file)
