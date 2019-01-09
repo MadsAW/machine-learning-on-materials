@@ -59,6 +59,43 @@ for di in data:
 param_list=['N','drop','acti','nhidden','m_folder','m_func']
 
 
+relu=[]
+sigmoid=[]
+fol03_01=[]
+fol04_01=[]
+fol11_10=[]
+grpprdxgrpprd=[]
+anumxanum=[]
+grpprdgrpprd2x2=[]
+for di in data:
+    if di['acti']=='relu':
+        relu.append(di['rmse_val'])
+    if di['acti']=='sigmoid':
+        sigmoid.append(di['rmse_val'])    
+    if di['m_folder']=='03-01-2019 11.04':
+        fol03_01.append(di['rmse_val'])
+    if di['m_folder']=='04-01-2019 21.56':
+        fol04_01.append(di['rmse_val'])
+    if di['m_folder']=='11-10-2018 11.36':
+        fol11_10.append(di['rmse_val'])
+    if di['m_func']=='shape_group_period_x_group_period':
+        grpprdxgrpprd.append(di['rmse_val'])
+    if di['m_func']=='shape_atomic_number':
+        anumxanum.append(di['rmse_val'])
+    if di['m_func']=='shape_group_period_2x2':
+        grpprdgrpprd2x2.append(di['rmse_val'])
+
+relu=np.mean(relu)
+sigmoid=np.mean(sigmoid)
+fol03_01=np.mean(fol03_01)
+fol04_01=np.mean(fol04_01)
+fol11_10=np.mean(fol11_10)
+grpprdxgrpprd=np.mean(grpprdxgrpprd)
+anumxanum=np.mean(anumxanum)
+grpprdgrpprd2x2=np.mean(grpprdgrpprd2x2)
+
+mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
+
 for param in param_list:
     new_list = param_list.copy()
     new_list.pop(param_list.index(param))
@@ -67,6 +104,8 @@ for param in param_list:
     for di in data:
         if [di[p] for p in new_list]==[minimum_di[p] for p in new_list]:
             plot_list.append(di)
+        
+        
     
     list_param=[di[param] for di in plot_list]
     list_rmse=[di['rmse_val'] for di in plot_list]
@@ -76,14 +115,16 @@ for param in param_list:
     l2=list(l2)
     
     if type(l1[0])==str:
+        plt.bar(l1,mean_list[param],color='orange')
         plt.bar(l1,l2)
-
-
+        plt.xticks(rotation='30')
     else:
         plt.plot(l1,l2)
+
     
     plt.title(param)
     plt.show()
     
-    
+
+
     
