@@ -30,11 +30,11 @@ module purge
 module load tensorflow/1.5-gpu-python-3.6.2
 
 
-for drop in 0.15 0.25 0.35 0.45
+for drop in 0.2 0.3 0.4
 do
-	for N in 200 300 400 500 600
+	for N in 350 450 550
 	do
-		for nhidden in 0 1 2 3 4
+		for nhidden in 1
 		do
 			python3 NN/NN_script.py $drop $N sigmoid $nhidden 03-01-2019\ 11.04 group_period_x_group_period
 		done
