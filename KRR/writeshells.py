@@ -2,20 +2,19 @@ c_list = [10**n for n in range(-9,15)]
 x = [-10**n for n in range(-9,15)]
 x.reverse()
 c_list = x + c_list
-
 for prdf in ["default", "faulty", "newest","deep"]:
     for description in ["GP","SimpleLarge"]:
         for ktype in ["linear"]:#,"linear","gaussian","laplacian"
-            for lambd in [0.001]:
+            for lambd in [0.01, 0.1, 1, 10]:
                 for c1 in c_list:
                     #Shell script function
-                    jobname='testing'
-                    output='output/4_0.1_faulty_gauss-%J.out'
+                    jobname='batch job | this is on purpose to utilize more kernels'
+                    output='output/batch/batch-%J.out'
                     mem='10GB'
                     runtime='45:00'
                     run='KRR/batch_KRR.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)
                     Mailbegin=False
-                    Mailend=True
+                    Mailend=False
                     mailb,maile="",""
                     if Mailbegin: mailb='\n#BSUB -B'
                     if Mailend: maile='\n#BSUB -N'
