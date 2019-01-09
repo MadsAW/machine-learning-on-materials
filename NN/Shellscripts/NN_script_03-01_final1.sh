@@ -38,9 +38,9 @@ do
 		do
 			for act in sigmoid
 			do
-				for folder in 03-01-2019\ 11.04 #04-01-2019\ 21.56 11-10-2018\ 11.36
+				for folder in 03-01-2019\ 11.04
 				do
-					for func in group_period_x_group_period #shape_atomic_number shape_group_period_2x2
+					for func in group_period_x_group_period
 					do
 						python3 NN/NN_script.py $drop $N $act $nhidden $folder $func
 					done
