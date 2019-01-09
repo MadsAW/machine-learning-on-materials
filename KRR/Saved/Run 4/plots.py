@@ -4,9 +4,10 @@ import matplotlib.pyplot as plt
 folder = "GP/"
 ktype = "lin"
 lambd = ["0.01","0.1","1.0"]
+prdf="" #Choices are "newest_" (5 overlap), "faulty_" (no overlap) and "" (1/2)
 plt.figure(0)   
 for l in lambd:
-    matrix = "/4_"+ktype+"_val_"+l
+    matrix = "/4_"+prdf+ktype+"_val_"+l
     with open(folder+ktype+matrix, "rb") as pickleFile:
         results = pickle.load(pickleFile)
         array = results[2]
