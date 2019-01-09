@@ -8,7 +8,7 @@ for prdf in ["default", "faulty", "newest","deep"]:
             for lambd in [0.01, 0.1, 1, 10]:
                 for c1 in c_list:
                     #Shell script function
-                    jobname='batch job this is on purpose to utilize more kernel'
+                    jobname='batch_job_this_is_on_purpose_to_utilize_more_kernel'
                     output='output/batch/batchjobs-%J.out'
                     mem='10GB'
                     runtime='45:00'
