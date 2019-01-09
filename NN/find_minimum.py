@@ -60,6 +60,7 @@ sigmoid=[]
 fol03_01=[]
 fol04_01=[]
 fol11_10=[]
+fol09_01=[]
 grpprdxgrpprd=[]
 anumxanum=[]
 grpprdgrpprd2x2=[]
@@ -74,6 +75,8 @@ for di in data:
         fol04_01.append(di['rmse_val'])
     if di['m_folder']=='11-10-2018 11.36':
         fol11_10.append(di['rmse_val'])
+    if di['m_folder']=='09-01-2019 12.57':
+        fol09_01.append(di['rmse_val'])
     if di['m_func']=='shape_group_period_x_group_period':
         grpprdxgrpprd.append(di['rmse_val'])
     if di['m_func']=='shape_atomic_number':
@@ -86,13 +89,14 @@ sigmoid=np.mean(sigmoid)
 fol03_01=np.mean(fol03_01)
 fol04_01=np.mean(fol04_01)
 fol11_10=np.mean(fol11_10)
+fol09_01=np.mean(fol09_01)
 grpprdxgrpprd=np.mean(grpprdxgrpprd)
 anumxanum=np.mean(anumxanum)
 grpprdgrpprd2x2=np.mean(grpprdgrpprd2x2)
 
-mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
+mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10,fol09_01], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
 
-for param in param_list:
+for param in ['N','drop','nhidden']:
     new_list = param_list.copy()
     new_list.pop(param_list.index(param))
     
@@ -110,17 +114,26 @@ for param in param_list:
     l1=list(l1)
     l2=list(l2)
     
-    if type(l1[0])==str:
-        plt.bar(l1,mean_list[param],color='orange')
-        plt.bar(l1,l2)
-        plt.xticks(rotation='30')
-    else:
-        plt.plot(l1,l2)
+    plt.plot(l1,l2)
 
     
     plt.title(param)
     plt.show()
     
 
+values={'acti':['sigmoid','relu'],'m_folder':['03-01-2019 11.04','04-01-2019 21.56','11-10-2018 11.36','09-01-2019 12.57'],'m_func':['shape_group_period_x_group_period','shape_atomic_number','shape_group_period_2x2']}
+for param in ['acti','m_folder','m_func']:
+    l1=values[param]
+    l2=[]
+    
+    for val in l1:
+        sublist=[di['rmse_val'] for di in data if di[param]==val]
+        best=np.mean(sublist)
+        l2.append(best)
+    
+    
 
+    plt.bar(l1,l2)
+    plt.xticks(rotation='30')
+    plt.show()
     
