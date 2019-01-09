@@ -61,7 +61,7 @@ Som input tager prdf følgende: Atoms, rs, dr, rmax
 """
 #%%
 
-rmax = 6.0
+rmax = 10.0
 dr = 0.25
 rs = np.arange(0, rmax - dr, dr/2)
 

@@ -128,7 +128,10 @@ for param in ['acti','m_folder','m_func']:
     
     for val in l1:
         sublist=[di['rmse_val'] for di in data if di[param]==val]
-        best=np.mean(sublist)
+        try:
+            best=min(sublist)
+        except:
+            best=0
         l2.append(best)
     
     
