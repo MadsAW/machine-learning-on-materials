@@ -8,9 +8,9 @@
 ##BSUB -q hpc
 
 ##Navn på job
-#BSUB -J NN_03-01
+#BSUB -J NN_last
 ##Output fil
-#BSUB -o output/NN_03-01-%J.out
+#BSUB -o output/NN_last-%J.out
 ##Antal kerner
 #BSUB -n 5
 ##Om kernerne må være på forskellige computere
@@ -18,7 +18,7 @@
 ##Ram pr kerne
 #BSUB -R "rusage[mem=6GB]"
 ##Hvor lang tid må den køre hh:mm
-#BSUB -W 15:00
+#BSUB -W 20:00
 ##Email når jobbet starter
 #BSUB -B
 ##og stopper
@@ -34,15 +34,15 @@ for drop in 0 0.1 0.2 0.25 0.3 0.4 0.7
 do
 	for N in 50
 	do
-		for nhidden in 1
+		for nhidden in 0 1 2 3 4 5 6
 		do
 			for act in sigmoid
 			do
-				for folder in 03-01-2019\ 11.04
+				for folder in 03-01-2019\ 11.04 09-01-2019\ 12.57 11-10-2018\ 11.36
 				do
-					for func in group_period_x_group_period
+					for func in group_period_x_group_period group_period_2x2 atomic_number
 					do
-						python3 NN/NN_script.py $drop 50 sigmoid 1 03-01-2019\ 11.04 group_period_x_group_period
+						python3 NN/NN_script.py $drop 50 sigmoid $nhidden $folder $func
 					done
 				done
 			done
