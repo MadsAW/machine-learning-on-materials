@@ -42,7 +42,7 @@ do
 				do
 					for func in group_period_x_group_period
 					do
-						python3 NN/NN_script.py $drop $N $act $nhidden $folder $func
+						echo "python3 NN/NN_script.py $drop $N $act $nhidden $folder $func"
 					done
 				done
 			done
