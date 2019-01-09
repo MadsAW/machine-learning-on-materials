@@ -17,10 +17,6 @@ folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store']
 folders.sort()
 
 
-#
-#folders = folders[-3:]
-#
-
 
 
 data=[]
