@@ -2,9 +2,9 @@
 ##Kør på cpu
 #BSUB -q hpc
 ##Navn på job
-#BSUB -J batch job | this is on purpose to utilize more kernels
+#BSUB -J batch job this is on purpose to utilize more kernel
 ##Output fil
-#BSUB -o output/batch/batch-%J.out
+#BSUB -o output/batch/batchjobs-%J.out
 ##Antal kerner
 #BSUB -n 1
 ##Om kernerne må være på forskellige computere

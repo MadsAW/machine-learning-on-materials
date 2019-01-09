@@ -8,8 +8,8 @@ for prdf in ["default", "faulty", "newest","deep"]:
             for lambd in [0.01, 0.1, 1, 10]:
                 for c1 in c_list:
                     #Shell script function
-                    jobname='batch job | this is on purpose to utilize more kernels'
-                    output='output/batch/batch-%J.out'
+                    jobname='batch job this is on purpose to utilize more kernel'
+                    output='output/batch/batchjobs-%J.out'
                     mem='10GB'
                     runtime='45:00'
                     run='KRR/batch_KRR.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)
