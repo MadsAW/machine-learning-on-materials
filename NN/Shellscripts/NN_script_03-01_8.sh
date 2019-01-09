@@ -1,6 +1,6 @@
 #!/bin/bash
 ##Kør på gpu
-#BSUB -q titanxpascal
+#BSUB -q gputitanxpascal
 ##Antal gpuer vi vil bruge. Kommenter ud hvis cpu.
 #BSUB -gpu "num=1:mode=exclusive_process"
 
