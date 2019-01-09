@@ -42,7 +42,7 @@ do
 				do
 					for func in group_period_x_group_period
 					do
-						python3 NN/NN_script.py $drop $N $act $nhidden $folder $func
+						python3 NN/NN_script.py $drop $N sigmoid 2 03-01-2019\ 11.04 group_period_x_group_period
 					done
 				done
 			done
