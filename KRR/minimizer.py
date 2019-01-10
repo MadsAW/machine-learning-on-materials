@@ -22,10 +22,10 @@ lambd=float(sys.argv[2])
 Feature=str(sys.argv[3])
 prdf=str(sys.argv[4])
 Args=ast.literal_eval(str(sys.argv[5]))
+print(Args)
 for i in range(len(Args)):
     Args[i]=float(Args[i])
-
-filename=str(prdf)
+print(Args)
 
 if prdf=="default":path = "Saved matrices/03-01-2019 11.04/sorted_Cutoff25_noSingleElementKrystals/"
 elif prdf=="faulty": path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
