@@ -17,4 +17,4 @@
 ##og stopper
 module purge
 module load python3
-python3 KRR/minimizer.py linear 1 GP default [0.5]
+python3 KRR/minimizer.py gaussian 0.01 GP deep [10]

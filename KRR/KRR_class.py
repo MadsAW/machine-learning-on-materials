@@ -72,7 +72,7 @@ class KernelRidgeRegression:
         #return np.exp(   -(np.linalg.norm(self._subt(A,B), axis=2)) /  sigma    )
 
     def _clear(self):
-        self.weigths = []
+        self.weights = []
         self.fitted = False
         self.rmse = None
 
@@ -105,16 +105,16 @@ class KernelRidgeRegression:
             self.Y = Y
             K = eval('self._'+self.type+'(self.X, self.X, self.c1, self.c2, self.d)')
             I = np.identity(len(X))
-            weigth=np.linalg.inv(np.matrix(K+self.lambd*I))
-            self.weights = weigth
+            weight=np.linalg.inv(np.matrix(K+self.lambd*I))
+            self.weights = weight
             self.fitted = True
             if "error" in args:
-                Y_predicted=K @ weigth @ self.Y
+                Y_predicted=K @ weight @ self.Y
                 self.rmse=np.sqrt(np.mean(np.square(Y_predicted-Y)))
         else:
             print("already fitted")
     def getw(self):
-        return self.weigths
+        return self.weights
     def predict(self, Xp, Y=[]):
         if (self.fitted == False):
             print("Not fitted yet")
