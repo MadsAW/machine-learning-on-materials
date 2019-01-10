@@ -120,6 +120,5 @@ elif method=='laplacian':
         return out2
 
 #Actual minimization
-passed=Args.append(lambd)
-print(passed)
-minimize(func,passed,method='Nelder-Mead', tol=1e-6)
+Args.append(lambd)
+minimize(func,Args,method='Nelder-Mead', tol=1e-6)
