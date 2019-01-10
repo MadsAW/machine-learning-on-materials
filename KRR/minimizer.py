@@ -21,6 +21,8 @@ lambd=float(sys.argv[2])
 Feature=str(sys.argv[3])
 prdf=str(sys.argv[4])
 Args=list(sys.argv[5])
+for i in len(Args):
+    Args[i]=float(Args[i])
 
 filename=str(prdf)
 
@@ -118,4 +120,5 @@ elif method=='laplacian':
 
 #Actual minimization
 passed=Args.append(lambd)
+print(passed)
 minimize(func,passed,method='Nelder-Mead', tol=1e-6)
