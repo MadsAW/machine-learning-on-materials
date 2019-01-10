@@ -22,10 +22,7 @@ lambd=float(sys.argv[2])
 Feature=str(sys.argv[3])
 prdf=str(sys.argv[4])
 Args=ast.literal_eval(str(sys.argv[5]))
-print(Args)
-print(Args[0])
-
-for i in len(Args):
+for i in range(len(Args)):
     Args[i]=float(Args[i])
 
 filename=str(prdf)
