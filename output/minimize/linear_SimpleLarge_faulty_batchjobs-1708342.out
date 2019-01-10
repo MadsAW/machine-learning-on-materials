@@ -1,0 +1,175 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[-10000]
+[-10000.0]
+[-1.e+04  5.e+00]
+5.0, -10000.0, 0.37980022916002504, 0.38342541700498056
+
+[-1.05e+04  5.00e+00]
+5.0, -10500.0, 0.37980022909057976, 0.3834254171421632
+
+[-1.00e+04  5.25e+00]
+5.25, -10000.0, 0.3830066264858106, 0.38568136695850613
+
+[-1.05e+04  4.75e+00]
+4.75, -10500.0, 0.3764313616843833, 0.3810786673132002
+
+[-1.075e+04  4.500e+00]
+4.5, -10750.0, 0.37288283070907907, 0.3786333370594029
+
+[-1.025e+04  4.500e+00]
+4.5, -10250.0, 0.37288283076803747, 0.3786333369318689
+
+[-1.0125e+04  4.2500e+00]
+4.25, -10125.0, 0.3691344045218136, 0.3760804448167104
+
+[-1.0875e+04  3.7500e+00]
+3.75, -10875.0, 0.3609369110478661, 0.37060832993028126
+
+[-1.13125e+04  3.12500e+00]
+3.125, -11312.5, 0.34901764462629115, 0.36293226894485237
+
+[-1.06875e+04  2.87500e+00]
+2.875, -10687.5, 0.34357194860486046, 0.35953904452722535
+
+[-1.065625e+04  2.062500e+00]
+2.0625, -10656.25, 0.3218735742629675, 0.3467499858749063
+
+[-1.184375e+04  9.375000e-01]
+0.9375, -11843.75, 0.27001916935622, 0.32108804657858775
+
+[-1.2703125e+04 -7.1875000e-01]
+-0.71875, -12703.125, 23.07688181347274, 20.075147710348205
+
+[-1.11875e+04 -1.25000e-01]
+-0.125, -11187.5, 5.8938895363028445, 7.031646842929576
+
+[-1.128125e+04  2.312500e+00]
+2.3125, -11281.25, 0.32935287481788206, 0.35102467017499556
+
+[-1.121875e+04  6.875000e-01]
+0.6875, -11218.75, 0.24958998142605063, 0.3129286946059348
+
+[-1.11875e+04 -1.25000e-01]
+-0.125, -11187.5, 5.8938895363028445, 7.031646842929576
+
+[-1.240625e+04 -4.375000e-01]
+-0.4375, -12406.25, 13.189122647892162, 12.64644082568604
+
+[-1.109375e+04  1.437500e+00]
+1.4375, -11093.75, 0.2981978996363974, 0.3341633472644133
+
+[-1.196875e+04  1.875000e-01]
+0.1875, -11968.75, 0.16907819645716354, 0.29187547655906565
+
+[-1.240625e+04 -4.375000e-01]
+-0.4375, -12406.25, 13.189122647892162, 12.64644082568604
+
+[-1.134375e+04 -6.250000e-02]
+-0.0625, -11343.75, 4.340969153330727, 4.419639675204138
+
+[-1.171875e+04  6.875000e-01]
+0.6875, -11718.75, 0.24958998141042105, 0.31292869468361195
+
+[-1.146875e+04  1.875000e-01]
+0.1875, -11468.75, 0.16907819646724723, 0.29187547654681084
+
+[-1.134375e+04 -6.250000e-02]
+-0.0625, -11343.75, 4.340969153330727, 4.419639675204138
+
+[-1.221875e+04 -3.125000e-01]
+-0.3125, -12218.75, 9.879577194482135, 12.03974375480119
+
+[-1.146875e+04  4.375000e-01]
+0.4375, -11468.75, 0.2202497750024411, 0.303189660640601
+
+[-1.196875e+04 -6.250000e-02]
+-0.0625, -11968.75, 4.340969327726777, 4.4196398653346165
+
+[-1.159375e+04  3.125000e-01]
+0.3125, -11593.75, 0.19912795931696733, 0.2976423598470101
+
+[-1.184375e+04  6.250000e-02]
+0.0625, -11843.75, 0.11765736592525491, 0.2879020025818817
+
+[-1.196875e+04 -6.250000e-02]
+-0.0625, -11968.75, 4.340969327726777, 4.4196398653346165
+
+[-1.134375e+04  6.250000e-02]
+0.0625, -11343.75, 0.11765736592811431, 0.2879020024135418
+
+[-11031.25      0.  ]
+Traceback (most recent call last):
+  File "KRR/minimizer.py", line 124, in <module>
+    minimize(func,Args,method='Nelder-Mead', tol=1e-3)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/_minimize.py", line 591, in minimize
+    return _minimize_neldermead(fun, x0, args, callback, **options)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 573, in _minimize_neldermead
+    fxe = func(xe)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 293, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "KRR/minimizer.py", line 78, in func
+    KRR.fit(X,Y, "error")
+  File "/zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials/KRR/KRR_class.py", line 108, in fit
+    weight=np.linalg.inv(np.matrix(K+self.lambd*I))
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 532, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 89, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.linalg.LinAlgError: Singular matrix
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-90>
+Subject: Job 1708342: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Thu Jan 10 17:20:37 2019
+Job was executed on host(s) <n-62-21-90>, in queue <hpc>, as user <s174007> in cluster <dcc> at Thu Jan 10 17:20:38 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 17:20:38 2019
+Terminated at Thu Jan 10 17:46:46 2019
+Results reported at Thu Jan 10 17:46:46 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/linear_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py linear 5 SimpleLarge faulty [-10000]
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   1565.71 sec.
+    Max Memory :                                 2433 MB
+    Average Memory :                             2214.51 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7807.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   1572 sec.
+    Turnaround time :                            1569 sec.
+
+The output (if any) is above this job summary.
+
