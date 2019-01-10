@@ -6,7 +6,7 @@ for prdf in ["default", "faulty", "newest","deep"]:#"default", "faulty", "newest
                 for c1 in c_list:
                     #Shell script function
                     jobname='batch_job_this_is_on_purpose_to_utilize_more_kernel'
-                    output='output/batch/batchjobs-%J.out'
+                    output='output/minimize/'+ktype+'_'+description+'_'+prdf+'_'+'batchjobs-%J.out'
                     mem='10GB'
                     runtime='45:00'
                     run='KRR/minimizer.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)

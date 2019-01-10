@@ -4,7 +4,7 @@
 ##Navn på job
 #BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
 ##Output fil
-#BSUB -o output/batch/batchjobs-%J.out
+#BSUB -o output/minimize/gaussian_SimpleLarge_default_batchjobs-%J.out
 ##Antal kerner
 #BSUB -n 1
 ##Om kernerne må være på forskellige computere
