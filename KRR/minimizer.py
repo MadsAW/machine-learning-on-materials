@@ -69,6 +69,7 @@ Yv = np.array(energiesValidate)
 if method=='linear':
     folder=folder+"lin/"
     def func(a, *args):
+        print(a)
         KRR=KernelRidgeRegression(type="linear")
         KRR.set_var(c1=a[0], lambd=a[1])
         KRR.fit(X,Y, "error")
@@ -116,4 +117,5 @@ elif method=='laplacian':
         return out2
 
 #Actual minimization
-minimize(func,Args.append(lambd),method='Nelder-Mead', tol=1e-6)
+passed=Args.append(lambd)
+minimize(func,passed,method='Nelder-Mead', tol=1e-6)
