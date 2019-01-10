@@ -1,0 +1,12 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.0
+Traceback (most recent call last):
+  File "KRR/batch_KRR.py", line 84, in <module>
+    KRR.fit(X,Y, "error")
+  File "/zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials/KRR/KRR_class.py", line 108, in fit
+    weigth=np.linalg.inv(np.matrix(K+self.lambd*I))
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 532, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 89, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.linalg.LinAlgError: Singular matrix
