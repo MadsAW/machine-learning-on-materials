@@ -1,8 +1,8 @@
-c_list = [0.5,1,5,10,25,50]
-for prdf in ["default"]:#"default", "faulty", "newest","deep"
-    for description in ["GP"]:#"GP","SimpleLarge"
-        for ktype in ["linear"]:#,"linear","gaussian","laplacian"
-            for lambd in [1]:#0.01, 0.001, 0.1, 10, 1
+c_list = [2,3,4]
+for prdf in ["default", "faulty", "newest","deep"]:#"default", "faulty", "newest","deep"
+    for description in ["GP","SimpleLarge"]:#"GP","SimpleLarge"
+        for ktype in ["gaussian","laplacian"]:#,"linear","gaussian","laplacian"
+            for lambd in [0.01, 0.001, 0.1, 10, 1]:#0.01, 0.001, 0.1, 10, 1
                 for c1 in c_list:
                     #Shell script function
                     jobname='batch_job_this_is_on_purpose_to_utilize_more_kernel'
