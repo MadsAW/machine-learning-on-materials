@@ -1,4 +1,4 @@
-c_list = [0.5,10]
+c_list = [[0.5],[10]]
 for prdf in ["default"]:#"default", "faulty", "newest","deep"
     for description in ["GP"]:#"GP","SimpleLarge"
         for ktype in ["linear"]:#,"linear","gaussian","laplacian"

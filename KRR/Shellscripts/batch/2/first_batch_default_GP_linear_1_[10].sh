@@ -17,4 +17,4 @@
 ##og stopper
 module purge
 module load python3
-python3 KRR/batch_KRR.py linear 1 GP default 10
+python3 KRR/batch_KRR.py linear 1 GP default [10]
