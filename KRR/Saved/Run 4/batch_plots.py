@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import csv
 import pandas
 
-folder = "GP/"
+folder = "SimpleLarge/"
 ktype = "lin"
 lambd = [0.001,0.01,0.1,1.0,10]
 prdf="default"
