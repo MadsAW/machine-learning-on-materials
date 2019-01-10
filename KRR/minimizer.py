@@ -7,6 +7,7 @@ from KRR_class import KernelRidgeRegression
 import pickle
 import numpy as np
 import numpy
+import ast
 
 #Kernel matrices output folder
 folder = "KRR/Saved/Run 4/"
@@ -20,9 +21,9 @@ method=sys.argv[1]
 lambd=float(sys.argv[2])
 Feature=str(sys.argv[3])
 prdf=str(sys.argv[4])
-Args=(sys.argv[5])
+Args=ast.literal_eval(sys.argv[5])
 print(Args)
-Args=list(Args)
+
 for i in len(Args):
     Args[i]=float(Args[i])
 
