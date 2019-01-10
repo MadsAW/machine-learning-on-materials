@@ -20,6 +20,7 @@ method=sys.argv[1]
 lambd=float(sys.argv[2])
 Feature=str(sys.argv[3])
 prdf=str(sys.argv[4])
+print(Args)
 Args=list(sys.argv[5])
 for i in len(Args):
     Args[i]=float(Args[i])
