@@ -1,7 +1,7 @@
 c_list = [[5],[10],[-10000]]
 for prdf in ["default", "faulty", "newest","deep"]:#"default", "faulty", "newest","deep"
     for description in ["GP","SimpleLarge"]:#"GP","SimpleLarge"
-        for ktype in ["Linear"]:#,"linear","gaussian","laplacian"
+        for ktype in ["linear"]:#,"linear","gaussian","laplacian"
             for lambd in [1,0.01,3,10,5]:#0.01, 0.001, 0.1, 10, 1
                 for c1 in c_list:
                     #Shell script function

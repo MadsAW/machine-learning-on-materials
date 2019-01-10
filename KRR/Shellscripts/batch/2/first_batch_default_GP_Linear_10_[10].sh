@@ -4,7 +4,7 @@
 ##Navn på job
 #BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
 ##Output fil
-#BSUB -o output/minimize/Linear_GP_default_batchjobs-%J.out
+#BSUB -o output/minimize/linear_GP_default_batchjobs-%J.out
 ##Antal kerner
 #BSUB -n 1
 ##Om kernerne må være på forskellige computere
@@ -17,4 +17,4 @@
 ##og stopper
 module purge
 module load python3
-python3 KRR/minimizer.py Linear 10 GP default [10]
+python3 KRR/minimizer.py linear 10 GP default [10]
