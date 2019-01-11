@@ -137,10 +137,8 @@ num_found=False
 while num_found == False:
     if f"history{file_num}" in best_saved:
         file_num+=1
-        print(1)
     else:
         num_found = True
-        print(2)
 
 with open(f"NN/Saved/"+histories_folder+f"/history"+str(file_num), 'wb') as file:
     pickle.dump(history.history, file)
