@@ -47,6 +47,7 @@ for di in data:
     di['rmse']=np.sqrt(np.mean(history['mean_squared_error'][-10:]))
     di['rmse_val']=np.sqrt(np.mean(history['val_mean_squared_error'][-10:]))
 
+
 minimum=100
 for di in data:
     if di['rmse_val']<minimum:
@@ -101,7 +102,7 @@ anumxanum=np.mean(anumxanum)
 grpprdgrpprd2x2=np.mean(grpprdgrpprd2x2)
 
 mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10,fol09_01,fol09_01ny], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
-
+sub_letters={'N':'(a)','drop':'(c)','nhidden':'(b)','m_folder':'(a)','m_func':'(b)','acti':''}
 titles={'N':'RMSE vs. size of first layer after input layer','drop':'RMSE vs. dropout regularization','acti':'Activation function','nhidden':'RMSE vs. number of hidden layers','m_folder':'Prdf parameters','m_func':'Feature matrix shape'}
 xlabels={'N':'Layer size','drop':'Dropout value','nhidden':'Number of hidden layers'}
 for param in ['N','drop','nhidden']:
@@ -117,19 +118,27 @@ for param in ['N','drop','nhidden']:
     
     list_param=[di[param] for di in plot_list]
     list_rmse=[di['rmse_val'] for di in plot_list]
+    list_train=[di['rmse'] for di in plot_list]
     
     l1,l2=zip(*sorted(zip(list_param, list_rmse)))
     l1=list(l1)
     l2=list(l2)
     
+    l1,l2_train=zip(*sorted(zip(list_param, list_train)))
+    l1=list(l1)
+    l2_train=list(l2_train)
+    
     if param=='nhidden':
         l1.pop(0)
         l2.pop(0)
+        l2_train.pop(0)
         ax = plt.figure().gca()
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
         
     
     plt.plot(l1,l2)
+    plt.plot(l1,l2_train, color='orangered')
+    plt.legend(['Validation','Training'])
 
     
     plt.title(titles[param],fontsize=16)
@@ -138,6 +147,7 @@ for param in ['N','drop','nhidden']:
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     plt.tight_layout()
+    plt.text(-0.1,-0.13,sub_letters[param],size=16, transform=ax.transAxes)
     plt.savefig(f'../Plots/{param}.png',dpi=300)
     plt.show()
     
@@ -158,8 +168,20 @@ for param in ['acti','m_folder','m_func']:
         l2.append(best)
     
     
+    m_list=[]
+    for val in l1:
+        m=[]
+        for di in data:
+            if di[param]==val:
+                m.append(di['rmse_val'])
+        m_list.append(np.mean(m))
+    
+    
     ticks=[tick_names[name] for name in l1]
+    plt.bar(ticks,m_list,color='orangered')
     plt.bar(ticks,l2)
+    plt.legend(['Mean','Best'])
+    
     if param == 'm_folder':
         plt.xticks(rotation='30', ha='right')
     if param== 'acti':
@@ -170,6 +192,7 @@ for param in ['acti','m_folder','m_func']:
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     plt.tight_layout()
+    plt.text(-0.1,-0.2,sub_letters[param],size=16, transform=ax.transAxes)
     plt.savefig(f'../Plots/{param}.png',dpi=300)
     plt.show()
 
