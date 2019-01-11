@@ -9,7 +9,7 @@ for prdf in ["default", "faulty", "newest","deep"]:#"default", "faulty", "newest
                     output='output/minimize/'+ktype+'_'+description+'_'+prdf+'_'+'batchjobs-%J.out'
                     mem='10GB'
                     runtime='45:00'
-                    run='KRR/minimizer.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)
+                    run='KRR/minimizer.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1).replace(" ","")
                     Mailbegin=False
                     Mailend=False
                     mailb,maile="",""

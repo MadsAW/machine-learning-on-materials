@@ -17,4 +17,4 @@
 ##og stopper
 module purge
 module load python3
-python3 KRR/minimizer.py polynomial 0.001 SimpleLarge deep [5, 20, 10]
+python3 KRR/minimizer.py polynomial 0.001 SimpleLarge deep [5,20,10]
