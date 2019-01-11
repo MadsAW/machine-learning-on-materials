@@ -15,6 +15,7 @@ import pickle
 import os
 
 
+
 data = connect('oqmd12.db')
 
 energies = []
@@ -23,8 +24,8 @@ atomsList=[]
 for row in data.select():
     atomsList.append(data.get_atoms(row['id']))
     energies.append(row.de)
-    
-    
+
+
 now = datetime.datetime.now()
 folderName = now.strftime("%d-%m-%Y %H.%M")
 os.mkdir("Saved matrices/"+folderName)

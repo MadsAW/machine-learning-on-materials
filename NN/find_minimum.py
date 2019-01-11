@@ -10,6 +10,7 @@ import os
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 
 os.chdir("Saved")
 
@@ -37,13 +38,14 @@ for folder in folders:
     
         data.append({'N':N,'drop':drop,'acti':acti,'nhidden':nhidden,'m_folder':m_folder,'m_func':m_func,'file':'hist_N_'+file})
 
-
+histories=[]
 for di in data:
     path=di['m_folder']+'_'+di['m_func']+'/'+di['file']
     with open(path, 'rb') as pickle_file:
         history=pickle.load(pickle_file)
-    di['rmse']=np.sqrt(np.mean(history['mean_squared_error'][-5:]))
-    di['rmse_val']=np.sqrt(np.mean(history['val_mean_squared_error'][-5:]))
+    histories.append(history['val_mean_squared_error'])
+    di['rmse']=np.sqrt(np.mean(history['mean_squared_error'][-10:]))
+    di['rmse_val']=np.sqrt(np.mean(history['val_mean_squared_error'][-10:]))
 
 minimum=100
 for di in data:
@@ -61,6 +63,7 @@ fol03_01=[]
 fol04_01=[]
 fol11_10=[]
 fol09_01=[]
+fol09_01ny=[]
 grpprdxgrpprd=[]
 anumxanum=[]
 grpprdgrpprd2x2=[]
@@ -77,6 +80,8 @@ for di in data:
         fol11_10.append(di['rmse_val'])
     if di['m_folder']=='09-01-2019 12.57':
         fol09_01.append(di['rmse_val'])
+    if di['m_folder']=='09-01-2019 16.03':
+        fol09_01ny.append(di['rmse_val'])
     if di['m_func']=='shape_group_period_x_group_period':
         grpprdxgrpprd.append(di['rmse_val'])
     if di['m_func']=='shape_atomic_number':
@@ -90,12 +95,15 @@ fol03_01=np.mean(fol03_01)
 fol04_01=np.mean(fol04_01)
 fol11_10=np.mean(fol11_10)
 fol09_01=np.mean(fol09_01)
+fol09_01ny=np.mean(fol09_01ny)
 grpprdxgrpprd=np.mean(grpprdxgrpprd)
 anumxanum=np.mean(anumxanum)
 grpprdgrpprd2x2=np.mean(grpprdgrpprd2x2)
 
-mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10,fol09_01], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
+mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10,fol09_01,fol09_01ny], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
 
+titles={'N':'RMSE vs. size of first layer after input layer','drop':'RMSE vs. dropout regularization','acti':'Activation function','nhidden':'RMSE vs. number of hidden layers','m_folder':'Prdf parameters','m_func':'Feature matrix shape'}
+xlabels={'N':'Layer size','drop':'Dropout value','nhidden':'Number of hidden layers'}
 for param in ['N','drop','nhidden']:
     new_list = param_list.copy()
     new_list.pop(param_list.index(param))
@@ -114,14 +122,29 @@ for param in ['N','drop','nhidden']:
     l1=list(l1)
     l2=list(l2)
     
+    if param=='nhidden':
+        l1.pop(0)
+        l2.pop(0)
+        ax = plt.figure().gca()
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+        
+    
     plt.plot(l1,l2)
 
     
-    plt.title(param)
+    plt.title(titles[param],fontsize=16)
+    plt.ylabel('RMSE [eV/atom]',fontsize=14)
+    plt.xlabel(xlabels[param],fontsize=14)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.tight_layout()
+    plt.savefig(f'../Plots/{param}.png',dpi=300)
     plt.show()
     
 
-values={'acti':['sigmoid','relu'],'m_folder':['03-01-2019 11.04','04-01-2019 21.56','11-10-2018 11.36','09-01-2019 12.57'],'m_func':['shape_group_period_x_group_period','shape_atomic_number','shape_group_period_2x2']}
+values={'acti':['sigmoid','relu'],'m_folder':['04-01-2019 21.56','11-10-2018 11.36','09-01-2019 12.57','03-01-2019 11.04','09-01-2019 16.03'],'m_func':['shape_group_period_x_group_period','shape_atomic_number','shape_group_period_2x2']}
+
+tick_names={'sigmoid':'sigmoid','relu':'relu','03-01-2019 11.04':'m=8, dr=0.25, s=0.125','04-01-2019 21.56':'m=6, dr=0.25, s=0.05','11-10-2018 11.36':'m=6, dr=0.25, s=0.25','09-01-2019 12.57':'m=6, dr=0.25, s=0.125','09-01-2019 16.03':'m=10, dr=0.25, s=0.125','shape_group_period_x_group_period':'GP','shape_atomic_number':'Simple','shape_group_period_2x2':'Naive'}
 for param in ['acti','m_folder','m_func']:
     l1=values[param]
     l2=[]
@@ -135,8 +158,49 @@ for param in ['acti','m_folder','m_func']:
         l2.append(best)
     
     
-
-    plt.bar(l1,l2)
-    plt.xticks(rotation='30')
-    plt.show()
+    ticks=[tick_names[name] for name in l1]
+    plt.bar(ticks,l2)
+    if param == 'm_folder':
+        plt.xticks(rotation='30', ha='right')
+    if param== 'acti':
+        print(f"{l1[0]}={l2[0]:.4}, {l1[1]}={l2[1]:.4}")
+    plt.title(titles[param],fontsize=16)
+    plt.ylabel('RMSE [eV/atom]',fontsize=14)
     
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.tight_layout()
+    plt.savefig(f'../Plots/{param}.png',dpi=300)
+    plt.show()
+
+
+#for param in ['nhidden']:
+#    new_list = param_list.copy()
+#    new_list.pop(param_list.index(param))
+#    
+#    x0=[]
+#    for di in data:
+#        if di['nhidden']==0:
+#            x0.append(di)
+#    
+#    x1=[]
+#    for di in data:
+#        for x in x0:
+#            if [di[p] for p in new_list]==[x[p] for p in new_list] and di['nhidden']==1:
+#                x1.append(di)
+#        
+#
+#    
+#    ordered_x1=[]
+#    for i in range(len(x0)):
+#        for j in range(len(x1)):
+#            if [x0[i][p] for p in new_list]==[x1[j][p] for p in new_list]:
+#                ordered_x1.append(x1[j])
+#                
+#    diff=[]
+#    for i in range(len(x0)):
+#        diff.append(x0[i]['rmse_val']-ordered_x1[i]['rmse_val'])
+
+
+#import random
+#plt.plot(histories[random.randint(0,len(histories))])
