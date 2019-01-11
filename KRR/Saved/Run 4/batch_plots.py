@@ -4,18 +4,21 @@ import matplotlib.pyplot as plt
 import csv
 import pandas
 
-folder = "SimpleLarge/"
+folder = "GP/"
 ktype = "lin"
-lambd = [0.001,0.01,0.1,1.0,10]
+lambd = [0.001,1.0,10]
+
 prdf="default"
 data=pandas.read_csv(folder+ktype+'/'+prdf+'.csv',', ')
 names=list(data)
-plt.figure(0)
+plt.figure(0,figsize=(20,6))
 # Enable interactive mode
 plt.ion()
-plt.title("Linear kernel with GP description")
-plt.xlabel("first coefficient (c) value")
-plt.ylabel("rmse [eV/atom]")
+plt.title("Linear kernel with GP description",fontsize=20)
+plt.xlabel("first coefficient (c) value",fontsize=17)
+plt.ylabel("RMSE [eV/atom]",fontsize=17)
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
 # Draw the grid lines
 plt.grid(True)
 for l in lambd:
@@ -26,12 +29,9 @@ for l in lambd:
     plt.plot(x[sort],y[sort], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="using lambda = "+str(l))
 plt.xscale('symlog', linthreshx=20)
 plt.ylim(0.1,0.5)
-plt.legend(loc='upper left')
+plt.legend(loc='upper left', fontsize=17)
 plt.show()
-plt.ion()
-plt.title("Laplacian kernel with GP description")
-plt.xlabel("Sigma value")
-plt.ylabel("rmse [eV/atom]")
+plt.savefig('kernel_lin.png',dpi=300)
 # Draw the grid lines
 plt.figure(3)
 plt.grid(True)

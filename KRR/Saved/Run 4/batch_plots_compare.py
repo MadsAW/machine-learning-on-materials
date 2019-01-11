@@ -47,7 +47,7 @@ ktype = "lin"
 lambd = [0.001,0.01,0.1,1.0,10]
 prdf="faulty"
 #Compare shown in red
-cfolder = "SimpleLarge/"
+cfolder = "GP/"
 cktype = "lin"
 cprdf="faulty"
 plt.figure(1)
