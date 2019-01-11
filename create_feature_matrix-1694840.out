@@ -1,0 +1,6 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+Traceback (most recent call last):
+  File "createFeatureMatrixProperEnergies.py", line 9, in <module>
+    from ase.db import connect
+ModuleNotFoundError: No module named 'ase'

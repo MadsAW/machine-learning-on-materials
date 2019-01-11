@@ -1,0 +1,60 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+/zhome/b0/b/127184/.lsbatch/1547060957.1695429.shell: line 20: 14122 Killed                  python3 KRR/batch_KRR.py linear 1 SimpleLarge newest 1e-09
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-99>
+Subject: Job 1695429: <batch> in cluster <dcc> Exited
+
+Job <batch> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Wed Jan  9 20:09:17 2019
+Job was executed on host(s) <n-62-21-99>, in queue <hpc>, as user <s174007> in cluster <dcc> at Wed Jan  9 20:09:17 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Wed Jan  9 20:09:17 2019
+Terminated at Wed Jan  9 20:09:20 2019
+Results reported at Wed Jan  9 20:09:20 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch job | this is on purpose to utilize more kernels
+##Output fil
+#BSUB -o output/batch/batch-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/batch_KRR.py linear 1 SimpleLarge newest 1e-09
+------------------------------------------------------------
+
+TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+Exited with exit code 137.
+
+Resource usage summary:
+
+    CPU time :                                   1.29 sec.
+    Max Memory :                                 1024 MB
+    Average Memory :                             -
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               0.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   3 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+

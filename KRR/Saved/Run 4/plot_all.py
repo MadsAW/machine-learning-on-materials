@@ -20,3 +20,4 @@ for matrix in matrices:
             plt.plot(results[1],results[2],label=matrix)
             plt.xscale('symlog', linthreshx=20)
             plt.legend(loc='upper left')
+            plt.show()

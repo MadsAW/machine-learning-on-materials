@@ -17,7 +17,7 @@ def flatten(lis):
          else:
              yield str(item)
 #%% Load training data
-#FUCK lambdA STÅR SOM FØRSTE LISTE MEN ER SIDSTE VÆRDI!!  SOMETHING FISHY
+best=[]
 for matrix in matrices:
     with open(path+matrix, "rb") as pickleFile:
         results = pickle.load(pickleFile)
@@ -36,6 +36,7 @@ for matrix in matrices:
             Variables.append(dimensions[i][index[i]])
         print("Variables:", Variables)
         print("Lambda:", results[0][index[-1]])
+        best.append(A[index])
         """
         MANUAL SHIT HERE FOR BACKUP
         values=list(flatten(results[len(results)-1]))
@@ -56,3 +57,4 @@ for matrix in matrices:
         for i in range(1,len(results)-1):
             par.append(results[i][var[i]])
         print("Other parameters:",par)"""
+best=np.array(best)

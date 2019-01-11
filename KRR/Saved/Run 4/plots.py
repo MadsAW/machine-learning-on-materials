@@ -15,7 +15,7 @@ for l in lambd:
         plt.ion()
         plt.title("Linear kernel with GP description")
         plt.xlabel("first coefficient (c) value")
-        plt.ylabel("rmse [eV]")
+        plt.ylabel("rmse [eV/atom]")
         # Draw the grid lines
         plt.grid(True)
         plt.plot(results[1],results[2], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="using lambda = "+l)

@@ -1,9 +1,0 @@
-Unloaded module: latex/TeXLive12
-Loaded module: python3/3.6.2
-
-Sigma: 15.0 Train: 0.08364124293514873 Validation: 0.2783995871864548
-
-
-Sigma: 20.0 Train: 0.0878335490469786 Validation: 0.27855126905468597
-
-Terminated
