@@ -72,6 +72,8 @@ Yv = np.array(energiesValidate)
 if method=='linear':
     folder=folder+"lin/"
     def func(a, *args):
+        if a[1]<=0:
+            return 10000
         print(a)
         KRR=KernelRidgeRegression(type="linear")
         KRR.set_var(c1=a[0], lambd=a[1])
@@ -84,6 +86,8 @@ if method=='linear':
 elif method=='polynomial':
     folder=folder+"pol/"
     def func(a, *args):
+        if a[3]<=0:
+            return 10000
         try:
             KRR=KernelRidgeRegression(type="poly")
             KRR.set_var(c1=a[0],c2=a[1],d=a[2], lambd=a[3])
@@ -99,6 +103,8 @@ elif method=='polynomial':
 if method=='gaussian':
     folder=folder+"gauss/"
     def func(a,*args):
+        if a[1]<=0:
+            return 10000
         KRR=KernelRidgeRegression(type="gauss")
         KRR.set_var(sigma=a[0], lambd=a[1])
         KRR.fit(X,Y, "error")
@@ -110,6 +116,8 @@ if method=='gaussian':
 elif method=='laplacian':
     folder=folder+"laplace/"
     def func(a,*args):
+        if a[1]<=0:
+            return 10000
         KRR=KernelRidgeRegression(type="laplace")
         KRR.set_var(sigma=a[0], lambd=a[1])
         KRR.fit(X,Y, "error")
