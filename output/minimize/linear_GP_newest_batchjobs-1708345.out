@@ -482,3 +482,95 @@ Loaded module: python3/3.6.2
 [6.79402909e+05 8.29934308e-01]
 0.8299343083018165, 679402.909381319, 0.11024297278627294, 0.2636241222537149
 
+[6.79402911e+05 8.29934309e-01]
+0.8299343093086254, 679402.9111715355, 0.11024297285982473, 0.2636241219464901
+
+[6.79402912e+05 8.29934310e-01]
+0.8299343100083707, 679402.9124722182, 0.11024297287267194, 0.26362412163215054
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343093942434, 679402.9114931505, 0.11024297280866475, 0.26362412197070595
+
+[6.79402911e+05 8.29934309e-01]
+0.82993430933003, 679402.9112519393, 0.11024297290511187, 0.26362412115061873
+
+[6.79402909e+05 8.29934308e-01]
+0.8299343080161574, 679402.908972189, 0.11024297282948493, 0.2636241224968102
+
+[6.79402912e+05 8.29934310e-01]
+0.8299343095103173, 679402.9115972109, 0.11024297258434285, 0.26362412180596523
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343090122641, 679402.9107222036, 0.11024297277160276, 0.263624121761308
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343093514344, 679402.911332343, 0.11024297294195054, 0.2636241214391348
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343090336685, 679402.9108026072, 0.11024297263646263, 0.26362412193541745
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343090176152, 679402.9107423045, 0.11024297275005002, 0.2636241218634051
+
+[6.79402911e+05 8.29934309e-01]
+0.8299343090229663, 679402.9107624054, 0.11024297271180736, 0.2636241211300743
+
+[6.79402910e+05 8.29934309e-01]
+0.829934308853381, 679402.9104573356, 0.11024297270942601, 0.2636241221448727
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-97>
+Subject: Job 1708345: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Thu Jan 10 17:20:37 2019
+Job was executed on host(s) <n-62-21-97>, in queue <hpc>, as user <s174007> in cluster <dcc> at Thu Jan 10 17:20:38 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 17:20:38 2019
+Terminated at Thu Jan 10 19:02:01 2019
+Results reported at Thu Jan 10 19:02:01 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/linear_GP_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py linear 0.01 GP newest [-10000]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6074.33 sec.
+    Max Memory :                                 2015 MB
+    Average Memory :                             1777.51 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8225.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   6086 sec.
+    Turnaround time :                            6084 sec.
+
+The output (if any) is above this job summary.
+

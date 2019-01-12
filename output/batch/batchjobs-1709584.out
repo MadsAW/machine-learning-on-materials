@@ -1,0 +1,61 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+
+Train: 0.3033232548154495 Validation: 0.33845966449425924
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-90>
+Subject: Job 1709584: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Thu Jan 10 19:44:22 2019
+Job was executed on host(s) <n-62-21-90>, in queue <hpc>, as user <s174007> in cluster <dcc> at Thu Jan 10 19:44:23 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 19:44:23 2019
+Terminated at Thu Jan 10 21:15:15 2019
+Results reported at Thu Jan 10 21:15:15 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/batch/batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/batch_KRR.py gaussian 1 SimpleLarge deep 2
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5450.67 sec.
+    Max Memory :                                 7796 MB
+    Average Memory :                             7743.12 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               2444.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   5453 sec.
+    Turnaround time :                            5453 sec.
+
+The output (if any) is above this job summary.
+

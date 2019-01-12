@@ -368,3 +368,80 @@ Loaded module: python3/3.6.2
 [1.68239982e+04 6.26049753e-02]
 0.0626049752545499, 16823.99817121296, 0.11771876439423935, 0.2879019945616153
 
+[1.68239992e+04 6.26049753e-02]
+0.06260497529043219, 16823.99922302373, 0.11771876441234226, 0.28790199483037004
+
+[1.68239983e+04 6.26049750e-02]
+0.06260497504213991, 16823.998281533775, 0.11771876428341345, 0.28790199474824135
+
+[1.68239985e+04 6.26049751e-02]
+0.06260497510421298, 16823.998516906264, 0.11771876431927, 0.28790199461463717
+
+[1.68239990e+04 6.26049752e-02]
+0.06260497522835912, 16823.99898765124, 0.11771876439140047, 0.2879019946232072
+
+[1.68239986e+04 6.26049751e-02]
+0.06260497513524951, 16823.998634592506, 0.11771876431618247, 0.28790199466772354
+
+[1.68239988e+04 6.26049752e-02]
+0.06260497516628605, 16823.998752278752, 0.11771876434206552, 0.28790199476779194
+
+[1.68239989e+04 6.26049751e-02]
+0.06260497509111759, 16823.998925125405, 0.11771876431283142, 0.28790199460001553
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-22>
+Subject: Job 1708330: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Thu Jan 10 17:20:36 2019
+Job was executed on host(s) <n-62-21-22>, in queue <hpc>, as user <s174007> in cluster <dcc> at Thu Jan 10 17:20:37 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 17:20:37 2019
+Terminated at Thu Jan 10 19:00:44 2019
+Results reported at Thu Jan 10 19:00:44 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/linear_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py linear 0.01 SimpleLarge faulty [-10000]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6006.14 sec.
+    Max Memory :                                 2821 MB
+    Average Memory :                             2523.70 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7419.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   6037 sec.
+    Turnaround time :                            6008 sec.
+
+The output (if any) is above this job summary.
+

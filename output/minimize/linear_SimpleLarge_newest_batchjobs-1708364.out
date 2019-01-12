@@ -80,3 +80,96 @@ Loaded module: python3/3.6.2
 [-1.221875e+04 -6.250000e-01]
 -0.625, -12218.75, 31.7302375969194, 30.313573389645665
 
+[-1.146875e+04  8.750000e-01]
+0.875, -11468.75, 0.1605181662111444, 0.2902509357551027
+
+[-1.196875e+04 -1.250000e-01]
+-0.125, -11968.75, 8.790884352943905, 11.424256474695738
+
+[-1.159375e+04  6.250000e-01]
+0.625, -11593.75, 0.14300126809799113, 0.2877079798848029
+
+[-1.184375e+04  1.250000e-01]
+0.125, -11843.75, 0.08976257076516231, 0.28418430839801606
+
+[-1.196875e+04 -1.250000e-01]
+-0.125, -11968.75, 8.790884352943905, 11.424256474695738
+
+[-1.134375e+04  1.250000e-01]
+0.125, -11343.75, 0.08976257076826034, 0.28418430825713215
+
+[-11031.25      0.  ]
+Traceback (most recent call last):
+  File "KRR/minimizer.py", line 124, in <module>
+    minimize(func,Args,method='Nelder-Mead', tol=1e-3)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/_minimize.py", line 591, in minimize
+    return _minimize_neldermead(fun, x0, args, callback, **options)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 573, in _minimize_neldermead
+    fxe = func(xe)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 293, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "KRR/minimizer.py", line 78, in func
+    KRR.fit(X,Y, "error")
+  File "/zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials/KRR/KRR_class.py", line 108, in fit
+    weight=np.linalg.inv(np.matrix(K+self.lambd*I))
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 532, in inv
+    ainv = _umath_linalg.inv(a, signature=signature, extobj=extobj)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/numpy/linalg/linalg.py", line 89, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.linalg.LinAlgError: Singular matrix
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-98>
+Subject: Job 1708364: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Thu Jan 10 17:20:39 2019
+Job was executed on host(s) <n-62-21-98>, in queue <hpc>, as user <s174007> in cluster <dcc> at Thu Jan 10 17:20:40 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 17:20:40 2019
+Terminated at Thu Jan 10 19:15:51 2019
+Results reported at Thu Jan 10 19:15:51 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/linear_SimpleLarge_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py linear 10 SimpleLarge newest [-10000]
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   6908.71 sec.
+    Max Memory :                                 10106 MB
+    Average Memory :                             9799.99 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               134.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   6910 sec.
+    Turnaround time :                            6912 sec.
+
+The output (if any) is above this job summary.
+
