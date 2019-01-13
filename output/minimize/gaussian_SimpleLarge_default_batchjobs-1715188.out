@@ -24,3 +24,77 @@ Loaded module: python3/3.6.2
 
 1.0656250000000005e-05, 3.9296875, 0.07609825695034148, 0.28389027221531027
 
+1.1843750000000003e-05, 4.1953125, 0.0761007784000315, 0.28363091611791175
+
+1.2703125000000006e-05, 4.80859375, 0.07610473302364484, 0.28321691394334525
+
+1.204687500000001e-05, 5.50390625, 0.0761073716919986, 0.282922456664972
+
+1.2414062500000015e-05, 6.638671875, 0.07611180818094344, 0.28261292308873837
+
+1.4460937500000015e-05, 7.517578125, 0.0761174678189409, 0.28244817995148064
+
+1.636328125000002e-05, 9.3115234375, 0.07613363670239293, 0.28223453805018445
+
+1.607421875000003e-05, 11.1416015625, 0.07615522687914973, 0.2820993367907531
+
+1.775976562500004e-05, 14.30810546875, 0.07624866776931574, 0.28189712945924766
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-4>
+Subject: Job 1715188: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:00 2019
+Job was executed on host(s) <n-62-21-4>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:01 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:01 2019
+Terminated at Sun Jan 13 07:41:06 2019
+Results reported at Sun Jan 13 07:41:06 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_SimpleLarge_default_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 1e-05 SimpleLarge default [2.5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161980.00 sec.
+    Max Memory :                                 6725 MB
+    Average Memory :                             6438.93 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               3515.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162010 sec.
+    Turnaround time :                            162006 sec.
+
+The output (if any) is above this job summary.
+

@@ -590,3 +590,69 @@ Loaded module: python3/3.6.2
 
 9.682940280234455e-08, 113696.79225854925, 0.07614389019078523, 0.27653067238849266
 
+9.682940430505908e-08, 113696.7904577229, 0.07614389010428028, 0.2765306772369747
+
+9.68294037106943e-08, 113696.7917752336, 0.07614389002918874, 0.27653068043027307
+
+9.682940671612337e-08, 113696.78817358092, 0.07614388997067183, 0.27653068446981705
+
+9.682940446205157e-08, 113696.79087482044, 0.07614389017782411, 0.27653067745114857
+
+9.68294059647661e-08, 113696.78907399409, 0.07614389020130684, 0.2765306693165303
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-16>
+Subject: Job 1715205: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:01 2019
+Job was executed on host(s) <n-62-21-16>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:02 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:02 2019
+Terminated at Sat Jan 12 21:59:01 2019
+Results reported at Sat Jan 12 21:59:01 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_GP_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 1e-05 GP faulty [10]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   126386.33 sec.
+    Max Memory :                                 821 MB
+    Average Memory :                             544.22 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               9419.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   127091 sec.
+    Turnaround time :                            127080 sec.
+
+The output (if any) is above this job summary.
+

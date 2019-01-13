@@ -18,3 +18,69 @@ Loaded module: python3/3.6.2
 
 0.0007499999999999994, 12.125, 0.07611776278289305, 0.29458488588585496
 
+0.0006249999999999988, 12.9375, 0.07611148769345509, 0.29443716385118773
+
+0.0005749999999999987, 14.0625, 0.0761113145239914, 0.29426315276678217
+
+0.00041249999999999794, 15.71875, 0.07610299863157563, 0.29405163883755164
+
+0.00018749999999999713, 16.78125, 0.07609173603690406, 0.29393617923021625
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-14>
+Subject: Job 1715237: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:04 2019
+Job was executed on host(s) <n-62-21-14>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:05 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:05 2019
+Terminated at Sun Jan 13 07:41:20 2019
+Results reported at Sun Jan 13 07:41:20 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 0.001 SimpleLarge newest [10]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161994.00 sec.
+    Max Memory :                                 10167 MB
+    Average Memory :                             9875.57 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               73.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162030 sec.
+    Turnaround time :                            162016 sec.
+
+The output (if any) is above this job summary.
+

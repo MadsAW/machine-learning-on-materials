@@ -138,3 +138,101 @@ Loaded module: python3/3.6.2
 
 0.0004268983066082014, 12.141403451561928, 0.11791560058547194, 0.28794592129193874
 
+0.00035930439829826466, 13.052796497941017, 0.11690832498168229, 0.2879409810608007
+
+0.0003258571654558191, 13.596241556107998, 0.11632724537934237, 0.2879401607190587
+
+0.00039415051639080155, 12.86034557968378, 0.11922157087872658, 0.28794494531896814
+
+0.0002931093752384193, 14.31518368422985, 0.11622442322716695, 0.2879372436385
+
+0.00022621490955352817, 15.402073800563812, 0.11232049599603565, 0.2879796787836207
+
+0.00022481602430343684, 15.051079660654068, 0.11059641088763458, 0.2880192354279108
+
+0.00035181689336896037, 13.408029099926353, 0.1180993483624633, 0.28793818473277033
+
+0.0003190691031515606, 14.126971228048205, 0.11834821479089433, 0.2879350411824064
+
+0.00031567507199943134, 14.39233606401831, 0.11933544809797428, 0.28793761993045935
+
+0.0002603615850210195, 15.034125812351704, 0.11549587197193659, 0.28793892610411453
+
+0.0003289530662819751, 13.81455327803269, 0.11782496379918793, 0.2879358540113544
+
+0.00035491279419511644, 13.626340821851045, 0.11962822730194829, 0.28794299135777235
+
+0.00030856022997759354, 14.14297296863515, 0.11720395150887024, 0.2879346997444929
+
+0.000298676266847179, 14.455390918650664, 0.11760978094556693, 0.28793290320034226
+
+0.0002835378671297809, 14.775809738959651, 0.11731174450991348, 0.2879318244340273
+
+0.00027302899395581384, 14.791811479546595, 0.11602904062237918, 0.28793630537747716
+
+0.0003075590758526239, 14.293181290922803, 0.11785661247383326, 0.2879336325809667
+
+0.00028253671300481123, 14.926018061247305, 0.11792183984689333, 0.2879310411289994
+
+0.0002695249545184201, 15.317540607553383, 0.11809215653109928, 0.28792974560576196
+
+0.0002455037457955771, 15.800169055590231, 0.11694926054560871, 0.2879288245367063
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-8>
+Subject: Job 1715208: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:01 2019
+Job was executed on host(s) <n-62-21-8>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:02 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:02 2019
+Terminated at Sun Jan 13 07:41:09 2019
+Results reported at Sun Jan 13 07:41:09 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 0.001 SimpleLarge faulty [2.5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161932.00 sec.
+    Max Memory :                                 2761 MB
+    Average Memory :                             2475.44 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7479.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162016 sec.
+    Turnaround time :                            162008 sec.
+
+The output (if any) is above this job summary.
+

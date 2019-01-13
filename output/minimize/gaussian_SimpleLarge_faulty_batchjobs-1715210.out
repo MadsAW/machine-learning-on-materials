@@ -138,3 +138,101 @@ Loaded module: python3/3.6.2
 
 0.028316833374944256, 1.6447259336287061, 0.12629848120904358, 0.29090095344269545
 
+0.030817793326715276, 1.797910156021544, 0.1377715771096246, 0.29092108728716537
+
+0.010065960562129647, 1.776377078200312, 0.09753628139119441, 0.29097306822362284
+
+0.02169235692030798, 1.863735728307347, 0.12540754462141337, 0.2901707878755297
+
+0.024193316872079006, 2.016919950700185, 0.13699260546384276, 0.29033715643640073
+
+0.03994322973312259, 1.732084583735741, 0.1468454758249101, 0.2918208328505284
+
+0.017535277854877882, 1.7653039545841693, 0.11327751570436335, 0.29034189312138337
+
+0.010910801400241601, 1.9843137492628102, 0.10549397012986367, 0.28999330795484984
+
+0.0022077854128902744, 2.1541076570798623, 0.08129241128349249, 0.292688739534315
+
+0.015067880465671698, 2.082745522985988, 0.11964681567958907, 0.28959206530493486
+
+0.013834181771068606, 2.241466307186897, 0.12196854493528007, 0.2893710026827398
+
+0.0030526262510022287, 2.3620443281423604, 0.08634454561768186, 0.29127788708184765
+
+0.017032424252981543, 1.9883128782661004, 0.12083281691637318, 0.28978712659151323
+
+0.019955804623808547, 2.2454654361901873, 0.13786775633998777, 0.290005742186744
+
+0.013172052206133338, 2.0496016709946545, 0.11359440927908007, 0.2896567916143824
+
+0.009973809724220399, 2.3027550999154514, 0.1119900950191081, 0.28929091873784635
+
+0.006444502459839824, 2.459976210740127, 0.10269256572689717, 0.2894459166368306
+
+0.010635939289155667, 2.494619736107694, 0.12000773719763161, 0.28904810324083907
+
+0.009367882830666831, 2.717128768664214, 0.12166123797716401, 0.28887738398626506
+
+0.005507510783818625, 2.778417561392768, 0.10510949398509464, 0.28906324148447887
+
+0.004901583890265057, 3.1927912301415304, 0.1100362989794209, 0.28866381869388896
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-8>
+Subject: Job 1715210: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:02 2019
+Job was executed on host(s) <n-62-21-8>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:03 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:03 2019
+Terminated at Sun Jan 13 07:41:09 2019
+Results reported at Sun Jan 13 07:41:09 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 1 SimpleLarge faulty [2.5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161938.00 sec.
+    Max Memory :                                 2823 MB
+    Average Memory :                             2474.90 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7417.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162016 sec.
+    Turnaround time :                            162007 sec.
+
+The output (if any) is above this job summary.
+

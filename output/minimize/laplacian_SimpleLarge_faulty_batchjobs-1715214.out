@@ -142,3 +142,105 @@ Loaded module: python3/3.6.2
 
 0.00044870527285097075, 52.436400346930895, 0.07697041752347328, 0.2930253048135852
 
+0.00036627466491485927, 53.42380799561943, 0.07671007463567225, 0.29302794962771356
+
+0.0003726983652043122, 54.56000232374936, 0.07675714279523524, 0.2930222747354795
+
+0.0003379067615257095, 56.189900476223556, 0.07667508197595564, 0.29301953102719724
+
+0.00042033736946182096, 55.202492827535025, 0.07694716479537164, 0.2930155665021215
+
+0.0004473687217353018, 56.091835243492824, 0.0770835445488302, 0.29301077744608145
+
+0.00033657021041004053, 59.845335372785485, 0.0767446339750184, 0.29300558665488896
+
+0.0002805026791895754, 63.54980288571278, 0.0766078823072353, 0.2930007130786365
+
+0.00038996463939916775, 63.45173765298205, 0.0770566273308497, 0.2929891614522068
+
+0.0004159935783358969, 67.08265624136129, 0.07730083647468965, 0.29297890532487747
+
+0.0002491275357901705, 74.54062388358125, 0.07664950450426214, 0.29297441980017647
+
+0.00015000694281760486, 83.76501820362546, 0.07635259696620204, 0.29297880214897914
+
+0.00038461843493649197, 78.07347723922976, 0.07747663579646558, 0.2929572225556654
+
+0.00043667631280995024, 85.33531441598825, 0.0781524397811066, 0.2929555767203708
+
+0.00026981027026422386, 92.7932820582082, 0.07707583125706423, 0.29293630827715594
+
+0.00019671861622838735, 105.64859496663166, 0.07678240618939992, 0.2929281000396985
+
+0.0003842673932481671, 116.44328549903867, 0.07895603319891255, 0.29294475226740435
+
+0.0001443096966666042, 136.75656604968208, 0.07671667936684866, 0.292907624896627
+
+0.00027739077484783143, 118.82293300359777, 0.07773408357628833, 0.29291313621433185
+
+0.00022498185528604828, 149.93090408664818, 0.07780419347512975, 0.29289559259111575
+
+0.0002391134748148787, 172.07205864665644, 0.0785515494463495, 0.2929027357845745
+
+9.190077710482104e-05, 167.8645371327325, 0.07648005541517376, 0.2929054354690678
+
+0.00017257293572426512, 181.0388751696986, 0.07757707897370747, 0.29288084355924987
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-8>
+Subject: Job 1715214: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:02 2019
+Job was executed on host(s) <n-62-21-8>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:03 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:03 2019
+Terminated at Sun Jan 13 07:41:09 2019
+Results reported at Sun Jan 13 07:41:09 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 0.001 SimpleLarge faulty [2.5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161978.00 sec.
+    Max Memory :                                 2759 MB
+    Average Memory :                             2474.49 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7481.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162016 sec.
+    Turnaround time :                            162007 sec.
+
+The output (if any) is above this job summary.
+

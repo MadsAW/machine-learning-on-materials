@@ -146,3 +146,103 @@ Loaded module: python3/3.6.2
 
 0.0015944480896135725, 28.44811737537384, 0.0790649368992828, 0.2932337573120717
 
+0.0016456127166920294, 33.402868807315826, 0.08025492426862199, 0.29322669236963106
+
+0.0004169940948679442, 36.57889360189438, 0.07647571701906286, 0.29313056823684264
+
+0.001133632659936901, 44.900384068489075, 0.07971677474889363, 0.29312017753023956
+
+0.0012359619140938152, 54.80988693237305, 0.08201689633310014, 0.2931906005003079
+
+0.001210463047047226, 37.07125382125378, 0.07899664370981305, 0.2931431862063299
+
+0.0003401637077576191, 44.40802384912968, 0.0764676314137899, 0.29308025495321194
+
+0.001056802272826576, 52.72951431572437, 0.08033268977968758, 0.2931116428160641
+
+0.000263333320647294, 52.237154096364975, 0.07640437246941592, 0.29304958793774755
+
+0.0006792753935145162, 50.52605164423585, 0.07787114710054377, 0.29303607796026687
+
+0.0006024450064041912, 58.35518189147115, 0.07794903332511141, 0.29300915462045557
+
+0.0007335856557274772, 65.32876091264188, 0.0793394169963774, 0.2930303035869132
+
+0.0010183870792714134, 56.64407943934202, 0.0805921748978153, 0.29310973502466175
+
+0.00045209676030332386, 53.33888543210924, 0.07701213572661372, 0.29302130319430114
+
+0.0003752663731929987, 61.168015679344535, 0.07692907517560998, 0.2929972041070371
+
+0.00022326186303223985, 66.48899769689888, 0.07645370493576666, 0.293002554863946
+
+0.000525614619293866, 66.18431213870645, 0.07791163948739871, 0.29298690552109874
+
+0.0005623735487891372, 72.60702549200505, 0.07852735045222116, 0.29298688437595777
+
+0.00033519491557794476, 75.41985927987844, 0.0770952136940838, 0.2929623411760227
+
+0.00020156987016482146, 83.95219797408208, 0.07655768803423228, 0.2929630626191554
+
+0.0005223020911740832, 86.85886909253895, 0.07903172910691492, 0.2929785601381368
+
+0.0002951234579628908, 89.67170288041234, 0.07718432380688692, 0.2929394535984058
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-10>
+Subject: Job 1715216: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:02 2019
+Job was executed on host(s) <n-62-21-10>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:03 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:03 2019
+Terminated at Sun Jan 13 07:41:06 2019
+Results reported at Sun Jan 13 07:41:06 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_faulty_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 1 SimpleLarge faulty [2.5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161991.00 sec.
+    Max Memory :                                 2760 MB
+    Average Memory :                             2475.87 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               7480.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162016 sec.
+    Turnaround time :                            162004 sec.
+
+The output (if any) is above this job summary.
+
