@@ -138,8 +138,7 @@ for param in ['N','drop','nhidden']:
         ax.xaxis.set_major_locator(MaxNLocator(integer=True))
     else:
         ax=plt.axes()
-
-
+    
     plt.plot(l1,l2)
     plt.plot(l1,l2_train, color='orangered')
     plt.legend(['Validation','Training'])

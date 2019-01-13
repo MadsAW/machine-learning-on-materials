@@ -24,11 +24,11 @@ import numpy as np
 
 
 
-drop=0
-N=1
+drop=0.3
+N=350
 act="sigmoid"
 n_hidden=1
-saved_matrix_folder="11-10-2018 11.36"
+saved_matrix_folder="03-01-2019 11.04"
 feature_matrix_shape="group_period_x_group_period"
 
 
