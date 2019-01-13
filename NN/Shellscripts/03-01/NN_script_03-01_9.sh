@@ -36,13 +36,13 @@ do
 	do
 		for nhidden in 0 1 2 3 4 5 6
 		do
-			for act in sigmoid
+			for act in relu
 			do
 				for folder in 03-01-201911.04
 				do
 					for func in group_period_x_group_period group_period_2x2 atomic_number
 					do
-						python3 NN/NN_script.py $drop 450 sigmoid $nhidden 03-01-2019\ 11.04 $func
+						python3 NN/NN_script.py $drop 450 relu $nhidden 03-01-2019\ 11.04 $func
 					done
 				done
 			done
