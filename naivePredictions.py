@@ -83,14 +83,17 @@ pctTest = round(len(energies)*0.15)
 
 
 #Mean
-mean=np.mean(energies[pctTest:])
+mean=np.mean(energies[2*pctTest:])
 
 a=0
 for i in range(len(energies[0:pctTest])):
     a+=((energies[0:pctTest])[i]-mean)**2
-rmse_a=np.sqrt(a/len(energies[0:pctTest]))
+rmse_test=np.sqrt(a/len(energies[0:pctTest]))
 
-
+a=0
+for i in range(len(energies[pctTest:2*pctTest])):
+    a+=((energies[pctTest:2*pctTest])[i]-mean)**2
+rmse_val=np.sqrt(a/len(energies[pctTest:2*pctTest]))
 
 
 
@@ -103,7 +106,7 @@ np.random.shuffle(chemicalSymbols)
 
 chemicalSymbolsCount = []
 
-for crystal in chemicalSymbols[pctTest:]:
+for crystal in chemicalSymbols[2*pctTest:]:
     elements, counts = np.unique(crystal, return_counts=True)
     chemicalSymbolsCount.append([list(elements), list(counts)])
     
@@ -124,7 +127,7 @@ for sym in uniqueAtomicSymbols:
 
 
 A=np.zeros((len(chemicalSymbolsCount),len(mappedAtomicNumber)))
-B=energies[pctTest:]
+B=energies[2*pctTest:]
 
 index=0
 for i in chemicalSymbolsCount:
@@ -156,11 +159,32 @@ for i in chemicalSymbolsCount:
 b=0
 for i in range(len(energies[0:pctTest])):
     b+=((energies[0:pctTest])[i]- (A@result[0])[i])**2
-rmse_b=np.sqrt(b/len(energies))
+rmse_lin_test=np.sqrt(b/len(energies))
+
+
+
+chemicalSymbolsCount = []
+for crystal in chemicalSymbols[pctTest:2*pctTest]:
+    elements, counts = np.unique(crystal, return_counts=True)
+    chemicalSymbolsCount.append([list(elements), list(counts)])
+A=np.zeros((len(chemicalSymbolsCount),len(mappedAtomicNumber)))
+index=0
+for i in chemicalSymbolsCount:
+    A[index][mappedAtomicNumber[i[0][0]]]=i[1][0]
+    A[index][mappedAtomicNumber[i[0][1]]]=i[1][1]    
+    index+=1
+
+b=0
+for i in range(len(energies[pctTest:2*pctTest])):
+    b+=((energies[pctTest:2*pctTest])[i]- (A@result[0])[i])**2
+rmse_lin_val=np.sqrt(b/len(energies))
 
 
 
 
-print(f"\n\nGuess mean every time. Root mean square error {rmse_a:.3f} eV.\n")
-print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found with least squares regression. Root mean square error {rmse_b:.3f} eV\n\n")
+print(f"\n\nGuess mean every time. Root mean square error, \nvalidation {rmse_val:.3f} eV, \ntest {rmse_test:.3f} eV.\n\n")
+
+
+print(f"For crystal 3F4H guess 3*a_F+4*a_H. a's found with least squares regression. Root mean square error, \nvalidation {rmse_lin_val:.3f} eV \ntest {rmse_lin_test:.3f} eV\n\n")
+
 

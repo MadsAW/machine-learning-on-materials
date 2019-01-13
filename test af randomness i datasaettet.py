@@ -9,6 +9,7 @@ Created on Thu Nov 22 21:46:40 2018
 import numpy as np
 import pickle
 import pandas as pd
+import matplotlib.pyplot as plt
 
 path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
 
@@ -60,6 +61,10 @@ for dataset in ['train','validate','test','FullSet']:
 for dataset in ['train','validate','test']:
     for element in all_counts[dataset]:
         all_counts[dataset][element]=round( 100*all_counts[dataset][element]/all_counts['FullSet'][element],1)
-        
+
+plt.plot(all_counts['train'].keys(),all_counts['train'].values())
+plt.plot(all_counts['validate'].keys(),all_counts['validate'].values())
+plt.plot(all_counts['test'].keys(),all_counts['test'].values())
+
 #FullSet er i antal
 #De tre andre sæt er i pct
