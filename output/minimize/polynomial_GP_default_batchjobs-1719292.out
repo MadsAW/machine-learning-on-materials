@@ -1,0 +1,84 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[5, 20, 10]
+[5.0, 20.0, 10.0]
+1.05, 5.0, 20.0, 10.0, 1.374222582616266e+22, 1.025447771105531e+21
+
+1.0, 5.03125, 20.0, 10.0, 6.8829888997509404e+25, 2.4122359903202346e+22
+
+0.99970703125, 4.9971923828125, 20.01611328125, 10.008056640625, 3.7664809546484636e+23, 4.805849631107242e+22
+
+0.9998535156249998, 5.00250244140625, 20.008056640625, 10.0040283203125, 3.3371157555144574e+27, 6.242211951459241e+24
+
+0.9999511718749999, 5.00213623046875, 20.002685546875, 10.0013427734375, 1.6365625929484468e+21, 2.800774818824964e+20
+
+1.0, 5.0, 20.0, 10.00390625, 1.550896898130896e+22, 4.430461012253614e+20
+
+0.9998992919921876, 5.000011444091797, 20.005538940429688, 9.999351501464844, 1.5159192620326754e+24, 2.402879524796439e+20
+
+1.0, 5.0, 20.00390625, 10.0, 2.6012273432580933e+27, 4.29175811107674e+24
+
+0.99990234375, 5.0003662109375, 20.00146484375, 10.000732421875, 4.725719086279633e+26, 7.072134432034443e+22
+
+0.9999919891357423, 4.999801158905029, 19.99958610534668, 10.00131893157959, 1.4521826442058904e+34, 6.584469626044512e+32
+
+1.0000049591064455, 4.999844074249268, 19.999605178833008, 10.000718116760254, 1.5936322033020028e+29, 2.5345972121097853e+27
+
+0.9999959945678711, 4.999900579452515, 19.99979305267334, 10.000659465789795, 2.277456445405003e+25, 5.757153466333733e+22
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-8>
+Subject: Job 1719292: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 18:36:09 2019
+Job was executed on host(s) <n-62-21-8>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 18:36:10 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 18:36:10 2019
+Terminated at Fri Jan 11 18:53:36 2019
+Results reported at Fri Jan 11 18:53:36 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/polynomial_GP_default_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py polynomial 1 GP default [5,20,10]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1043.05 sec.
+    Max Memory :                                 1260 MB
+    Average Memory :                             1029.76 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8980.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   1075 sec.
+    Turnaround time :                            1047 sec.
+
+The output (if any) is above this job summary.
+

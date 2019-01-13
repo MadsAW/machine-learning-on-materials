@@ -1,0 +1,70 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[5, 20, 10]
+[5.0, 20.0, 10.0]
+1.003125, 5.00390625, 20.015625, 10.0078125, 3.642168673276365e+36, 3.609607832837835e+34
+
+1.0, 5.0, 20.03125, 10.0, 1.6744124261607494e+27, 1.2474758472773137e+26
+
+1.00003662109375, 5.00018310546875, 19.9990234375, 10.0003662109375, 2.4893440920443017e+27, 2.8014424199665656e+24
+
+1.0000183105468752, 5.000091552734375, 20.00048828125, 10.00018310546875, 4.390592397048864e+37, 9.563234485363226e+33
+
+1.000018310546875, 5.000091552734375, 19.99951171875, 10.00018310546875, 6.778990218734537e+35, 2.1410604130609716e+33
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-17>
+Subject: Job 1719316: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 18:36:11 2019
+Job was executed on host(s) <n-62-21-17>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 18:52:29 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 18:52:29 2019
+Terminated at Fri Jan 11 19:18:47 2019
+Results reported at Fri Jan 11 19:18:47 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/polynomial_GP_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py polynomial 1 GP newest [5,20,10]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1577.32 sec.
+    Max Memory :                                 2081 MB
+    Average Memory :                             1769.80 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8159.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   1580 sec.
+    Turnaround time :                            2556 sec.
+
+The output (if any) is above this job summary.
+

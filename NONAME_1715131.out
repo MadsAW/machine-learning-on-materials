@@ -1,0 +1,38 @@
+/bin/bash: KRR/Shellscripts/batch/2/first_batch_newest_SimpleLarge_laplacian_1e-05_[2.5].sh: Permission denied
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-99>
+Subject: Job 1715131: <NONAME> in cluster <dcc> Exited
+
+Job <NONAME> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:35:40 2019
+Job was executed on host(s) <n-62-21-99>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:35:41 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:35:41 2019
+Terminated at Fri Jan 11 10:35:42 2019
+Results reported at Fri Jan 11 10:35:42 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+KRR/Shellscripts/batch/2/first_batch_newest_SimpleLarge_laplacian_1e-05_[2.5].sh
+------------------------------------------------------------
+
+Exited with exit code 126.
+
+Resource usage summary:
+
+    CPU time :                                   0.24 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   13 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) is above this job summary.
+

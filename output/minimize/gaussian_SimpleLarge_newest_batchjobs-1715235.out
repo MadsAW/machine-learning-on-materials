@@ -1,0 +1,86 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[10]
+[10.0]
+1e-05, 10.0, 0.07609144050610593, 0.28636544163255834
+
+1e-05, 10.5, 0.0760921108376193, 0.2863133873304612
+
+1.0500000000000001e-05, 10.0, 0.07609175713341454, 0.2863622740890417
+
+1.0500000000000003e-05, 10.5, 0.07609249318194719, 0.2863099262760628
+
+1.075e-05, 10.75, 0.07609311687281378, 0.286284219153716
+
+1.0250000000000002e-05, 11.25, 0.07609354753806345, 0.2862439632524838
+
+1.0125000000000002e-05, 11.875, 0.07609463060483126, 0.28619629305894634
+
+1.0875000000000002e-05, 12.125, 0.07609618406670841, 0.2861718171583986
+
+1.13125e-05, 12.9375, 0.07609923326222241, 0.2861139960383756
+
+1.0687500000000002e-05, 14.0625, 0.0761018131178901, 0.2860564479395393
+
+1.0656250000000005e-05, 15.71875, 0.07610886379608822, 0.2859784985214744
+
+1.1843750000000003e-05, 16.78125, 0.07612047485441215, 0.2859181052021272
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-19>
+Subject: Job 1715235: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:04 2019
+Job was executed on host(s) <n-62-21-19>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:05 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:05 2019
+Terminated at Sun Jan 13 07:41:21 2019
+Results reported at Sun Jan 13 07:41:21 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_SimpleLarge_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 1e-05 SimpleLarge newest [10]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   162002.00 sec.
+    Max Memory :                                 10108 MB
+    Average Memory :                             9888.94 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               132.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162015 sec.
+    Turnaround time :                            162017 sec.
+
+The output (if any) is above this job summary.
+

@@ -1,0 +1,69 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.0
+Traceback (most recent call last):
+  File "KRR/minimizer.py", line 1, in <module>
+    from scipy.optimize import minimize
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/__init__.py", line 119, in <module>
+    from scipy._lib._ccallback import LowLevelCallable
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/_lib/_ccallback.py", line 1, in <module>
+    from . import _ccallback_c
+  File "_ccallback_c.pyx", line 212, in init scipy._lib._ccallback_c
+  File "/appl/python/3.6.0/lib/python3.6/ctypes/__init__.py", line 7, in <module>
+    from _ctypes import Union, Structure, Array
+ImportError: libffi.so.5: cannot open shared object file: No such file or directory
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-23-36>
+Subject: Job 1715224: <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Fri Jan 11 10:41:03 2019
+Job was executed on host(s) <n-62-23-36>, in queue <hpc>, as user <s174007> in cluster <dcc> at Fri Jan 11 10:41:04 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Fri Jan 11 10:41:04 2019
+Terminated at Fri Jan 11 10:41:06 2019
+Results reported at Fri Jan 11 10:41:06 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J minimize_batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_GP_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 1e-05 GP newest [2.5]
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.45 sec.
+    Max Memory :                                 7 MB
+    Average Memory :                             4.00 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               10233.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                7
+    Run time :                                   1 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+
