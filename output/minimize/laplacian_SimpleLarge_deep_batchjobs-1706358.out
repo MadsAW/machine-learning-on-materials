@@ -14,3 +14,75 @@ Loaded module: python3/3.6.2
 
 0.0010250000000000003, 11.25, 0.07616717187976821, 0.28888105505442324
 
+0.0010125000000000004, 11.875, 0.07617357340742212, 0.28878433567701484
+
+0.0010875000000000008, 12.125, 0.07619038148120792, 0.2887482167619621
+
+0.0011312500000000012, 12.9375, 0.07621298472479611, 0.2886414688385357
+
+0.0010687500000000011, 14.0625, 0.07621891152206574, 0.2885147579165414
+
+0.0010656250000000015, 15.71875, 0.07624869542938352, 0.2883618235821754
+
+0.0011843750000000023, 16.78125, 0.076311410570975, 0.28828037458787314
+
+0.0012703125000000032, 19.234375, 0.0764190668243654, 0.28812844048592995
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-28-29>
+Subject: Job 1706358: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s173977> in cluster <dcc> at Thu Jan 10 14:23:48 2019
+Job was executed on host(s) <n-62-28-29>, in queue <hpc>, as user <s173977> in cluster <dcc> at Thu Jan 10 14:23:49 2019
+</zhome/e8/9/127123> was used as the home directory.
+</zhome/e8/9/127123/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 14:23:49 2019
+Terminated at Sat Jan 12 11:23:54 2019
+Results reported at Sat Jan 12 11:23:54 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_deep_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 0.001 SimpleLarge deep [10]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161984.00 sec.
+    Max Memory :                                 8041 MB
+    Average Memory :                             7751.45 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               2199.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162009 sec.
+    Turnaround time :                            162006 sec.
+
+The output (if any) is above this job summary.
+

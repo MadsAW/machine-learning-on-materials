@@ -26,3 +26,95 @@ Loaded module: python3/3.6.2
 
 0.0018749999999999704, 8.390625, 0.07623752394098317, 0.2895128842669178
 
+-0.0014375000000000412, 9.6171875, 0.07621151071553024, 0.28923729524544706
+
+-0.0035625000000000535, 11.0078125, 0.07713801498521901, 0.28908658716524444
+
+-0.008468750000000073, 13.27734375, 0.08691529344372484, 0.2897574638799635
+
+-0.00912500000000007, 12.765625, 0.0902050913511472, 0.289970663111057
+
+0.0008124999999999643, 9.0859375, 0.07612160860527817, 0.2893236541197865
+
+-0.005812500000000059, 11.5390625, 0.07938737732780976, 0.28924198752443225
+
+-0.004156250000000053, 10.92578125, 0.07752056315396846, 0.2891437043000125
+
+-0.006281250000000065, 12.31640625, 0.08058146207581354, 0.28925285771753334
+
+-0.0026484375000000475, 10.2919921875, 0.07658211807447694, 0.28914935833806754
+
+-0.005070312500000059, 11.6416015625, 0.07858634847933398, 0.2891433402013398
+
+-0.0044765625000000595, 11.7236328125, 0.07802726782743398, 0.28907175552153386
+
+-0.004636718750000062, 12.12255859375, 0.07832931221967394, 0.28904693713314245
+
+-0.003128906250000056, 11.48876953125, 0.07695953252249388, 0.2889878893338769
+
+-0.0021582031250000546, 11.412353515625, 0.07648514620121119, 0.28894041845584045
+
+-0.003232421875000063, 12.527099609375, 0.0772001388683956, 0.2888688166157563
+
+-0.0030673828125000677, 13.2867431640625, 0.07721072264347281, 0.28877734590140125
+
+-0.0005888671875000605, 12.5765380859375, 0.07612224590355192, 0.28871466755648995
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-18>
+Subject: Job 1706361: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s173977> in cluster <dcc> at Thu Jan 10 14:23:49 2019
+Job was executed on host(s) <n-62-21-18>, in queue <hpc>, as user <s173977> in cluster <dcc> at Thu Jan 10 14:23:49 2019
+</zhome/e8/9/127123> was used as the home directory.
+</zhome/e8/9/127123/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 14:23:49 2019
+Terminated at Sat Jan 12 11:23:47 2019
+Results reported at Sat Jan 12 11:23:47 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_deep_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 0.01 SimpleLarge deep [5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161537.00 sec.
+    Max Memory :                                 8037 MB
+    Average Memory :                             7752.46 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               2203.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162024 sec.
+    Turnaround time :                            161998 sec.
+
+The output (if any) is above this job summary.
+

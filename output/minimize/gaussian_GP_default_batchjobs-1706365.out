@@ -176,3 +176,79 @@ Loaded module: python3/3.6.2
 
 0.009045754415095874, 3.5622815922248137, 0.08353609310910241, 0.2640294985237599
 
+0.009045829967958177, 3.5622756249887217, 0.08353613922272413, 0.26402949852369406
+
+0.009045856848315773, 3.562278124490656, 0.08353618319390513, 0.2640294985236886
+
+0.009045845104207136, 3.56228136332032, 0.08353618980838524, 0.264029498523758
+
+0.009045833752020418, 3.5622770595716213, 0.08353615186911835, 0.26402949852372387
+
+0.009045837536082657, 3.562278494154521, 0.08353616451552179, 0.2640294985236445
+
+0.009045824095903859, 3.562277244403554, 0.08353614252991741, 0.2640294985236596
+
+0.00904583166402834, 3.5622801135693534, 0.08353616782274792, 0.2640294985237523
+
+0.009045825987934979, 3.562277961695004, 0.08353614885312419, 0.2640294985236884
+
+0.0090458278799661, 3.562278678986454, 0.08353615517634408, 0.2640294985236742
+
+0.0090458211598767, 3.56227805411097, 0.08353614418354281, 0.2640294985237596
+
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-17>
+Subject: Job 1706365: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s173977> in cluster <dcc> at Thu Jan 10 14:23:49 2019
+Job was executed on host(s) <n-62-21-17>, in queue <hpc>, as user <s173977> in cluster <dcc> at Thu Jan 10 14:23:50 2019
+</zhome/e8/9/127123> was used as the home directory.
+</zhome/e8/9/127123/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 14:23:50 2019
+Terminated at Fri Jan 11 11:41:18 2019
+Results reported at Fri Jan 11 11:41:18 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_GP_default_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 0.01 GP default [5]
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   76635.55 sec.
+    Max Memory :                                 1260 MB
+    Average Memory :                             978.29 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8980.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   76675 sec.
+    Turnaround time :                            76649 sec.
+
+The output (if any) is above this job summary.
+

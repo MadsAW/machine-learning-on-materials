@@ -14,3 +14,75 @@ Loaded module: python3/3.6.2
 
 0.010249999999999997, 4.5, 0.11870977024800723, 0.281727343285773
 
+0.010124999999999995, 4.25, 0.11406631518378046, 0.2816199035785937
+
+0.010874999999999994, 3.75, 0.10810484045722267, 0.28177870690689444
+
+0.010249999999999992, 3.5, 0.10224241278786043, 0.28192676092424584
+
+0.010624999999999997, 4.25, 0.11581296249077339, 0.2817082162195436
+
+0.009874999999999997, 4.75, 0.12143552572032922, 0.28178143784027176
+
+0.010624999999999996, 4.0, 0.1115592533069771, 0.2816851286755715
+
+0.010124999999999993, 4.0, 0.10993379872005672, 0.2816226725179473
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-28-29>
+Subject: Job 1706357: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s173977> in cluster <dcc> at Thu Jan 10 14:23:48 2019
+Job was executed on host(s) <n-62-28-29>, in queue <hpc>, as user <s173977> in cluster <dcc> at Thu Jan 10 14:23:49 2019
+</zhome/e8/9/127123> was used as the home directory.
+</zhome/e8/9/127123/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 14:23:49 2019
+Terminated at Sat Jan 12 11:23:52 2019
+Results reported at Sat Jan 12 11:23:52 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/gaussian_SimpleLarge_deep_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py gaussian 0.01 SimpleLarge deep [5]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161981.00 sec.
+    Max Memory :                                 8054 MB
+    Average Memory :                             7768.96 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               2186.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162009 sec.
+    Turnaround time :                            162004 sec.
+
+The output (if any) is above this job summary.
+

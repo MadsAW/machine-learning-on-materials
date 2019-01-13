@@ -10,3 +10,69 @@ Loaded module: python3/3.6.2
 
 0.0095, 10.5, 0.07907373835406484, 0.29526937673561227
 
+0.008999999999999998, 10.75, 0.07890710382028601, 0.2951885154670391
+
+0.008999999999999996, 11.25, 0.07913192149615517, 0.2950919179196976
+
+0.008499999999999994, 11.875, 0.07909861297496491, 0.29495407268975166
+
+0.007499999999999991, 12.125, 0.07857780776076484, 0.2948520768926721
+
+User defined signal 2
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-24>
+Subject: Job 1706408: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s173977> in cluster <dcc> at Thu Jan 10 14:23:52 2019
+Job was executed on host(s) <n-62-21-24>, in queue <hpc>, as user <s173977> in cluster <dcc> at Thu Jan 10 14:23:54 2019
+</zhome/e8/9/127123> was used as the home directory.
+</zhome/e8/9/127123/machine-learning-on-materials> was used as the working directory.
+Started at Thu Jan 10 14:23:54 2019
+Terminated at Sat Jan 12 11:23:42 2019
+Results reported at Sat Jan 12 11:23:42 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/minimize/laplacian_SimpleLarge_newest_batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/minimizer.py laplacian 0.01 SimpleLarge newest [10]
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   161930.00 sec.
+    Max Memory :                                 9857 MB
+    Average Memory :                             9816.00 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               383.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   162009 sec.
+    Turnaround time :                            161990 sec.
+
+The output (if any) is above this job summary.
+
