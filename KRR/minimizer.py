@@ -31,6 +31,8 @@ if prdf=="default":path = "Saved matrices/03-01-2019 11.04/sorted_Cutoff25_noSin
 elif prdf=="faulty": path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
 elif prdf=="newest": path = "Saved matrices/04-01-2019 21.56/sorted_Cutoff25_noSingleElementKrystals/"
 elif prdf=="deep": path = "Saved matrices/09-01-2019 16.03/sorted_Cutoff25_noSingleElementKrystals/"
+elif prdf=="compare": path = "Saved matrices/09-01-2019 12.57/sorted_Cutoff25_noSingleElementKrystals/"
+
 #%% Load training data
 featureMatrixFile = "train_featureMatrix.npy"
 atomicSymbolsListFile = "train_pickledAtomicSymbolsList.txt"
