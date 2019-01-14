@@ -9,23 +9,11 @@ RMSE on training data= [0.09880239]
 RMSE on validation data= [0.24308015]
 RMSE on test data= [0.2888618]
 
-Activation: relu
-Model number= = 1
-RMSE on training data= [0.09226663]
-RMSE on validation data= [0.25301024]
-RMSE on test data= [0.28601626]
-
 Activation: sigmoid
 Model number= = 2
 RMSE on training data= [0.10647423]
 RMSE on validation data= [0.25429636]
 RMSE on test data= [0.2890771]
-
-Activation: relu
-Model number= = 2
-RMSE on training data= [0.08992717]
-RMSE on validation data= [0.24978727]
-RMSE on test data= [0.28564757]
 
 Activation: sigmoid
 Model number= = 3
@@ -33,33 +21,15 @@ RMSE on training data= [0.10379533]
 RMSE on validation data= [0.24850968]
 RMSE on test data= [0.28958428]
 
-Activation: relu
-Model number= = 3
-RMSE on training data= [0.09315436]
-RMSE on validation data= [0.25561816]
-RMSE on test data= [0.28730282]
-
 Activation: sigmoid
 Model number= = 4
 RMSE on training data= [0.09945143]
 RMSE on validation data= [0.25077066]
 RMSE on test data= [0.292114]
 
-Activation: relu
-Model number= = 4
-RMSE on training data= [0.08978894]
-RMSE on validation data= [0.24684814]
-RMSE on test data= [0.27721757]
-
 Activation: sigmoid
 Model number= = 5
 RMSE on training data= [0.10028818]
 RMSE on validation data= [0.24472675]
 RMSE on test data= [0.28734398]
-
-Activation: relu
-Model number= = 5
-RMSE on training data= [0.08983964]
-RMSE on validation data= [0.2543655]
-RMSE on test data= [0.2868454]
 

@@ -14,7 +14,7 @@ from matplotlib.ticker import MaxNLocator
 
 os.chdir("Saved")
 
-folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store']
+folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store' and f!='best']
 folders.sort()
 
 
@@ -103,7 +103,7 @@ grpprdgrpprd2x2=np.mean(grpprdgrpprd2x2)
 
 mean_list={'acti':[relu,sigmoid], 'm_folder':[fol03_01,fol04_01,fol11_10,fol09_01,fol09_01ny], 'm_func':[anumxanum,grpprdgrpprd2x2,grpprdxgrpprd]}
 sub_letters={'N':'(a)','drop':'(c)','nhidden':'(b)','m_folder':'(a)','m_func':'(b)','acti':''}
-titles={'N':'RMSE vs. size of first hidden layer','drop':'RMSE vs. dropout regularization','acti':'Activation function','nhidden':'RMSE vs. number of hidden layers','m_folder':'Prdf parameters','m_func':'Feature matrix shape'}
+titles={'N':'RMSE vs. size of first hidden layer','drop':'RMSE vs. dropout regularization','acti':'Activation function','nhidden':'RMSE vs. number of hidden layers','m_folder':'PRDF parameters','m_func':'Feature matrix shape'}
 xlabels={'N':'Layer size','drop':'Dropout value','nhidden':'Number of hidden layers'}
 for param in ['N','drop','nhidden']:
     new_list = param_list.copy()
@@ -184,8 +184,9 @@ for param in ['acti','m_folder','m_func']:
     ticks=[tick_names[name] for name in l1]
     plt.bar(ticks,m_list,color='orangered')
     plt.bar(ticks,l2)
-    plt.legend(['Mean','Best'])
 
+    plt.legend(['Mean','Best'], loc='lower right')
+    
     if param == 'm_folder':
         plt.xticks(rotation='30', ha='right')
     if param== 'acti':
