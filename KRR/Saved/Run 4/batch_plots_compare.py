@@ -4,7 +4,7 @@ import pandas
 
 folder = "GP/"
 ktype = "lin"
-lambd = [0.001,0.01,0.1,1.0,10]
+lambd = [0.01,0.1,1.0]
 prdf="newest"
 #Compare shown in red
 cfolder = "SimpleLarge/"

@@ -45,6 +45,9 @@ plt.plot(x[sort],y1[sort], marker='x', linestyle='dashed', linewidth=2, markersi
 plt.plot(x[sort],y2[sort], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="Training set")
 plt.legend(loc='lower right')
 plt.title("Effect of Regularization", fontsize=20)
+plt.ylabel("RMSE [eV/atom]",fontsize=17)
+plt.xlabel("Regularization value ($\lambda$)",fontsize=17)
+
 plt.tight_layout()
 plt.savefig("lin_lam.png")
 plt.show()
@@ -77,7 +80,6 @@ plt.figure(4)
 # Enable interactive mode
 plt.ion()
 plt.title("Gaussian kernel with GP description", fontsize=20)
-plt.xlabel("Lambda value", fontsize=17)
 plt.ylabel("RMSE [eV/atom]", fontsize=17)
 # Draw the grid lines
 plt.grid(True)
@@ -91,6 +93,8 @@ plt.plot(x[sort],y1[sort], marker='x', linestyle='dashed', linewidth=2, markersi
 plt.plot(x[sort],y2[sort], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="Training set")
 plt.legend(loc='lower right', fontsize=17)
 plt.title("Gaussian kernel with GP description", fontsize=20)
+plt.xlabel("Regularization value ($\lambda$)",fontsize=17)
+plt.xscale('log')
 
 plt.savefig("gauss_lam.png")
 plt.show()
@@ -105,7 +109,7 @@ plt.figure(2)
 plt.ion()
 plt.title("Laplacian kernel with GP description")
 plt.xlabel("Sigma value")
-plt.ylabel("RMSE [eV/atom]")
+plt.ylabel("RMSE [eV/atom]",fontsize=17)
 # Draw the grid lines
 plt.grid(True)
 for l in lambd:
@@ -123,8 +127,6 @@ plt.figure(5)
 # Enable interactive mode
 plt.ion()
 plt.title("Laplacian kernel with GP description", fontsize=20)
-plt.xlabel("Lambda value", fontsize=17)
-plt.ylabel("RMSE [eV/atom]", fontsize=17)
 # Draw the grid lines
 plt.grid(True)
 c=5
@@ -137,6 +139,9 @@ plt.plot(x[sort],y1[sort], marker='x', linestyle='dashed', linewidth=2, markersi
 plt.plot(x[sort],y2[sort], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="Training set")
 plt.legend(loc='lower right', fontsize=17)
 plt.title("Laplacian kernel with GP description", fontsize=20)
+plt.ylabel("RMSE [eV/atom]",fontsize=17)
+plt.xlabel("Regularization value ($\lambda$)",fontsize=17)
+plt.xscale('log')
 plt.savefig("laplace_lam.png")
 plt.show()
 

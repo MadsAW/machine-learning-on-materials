@@ -2,9 +2,9 @@
 ##Kør på cpu
 #BSUB -q hpc
 ##Navn på job
-#BSUB -J testing
+#BSUB -J testing_laplace
 ##Output fil
-#BSUB -o output/4_0.1_faulty_gauss-%J.out
+#BSUB -o output/test_results_laplace-%J.out
 ##Antal kerner
 #BSUB -n 1
 ##Om kernerne må være på forskellige computere
@@ -19,4 +19,4 @@
 #BSUB -N
 module purge
 module load python3
-python3 KRR/KRR_on_test.py linear 0.8193310105066505 GP newest -0.0004232564074429044
+python3 KRR/KRR_on_test.py laplacian 0.0000001637 GP newest 5734
