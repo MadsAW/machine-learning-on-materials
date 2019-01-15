@@ -54,8 +54,8 @@ with open(path+energiesFile, "rb") as pickleFile:
 print(largeFeatureMatrix.shape)
 largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 
-X = largeFeatureMatrix
-Y = np.array(energies)
+X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
 
 
 
