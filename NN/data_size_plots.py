@@ -12,6 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+
 os.chdir("Saved/data_size")
 
 
@@ -41,13 +42,17 @@ for pct in pct_list:
     rmse_list.append(np.mean(data[pct]))
 
 
+ax=plt.axes()
+plt.text(-0.1,-0.13,'(a)',size=16, transform=ax.transAxes)
 
 plt.xlabel('% of training set used', fontsize=14)
 plt.ylabel('RMSE [eV/atom]', fontsize=14)
-plt.title('RMSE vs. % of training set used', fontsize=16)
+plt.ylim(0.24,0.38)
+plt.xlim(5,105)
+plt.title('RMSE vs. % of training set used (NN)', fontsize=16)
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
-plt.plot(np.array(pct_list)*100,rmse_list)
+plt.plot(np.array(pct_list)*100,rmse_list, 'x--')
 plt.savefig('../../Plots/RMSE_pct_training', dpi=300)
 plt.show()
 
