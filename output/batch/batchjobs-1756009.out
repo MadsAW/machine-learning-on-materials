@@ -1,0 +1,115 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[2.e+00 1.e-03]
+[2.1e+00 1.0e-03]
+[2.00e+00 1.05e-03]
+[1.90e+00 1.05e-03]
+[1.800e+00 1.075e-03]
+[1.800e+00 1.125e-03]
+[1.7000e+00 1.1875e-03]
+[1.5000e+00 1.2125e-03]
+[1.25       0.00129375]
+[1.15       0.00140625]
+[0.825      0.00157188]
+[0.375      0.00167813]
+[-0.2875      0.00192344]
+[-0.05        0.00195625]
+[0.925      0.00145938]
+[0.275      0.00179063]
+[-0.05        0.00195625]
+[-0.175       0.00189688]
+[0.575      0.00165313]
+[0.075      0.00181563]
+[-0.175       0.00189688]
+[-0.025       0.00192813]
+[0.275      0.00174063]
+[0.075      0.00186563]
+[-0.025       0.00192813]
+[-0.125       0.00189063]
+[0.175      0.00181563]
+[-0.025       0.00186563]
+[0.125      0.00182813]
+[0.025      0.00185313]
+[-0.025       0.00186563]
+[0.025      0.00190313]
+[-5.91193761e-15  1.94687500e-03]
+[-0.05        0.00193438]
+[0.04375    0.00188281]
+[-0.01875     0.00191719]
+[-0.04375     0.00201094]
+[0.0078125  0.00189258]
+[-0.0265625   0.00197148]
+[-0.00078125  0.0019123 ]
+[0.01796875 0.00194199]
+[-0.00957031  0.00192339]
+[-0.01035156  0.00188882]
+[-0.01552734  0.00185979]
+[-0.01914063  0.0018999 ]
+[-0.00537109  0.0019092 ]
+[-0.01455078  0.001903  ]
+[-0.01914063  0.0018999 ]
+[-0.01533203  0.00186843]
+[-0.01101074  0.00190965]
+[-0.01520996  0.00192383]
+[-0.01156616  0.00189757]
+[-0.00802612  0.00190422]
+[-0.01291962  0.00190331]
+[-0.01347504  0.00189123]
+[-0.01482849  0.00189696]
+[-0.01238174  0.00189742]
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-13>
+Subject: Job 1756009: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Tue Jan 15 17:21:48 2019
+Job was executed on host(s) <n-62-21-13>, in queue <hpc>, as user <s174007> in cluster <dcc> at Tue Jan 15 17:21:49 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Tue Jan 15 17:21:49 2019
+Terminated at Tue Jan 15 17:39:16 2019
+Results reported at Tue Jan 15 17:39:16 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/batch/batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/batch_KRR_learn.py linear 0.001 GP newest 2 70
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1045.96 sec.
+    Max Memory :                                 1884 MB
+    Average Memory :                             1777.53 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8356.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   1055 sec.
+    Turnaround time :                            1048 sec.
+
+The output (if any) is above this job summary.
+

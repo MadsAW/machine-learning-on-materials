@@ -1,0 +1,71 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[2. 1.]
+Traceback (most recent call last):
+  File "KRR/batch_KRR_learn.py", line 135, in <module>
+    minimize(func,input,method='Nelder-Mead', tol=1e-3)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/_minimize.py", line 591, in minimize
+    return _minimize_neldermead(fun, x0, args, callback, **options)
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 552, in _minimize_neldermead
+    fsim[k] = func(sim[k])
+  File "/zhome/b0/b/127184/.local/lib/python3.6/site-packages/scipy/optimize/optimize.py", line 293, in function_wrapper
+    return function(*(wrapper_args + args))
+  File "KRR/batch_KRR_learn.py", line 84, in func
+    with open(folder+filename, "a") as myfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'KRR/Saved/learning/lin/size2.csv'
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-13>
+Subject: Job 1755961: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Exited
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Tue Jan 15 17:20:35 2019
+Job was executed on host(s) <n-62-21-13>, in queue <hpc>, as user <s174007> in cluster <dcc> at Tue Jan 15 17:20:39 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Tue Jan 15 17:20:39 2019
+Terminated at Tue Jan 15 17:21:11 2019
+Results reported at Tue Jan 15 17:21:11 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/batch/batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/batch_KRR_learn.py linear 1 GP newest 2 90
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   30.98 sec.
+    Max Memory :                                 1957 MB
+    Average Memory :                             1320.50 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8283.00 MB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                8
+    Run time :                                   33 sec.
+    Turnaround time :                            36 sec.
+
+The output (if any) is above this job summary.
+

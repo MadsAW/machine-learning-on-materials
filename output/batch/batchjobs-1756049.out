@@ -1,0 +1,142 @@
+Unloaded module: latex/TeXLive12
+Loaded module: python3/3.6.2
+[ 2. 10.]
+[ 2.1 10. ]
+[ 2.  10.5]
+[2.1 9.5]
+[2.15 9.  ]
+[2.05 9.  ]
+[2.025 8.5  ]
+[2.175 7.5  ]
+[2.2625 6.25  ]
+[2.1375 5.75  ]
+[2.13125 4.125  ]
+[2.36875 1.875  ]
+[2.25625 4.625  ]
+[2.24375 1.375  ]
+[2.21875 2.875  ]
+[2.39375 0.375  ]
+[2.34375 1.375  ]
+[2.29375 0.375  ]
+[2.29375 0.875  ]
+[2.19375 0.875  ]
+[2.09375 1.125  ]
+[2.19375 1.375  ]
+[2.26875 0.625  ]
+[2.16875 0.625  ]
+[2.10625 0.5    ]
+[2.24375 0.375  ]
+[2.20625 0.75   ]
+[2.23125 0.5    ]
+[2.2125 0.6875]
+[2.1125 0.6875]
+[2.034375 0.71875 ]
+[2.15625 0.75   ]
+[2.165625 0.65625 ]
+[2.065625 0.65625 ]
+[1.9921875 0.640625 ]
+[1.9390625 0.671875 ]
+[1.82578125 0.6796875 ]
+[1.70546875 0.6328125 ]
+[1.50195312 0.60546875]
+[1.33554687 0.64453125]
+[1.00722656 0.64648438]
+[0.68339844 0.57226562]
+[0.11220703 0.51855469]
+[-0.38251953  0.55957031]
+[1.03083496 0.59399414]
+[0.08859863 0.57104492]
+[-0.38251953  0.55957031]
+[-0.8064209   0.44311523]
+[0.5538147  0.59564209]
+[-0.35300903  0.49395752]
+[0.32710876 0.57022095]
+[-0.1263031   0.51937866]
+[0.2137558  0.55751038]
+[-0.01295013  0.53208923]
+[-0.1263031   0.51937866]
+[-0.03655853  0.58457947]
+[0.07501564 0.53506088]
+[-0.02653313  0.49610519]
+[0.05981569 0.55230999]
+[-0.02815008  0.54933834]
+[0.04922421 0.53863025]
+[-0.02354162  0.51840949]
+[0.03897637 0.54383487]
+[-0.02319798  0.53729385]
+[0.03111866 0.53829615]
+[-0.02080784  0.52655052]
+[-0.00586179  0.5308716 ]
+[-0.04993058  0.52466469]
+[0.01085635 0.53488828]
+[-0.02966827  0.52807255]
+[0.0007252  0.53318435]
+[-0.01953712  0.52977649]
+[-0.00434038  0.53233238]
+[0.00274797 0.53111475]
+[-0.00902561  0.53184561]
+[-0.01054701  0.53038483]
+[-0.01371084  0.53135884]
+[-0.00782405  0.53099341]
+[-0.00630264  0.53245419]
+[-0.00948592  0.53090217]
+[-0.00736374  0.53193685]
+[-0.00895538  0.53116084]
+[-0.01015694  0.53201304]
+[-0.00840727  0.53124832]
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-11>
+Subject: Job 1756049: <batch_job_this_is_on_purpose_to_utilize_more_kernel> in cluster <dcc> Done
+
+Job <batch_job_this_is_on_purpose_to_utilize_more_kernel> was submitted from host <gbarlogin2> by user <s174007> in cluster <dcc> at Tue Jan 15 17:21:52 2019
+Job was executed on host(s) <n-62-21-11>, in queue <hpc>, as user <s174007> in cluster <dcc> at Tue Jan 15 17:21:52 2019
+</zhome/b0/b/127184> was used as the home directory.
+</zhome/b0/b/127184/Documents/Projects/machine-learning-on-materials> was used as the working directory.
+Started at Tue Jan 15 17:21:52 2019
+Terminated at Tue Jan 15 17:47:24 2019
+Results reported at Tue Jan 15 17:47:24 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+##Kør på cpu
+#BSUB -q hpc
+##Navn på job
+#BSUB -J batch_job_this_is_on_purpose_to_utilize_more_kernel
+##Output fil
+#BSUB -o output/batch/batchjobs-%J.out
+##Antal kerner
+#BSUB -n 1
+##Om kernerne må være på forskellige computere
+#BSUB -R "span[hosts=1]"
+##Ram pr kerne
+#BSUB -R "rusage[mem=10GB]"
+##Hvor lang tid må den køre hh:mm
+#BSUB -W 45:00
+##Email når jobbet starter
+##og stopper
+module purge
+module load python3
+python3 KRR/batch_KRR_learn.py linear 10 GP newest 2 70
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1529.75 sec.
+    Max Memory :                                 1883 MB
+    Average Memory :                             1730.70 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8357.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   1533 sec.
+    Turnaround time :                            1532 sec.
+
+The output (if any) is above this job summary.
+
