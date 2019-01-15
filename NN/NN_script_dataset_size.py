@@ -15,13 +15,13 @@ if os.getcwd()[-2:] == 'NN':
 
 from createLargerFeatureMatrix import simpleLargeMatrix, no_redundancy_matrix, advanced_large_matrix
 import pickle
-from keras.models import Sequential
-from keras.layers import Dense, Dropout
-from keras import regularizers
+#from keras.models import Sequential
+#from keras.layers import Dense, Dropout
+#from keras import regularizers
 import numpy as np
 
 
-pct=sys.argv[1]
+pct=float(sys.argv[1])
 
 
 
