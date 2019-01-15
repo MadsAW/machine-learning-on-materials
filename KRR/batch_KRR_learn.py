@@ -1,11 +1,7 @@
-def frange(x, y, jump):
-  while x < y:
-    yield x
-    x += jump
-
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from scipy.optimize import minimize
 from createLargerFeatureMatrix import simpleLargeMatrix, advanced_large_matrix
 from KRR_class import KernelRidgeRegression
 import pickle
