@@ -28,7 +28,7 @@ Args=float(sys.argv[5])
 size=float(sys.argv[6])
 
 
-filename="size.csv"
+filename="size2.csv"
 
 if prdf=="default":path = "Saved matrices/03-01-2019 11.04/sorted_Cutoff25_noSingleElementKrystals/"
 elif prdf=="faulty": path = "Saved matrices/11-10-2018 11.36/sorted_Cutoff25_noSingleElementKrystals/"
@@ -74,40 +74,66 @@ Xv = largeFeatureMatrixValidate
 Yv = np.array(energiesValidate)
 
 if method=='linear':
-    KRR=KernelRidgeRegression(type="linear")
-    KRR.set_var(c1=Args, lambd=lambd)
-    KRR.fit(X,Y, "error")
-    out1=KRR.rmse
-    KRR.predict(Xv,Yv)
-    out2=KRR.rmse
-    print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
-elif method=='polynomial':
-    try:
-        KRR=KernelRidgeRegression(type="poly")
-        KRR.set_var(c1=c1_list[c1],c2=c2_list[c2],d=d_list[d], lambd=lambd)
+    folder=folder+"lin/"
+    def func(a, *args):
+        if a[1]<=0:
+            return 10000
+        print(a)
+        KRR=KernelRidgeRegression(type="linear")
+        KRR.set_var(c1=a[0], lambd=a[1])
         KRR.fit(X,Y, "error")
         out1=KRR.rmse
         KRR.predict(Xv,Yv)
         out2=KRR.rmse
-        print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
-    except numpy.linalg.linalg.LinAlgError:
-        out1=-1
-        out2=-1
+        with open(folder+filename, "a") as myfile:
+            myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
+        return out2
+elif method=='polynomial':
+    folder=folder+"pol/"
+    def func(a, *args):
+        if a[3]<=0:
+            return 10000
+        try:
+            KRR=KernelRidgeRegression(type="poly")
+            KRR.set_var(c1=a[0],c2=a[1],d=a[2], lambd=a[3])
+            KRR.fit(X,Y, "error")
+            out1=KRR.rmse
+            KRR.predict(Xv,Yv)
+            out2=KRR.rmse
+            print(str(a[3])+", "+str(a[0])+", "+str(a[1])+", "+str(a[2])+", "+str(out1)+", "+str(out2)+"\n", flush=True)
+        except numpy.linalg.linalg.LinAlgError:
+            out1=10**9
+            out2=10**9
+        return out2
 if method=='gaussian':
-    KRR=KernelRidgeRegression(type="gauss")
-    KRR.set_var(sigma=Args, lambd=lambd)
-    KRR.fit(X,Y, "error")
-    out1=KRR.rmse
-    KRR.predict(Xv,Yv)
-    out2=KRR.rmse
-    print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
+    folder=folder+"gauss/"
+    def func(a,*args):
+        if a[1]<=0:
+            return 10000
+        KRR=KernelRidgeRegression(type="gauss")
+        KRR.set_var(sigma=a[0], lambd=a[1])
+        KRR.fit(X,Y, "error")
+        out1=KRR.rmse
+        KRR.predict(Xv,Yv)
+        out2=KRR.rmse
+        with open(folder+filename, "a") as myfile:
+            myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
+        return out2
 elif method=='laplacian':
-    KRR=KernelRidgeRegression(type="laplace")
-    KRR.set_var(sigma=Args, lambd=lambd)
-    KRR.fit(X,Y, "error")
-    out1=KRR.rmse
-    KRR.predict(Xv,Yv)
-    out2=KRR.rmse
-    print("\nTrain: " + str(out1) + " Validation: " + str(out2)+"\n", flush=True)
-with open(folder+filename, "a") as myfile:
-    myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
+    folder=folder+"laplace/"
+    def func(a,*args):
+        if a[1]<=0:
+            return 10000
+        KRR=KernelRidgeRegression(type="laplace")
+        KRR.set_var(sigma=a[0], lambd=a[1])
+        KRR.fit(X,Y, "error")
+        out1=KRR.rmse
+        KRR.predict(Xv,Yv)
+        out2=KRR.rmse
+        with open(folder+filename, "a") as myfile:
+            myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
+        return out2
+
+#Actual minimization
+input=[Args,lambd]
+minimize(func,input,method='Nelder-Mead', tol=1e-3)
