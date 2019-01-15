@@ -53,7 +53,7 @@ largeFeatureMatrix.shape = (largeFeatureMatrix.shape[0], -1)
 cut=int(largeFeatureMatrix.shape[0]*(size/100))
 
 X = largeFeatureMatrix[0:cut,:]
-Y = np.array(energies)[0:cut,:]
+Y = np.array(energies)[0:cut]
 
 #%% Load  Validation data
 
