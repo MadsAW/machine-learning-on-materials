@@ -5,7 +5,7 @@ folder = "GP/"
 ktype = "lin"
 lambd = ["0.01","0.1","1.0"]
 prdf="newest_" #Choices are "newest_" (5 overlap), "faulty_" (no overlap) and "" (1/2)
-plt.figure(0, figsize=(16,6))   
+plt.figure(0, figsize=(16,5))   
 for l in lambd:
     matrix = "/4_"+prdf+ktype+"_val_"+l
     with open(folder+ktype+matrix, "rb") as pickleFile:
@@ -13,17 +13,18 @@ for l in lambd:
         array = results[2]
         # Enable interactive mode
         plt.ion()
-        plt.title("Linear kernel with GP description",fontsize=20)
-        plt.xlabel("Coefficient (c) value",fontsize=17)
-        plt.ylabel("RMSE [eV/atom]",fontsize=17)
+        plt.title("Linear kernel with GP description",fontsize=24)
+        plt.xlabel("Coefficient (c) value",fontsize=20)
+        plt.ylabel("RMSE [eV/atom]",fontsize=20)
         # Draw the grid lines
         plt.grid(True)
         plt.plot(results[1],results[2], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="using lambda = "+l)
         plt.xscale('symlog', linthreshx=20)
         plt.xticks(fontsize=13)
-        plt.yticks(fontsize=15)
+        plt.yticks(fontsize=17)
         plt.ylim(0.2,0.4)
-        plt.legend(loc='upper left',fontsize=16)
+        plt.legend(loc='upper left',fontsize=20)
+        plt.tight_layout()
         plt.show()
         plt.savefig("kernel_lin.png")
 plt.figure(1)   

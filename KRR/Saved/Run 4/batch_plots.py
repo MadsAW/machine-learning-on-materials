@@ -14,9 +14,9 @@ names=list(data)
 plt.figure(0,figsize=(20,6))
 # Enable interactive mode
 plt.ion()
-plt.title("Linear kernel with GP description",fontsize=20)
-plt.xlabel("first coefficient (c) value",fontsize=17)
-plt.ylabel("RMSE [eV/atom]",fontsize=17)
+plt.title("Linear kernel with GP description",fontsize=24)
+plt.xlabel("first coefficient (c) value",fontsize=20)
+plt.ylabel("RMSE [eV/atom]",fontsize=20)
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
 # Draw the grid lines
@@ -29,7 +29,7 @@ for l in lambd:
     plt.plot(x[sort],y[sort], marker='x', linestyle='dashed', linewidth=2, markersize=8, label="using lambda = "+str(l))
 plt.xscale('symlog', linthreshx=20)
 plt.ylim(0.1,0.5)
-plt.legend(loc='upper left', fontsize=17)
+plt.legend(loc='upper left', fontsize=20)
 plt.show()
 plt.savefig('kernel_lin.png')
 # Draw the grid lines
