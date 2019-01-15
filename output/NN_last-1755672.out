@@ -1,0 +1,55 @@
+Unloaded module: latex/TeXLive12
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: python3/3.6.2
+Loaded dependency [cudnn/v7.0.5-prod-cuda-9.0]: cuda/9.0
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: cudnn/v7.0.5-prod-cuda-9.0
+Loaded module: tensorflow/1.5-gpu-python-3.6.2
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array

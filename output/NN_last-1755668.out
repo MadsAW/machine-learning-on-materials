@@ -1,0 +1,65 @@
+Unloaded module: latex/TeXLive12
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: python3/3.6.2
+Loaded dependency [cudnn/v7.0.5-prod-cuda-9.0]: cuda/9.0
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: cudnn/v7.0.5-prod-cuda-9.0
+Loaded module: tensorflow/1.5-gpu-python-3.6.2
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10.10
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20.20
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30.30
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40.40
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50.50
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60.60
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70.70
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80.80
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 57, in <module>
+    X = largeFeatureMatrix[0:int(len(largeFeatureMatrix)*pct),:]
+ValueError: invalid literal for int() with base 10: '0.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90.90
+Using TensorFlow backend.
+(2918, 23, 23, 62)
+Traceback (most recent call last):
+  File "NN/NN_script_dataset_size.py", line 58, in <module>
+    Y = np.array(energies)[0:int(len(largeFeatureMatrix)*pct),:]
+IndexError: too many indices for array
