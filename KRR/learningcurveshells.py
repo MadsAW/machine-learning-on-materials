@@ -10,7 +10,7 @@ for prdf in ["newest"]:#"default", "faulty", "newest","deep"
                         output='output/batch/batchjobs-%J.out'
                         mem='10GB'
                         runtime='45:00'
-                        run='KRR/batch_KRR_learn.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)+size
+                        run='KRR/batch_KRR_learn.py '+ktype+' '+str(lambd)+' '+description+' '+prdf+' '+str(c1)+' '+size
                         Mailbegin=False
                         Mailend=False
                         mailb,maile="",""

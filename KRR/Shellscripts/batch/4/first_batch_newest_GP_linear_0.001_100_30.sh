@@ -17,4 +17,4 @@
 ##og stopper
 module purge
 module load python3
-python3 KRR/batch_KRR_learn.py linear 0.001 GP newest 10030
+python3 KRR/batch_KRR_learn.py linear 0.001 GP newest 100 30
