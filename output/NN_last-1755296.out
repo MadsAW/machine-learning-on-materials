@@ -1,0 +1,1250 @@
+Unloaded module: latex/TeXLive12
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: python3/3.6.2
+Loaded dependency [cudnn/v7.0.5-prod-cuda-9.0]: cuda/9.0
+Loaded dependency [tensorflow/1.5-gpu-python-3.6.2]: cudnn/v7.0.5-prod-cuda-9.0
+Loaded module: tensorflow/1.5-gpu-python-3.6.2
+2019-01-15 17:06:05.157788: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-01-15 17:06:05.481019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:37:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-01-15 17:06:05.481055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:37:00.0, compute capability: 7.0)
+(2918, 23, 23, 62)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dropout_1 (Dropout)          (None, 32798)             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 350)               11479650  
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 350)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 351       
+=================================================================
+Total params: 11,480,001
+Trainable params: 11,480,001
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 2918 samples, validate on 625 samples
+Epoch 1/70
+
+  50/2918 [..............................] - ETA: 5:29 - loss: 4.2483 - mean_squared_error: 4.2483
+ 300/2918 [==>...........................] - ETA: 50s - loss: 2.5430 - mean_squared_error: 2.5430 
+ 600/2918 [=====>........................] - ETA: 22s - loss: 1.6770 - mean_squared_error: 1.6770
+ 900/2918 [========>.....................] - ETA: 13s - loss: 1.3944 - mean_squared_error: 1.3944
+1200/2918 [===========>..................] - ETA: 8s - loss: 1.2371 - mean_squared_error: 1.2371 
+1500/2918 [==============>...............] - ETA: 5s - loss: 1.0672 - mean_squared_error: 1.0672
+1800/2918 [=================>............] - ETA: 3s - loss: 0.9647 - mean_squared_error: 0.9647
+2100/2918 [====================>.........] - ETA: 2s - loss: 0.8776 - mean_squared_error: 0.8776
+2400/2918 [=======================>......] - ETA: 1s - loss: 0.8078 - mean_squared_error: 0.8078
+2700/2918 [==========================>...] - ETA: 0s - loss: 0.7555 - mean_squared_error: 0.7555
+2918/2918 [==============================] - 6s 2ms/step - loss: 0.7207 - mean_squared_error: 0.7207 - val_loss: 0.1144 - val_mean_squared_error: 0.1144
+Epoch 2/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.3120 - mean_squared_error: 0.3120
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2527 - mean_squared_error: 0.2527
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2742 - mean_squared_error: 0.2742
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2850 - mean_squared_error: 0.2850
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2865 - mean_squared_error: 0.2865
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2811 - mean_squared_error: 0.2811
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2804 - mean_squared_error: 0.2804
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2779 - mean_squared_error: 0.2779
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2777 - mean_squared_error: 0.2777
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2825 - mean_squared_error: 0.2825
+2918/2918 [==============================] - 1s 209us/step - loss: 0.2813 - mean_squared_error: 0.2813 - val_loss: 0.0952 - val_mean_squared_error: 0.0952
+Epoch 3/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1612 - mean_squared_error: 0.1612
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2792 - mean_squared_error: 0.2792
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2591 - mean_squared_error: 0.2591
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2606 - mean_squared_error: 0.2606
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2653 - mean_squared_error: 0.2653
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2670 - mean_squared_error: 0.2670
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2625 - mean_squared_error: 0.2625
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2644 - mean_squared_error: 0.2644
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2574 - mean_squared_error: 0.2574
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2556 - mean_squared_error: 0.2556
+2918/2918 [==============================] - 1s 201us/step - loss: 0.2546 - mean_squared_error: 0.2546 - val_loss: 0.0900 - val_mean_squared_error: 0.0900
+Epoch 4/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.3052 - mean_squared_error: 0.3052
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2452 - mean_squared_error: 0.2452
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2524 - mean_squared_error: 0.2524
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2504 - mean_squared_error: 0.2504
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2435 - mean_squared_error: 0.2435
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2402 - mean_squared_error: 0.2402
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2338 - mean_squared_error: 0.2338
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2361 - mean_squared_error: 0.2361
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2345 - mean_squared_error: 0.2345
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2323 - mean_squared_error: 0.2323
+2918/2918 [==============================] - 1s 201us/step - loss: 0.2341 - mean_squared_error: 0.2341 - val_loss: 0.0844 - val_mean_squared_error: 0.0844
+Epoch 5/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.2068 - mean_squared_error: 0.2068
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2361 - mean_squared_error: 0.2361
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2359 - mean_squared_error: 0.2359
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2290 - mean_squared_error: 0.2290
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2224 - mean_squared_error: 0.2224
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2139 - mean_squared_error: 0.2139
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2119 - mean_squared_error: 0.2119
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2126 - mean_squared_error: 0.2126
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2129 - mean_squared_error: 0.2129
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2096 - mean_squared_error: 0.2096
+2918/2918 [==============================] - 1s 201us/step - loss: 0.2087 - mean_squared_error: 0.2087 - val_loss: 0.0856 - val_mean_squared_error: 0.0856
+Epoch 6/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.2436 - mean_squared_error: 0.2436
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1830 - mean_squared_error: 0.1830
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1904 - mean_squared_error: 0.1904
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1863 - mean_squared_error: 0.1863
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1917 - mean_squared_error: 0.1917
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1833 - mean_squared_error: 0.1833
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1853 - mean_squared_error: 0.1853
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1834 - mean_squared_error: 0.1834
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1808 - mean_squared_error: 0.1808
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1798 - mean_squared_error: 0.1798
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1816 - mean_squared_error: 0.1816 - val_loss: 0.0778 - val_mean_squared_error: 0.0778
+Epoch 7/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1131 - mean_squared_error: 0.1131
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1602 - mean_squared_error: 0.1602
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1549 - mean_squared_error: 0.1549
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1674 - mean_squared_error: 0.1674
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1631 - mean_squared_error: 0.1631
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1641 - mean_squared_error: 0.1641
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1638 - mean_squared_error: 0.1638
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1659 - mean_squared_error: 0.1659
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1655 - mean_squared_error: 0.1655
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1668 - mean_squared_error: 0.1668
+2918/2918 [==============================] - 1s 200us/step - loss: 0.1647 - mean_squared_error: 0.1647 - val_loss: 0.0850 - val_mean_squared_error: 0.0850
+Epoch 8/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1412 - mean_squared_error: 0.1412
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1528 - mean_squared_error: 0.1528
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1681 - mean_squared_error: 0.1681
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1633 - mean_squared_error: 0.1633
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1568 - mean_squared_error: 0.1568
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1563 - mean_squared_error: 0.1563
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1581 - mean_squared_error: 0.1581
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1583 - mean_squared_error: 0.1583
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1555 - mean_squared_error: 0.1555
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1517 - mean_squared_error: 0.1517
+2918/2918 [==============================] - 1s 201us/step - loss: 0.1500 - mean_squared_error: 0.1500 - val_loss: 0.0761 - val_mean_squared_error: 0.0761
+Epoch 9/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0835 - mean_squared_error: 0.0835
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1152 - mean_squared_error: 0.1152
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1243 - mean_squared_error: 0.1243
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1315 - mean_squared_error: 0.1315
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1326 - mean_squared_error: 0.1326
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1323 - mean_squared_error: 0.1323
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1364 - mean_squared_error: 0.1364
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1343 - mean_squared_error: 0.1343
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1335 - mean_squared_error: 0.1335
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1313 - mean_squared_error: 0.1313
+2918/2918 [==============================] - 1s 201us/step - loss: 0.1302 - mean_squared_error: 0.1302 - val_loss: 0.0725 - val_mean_squared_error: 0.0725
+Epoch 10/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0787 - mean_squared_error: 0.0787
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1174 - mean_squared_error: 0.1174
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1208 - mean_squared_error: 0.1208
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1174 - mean_squared_error: 0.1174
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1182 - mean_squared_error: 0.1182
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1191 - mean_squared_error: 0.1191
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1201 - mean_squared_error: 0.1201
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1190 - mean_squared_error: 0.1190
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1228 - mean_squared_error: 0.1228
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1213 - mean_squared_error: 0.1213
+2918/2918 [==============================] - 1s 203us/step - loss: 0.1205 - mean_squared_error: 0.1205 - val_loss: 0.0724 - val_mean_squared_error: 0.0724
+Epoch 11/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0897 - mean_squared_error: 0.0897
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0916 - mean_squared_error: 0.0916
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0955 - mean_squared_error: 0.0955
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1031 - mean_squared_error: 0.1031
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1079 - mean_squared_error: 0.1079
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1118 - mean_squared_error: 0.1118
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1110 - mean_squared_error: 0.1110
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1129 - mean_squared_error: 0.1129
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1122 - mean_squared_error: 0.1122
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1109 - mean_squared_error: 0.1109
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1095 - mean_squared_error: 0.1095 - val_loss: 0.0721 - val_mean_squared_error: 0.0721
+Epoch 12/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1273 - mean_squared_error: 0.1273
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1032 - mean_squared_error: 0.1032
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1110 - mean_squared_error: 0.1110
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1106 - mean_squared_error: 0.1106
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1056 - mean_squared_error: 0.1056
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1055 - mean_squared_error: 0.1055
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1065 - mean_squared_error: 0.1065
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1050 - mean_squared_error: 0.1050
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1039 - mean_squared_error: 0.1039
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1034 - mean_squared_error: 0.1034
+2918/2918 [==============================] - 1s 209us/step - loss: 0.1041 - mean_squared_error: 0.1041 - val_loss: 0.0709 - val_mean_squared_error: 0.0709
+Epoch 13/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1246 - mean_squared_error: 0.1246
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0944 - mean_squared_error: 0.0944
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0943 - mean_squared_error: 0.0943
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0926 - mean_squared_error: 0.0926
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0912 - mean_squared_error: 0.0912
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0927 - mean_squared_error: 0.0927
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0911 - mean_squared_error: 0.0911
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0908 - mean_squared_error: 0.0908
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0887 - mean_squared_error: 0.0887
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0891 - mean_squared_error: 0.0891
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0888 - mean_squared_error: 0.0888 - val_loss: 0.0707 - val_mean_squared_error: 0.0707
+Epoch 14/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0868 - mean_squared_error: 0.0868
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0774 - mean_squared_error: 0.0774
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0794 - mean_squared_error: 0.0794
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0799 - mean_squared_error: 0.0799
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0811 - mean_squared_error: 0.0811
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0844 - mean_squared_error: 0.0844
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0859 - mean_squared_error: 0.0859
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0868 - mean_squared_error: 0.0868
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0857 - mean_squared_error: 0.0857
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0846 - mean_squared_error: 0.0846
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0833 - mean_squared_error: 0.0833 - val_loss: 0.0690 - val_mean_squared_error: 0.0690
+Epoch 15/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0662 - mean_squared_error: 0.0662
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0736 - mean_squared_error: 0.0736
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0814 - mean_squared_error: 0.0814
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0810 - mean_squared_error: 0.0810
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0804 - mean_squared_error: 0.0804
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0783 - mean_squared_error: 0.0783
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0785 - mean_squared_error: 0.0785
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0783 - mean_squared_error: 0.0783
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0772 - mean_squared_error: 0.0772
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0795 - mean_squared_error: 0.0795
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0791 - mean_squared_error: 0.0791 - val_loss: 0.0672 - val_mean_squared_error: 0.0672
+Epoch 16/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0915 - mean_squared_error: 0.0915
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0831 - mean_squared_error: 0.0831
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0842 - mean_squared_error: 0.0842
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0804 - mean_squared_error: 0.0804
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0831 - mean_squared_error: 0.0831
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0811 - mean_squared_error: 0.0811
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0810 - mean_squared_error: 0.0810
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0803 - mean_squared_error: 0.0803
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0791 - mean_squared_error: 0.0791
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0774 - mean_squared_error: 0.0774
+2918/2918 [==============================] - 1s 204us/step - loss: 0.0766 - mean_squared_error: 0.0766 - val_loss: 0.0680 - val_mean_squared_error: 0.0680
+Epoch 17/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0746 - mean_squared_error: 0.0746
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0681 - mean_squared_error: 0.0681
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0742 - mean_squared_error: 0.0742
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0767 - mean_squared_error: 0.0767
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0765 - mean_squared_error: 0.0765
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0740 - mean_squared_error: 0.0740
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0744 - mean_squared_error: 0.0744
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0742 - mean_squared_error: 0.0742
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0734 - mean_squared_error: 0.0734
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0726 - mean_squared_error: 0.0726
+2918/2918 [==============================] - 1s 209us/step - loss: 0.0726 - mean_squared_error: 0.0726 - val_loss: 0.0644 - val_mean_squared_error: 0.0644
+Epoch 18/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1118 - mean_squared_error: 0.1118
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0740 - mean_squared_error: 0.0740
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0746 - mean_squared_error: 0.0746
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0745 - mean_squared_error: 0.0745
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0759 - mean_squared_error: 0.0759
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0734 - mean_squared_error: 0.0734
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0722 - mean_squared_error: 0.0722
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0710 - mean_squared_error: 0.0710
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0686 - mean_squared_error: 0.0686
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0677 - mean_squared_error: 0.0677
+2918/2918 [==============================] - 1s 210us/step - loss: 0.0685 - mean_squared_error: 0.0685 - val_loss: 0.0677 - val_mean_squared_error: 0.0677
+Epoch 19/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0363 - mean_squared_error: 0.0363
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0716 - mean_squared_error: 0.0716
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0683 - mean_squared_error: 0.0683
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0692 - mean_squared_error: 0.0692
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0672 - mean_squared_error: 0.0672
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0686 - mean_squared_error: 0.0686
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0673 - mean_squared_error: 0.0673
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0659 - mean_squared_error: 0.0659
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0646 - mean_squared_error: 0.0646
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0642 - mean_squared_error: 0.0642
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0635 - mean_squared_error: 0.0635 - val_loss: 0.0668 - val_mean_squared_error: 0.0668
+Epoch 20/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0621 - mean_squared_error: 0.0621
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0607 - mean_squared_error: 0.0607
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0589 - mean_squared_error: 0.0589
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0603 - mean_squared_error: 0.0603
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0593 - mean_squared_error: 0.0593
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0576 - mean_squared_error: 0.0576
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0565 - mean_squared_error: 0.0565
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0580 - mean_squared_error: 0.0580
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0590 - mean_squared_error: 0.0590
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0598 - mean_squared_error: 0.0598
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0605 - mean_squared_error: 0.0605 - val_loss: 0.0671 - val_mean_squared_error: 0.0671
+Epoch 21/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0552 - mean_squared_error: 0.0552
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0608 - mean_squared_error: 0.0608
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0610 - mean_squared_error: 0.0610
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0598 - mean_squared_error: 0.0598
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0586 - mean_squared_error: 0.0586
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0561 - mean_squared_error: 0.0561
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0572 - mean_squared_error: 0.0572
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0585 - mean_squared_error: 0.0585
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0579 - mean_squared_error: 0.0579
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0578 - mean_squared_error: 0.0578
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0578 - mean_squared_error: 0.0578 - val_loss: 0.0662 - val_mean_squared_error: 0.0662
+Epoch 22/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0566 - mean_squared_error: 0.0566
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0522 - mean_squared_error: 0.0522
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0580 - mean_squared_error: 0.0580
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0546 - mean_squared_error: 0.0546
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0576 - mean_squared_error: 0.0576
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0583 - mean_squared_error: 0.0583
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0568 - mean_squared_error: 0.0568
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0554 - mean_squared_error: 0.0554
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0543 - mean_squared_error: 0.0543
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0550 - mean_squared_error: 0.0550
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0554 - mean_squared_error: 0.0554 - val_loss: 0.0656 - val_mean_squared_error: 0.0656
+Epoch 23/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0585 - mean_squared_error: 0.0585
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0488 - mean_squared_error: 0.0488
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0494 - mean_squared_error: 0.0494
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0479 - mean_squared_error: 0.0479
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0518 - mean_squared_error: 0.0518
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0524 - mean_squared_error: 0.0524
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0519 - mean_squared_error: 0.0519
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0520 - mean_squared_error: 0.0520
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0521 - mean_squared_error: 0.0521
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0519 - mean_squared_error: 0.0519
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0522 - mean_squared_error: 0.0522 - val_loss: 0.0653 - val_mean_squared_error: 0.0653
+Epoch 24/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0612 - mean_squared_error: 0.0612
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0657 - mean_squared_error: 0.0657
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0634 - mean_squared_error: 0.0634
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0588 - mean_squared_error: 0.0588
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0559 - mean_squared_error: 0.0559
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0536 - mean_squared_error: 0.0536
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0531 - mean_squared_error: 0.0531
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0526 - mean_squared_error: 0.0526
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0521 - mean_squared_error: 0.0521
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0524 - mean_squared_error: 0.0524
+2918/2918 [==============================] - 1s 204us/step - loss: 0.0528 - mean_squared_error: 0.0528 - val_loss: 0.0656 - val_mean_squared_error: 0.0656
+Epoch 25/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0812 - mean_squared_error: 0.0812
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0499 - mean_squared_error: 0.0499
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0474 - mean_squared_error: 0.0474
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0472 - mean_squared_error: 0.0472
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0481 - mean_squared_error: 0.0481
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0468 - mean_squared_error: 0.0468
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0468 - mean_squared_error: 0.0468
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0452 - mean_squared_error: 0.0452
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0461 - mean_squared_error: 0.0461
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0465 - mean_squared_error: 0.0465
+2918/2918 [==============================] - 1s 215us/step - loss: 0.0468 - mean_squared_error: 0.0468 - val_loss: 0.0660 - val_mean_squared_error: 0.0660
+Epoch 26/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0399 - mean_squared_error: 0.0399
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0419 - mean_squared_error: 0.0419
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0501 - mean_squared_error: 0.0501
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0494 - mean_squared_error: 0.0494
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0484 - mean_squared_error: 0.0484
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0481 - mean_squared_error: 0.0481
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0471 - mean_squared_error: 0.0471
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0461 - mean_squared_error: 0.0461
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0471 - mean_squared_error: 0.0471
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0464 - mean_squared_error: 0.0464
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0464 - mean_squared_error: 0.0464 - val_loss: 0.0650 - val_mean_squared_error: 0.0650
+Epoch 27/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0356 - mean_squared_error: 0.0356
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0451 - mean_squared_error: 0.0451
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0491 - mean_squared_error: 0.0491
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0469 - mean_squared_error: 0.0469
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0438 - mean_squared_error: 0.0438
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0447 - mean_squared_error: 0.0447
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0446 - mean_squared_error: 0.0446
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0442 - mean_squared_error: 0.0442
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0442 - mean_squared_error: 0.0442
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0450 - mean_squared_error: 0.0450
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0445 - mean_squared_error: 0.0445 - val_loss: 0.0667 - val_mean_squared_error: 0.0667
+Epoch 28/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0302 - mean_squared_error: 0.0302
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0486 - mean_squared_error: 0.0486
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0439 - mean_squared_error: 0.0439
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0483 - mean_squared_error: 0.0483
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0474 - mean_squared_error: 0.0474
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0472 - mean_squared_error: 0.0472
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0461 - mean_squared_error: 0.0461
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0457 - mean_squared_error: 0.0457
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0453 - mean_squared_error: 0.0453
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0448 - mean_squared_error: 0.0448
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0450 - mean_squared_error: 0.0450 - val_loss: 0.0665 - val_mean_squared_error: 0.0665
+Epoch 29/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0617 - mean_squared_error: 0.0617
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0373 - mean_squared_error: 0.0373
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0387 - mean_squared_error: 0.0387
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0394 - mean_squared_error: 0.0394
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0448 - mean_squared_error: 0.0448
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0439 - mean_squared_error: 0.0439
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0457 - mean_squared_error: 0.0457
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0448 - mean_squared_error: 0.0448
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0445 - mean_squared_error: 0.0445
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0447 - mean_squared_error: 0.0447
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0448 - mean_squared_error: 0.0448 - val_loss: 0.0654 - val_mean_squared_error: 0.0654
+Epoch 30/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0284 - mean_squared_error: 0.0284
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0405 - mean_squared_error: 0.0405
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0374 - mean_squared_error: 0.0374
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0392 - mean_squared_error: 0.0392
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0424 - mean_squared_error: 0.0424
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0417 - mean_squared_error: 0.0417
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0422 - mean_squared_error: 0.0422
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0422 - mean_squared_error: 0.0422
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0435 - mean_squared_error: 0.0435
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0436 - mean_squared_error: 0.0436
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0435 - mean_squared_error: 0.0435 - val_loss: 0.0669 - val_mean_squared_error: 0.0669
+Epoch 31/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0462 - mean_squared_error: 0.0462
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0476 - mean_squared_error: 0.0476
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0397 - mean_squared_error: 0.0397
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0398 - mean_squared_error: 0.0398
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0410 - mean_squared_error: 0.0410
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0412 - mean_squared_error: 0.0412
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0420 - mean_squared_error: 0.0420
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0419 - mean_squared_error: 0.0419
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0430 - mean_squared_error: 0.0430
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0429 - mean_squared_error: 0.0429
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0425 - mean_squared_error: 0.0425 - val_loss: 0.0647 - val_mean_squared_error: 0.0647
+Epoch 32/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0469 - mean_squared_error: 0.0469
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0345 - mean_squared_error: 0.0345
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0361 - mean_squared_error: 0.0361
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0381 - mean_squared_error: 0.0381
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0390 - mean_squared_error: 0.0390
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0385 - mean_squared_error: 0.0385
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0377 - mean_squared_error: 0.0377
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0385 - mean_squared_error: 0.0385
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0403 - mean_squared_error: 0.0403
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0400 - mean_squared_error: 0.0400
+2918/2918 [==============================] - 1s 204us/step - loss: 0.0398 - mean_squared_error: 0.0398 - val_loss: 0.0697 - val_mean_squared_error: 0.0697
+Epoch 33/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0593 - mean_squared_error: 0.0593
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0456 - mean_squared_error: 0.0456
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0394 - mean_squared_error: 0.0394
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0394 - mean_squared_error: 0.0394
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0375 - mean_squared_error: 0.0375
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0373 - mean_squared_error: 0.0373
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0389 - mean_squared_error: 0.0389
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0389 - mean_squared_error: 0.0389
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0400 - mean_squared_error: 0.0400
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0401 - mean_squared_error: 0.0401
+2918/2918 [==============================] - 1s 208us/step - loss: 0.0401 - mean_squared_error: 0.0401 - val_loss: 0.0647 - val_mean_squared_error: 0.0647
+Epoch 34/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0603 - mean_squared_error: 0.0603
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0475 - mean_squared_error: 0.0475
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0412 - mean_squared_error: 0.0412
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0421 - mean_squared_error: 0.0421
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0405 - mean_squared_error: 0.0405
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0386 - mean_squared_error: 0.0386
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0386 - mean_squared_error: 0.0386
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0391 - mean_squared_error: 0.0391
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0392 - mean_squared_error: 0.0392
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0393 - mean_squared_error: 0.0393
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0393 - mean_squared_error: 0.0393 - val_loss: 0.0657 - val_mean_squared_error: 0.0657
+Epoch 35/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0375 - mean_squared_error: 0.0375
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0439 - mean_squared_error: 0.0439
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0435 - mean_squared_error: 0.0435
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0397 - mean_squared_error: 0.0397
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0375 - mean_squared_error: 0.0375
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0390 - mean_squared_error: 0.0390
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0379 - mean_squared_error: 0.0379
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0380 - mean_squared_error: 0.0380
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0380 - mean_squared_error: 0.0380
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0381 - mean_squared_error: 0.0381
+2918/2918 [==============================] - 1s 210us/step - loss: 0.0380 - mean_squared_error: 0.0380 - val_loss: 0.0640 - val_mean_squared_error: 0.0640
+Epoch 36/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0368 - mean_squared_error: 0.0368
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0382 - mean_squared_error: 0.0382
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0365 - mean_squared_error: 0.0365
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0379 - mean_squared_error: 0.0379
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0391 - mean_squared_error: 0.0391
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0376 - mean_squared_error: 0.0376
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0379 - mean_squared_error: 0.0379
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0368 - mean_squared_error: 0.0368
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0367 - mean_squared_error: 0.0367
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0376 - mean_squared_error: 0.0376
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0381 - mean_squared_error: 0.0381 - val_loss: 0.0646 - val_mean_squared_error: 0.0646
+Epoch 37/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0364 - mean_squared_error: 0.0364
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0345 - mean_squared_error: 0.0345
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0358 - mean_squared_error: 0.0358
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0370 - mean_squared_error: 0.0370
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0368 - mean_squared_error: 0.0368
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0380 - mean_squared_error: 0.0380
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0374 - mean_squared_error: 0.0374
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0365 - mean_squared_error: 0.0365
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0369 - mean_squared_error: 0.0369
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0372 - mean_squared_error: 0.0372
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0368 - mean_squared_error: 0.0368 - val_loss: 0.0632 - val_mean_squared_error: 0.0632
+Epoch 38/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0307 - mean_squared_error: 0.0307
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0325 - mean_squared_error: 0.0325
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0310 - mean_squared_error: 0.0310
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0338 - mean_squared_error: 0.0338
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0347 - mean_squared_error: 0.0347
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0336 - mean_squared_error: 0.0336
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0336 - mean_squared_error: 0.0336
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0344 - mean_squared_error: 0.0344
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0343 - mean_squared_error: 0.0343
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0345 - mean_squared_error: 0.0345
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0347 - mean_squared_error: 0.0347 - val_loss: 0.0633 - val_mean_squared_error: 0.0633
+Epoch 39/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0373 - mean_squared_error: 0.0373
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0415 - mean_squared_error: 0.0415
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0346 - mean_squared_error: 0.0346
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0336 - mean_squared_error: 0.0336
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0346 - mean_squared_error: 0.0346
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0347 - mean_squared_error: 0.0347
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0352 - mean_squared_error: 0.0352
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0348 - mean_squared_error: 0.0348
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0348 - mean_squared_error: 0.0348
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0346 - mean_squared_error: 0.0346
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0345 - mean_squared_error: 0.0345 - val_loss: 0.0634 - val_mean_squared_error: 0.0634
+Epoch 40/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0360 - mean_squared_error: 0.0360
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0335 - mean_squared_error: 0.0335
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0317 - mean_squared_error: 0.0317
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0320 - mean_squared_error: 0.0320
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0335 - mean_squared_error: 0.0335
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0344 - mean_squared_error: 0.0344
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0346 - mean_squared_error: 0.0346
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0349 - mean_squared_error: 0.0349
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0352 - mean_squared_error: 0.0352
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0345 - mean_squared_error: 0.0345
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0343 - mean_squared_error: 0.0343 - val_loss: 0.0630 - val_mean_squared_error: 0.0630
+Epoch 41/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0389 - mean_squared_error: 0.0389
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0357 - mean_squared_error: 0.0357
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0355 - mean_squared_error: 0.0355
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0349 - mean_squared_error: 0.0349
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0362 - mean_squared_error: 0.0362
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0370 - mean_squared_error: 0.0370
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0365 - mean_squared_error: 0.0365
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0369 - mean_squared_error: 0.0369
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0372 - mean_squared_error: 0.0372
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0365 - mean_squared_error: 0.0365
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0365 - mean_squared_error: 0.0365 - val_loss: 0.0631 - val_mean_squared_error: 0.0631
+Epoch 42/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0148 - mean_squared_error: 0.0148
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0345 - mean_squared_error: 0.0345
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0397 - mean_squared_error: 0.0397
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0391 - mean_squared_error: 0.0391
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0373 - mean_squared_error: 0.0373
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0351 - mean_squared_error: 0.0351
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0349 - mean_squared_error: 0.0349
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0349 - mean_squared_error: 0.0349
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0350 - mean_squared_error: 0.0350
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0355 - mean_squared_error: 0.0355
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0350 - mean_squared_error: 0.0350 - val_loss: 0.0642 - val_mean_squared_error: 0.0642
+Epoch 43/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0281 - mean_squared_error: 0.0281
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0312 - mean_squared_error: 0.0312
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0301 - mean_squared_error: 0.0301
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0290 - mean_squared_error: 0.0290
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0292 - mean_squared_error: 0.0292
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0309 - mean_squared_error: 0.0309
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0316 - mean_squared_error: 0.0316
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0316 - mean_squared_error: 0.0316
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0319 - mean_squared_error: 0.0319
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0327 - mean_squared_error: 0.0327 - val_loss: 0.0643 - val_mean_squared_error: 0.0643
+Epoch 44/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0257 - mean_squared_error: 0.0257
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0275 - mean_squared_error: 0.0275
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0305 - mean_squared_error: 0.0305
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0297 - mean_squared_error: 0.0297
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0306 - mean_squared_error: 0.0306
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0303 - mean_squared_error: 0.0303
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0303 - mean_squared_error: 0.0303
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0305 - mean_squared_error: 0.0305
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0308 - mean_squared_error: 0.0308
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0304 - mean_squared_error: 0.0304 - val_loss: 0.0629 - val_mean_squared_error: 0.0629
+Epoch 45/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0409 - mean_squared_error: 0.0409
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0251 - mean_squared_error: 0.0251
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0270 - mean_squared_error: 0.0270
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0264 - mean_squared_error: 0.0264
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0275 - mean_squared_error: 0.0275
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0290 - mean_squared_error: 0.0290
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0289 - mean_squared_error: 0.0289
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0302 - mean_squared_error: 0.0302
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0301 - mean_squared_error: 0.0301
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0303 - mean_squared_error: 0.0303 - val_loss: 0.0640 - val_mean_squared_error: 0.0640
+Epoch 46/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0241 - mean_squared_error: 0.0241
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0266 - mean_squared_error: 0.0266
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0287 - mean_squared_error: 0.0287
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0302 - mean_squared_error: 0.0302
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0309 - mean_squared_error: 0.0309
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0314 - mean_squared_error: 0.0314
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0318 - mean_squared_error: 0.0318
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0307 - mean_squared_error: 0.0307
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0312 - mean_squared_error: 0.0312
+2918/2918 [==============================] - 1s 200us/step - loss: 0.0307 - mean_squared_error: 0.0307 - val_loss: 0.0660 - val_mean_squared_error: 0.0660
+Epoch 47/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0267 - mean_squared_error: 0.0267
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0271 - mean_squared_error: 0.0271
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0293 - mean_squared_error: 0.0293
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0280 - mean_squared_error: 0.0280
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0309 - mean_squared_error: 0.0309
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0316 - mean_squared_error: 0.0316
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0309 - mean_squared_error: 0.0309
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0312 - mean_squared_error: 0.0312
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0308 - mean_squared_error: 0.0308
+2918/2918 [==============================] - 1s 200us/step - loss: 0.0309 - mean_squared_error: 0.0309 - val_loss: 0.0622 - val_mean_squared_error: 0.0622
+Epoch 48/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0443 - mean_squared_error: 0.0443
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0309 - mean_squared_error: 0.0309
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0331 - mean_squared_error: 0.0331
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0317 - mean_squared_error: 0.0317
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0304 - mean_squared_error: 0.0304
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0305 - mean_squared_error: 0.0305
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0301 - mean_squared_error: 0.0301
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0296 - mean_squared_error: 0.0296
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0300 - mean_squared_error: 0.0300
+2918/2918 [==============================] - 1s 200us/step - loss: 0.0296 - mean_squared_error: 0.0296 - val_loss: 0.0630 - val_mean_squared_error: 0.0630
+Epoch 49/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0213 - mean_squared_error: 0.0213
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0269 - mean_squared_error: 0.0269
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0289 - mean_squared_error: 0.0289
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0284 - mean_squared_error: 0.0284
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0293 - mean_squared_error: 0.0293
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0280 - mean_squared_error: 0.0280
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0280 - mean_squared_error: 0.0280
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0276 - mean_squared_error: 0.0276
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0270 - mean_squared_error: 0.0270
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0276 - mean_squared_error: 0.0276 - val_loss: 0.0622 - val_mean_squared_error: 0.0622
+Epoch 50/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0274 - mean_squared_error: 0.0274
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0217 - mean_squared_error: 0.0217
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0235 - mean_squared_error: 0.0235
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0272 - mean_squared_error: 0.0272
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0253 - mean_squared_error: 0.0253
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0259 - mean_squared_error: 0.0259
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0262 - mean_squared_error: 0.0262
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0272 - mean_squared_error: 0.0272
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0276 - mean_squared_error: 0.0276
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0277 - mean_squared_error: 0.0277
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0278 - mean_squared_error: 0.0278 - val_loss: 0.0632 - val_mean_squared_error: 0.0632
+Epoch 51/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0233 - mean_squared_error: 0.0233
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0307 - mean_squared_error: 0.0307
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0284 - mean_squared_error: 0.0284
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0269 - mean_squared_error: 0.0269
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0271 - mean_squared_error: 0.0271
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0266 - mean_squared_error: 0.0266
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0264 - mean_squared_error: 0.0264
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0273 - mean_squared_error: 0.0273
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0273 - mean_squared_error: 0.0273 - val_loss: 0.0643 - val_mean_squared_error: 0.0643
+Epoch 52/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0433 - mean_squared_error: 0.0433
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0273 - mean_squared_error: 0.0273
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0251 - mean_squared_error: 0.0251
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0248 - mean_squared_error: 0.0248
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0249 - mean_squared_error: 0.0249
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0259 - mean_squared_error: 0.0259
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0263 - mean_squared_error: 0.0263
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0265 - mean_squared_error: 0.0265 - val_loss: 0.0622 - val_mean_squared_error: 0.0622
+Epoch 53/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0180 - mean_squared_error: 0.0180
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0241 - mean_squared_error: 0.0241
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0261 - mean_squared_error: 0.0261
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0247 - mean_squared_error: 0.0247
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0257 - mean_squared_error: 0.0257
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0268 - mean_squared_error: 0.0268
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0277 - mean_squared_error: 0.0277 - val_loss: 0.0638 - val_mean_squared_error: 0.0638
+Epoch 54/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0299 - mean_squared_error: 0.0299
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0259 - mean_squared_error: 0.0259
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0238 - mean_squared_error: 0.0238
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0279 - mean_squared_error: 0.0279
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0272 - mean_squared_error: 0.0272
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0283 - mean_squared_error: 0.0283
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0280 - mean_squared_error: 0.0280
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0277 - mean_squared_error: 0.0277
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0284 - mean_squared_error: 0.0284
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0281 - mean_squared_error: 0.0281 - val_loss: 0.0619 - val_mean_squared_error: 0.0619
+Epoch 55/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0293 - mean_squared_error: 0.0293
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0204 - mean_squared_error: 0.0204
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0207 - mean_squared_error: 0.0207
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0251 - mean_squared_error: 0.0251
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0248 - mean_squared_error: 0.0248
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0253 - mean_squared_error: 0.0253
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0252 - mean_squared_error: 0.0252
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0256 - mean_squared_error: 0.0256
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0254 - mean_squared_error: 0.0254
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0255 - mean_squared_error: 0.0255 - val_loss: 0.0617 - val_mean_squared_error: 0.0617
+Epoch 56/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0242 - mean_squared_error: 0.0242
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0238 - mean_squared_error: 0.0238
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0263 - mean_squared_error: 0.0263
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0261 - mean_squared_error: 0.0261
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0275 - mean_squared_error: 0.0275
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0276 - mean_squared_error: 0.0276
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0277 - mean_squared_error: 0.0277
+2918/2918 [==============================] - 1s 206us/step - loss: 0.0277 - mean_squared_error: 0.0277 - val_loss: 0.0619 - val_mean_squared_error: 0.0619
+Epoch 57/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0188 - mean_squared_error: 0.0188
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0242 - mean_squared_error: 0.0242
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0255 - mean_squared_error: 0.0255
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0275 - mean_squared_error: 0.0275
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0265 - mean_squared_error: 0.0265
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0269 - mean_squared_error: 0.0269
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0269 - mean_squared_error: 0.0269
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0267 - mean_squared_error: 0.0267
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0260 - mean_squared_error: 0.0260
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0253 - mean_squared_error: 0.0253
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0259 - mean_squared_error: 0.0259 - val_loss: 0.0616 - val_mean_squared_error: 0.0616
+Epoch 58/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0270 - mean_squared_error: 0.0270
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0238 - mean_squared_error: 0.0238
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0232 - mean_squared_error: 0.0232
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0241 - mean_squared_error: 0.0241
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0242 - mean_squared_error: 0.0242
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0249 - mean_squared_error: 0.0249
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0256 - mean_squared_error: 0.0256
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0253 - mean_squared_error: 0.0253 - val_loss: 0.0620 - val_mean_squared_error: 0.0620
+Epoch 59/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0129 - mean_squared_error: 0.0129
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0202 - mean_squared_error: 0.0202
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0233 - mean_squared_error: 0.0233
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0223 - mean_squared_error: 0.0223
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0249 - mean_squared_error: 0.0249
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0245 - mean_squared_error: 0.0245
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0250 - mean_squared_error: 0.0250
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0252 - mean_squared_error: 0.0252 - val_loss: 0.0663 - val_mean_squared_error: 0.0663
+Epoch 60/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0292 - mean_squared_error: 0.0292
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0312 - mean_squared_error: 0.0312
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0308 - mean_squared_error: 0.0308
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0325 - mean_squared_error: 0.0325
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0319 - mean_squared_error: 0.0319
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0306 - mean_squared_error: 0.0306
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0293 - mean_squared_error: 0.0293
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0293 - mean_squared_error: 0.0293
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0280 - mean_squared_error: 0.0280
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0272 - mean_squared_error: 0.0272
+2918/2918 [==============================] - 1s 210us/step - loss: 0.0270 - mean_squared_error: 0.0270 - val_loss: 0.0617 - val_mean_squared_error: 0.0617
+Epoch 61/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0187 - mean_squared_error: 0.0187
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0247 - mean_squared_error: 0.0247
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0260 - mean_squared_error: 0.0260
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0235 - mean_squared_error: 0.0235
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0232 - mean_squared_error: 0.0232
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0232 - mean_squared_error: 0.0232
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0230 - mean_squared_error: 0.0230
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0236 - mean_squared_error: 0.0236
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0234 - mean_squared_error: 0.0234
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0235 - mean_squared_error: 0.0235
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0237 - mean_squared_error: 0.0237 - val_loss: 0.0631 - val_mean_squared_error: 0.0631
+Epoch 62/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0235 - mean_squared_error: 0.0235
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0216 - mean_squared_error: 0.0216
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0217 - mean_squared_error: 0.0217
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0232 - mean_squared_error: 0.0232
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0228 - mean_squared_error: 0.0228
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0243 - mean_squared_error: 0.0243
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0240 - mean_squared_error: 0.0240
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0237 - mean_squared_error: 0.0237 - val_loss: 0.0608 - val_mean_squared_error: 0.0608
+Epoch 63/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0254 - mean_squared_error: 0.0254
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0225 - mean_squared_error: 0.0225
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0218 - mean_squared_error: 0.0218
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0237 - mean_squared_error: 0.0237
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0228 - mean_squared_error: 0.0228
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0231 - mean_squared_error: 0.0231
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0230 - mean_squared_error: 0.0230
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0231 - mean_squared_error: 0.0231
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0234 - mean_squared_error: 0.0234
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0238 - mean_squared_error: 0.0238 - val_loss: 0.0611 - val_mean_squared_error: 0.0611
+Epoch 64/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0180 - mean_squared_error: 0.0180
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0206 - mean_squared_error: 0.0206
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0241 - mean_squared_error: 0.0241
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0239 - mean_squared_error: 0.0239
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0240 - mean_squared_error: 0.0240
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0241 - mean_squared_error: 0.0241
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0244 - mean_squared_error: 0.0244
+2918/2918 [==============================] - 1s 200us/step - loss: 0.0244 - mean_squared_error: 0.0244 - val_loss: 0.0612 - val_mean_squared_error: 0.0612
+Epoch 65/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0212 - mean_squared_error: 0.0212
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0209 - mean_squared_error: 0.0209
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0214 - mean_squared_error: 0.0214
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0224 - mean_squared_error: 0.0224
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0221 - mean_squared_error: 0.0221
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0224 - mean_squared_error: 0.0224
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0231 - mean_squared_error: 0.0231
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0230 - mean_squared_error: 0.0230
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0233 - mean_squared_error: 0.0233
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0233 - mean_squared_error: 0.0233 - val_loss: 0.0613 - val_mean_squared_error: 0.0613
+Epoch 66/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0284 - mean_squared_error: 0.0284
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0228 - mean_squared_error: 0.0228
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0208 - mean_squared_error: 0.0208
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0202 - mean_squared_error: 0.0202
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0234 - mean_squared_error: 0.0234
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0226 - mean_squared_error: 0.0226
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0227 - mean_squared_error: 0.0227
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0231 - mean_squared_error: 0.0231
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0225 - mean_squared_error: 0.0225
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0224 - mean_squared_error: 0.0224 - val_loss: 0.0611 - val_mean_squared_error: 0.0611
+Epoch 67/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0183 - mean_squared_error: 0.0183
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0196 - mean_squared_error: 0.0196
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0209 - mean_squared_error: 0.0209
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0201 - mean_squared_error: 0.0201
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0199 - mean_squared_error: 0.0199
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0207 - mean_squared_error: 0.0207
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0220 - mean_squared_error: 0.0220
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0217 - mean_squared_error: 0.0217
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0213 - mean_squared_error: 0.0213
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0219 - mean_squared_error: 0.0219
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0221 - mean_squared_error: 0.0221 - val_loss: 0.0611 - val_mean_squared_error: 0.0611
+Epoch 68/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0311 - mean_squared_error: 0.0311
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0215 - mean_squared_error: 0.0215
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0217 - mean_squared_error: 0.0217
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0207 - mean_squared_error: 0.0207
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0204 - mean_squared_error: 0.0204
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0207 - mean_squared_error: 0.0207
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0216 - mean_squared_error: 0.0216
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0218 - mean_squared_error: 0.0218
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0226 - mean_squared_error: 0.0226
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0225 - mean_squared_error: 0.0225 - val_loss: 0.0611 - val_mean_squared_error: 0.0611
+Epoch 69/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0274 - mean_squared_error: 0.0274
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0263 - mean_squared_error: 0.0263
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0229 - mean_squared_error: 0.0229
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0225 - mean_squared_error: 0.0225
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0209 - mean_squared_error: 0.0209
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0215 - mean_squared_error: 0.0215
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0214 - mean_squared_error: 0.0214
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0221 - mean_squared_error: 0.0221
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0224 - mean_squared_error: 0.0224
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0234 - mean_squared_error: 0.0234
+2918/2918 [==============================] - 1s 201us/step - loss: 0.0237 - mean_squared_error: 0.0237 - val_loss: 0.0598 - val_mean_squared_error: 0.0598
+Epoch 70/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0215 - mean_squared_error: 0.0215
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0185 - mean_squared_error: 0.0185
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0198 - mean_squared_error: 0.0198
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0201 - mean_squared_error: 0.0201
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0197 - mean_squared_error: 0.0197
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0224 - mean_squared_error: 0.0224
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0225 - mean_squared_error: 0.0225
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0217 - mean_squared_error: 0.0217
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0221 - mean_squared_error: 0.0221
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0223 - mean_squared_error: 0.0223
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0223 - mean_squared_error: 0.0223 - val_loss: 0.0611 - val_mean_squared_error: 0.0611
+Using TensorFlow backend.
+DONE
+2019-01-15 17:06:56.273050: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2019-01-15 17:06:56.589130: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:37:00.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-01-15 17:06:56.589173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:37:00.0, compute capability: 7.0)
+(2918, 23, 23, 62)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dropout_1 (Dropout)          (None, 32798)             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 350)               11479650  
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 350)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 351       
+=================================================================
+Total params: 11,480,001
+Trainable params: 11,480,001
+Non-trainable params: 0
+_________________________________________________________________
+None
+Train on 2918 samples, validate on 625 samples
+Epoch 1/70
+
+  50/2918 [..............................] - ETA: 1:02 - loss: 2.2243 - mean_squared_error: 2.2243
+ 300/2918 [==>...........................] - ETA: 10s - loss: 1.3580 - mean_squared_error: 1.3580 
+ 600/2918 [=====>........................] - ETA: 4s - loss: 0.9546 - mean_squared_error: 0.9546 
+ 900/2918 [========>.....................] - ETA: 2s - loss: 0.8217 - mean_squared_error: 0.8217
+1200/2918 [===========>..................] - ETA: 1s - loss: 0.7150 - mean_squared_error: 0.7150
+1500/2918 [==============>...............] - ETA: 1s - loss: 0.6494 - mean_squared_error: 0.6494
+1800/2918 [=================>............] - ETA: 0s - loss: 0.6101 - mean_squared_error: 0.6101
+2100/2918 [====================>.........] - ETA: 0s - loss: 0.5683 - mean_squared_error: 0.5683
+2400/2918 [=======================>......] - ETA: 0s - loss: 0.5341 - mean_squared_error: 0.5341
+2700/2918 [==========================>...] - ETA: 0s - loss: 0.5130 - mean_squared_error: 0.5130
+2918/2918 [==============================] - 2s 586us/step - loss: 0.5087 - mean_squared_error: 0.5087 - val_loss: 0.1087 - val_mean_squared_error: 0.1087
+Epoch 2/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.2341 - mean_squared_error: 0.2341
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2752 - mean_squared_error: 0.2752
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2751 - mean_squared_error: 0.2751
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2787 - mean_squared_error: 0.2787
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2754 - mean_squared_error: 0.2754
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2749 - mean_squared_error: 0.2749
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2777 - mean_squared_error: 0.2777
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2803 - mean_squared_error: 0.2803
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2776 - mean_squared_error: 0.2776
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2734 - mean_squared_error: 0.2734
+2918/2918 [==============================] - 1s 210us/step - loss: 0.2741 - mean_squared_error: 0.2741 - val_loss: 0.0930 - val_mean_squared_error: 0.0930
+Epoch 3/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.4123 - mean_squared_error: 0.4123
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2808 - mean_squared_error: 0.2808
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.2729 - mean_squared_error: 0.2729
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2751 - mean_squared_error: 0.2751
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2640 - mean_squared_error: 0.2640
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2625 - mean_squared_error: 0.2625
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2528 - mean_squared_error: 0.2528
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2488 - mean_squared_error: 0.2488
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2496 - mean_squared_error: 0.2496
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2465 - mean_squared_error: 0.2465
+2918/2918 [==============================] - 1s 201us/step - loss: 0.2485 - mean_squared_error: 0.2485 - val_loss: 0.0914 - val_mean_squared_error: 0.0914
+Epoch 4/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.2063 - mean_squared_error: 0.2063
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1910 - mean_squared_error: 0.1910
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1919 - mean_squared_error: 0.1919
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.2004 - mean_squared_error: 0.2004
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.2029 - mean_squared_error: 0.2029
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.2050 - mean_squared_error: 0.2050
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.2027 - mean_squared_error: 0.2027
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.2057 - mean_squared_error: 0.2057
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.2040 - mean_squared_error: 0.2040
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.2048 - mean_squared_error: 0.2048
+2918/2918 [==============================] - 1s 202us/step - loss: 0.2059 - mean_squared_error: 0.2059 - val_loss: 0.0833 - val_mean_squared_error: 0.0833
+Epoch 5/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1506 - mean_squared_error: 0.1506
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.2073 - mean_squared_error: 0.2073
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1931 - mean_squared_error: 0.1931
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1874 - mean_squared_error: 0.1874
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1877 - mean_squared_error: 0.1877
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1880 - mean_squared_error: 0.1880
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1864 - mean_squared_error: 0.1864
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1829 - mean_squared_error: 0.1829
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1849 - mean_squared_error: 0.1849
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1815 - mean_squared_error: 0.1815
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1801 - mean_squared_error: 0.1801 - val_loss: 0.0862 - val_mean_squared_error: 0.0862
+Epoch 6/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1610 - mean_squared_error: 0.1610
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1721 - mean_squared_error: 0.1721
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1665 - mean_squared_error: 0.1665
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1649 - mean_squared_error: 0.1649
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1632 - mean_squared_error: 0.1632
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1648 - mean_squared_error: 0.1648
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1638 - mean_squared_error: 0.1638
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1662 - mean_squared_error: 0.1662
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1648 - mean_squared_error: 0.1648
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1649 - mean_squared_error: 0.1649
+2918/2918 [==============================] - 1s 201us/step - loss: 0.1633 - mean_squared_error: 0.1633 - val_loss: 0.0803 - val_mean_squared_error: 0.0803
+Epoch 7/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1228 - mean_squared_error: 0.1228
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1654 - mean_squared_error: 0.1654
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1557 - mean_squared_error: 0.1557
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1568 - mean_squared_error: 0.1568
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1557 - mean_squared_error: 0.1557
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1519 - mean_squared_error: 0.1519
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1479 - mean_squared_error: 0.1479
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1450 - mean_squared_error: 0.1450
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1431 - mean_squared_error: 0.1431
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1443 - mean_squared_error: 0.1443
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1434 - mean_squared_error: 0.1434 - val_loss: 0.0794 - val_mean_squared_error: 0.0794
+Epoch 8/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0982 - mean_squared_error: 0.0982
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1402 - mean_squared_error: 0.1402
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1440 - mean_squared_error: 0.1440
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1365 - mean_squared_error: 0.1365
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1347 - mean_squared_error: 0.1347
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1327 - mean_squared_error: 0.1327
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1351 - mean_squared_error: 0.1351
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1357 - mean_squared_error: 0.1357
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1361 - mean_squared_error: 0.1361
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1358 - mean_squared_error: 0.1358
+2918/2918 [==============================] - 1s 201us/step - loss: 0.1349 - mean_squared_error: 0.1349 - val_loss: 0.0758 - val_mean_squared_error: 0.0758
+Epoch 9/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1185 - mean_squared_error: 0.1185
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1040 - mean_squared_error: 0.1040
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1001 - mean_squared_error: 0.1001
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1015 - mean_squared_error: 0.1015
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1109 - mean_squared_error: 0.1109
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1163 - mean_squared_error: 0.1163
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1130 - mean_squared_error: 0.1130
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1129 - mean_squared_error: 0.1129
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1138 - mean_squared_error: 0.1138
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1129 - mean_squared_error: 0.1129
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1133 - mean_squared_error: 0.1133 - val_loss: 0.0762 - val_mean_squared_error: 0.0762
+Epoch 10/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0880 - mean_squared_error: 0.0880
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1146 - mean_squared_error: 0.1146
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1032 - mean_squared_error: 0.1032
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.1032 - mean_squared_error: 0.1032
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.1081 - mean_squared_error: 0.1081
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.1057 - mean_squared_error: 0.1057
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.1068 - mean_squared_error: 0.1068
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.1061 - mean_squared_error: 0.1061
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.1035 - mean_squared_error: 0.1035
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.1043 - mean_squared_error: 0.1043
+2918/2918 [==============================] - 1s 202us/step - loss: 0.1049 - mean_squared_error: 0.1049 - val_loss: 0.0749 - val_mean_squared_error: 0.0749
+Epoch 11/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0898 - mean_squared_error: 0.0898
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1010 - mean_squared_error: 0.1010
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.1015 - mean_squared_error: 0.1015
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0957 - mean_squared_error: 0.0957
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0943 - mean_squared_error: 0.0943
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0943 - mean_squared_error: 0.0943
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0932 - mean_squared_error: 0.0932
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0906 - mean_squared_error: 0.0906
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0908 - mean_squared_error: 0.0908
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0919 - mean_squared_error: 0.0919
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0911 - mean_squared_error: 0.0911 - val_loss: 0.0733 - val_mean_squared_error: 0.0733
+Epoch 12/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0743 - mean_squared_error: 0.0743
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0814 - mean_squared_error: 0.0814
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0831 - mean_squared_error: 0.0831
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0814 - mean_squared_error: 0.0814
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0825 - mean_squared_error: 0.0825
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0814 - mean_squared_error: 0.0814
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0823 - mean_squared_error: 0.0823
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0826 - mean_squared_error: 0.0826
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0839 - mean_squared_error: 0.0839
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0831 - mean_squared_error: 0.0831
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0838 - mean_squared_error: 0.0838 - val_loss: 0.0710 - val_mean_squared_error: 0.0710
+Epoch 13/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.1039 - mean_squared_error: 0.1039
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.1054 - mean_squared_error: 0.1054
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0951 - mean_squared_error: 0.0951
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0892 - mean_squared_error: 0.0892
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0920 - mean_squared_error: 0.0920
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0901 - mean_squared_error: 0.0901
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0877 - mean_squared_error: 0.0877
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0850 - mean_squared_error: 0.0850
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0839 - mean_squared_error: 0.0839
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0823 - mean_squared_error: 0.0823
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0816 - mean_squared_error: 0.0816 - val_loss: 0.0722 - val_mean_squared_error: 0.0722
+Epoch 14/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0678 - mean_squared_error: 0.0678
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0731 - mean_squared_error: 0.0731
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0695 - mean_squared_error: 0.0695
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0670 - mean_squared_error: 0.0670
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0701 - mean_squared_error: 0.0701
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0713 - mean_squared_error: 0.0713
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0696 - mean_squared_error: 0.0696
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0691 - mean_squared_error: 0.0691
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0701 - mean_squared_error: 0.0701
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0720 - mean_squared_error: 0.0720
+2918/2918 [==============================] - 1s 202us/step - loss: 0.0723 - mean_squared_error: 0.0723 - val_loss: 0.0707 - val_mean_squared_error: 0.0707
+Epoch 15/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0548 - mean_squared_error: 0.0548
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0678 - mean_squared_error: 0.0678
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0739 - mean_squared_error: 0.0739
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0729 - mean_squared_error: 0.0729
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0727 - mean_squared_error: 0.0727
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0736 - mean_squared_error: 0.0736
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0732 - mean_squared_error: 0.0732
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0724 - mean_squared_error: 0.0724
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0707 - mean_squared_error: 0.0707
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0699 - mean_squared_error: 0.0699
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0690 - mean_squared_error: 0.0690 - val_loss: 0.0696 - val_mean_squared_error: 0.0696
+Epoch 16/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0462 - mean_squared_error: 0.0462
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0840 - mean_squared_error: 0.0840
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0758 - mean_squared_error: 0.0758
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0702 - mean_squared_error: 0.0702
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0702 - mean_squared_error: 0.0702
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0696 - mean_squared_error: 0.0696
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0686 - mean_squared_error: 0.0686
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0688 - mean_squared_error: 0.0688
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0680 - mean_squared_error: 0.0680
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0681 - mean_squared_error: 0.0681
+2918/2918 [==============================] - 1s 204us/step - loss: 0.0683 - mean_squared_error: 0.0683 - val_loss: 0.0696 - val_mean_squared_error: 0.0696
+Epoch 17/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0831 - mean_squared_error: 0.0831
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0725 - mean_squared_error: 0.0725
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0656 - mean_squared_error: 0.0656
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0700 - mean_squared_error: 0.0700
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0689 - mean_squared_error: 0.0689
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0683 - mean_squared_error: 0.0683
+1800/2918 [=================>............] - ETA: 0s - loss: 0.0680 - mean_squared_error: 0.0680
+2100/2918 [====================>.........] - ETA: 0s - loss: 0.0671 - mean_squared_error: 0.0671
+2400/2918 [=======================>......] - ETA: 0s - loss: 0.0654 - mean_squared_error: 0.0654
+2700/2918 [==========================>...] - ETA: 0s - loss: 0.0651 - mean_squared_error: 0.0651
+2918/2918 [==============================] - 1s 210us/step - loss: 0.0644 - mean_squared_error: 0.0644 - val_loss: 0.0699 - val_mean_squared_error: 0.0699
+Epoch 18/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0538 - mean_squared_error: 0.0538
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0619 - mean_squared_error: 0.0619
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0558 - mean_squared_error: 0.0558
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0598 - mean_squared_error: 0.0598
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0577 - mean_squared_error: 0.0577
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0575 - mean_squared_error: 0.0575
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0583 - mean_squared_error: 0.0583
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0598 - mean_squared_error: 0.0598
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0609 - mean_squared_error: 0.0609
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0613 - mean_squared_error: 0.0613
+2918/2918 [==============================] - 1s 210us/step - loss: 0.0606 - mean_squared_error: 0.0606 - val_loss: 0.0682 - val_mean_squared_error: 0.0682
+Epoch 19/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0366 - mean_squared_error: 0.0366
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0571 - mean_squared_error: 0.0571
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0613 - mean_squared_error: 0.0613
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0607 - mean_squared_error: 0.0607
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0587 - mean_squared_error: 0.0587
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0570 - mean_squared_error: 0.0570
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0565 - mean_squared_error: 0.0565
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0570 - mean_squared_error: 0.0570
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0566 - mean_squared_error: 0.0566
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0580 - mean_squared_error: 0.0580
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0585 - mean_squared_error: 0.0585 - val_loss: 0.0678 - val_mean_squared_error: 0.0678
+Epoch 20/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0522 - mean_squared_error: 0.0522
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0542 - mean_squared_error: 0.0542
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0520 - mean_squared_error: 0.0520
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0525 - mean_squared_error: 0.0525
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0552 - mean_squared_error: 0.0552
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0558 - mean_squared_error: 0.0558
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0554 - mean_squared_error: 0.0554
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0543 - mean_squared_error: 0.0543
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0562 - mean_squared_error: 0.0562
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0555 - mean_squared_error: 0.0555
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0561 - mean_squared_error: 0.0561 - val_loss: 0.0704 - val_mean_squared_error: 0.0704
+Epoch 21/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0416 - mean_squared_error: 0.0416
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0450 - mean_squared_error: 0.0450
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0464 - mean_squared_error: 0.0464
+ 950/2918 [========>.....................] - ETA: 0s - loss: 0.0467 - mean_squared_error: 0.0467
+1250/2918 [===========>..................] - ETA: 0s - loss: 0.0468 - mean_squared_error: 0.0468
+1550/2918 [==============>...............] - ETA: 0s - loss: 0.0476 - mean_squared_error: 0.0476
+1850/2918 [==================>...........] - ETA: 0s - loss: 0.0500 - mean_squared_error: 0.0500
+2150/2918 [=====================>........] - ETA: 0s - loss: 0.0513 - mean_squared_error: 0.0513
+2450/2918 [========================>.....] - ETA: 0s - loss: 0.0534 - mean_squared_error: 0.0534
+2750/2918 [===========================>..] - ETA: 0s - loss: 0.0549 - mean_squared_error: 0.0549
+2918/2918 [==============================] - 1s 203us/step - loss: 0.0548 - mean_squared_error: 0.0548 - val_loss: 0.0679 - val_mean_squared_error: 0.0679
+Epoch 22/70
+
+  50/2918 [..............................] - ETA: 0s - loss: 0.0546 - mean_squared_error: 0.0546
+ 350/2918 [==>...........................] - ETA: 0s - loss: 0.0498 - mean_squared_error: 0.0498
+ 650/2918 [=====>........................] - ETA: 0s - loss: 0.0522 - mean_squared_error: 0.0522
+ 900/2918 [========>.....................] - ETA: 0s - loss: 0.0511 - mean_squared_error: 0.0511
+1200/2918 [===========>..................] - ETA: 0s - loss: 0.0486 - mean_squared_error: 0.0486
+1500/2918 [==============>...............] - ETA: 0s - loss: 0.0511 - mean_squared_error: 0.0511
+1800/2918 [=================>............] - ETA: 0s - loss: 0.0495 - mean_squared_error: 0.0495
+2100/2918 [====================>.........] - ETA: 0s - loss: 0.0513 - mean_squared_error: 0.0513
+2400/2918 [=======================>......] - ETA: 0s - loss: 0.0525 - mean_squared_error: 0.0525
+2700/2918 [==========================>...] - ETA: 0s - loss: 0.0535 - mean_squared_error: 0.0535Terminated
