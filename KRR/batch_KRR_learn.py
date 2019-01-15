@@ -70,7 +70,6 @@ Xv = largeFeatureMatrixValidate
 Yv = np.array(energiesValidate)
 
 if method=='linear':
-    folder=folder+"lin/"
     def func(a, *args):
         if a[1]<=0:
             return 10000
@@ -85,7 +84,6 @@ if method=='linear':
             myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
         return out2
 elif method=='polynomial':
-    folder=folder+"pol/"
     def func(a, *args):
         if a[3]<=0:
             return 10000
@@ -102,7 +100,6 @@ elif method=='polynomial':
             out2=10**9
         return out2
 if method=='gaussian':
-    folder=folder+"gauss/"
     def func(a,*args):
         if a[1]<=0:
             return 10000
@@ -116,7 +113,6 @@ if method=='gaussian':
             myfile.write(str(size)+", "+str(out1)+", "+str(out2)+"\n")
         return out2
 elif method=='laplacian':
-    folder=folder+"laplace/"
     def func(a,*args):
         if a[1]<=0:
             return 10000
