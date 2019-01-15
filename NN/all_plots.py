@@ -185,6 +185,7 @@ for param in ['acti','m_folder','m_func']:
     plt.bar(ticks,m_list,color='orangered')
     plt.bar(ticks,l2)
 
+
     plt.legend(['Mean','Best'], loc='lower right')
     
     if param == 'm_folder':
