@@ -14,7 +14,7 @@ from matplotlib.ticker import MaxNLocator
 
 os.chdir("Saved")
 
-folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store' and f!='best']
+folders = [f for f in os.listdir() if f!='Old saved' and f!='.DS_Store' and f!='best' and f!='data_size']
 folders.sort()
 
 
@@ -165,11 +165,16 @@ for param in ['acti','m_folder','m_func']:
 
     for val in l1:
         sublist=[di['rmse_val'] for di in data if di[param]==val]
+        sublist2=[di for di in data if di[param]==val]
         try:
             best=min(sublist)
         except:
             best=0
         l2.append(best)
+        for i in sublist2:
+            if i['rmse_val']==best:
+                print(i)
+                print(tick_names[i['m_folder']])
 
 
     m_list=[]

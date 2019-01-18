@@ -23,6 +23,5 @@ for l in range(10,110,10):
 plt.plot(x,y, marker='x', linestyle='dashed', linewidth=2, markersize=8)
 plt.ylim(0.24,0.38)
 plt.xlim(5,105)
-plt.show()
 plt.savefig('learning_curve.png', dpi=300)
-#
+plt.show()

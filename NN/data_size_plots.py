@@ -52,7 +52,7 @@ plt.xlim(5,105)
 plt.title('RMSE vs. % of training set used (NN)', fontsize=16)
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
-plt.plot(np.array(pct_list)*100,rmse_list, 'x--')
+plt.plot(np.array(pct_list)*100,rmse_list, 'x--', linewidth=2, markersize=8)
 plt.savefig('../../Plots/RMSE_pct_training', dpi=300)
 plt.show()
 
