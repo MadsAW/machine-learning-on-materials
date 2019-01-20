@@ -28,3 +28,4 @@ This will serve as a quick overview of the folders in the project:
 |Output|This folder stores all output files created using gbar|
 |NN|This folder contains all scripts related to the Neural Network|
 |KRR|This folder contains all scripts related to the Kernel Ridge Regression|
+|Saved matrices|This folder contains all the feature matrices we have created in a sorted and non-sorted version. Also present is a folder with the PRDF parameters that were used to create the matrix|

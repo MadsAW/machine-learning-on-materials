@@ -3,7 +3,16 @@
 """
 Created on Thu Nov 29 12:50:17 2018
 
-@author: Simon
+Trains the NN with the parameters:
+dropout=0.3
+Size of first hidden lauer: 350
+One hidden layers
+Sigmoid Activation
+Using matrix from folder: 03-01-2019 11.04
+Using GP matrix shape
+
+One option should be used when calling the script:
+The fraction of the training data that should be used when training the NN.
 """
 
 
@@ -32,7 +41,7 @@ n_hidden=1
 saved_matrix_folder="03-01-2019 11.04"
 feature_matrix_shape="group_period_x_group_period"
 
-        
+
 matrix_functions={"atomic_number":simpleLargeMatrix, "group_period_2x2":no_redundancy_matrix, "group_period_x_group_period":advanced_large_matrix}
 matrix_function=matrix_functions[feature_matrix_shape]
 path = "Saved matrices/"+saved_matrix_folder+"/sorted_Cutoff25_noSingleElementKrystals/"

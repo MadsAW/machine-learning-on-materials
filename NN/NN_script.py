@@ -4,6 +4,9 @@
 Created on Thu Nov 29 12:50:17 2018
 
 @author: Simon
+
+Trains a NN. The script should be called like:
+python NN_script.py dropout size_of_first_hidden_layer activation number_of_hidden_layers saved_matrix_folder feature_matrix_shape
 """
 
 
