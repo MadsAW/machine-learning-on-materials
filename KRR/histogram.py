@@ -47,13 +47,13 @@ df_rearanged = pd.DataFrame({
     'Simple description' : values2
     },index = nam1
 )
-ax=df_rearanged.plot(kind='bar', color=["C0","orangered"], figsize=(16,6))
+ax=df_rearanged.plot(kind='bar', color=["C0","orangered"], figsize=(10,10))
 
 plt.legend(bbox_to_anchor=(1,0), loc="lower right", ncol=3, fontsize=20)
 plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.ylabel("RMSE [eV/atom]",fontsize=20)
-plt.xticks(rotation='30', ha='right')
+plt.xticks(rotation='30', ha='right',fontsize=24)
 plt.title("Comparison of descriptions in the linear kernel space", fontsize=24)
 plt.tight_layout()
 plt.savefig('desc_lin.png',dpi=300)
